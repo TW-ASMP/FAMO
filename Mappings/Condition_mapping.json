@@ -1,0 +1,141 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "famo": "http://ontology.eil.utoronto.ca/famo#",
+    "test": "http://famo_test_namespace.org#"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasInterpretation"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "source": "record_id"
+              },
+              "valueType": {
+                "type": "unique_bnode"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "indicates"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "language": "raw"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "condition_enum_bnode_placeholder"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "Entity Number",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "datatype_literal",
+                          "datatype": {
+                            "transformation": {
+                              "expression": "xsd",
+                              "language": "prefix"
+                            },
+                            "valueSource": {
+                              "source": "constant",
+                              "constant": "string"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "EntityNumber"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "test",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "UID",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Record"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "EntityNumber"
+          }
+        }
+      ]
+    }
+  ]
+}
