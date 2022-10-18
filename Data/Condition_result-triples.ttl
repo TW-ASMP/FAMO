@@ -1,0 +1,31 @@
+@base <http://example.com/base/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix famo: <http://ontology.eil.utoronto.ca/famo#> .
+@prefix test: <http://famo_test_namespace.org#> .
+
+test:S3ID2 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x13;
+  famo:indicates <condition_enum_bnode_placeholder> .
+
+<condition_enum_bnode_placeholder> a famo:EntityNumber;
+  famo:hasValue "R2", "R3", "R4", "R5", "R6", "R7" .
+
+test:S3ID3 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x14;
+  famo:indicates <condition_enum_bnode_placeholder> .
+
+test:S3ID4 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x15;
+  famo:indicates <condition_enum_bnode_placeholder> .
+
+test:S3ID5 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x16;
+  famo:indicates <condition_enum_bnode_placeholder> .
+
+test:S3ID6 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x17;
+  famo:indicates <condition_enum_bnode_placeholder> .
+
+test:S3ID7 a famo:Record, famo:EntityNumber;
+  famo:hasInterpretation _:node1gdc0svq5x18;
+  famo:indicates <condition_enum_bnode_placeholder> .
