@@ -1,0 +1,7 @@
+Role UID,Entity Number,Description,Asset UID,Asset Serial,Asset LCS,Role DH ID (to initialize test case),Asset DH ID (to initialize test case)
+S1ID2,R2,role description 2,auid-2,A2,Active Service,DHID_ROLE_S1ID2,DHID_ASSET_S1ID2
+S1ID3,R3w,role description 3,auid-3,A3,Active Service,DHID_ROLE_S1ID3,DHID_ASSET_S1ID3
+S1ID4,R4,role description 4,auid-4,A4,Active Service,DHID_ROLE_S1ID4,DHID_ASSET_S1ID4
+S1ID5,R5,role description 5,auid-5,A5,Active Service,DHID_ROLE_S1ID5,DHID_ASSET_S1ID5
+S1ID6,R6,role description 6,auid-6,A6,Active Service,DHID_ROLE_S1ID6,DHID_ASSET_S1ID6
+S1ID7,R7,role description 7,auid-7,A7,Active Service,DHID_ROLE_S1ID7,DHID_ASSET_S1ID7

@@ -1,0 +1,23 @@
+PREFIX test: <http://famo_test_namespace.org#>
+PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# keeping one dh entity and rewriting from the other
+# avoid unnecessary work that would be created with the creation of an entirely new (merged) object
+DELETE {
+	test:S1ID2 ?p ?o.
+}
+INSERT {
+	test:S3ID2 ?p ?o.
+}
+WHERE {
+    test:S1ID2 ?p ?o.
+};
+DELETE {
+	?s ?p test:S1ID2.
+}
+INSERT {
+	?s ?p test:S3ID2.
+}
+WHERE {
+	?s ?p test:S1ID2.
+}
