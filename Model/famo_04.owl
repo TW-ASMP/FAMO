@@ -824,18 +824,10 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasDescription -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasDescription">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier"/>
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -846,6 +838,16 @@ Verion 0.4 focuses on:
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumber">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
+        <rdfs:comment>Identifies the life cycle state of an asset.</rdfs:comment>
+        <rdfs:label>has life cycle state</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1042,6 +1044,13 @@ Verion 0.4 focuses on:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSerialNumber"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1083,24 +1092,6 @@ All assets have at least one, but possibly more, capability(s). This Capability(
         </rdfs:subClassOf>
         <rdfs:comment>identifies the life cycle status of an asset, as indicated by some Record.</rdfs:comment>
         <rdfs:label>Asset LCS Property</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded"/>
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place"/>
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/operational"/>
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
     </owl:Class>
     
 
@@ -1799,6 +1790,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumber"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1932,17 +1929,13 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded"/>
     
 
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place"/>
     
 
 
@@ -1956,17 +1949,13 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/operational -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/operational">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/operational"/>
     
 
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage -->
 
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage"/>
     
 
 
