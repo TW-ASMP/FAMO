@@ -215,6 +215,15 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <rdfs:comment>A transitive ordering on manifestations, afterManifestation is a generalization of hasPreviousManifestation.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities">
@@ -241,6 +250,15 @@ Verion 0.4 focuses on:
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#influenced"/>
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasAuthor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <rdfs:comment>A transitive ordering on Manifestations, beforeManifestation is a generalization of hasNextManifestation</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -919,6 +937,25 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/5087/1/Activity/State -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Activity/State"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
