@@ -1,0 +1,132 @@
+%note: scada link is missing from the current query, not sure how this will be related/supplied
+%note: need to test how optional clause will work in this case
+SELECT
+	?dh_enum ?dh_name ?common_ref ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
+	WHERE %match with pinned records
+	{	
+	%if any of the records is interpreted as the ?dhid then bind true to ?common_ref
+	BIND (exists {
+		{
+			?wmsrec famo:hasInterpretation [famo:denotes ?dhid].
+			}
+		UNION
+		{
+			?dwgrec famo:hasInterpretation [famo:denotes ?dhid].
+			}
+		UNION
+		{
+			?etmsrec famo:hasInterpretation [famo:denotes ?dhid].
+			}
+		UNION
+		{
+			?scadarec famo:hasInterpretation [famo:denotes ?dhid].
+			}
+	} AS ?common_ref)
+	
+	%the dh entity may or may not have a defined entity number and name (TBD: we may require the entity number to be defined for pinning)		
+		OPTIONAL {
+			?dhid famo:hasEntityNumber ?dh_enum;
+				famo:hasName ?dh_name.
+			}
+	%pinned wms
+		{
+		?i_wms famo:denotes ?dhid.
+		?wmsrec famo:hasInterpretation ?i_wms;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										hasValue ?wms_enum];
+				famo:representsSubjectOf [a famo:Name;
+										hasValue ?wms_name];
+				%role inclusion property to capture required "parent" field
+				famo:representsSubjectOf [a famo:RoleInclusionRelation;
+											famo:ObjectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
+											famo:hasValue ?wms_parent]]];
+				famo:instantiatedIn <wms_datasystem_id>.
+				}
+	%pinned drawings
+		UNION {
+			?i_dwg famo:denotes ?dhid.
+			?dwgrec famo:hasInterpretation ?i_dwg;
+					famo:representsSubjectOf [a famo:EntityNumberProperty;
+											hasValue ?dwg_enum];
+					famo:instantiatedIn <dwg_datasystem_id>.
+			}
+	%pinned etms
+		UNION {
+		?i_etms famo:denotes ?dhid.
+		?etmsrec famo:hasInterpretation ?i_etms;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										hasValue ?etms_enum];
+				famo:representsSubjectOf [a famo:Name;
+										hasValue ?etms_name];
+				famo:instantiatedIn <etms_datasystem_id>.
+		}
+	%pinned scada
+		UNION {
+		?i_scada famo:denotes ?dhid.
+		?scadarec famo:hasInterpretation ?i_scada;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										hasValue ?scada_enum];
+				famo:instantiatedIn <scada_datasystem_id>.
+		}
+	}
+	UNION
+	%un-pinned records with "matching" entity numbers
+	{
+		%the dh entity may or may not have a defined entity number and name
+		%TO FIX: need to accomodate the case where there is no DH entity (revisit TH proposal for initial ingestion hub)
+		OPTIONAL{
+			?dhid famo:hasEntityNumber ?dh_enum;
+				famo:hasName ?dh_name.
+		}
+	%matching wms enum
+		{
+		?wmsrec famo:representsSubjectOf [a famo:EntityNumberProperty;
+										hasValue ?wms_enum];
+				famo:representsSubjectOf [a famo:Name;
+										hasValue ?wms_name];
+				%role inclusion property to capture required "parent" field
+				famo:representsSubjectOf [a famo:RoleInclusionRelation;
+											famo:ObjectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
+											famo:hasValue ?wms_parent]]];
+				famo:instantiatedIn <wms_datasystem_id>.
+				%tbd: is this the most efficient way to do this?
+				FILTER (?dh_enum == ?wms_enum || ?wms_enum == ?dwg_enum || ?wms_enum == ?etms_enum || ?wms_enum == ?scada_enum)
+				}
+	
+	%matching drawings
+		UNION {
+			?dwgrec famo:representsSubjectOf [a famo:EntityNumberProperty;
+											hasValue ?dwg_enum];
+					famo:instantiatedIn <dwg_datasystem_id>.
+			FILTER (?dh_enum == ?dwg_enum || ?wms_enum == ?dwg_enum || ?dwg_enum == ?etms_enum || ?dwg_enum == ?scada_enum)
+			}				
+
+	%matching etms
+		UNION {
+		?etmsrec famo:representsSubjectOf [a famo:EntityNumberProperty;
+										hasValue ?etms_enum];
+				famo:representsSubjectOf [a famo:Name;
+										hasValue ?etms_name];
+				famo:instantiatedIn <etms_datasystem_id>.
+		FILTER (?dh_enum == ?etms_enum || ?wms_enum == ?etms_enum || ?dwg_enum == ?etms_enum || ?etms_enum == ?scada_enum)
+		}
+
+	%matching scada
+	UNION {
+	?scadarec famo:representsSubjectOf [a famo:EntityNumberProperty;
+									hasValue ?scada_enum];
+			famo:instantiatedIn <scada_datasystem_id>.
+	FILTER (?dh_enum == ?scada_enum || ?wms_enum == ?scada_enum || ?dwg_enum == ?scada_enum || ?etms_enum == ?scada_enum))
+	}	
+	
+	}
+	UNION
+	%records interpreted as nothing, clustered around the same nothing
+	{
+	}
+	
+	UNION
+	%unintelligible records, each in their own row
+	{
+	}
+	
