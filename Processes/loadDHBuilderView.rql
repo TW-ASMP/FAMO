@@ -1,12 +1,23 @@
 %note: scada link is missing from the current query, not sure how this will be related/supplied
 %note: need to test how optional clause will work in this case
 SELECT
-	?dh_enum ?dh_name ?dh_parent ?common_ref ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
+%TODO a new column
+	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
 	WHERE %match with pinned records
 			
 	%the dh entity must be an actual role (exclude "nothing-entities")
 	{
 		?dhid a famo:ActualRole.
+		
+	%if a field investigation famo:finds ?dhid -> "confirmed", else if it famo:unableToAccess ?dhid -> "cannot be confirmed" else, "to be investigated"
+		OPTIONAL {
+			?obs famo:finds ?dhid.
+			BIND("Confirmed" AS ?referent_exists)
+			}
+		OPTIONAL {
+			?obs famo:unableToAccess ?dhid.
+			BIND("Cannot be confirmed" AS ?referent_exists)
+			}
 		}
 		
 	%the dh entity may or may not have a defined entity number and name	
