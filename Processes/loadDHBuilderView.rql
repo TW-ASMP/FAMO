@@ -7,18 +7,8 @@ SELECT
 			
 	%the dh entity must be an actual role (exclude "nothing-entities")
 	{
-		?dhid a famo:ActualRole.
-		
-	%if a field investigation famo:finds ?dhid -> "confirmed", else if it famo:unableToAccess ?dhid -> "cannot be confirmed" else, "to be investigated"
-		OPTIONAL {
-			?obs famo:finds ?dhid.
-			BIND("Confirmed" AS ?referent_exists)
-			}
-		OPTIONAL {
-			?obs famo:unableToAccess ?dhid.
-			BIND("Cannot be confirmed" AS ?referent_exists)
-			}
-		}
+		?dhid a famo:ActualRole;
+			famo:existenceAnnotation ?reference_exists.
 		
 	%the dh entity may or may not have a defined entity number and name	
 	OPTIONAL {
