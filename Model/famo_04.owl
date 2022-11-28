@@ -37,6 +37,7 @@
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Prov.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/"/>
         <terms:creator xml:lang="en">Megan Katsumi, University of Toronto
 Mark Fox, University of Toronto
 Tony Huang, Toronto Water</terms:creator>
@@ -430,6 +431,15 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasManufacturer -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasManufacturer">
@@ -555,6 +565,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase">
@@ -601,6 +619,7 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf"/>
     </owl:ObjectProperty>
     
@@ -609,6 +628,7 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/objectWasRepresentedBy -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectWasRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf"/>
     </owl:ObjectProperty>
     
@@ -753,13 +773,17 @@ Verion 0.4 focuses on:
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/subjectWasRepresentedBy -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectWasRepresentedBy"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectWasRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1013,6 +1037,22 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ActualAsset -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ActualAsset">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ActualRole -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ActualRole">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
     </owl:Class>
     
 
@@ -1458,7 +1498,7 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalRole -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalRole">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ActualRole"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubRole"/>
@@ -1632,6 +1672,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Record">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InterpretationOfID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf"/>
@@ -1917,7 +1963,7 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/TerminalRole -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/TerminalRole">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ActualRole"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubRole"/>
@@ -1929,11 +1975,73 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/UninterpretableRecord -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/UninterpretableRecord">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Record"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/WorkOrderTask -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/WorkOrderTask">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerAsset -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerAsset">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerRole -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerRole">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedAsset -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedAsset">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedRole -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedRole">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedAsset -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedAsset">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedRole -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedRole">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+    </rdf:Description>
     
 
 
