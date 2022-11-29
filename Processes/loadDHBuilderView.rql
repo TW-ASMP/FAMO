@@ -1,4 +1,5 @@
-%note: scada link is missing from the current query, not sure how this will be related/supplied
+%note: scada link is missing from the current query, TBD
+%note: drawing data is missing, format TBD
 %note: need to test how optional clause will work in this case
 SELECT
 %TODO a new column
@@ -31,14 +32,7 @@ SELECT
 											famo:hasValue ?wms_parent]]];
 				famo:instantiatedIn <wms_datasystem_id>.
 				}
-	%pinned drawings
-		UNION {
-			?i_dwg famo:denotes ?dhid.
-			?dwgrec famo:hasInterpretation ?i_dwg;
-					famo:representsSubjectOf [a famo:EntityNumberProperty;
-											hasValue ?dwg_enum];
-					famo:instantiatedIn <dwg_datasystem_id>.
-			}
+	%drawings (pinned?) TBD
 	%pinned etms
 		UNION {
 		?i_etms famo:denotes ?dhid.
@@ -49,7 +43,7 @@ SELECT
 										hasValue ?etms_name];
 				famo:instantiatedIn <etms_datasystem_id>.
 		}
-	%pinned scada
+	%pinned scada? GIS?
 		UNION {
 		?i_scada famo:denotes ?dhid.
 		?scadarec famo:hasInterpretation ?i_scada;
