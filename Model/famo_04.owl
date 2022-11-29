@@ -431,9 +431,9 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasIntepretation -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation">
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasIntepretation">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf"/>
     </owl:ObjectProperty>
@@ -1674,12 +1674,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InterpretationOfID"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
             </owl:Restriction>
@@ -1979,12 +1973,6 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/UninterpretableRecord">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Record"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
