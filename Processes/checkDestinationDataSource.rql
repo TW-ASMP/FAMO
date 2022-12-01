@@ -1,0 +1,5 @@
+ASK {
+	<rec1> famo:instantiatedIn ?ds.
+	?rec2 famo:hasInterpretation [denotes <dhid>];
+				famo:instantiatedIn ?ds.
+}
