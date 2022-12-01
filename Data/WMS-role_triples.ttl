@@ -1,0 +1,122 @@
+@base <http://example.com/base/> .
+@prefix famo: <http://ontology.eil.utoronto.ca/FAMO/famo/> .
+@prefix test: <http://www.test.org/TW_test_data_example/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+test:WMS-RID1 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID1_PM2022-11-30T14:15:10Z, test:name_WMS-RID1_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID1_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID1_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID1_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R1" .
+
+test:name_WMS-RID1_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 1 description" .
+
+test:roleinclusion_WMS-RID1_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation .
+
+test:interpretation_WMS-RID1_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R1 .
+
+test:WMS-RID2 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID2_PM2022-11-30T14:15:10Z, test:name_WMS-RID2_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID2_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID2_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID2_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R2" .
+
+test:name_WMS-RID2_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 2 description" .
+
+test:roleinclusion_WMS-RID2_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID1 .
+
+test:interpretation_WMS-RID2_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R2 .
+
+test:WMS-RID3 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID3_PM2022-11-30T14:15:10Z, test:name_WMS-RID3_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID3_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID3_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID3_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R3wrong" .
+
+test:name_WMS-RID3_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 3 description" .
+
+test:roleinclusion_WMS-RID3_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID2 .
+
+test:interpretation_WMS-RID3_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R3wrong .
+
+test:WMS-RID4 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID4_PM2022-11-30T14:15:10Z, test:name_WMS-RID4_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID4_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID4_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID4_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R4" .
+
+test:name_WMS-RID4_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 4 description" .
+
+test:roleinclusion_WMS-RID4_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID3 .
+
+test:interpretation_WMS-RID4_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R4 .
+
+test:WMS-RID5 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID5_PM2022-11-30T14:15:10Z, test:name_WMS-RID5_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID5_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID5_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID5_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R5" .
+
+test:name_WMS-RID5_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 5 description" .
+
+test:roleinclusion_WMS-RID5_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID3 .
+
+test:interpretation_WMS-RID5_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R5 .
+
+test:WMS-RID6 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID6_PM2022-11-30T14:15:10Z, test:name_WMS-RID6_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID6_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID6_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID6_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R6" .
+
+test:name_WMS-RID6_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 6 description" .
+
+test:roleinclusion_WMS-RID6_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID3 .
+
+test:interpretation_WMS-RID6_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R6 .
+
+test:WMS-RID7 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_WMS-RID7_PM2022-11-30T14:15:10Z, test:name_WMS-RID7_PM2022-11-30T14:15:10Z,
+    test:roleinclusion_WMS-RID7_PM2022-11-30T14:15:10Z;
+  famo:hasInterpretation test:interpretation_WMS-RID7_PM2022-11-30T14:15:10Z .
+
+test:enum_WMS-RID7_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
+  famo:hasValue "R7" .
+
+test:name_WMS-RID7_PM2022-11-30T14:15:10Z a famo:NameProperty;
+  famo:hasValue "role 7 description" .
+
+test:roleinclusion_WMS-RID7_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:WMS-RID3 .
+
+test:interpretation_WMS-RID7_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R7 .
