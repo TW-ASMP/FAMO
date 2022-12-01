@@ -146,7 +146,7 @@
                     "values": [
                       {
                         "valueSource": {
-                          "columnName": "Description",
+                          "columnName": "Functional Description",
                           "source": "column"
                         },
                         "valueType": {
@@ -223,7 +223,7 @@
                           "language": "prefix"
                         },
                         "valueSource": {
-                          "columnName": "Parent Number",
+                          "columnName": "Parent Entity",
                           "source": "column"
                         },
                         "valueType": {
