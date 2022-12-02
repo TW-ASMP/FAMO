@@ -38,9 +38,9 @@ SELECT
 		?i_etms famo:denotes ?dhid.
 		?etmsrec famo:hasInterpretation ?i_etms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										hasValue ?etms_enum];
+										famo:hasValue ?etms_enum];
 				famo:representsSubjectOf [a famo:Name;
-										hasValue ?etms_name];
+										famo:hasValue ?etms_name];
 				famo:instantiatedIn <etms_datasystem_id>.
 		}
 	%pinned scada? GIS?
@@ -48,7 +48,7 @@ SELECT
 		?i_scada famo:denotes ?dhid.
 		?scadarec famo:hasInterpretation ?i_scada;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										hasValue ?scada_enum];
+										famo:hasValue ?scada_enum];
 				famo:instantiatedIn <scada_datasystem_id>.
 		}
 
