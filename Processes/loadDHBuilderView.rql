@@ -1,24 +1,24 @@
-%note: scada link is missing from the current query, TBD
-%note: drawing data is missing, format TBD
-%note: need to test how optional clause will work in this case
+#note: scada link is missing from the current query, TBD
+#note: drawing data is missing, format TBD
+#note: need to test how optional clause will work in this case
 SELECT
-%TODO a new column
+#TODO a new column
 	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
-	WHERE %match with pinned records
+	WHERE #match with pinned records
 {			
-	%the dh entity must be an actual role (exclude "nothing-entities")
+	#the dh entity must be an actual role (exclude "nothing-entities")
 	{
 		?dhid a famo:ActualRole;
 			famo:existenceAnnotation ?referent_exists.
 		
-	%the dh entity may or may not have a defined entity number and name	
+	#the dh entity may or may not have a defined entity number and name	
 	OPTIONAL {
 		?dhid famo:hasEntityNumber ?dh_enum;
 			famo:hasName ?dh_name;
 			famo:subRoleOf ?dh_parent.
 		}
 	}		
-	%pinned wms
+	#pinned wms
 	UNION {
 		?i_wms famo:denotes ?dhid.
 		?wmsrec famo:hasInterpretation ?i_wms;
@@ -26,14 +26,14 @@ SELECT
 										test:hasValue ?wms_enum];
 				famo:representsSubjectOf [a famo:Name;
 										test:hasValue ?wms_name];
-				%role inclusion property to capture required "parent" field
+				#role inclusion property to capture required "parent" field
 				famo:representsSubjectOf [a famo:RoleInclusionRelation;
 											famo:ObjectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_parent]]];
 				famo:instantiatedIn <wms_datasystem_id>.
 				}
-	%drawings (pinned?) TBD
-	%pinned etms
+	#drawings (pinned?) TBD
+	#pinned etms
 		UNION {
 		?i_etms famo:denotes ?dhid.
 		?etmsrec famo:hasInterpretation ?i_etms;
@@ -43,7 +43,7 @@ SELECT
 										famo:hasValue ?etms_name];
 				famo:instantiatedIn <etms_datasystem_id>.
 		}
-	%pinned scada? GIS?
+	#pinned scada? GIS?
 		UNION {
 		?i_scada famo:denotes ?dhid.
 		?scadarec famo:hasInterpretation ?i_scada;
@@ -52,6 +52,6 @@ SELECT
 				famo:instantiatedIn <scada_datasystem_id>.
 		}
 }
-%uintelligible records not displayed
-%records interpreted as "nothing" not displayed
+#uintelligible records not displayed
+#records interpreted as "nothing" not displayed
 	
