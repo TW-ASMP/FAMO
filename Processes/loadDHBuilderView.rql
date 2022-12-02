@@ -1,6 +1,7 @@
 #note: scada link is missing from the current query, TBD
 #note: drawing data is missing, format TBD
 #note: need to test how optional clause will work in this case
+#NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
 SELECT
 #TODO a new column
 	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
@@ -8,8 +9,8 @@ SELECT
 {			
 	#the dh entity must be an actual role (exclude "nothing-entities")
 	{
-		?dhid a famo:ActualRole;
-			famo:existenceAnnotation ?referent_exists.
+#		?dhid a famo:ActualRole;
+#			famo:existenceAnnotation ?referent_exists.
 		
 	#the dh entity may or may not have a defined entity number and name	
 	OPTIONAL {
@@ -23,14 +24,14 @@ SELECT
 		?i_wms famo:denotes ?dhid.
 		?wmsrec famo:hasInterpretation ?i_wms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										test:hasValue ?wms_enum];
-				famo:representsSubjectOf [a famo:Name;
-										test:hasValue ?wms_name];
-				#role inclusion property to capture required "parent" field
-				famo:representsSubjectOf [a famo:RoleInclusionRelation;
-											famo:ObjectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
+										famo:hasValue ?wms_enum];
+				famo:representsSubjectOf [a famo:NameProperty;
+										famo:hasValue ?wms_name];
+				#role occupation property to capture required "parent" field
+				famo:representsSubjectOf [a famo:RoleOccupationRelation;
+											famo:objectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_parent]]];
-				famo:instantiatedIn <wms_datasystem_id>.
+				famo:instantiatedIn test:wms_datasystem.
 				}
 	#drawings (pinned?) TBD
 	#pinned etms
