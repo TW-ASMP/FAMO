@@ -5,7 +5,7 @@ SELECT
 %TODO a new column
 	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
 	WHERE %match with pinned records
-			
+{			
 	%the dh entity must be an actual role (exclude "nothing-entities")
 	{
 		?dhid a famo:ActualRole;
@@ -17,15 +17,15 @@ SELECT
 			famo:hasName ?dh_name;
 			famo:subRoleOf ?dh_parent.
 		}
-			
+	}		
 	%pinned wms
 	UNION {
 		?i_wms famo:denotes ?dhid.
 		?wmsrec famo:hasInterpretation ?i_wms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										hasValue ?wms_enum];
+										test:hasValue ?wms_enum];
 				famo:representsSubjectOf [a famo:Name;
-										hasValue ?wms_name];
+										test:hasValue ?wms_name];
 				%role inclusion property to capture required "parent" field
 				famo:representsSubjectOf [a famo:RoleInclusionRelation;
 											famo:ObjectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
@@ -51,7 +51,7 @@ SELECT
 										famo:hasValue ?scada_enum];
 				famo:instantiatedIn <scada_datasystem_id>.
 		}
-
+}
 %uintelligible records not displayed
 %records interpreted as "nothing" not displayed
 	
