@@ -2,121 +2,423 @@
 @prefix famo: <http://ontology.eil.utoronto.ca/FAMO/famo/> .
 @prefix test: <http://www.test.org/TW_test_data_example/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/> .
 
-test:WMS-RID1 a famo:Record;
+test:1181 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID1_PM2022-11-30T14:15:10Z, test:name_WMS-RID1_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID1_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID1_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1181_PM2022-12-06T15:06:19Z, test:name_1181_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1181_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1181_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID1_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R1" .
+test:enum_1181_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG" .
 
-test:name_WMS-RID1_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 1 description" .
+test:name_1181_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "clarifier system" .
 
-test:roleinclusion_WMS-RID1_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation .
+test:roleinclusion_1181_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation .
 
-test:interpretation_WMS-RID1_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R1 .
+test:interpretation_1181_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG .
 
-test:WMS-RID2 a famo:Record;
+test:dhid_THX-DIG a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1182 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID2_PM2022-11-30T14:15:10Z, test:name_WMS-RID2_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID2_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID2_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1182_PM2022-12-06T15:06:19Z, test:name_1182_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1182_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1182_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID2_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R2" .
+test:enum_1182_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-BU-5100" .
 
-test:name_WMS-RID2_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 2 description" .
+test:name_1182_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Burner,Waste Gas, Building XX" .
 
-test:roleinclusion_WMS-RID2_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID1 .
+test:roleinclusion_1182_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG .
 
-test:interpretation_WMS-RID2_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R2 .
+test:interpretation_1182_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-BU-5100 .
 
-test:WMS-RID3 a famo:Record;
+test:dhid_THX-DIG-BU-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1183 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID3_PM2022-11-30T14:15:10Z, test:name_WMS-RID3_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID3_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID3_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1183_PM2022-12-06T15:06:19Z, test:name_1183_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1183_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1183_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID3_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R3wrong" .
+test:enum_1183_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-CP-5100" .
 
-test:name_WMS-RID3_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 3 description" .
+test:name_1183_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Control Panel,BU-5100,Building XX" .
 
-test:roleinclusion_WMS-RID3_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID2 .
+test:roleinclusion_1183_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
 
-test:interpretation_WMS-RID3_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R3wrong .
+test:interpretation_1183_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-CP-5100 .
 
-test:WMS-RID4 a famo:Record;
+test:dhid_THX-DIG-CP-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1184 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID4_PM2022-11-30T14:15:10Z, test:name_WMS-RID4_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID4_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID4_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1184_PM2022-12-06T15:06:19Z, test:name_1184_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1184_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1184_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID4_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R4" .
+test:enum_1184_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CP-5150" .
 
-test:name_WMS-RID4_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 4 description" .
+test:name_1184_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Control Panel,Combustion,Waste Gas Burner Pilot Panel CP-5100" .
 
-test:roleinclusion_WMS-RID4_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID3 .
+test:roleinclusion_1184_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
 
-test:interpretation_WMS-RID4_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R4 .
+test:interpretation_1184_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-CP-5150 .
 
-test:WMS-RID5 a famo:Record;
+test:dhid_THX-NGS-CP-5150 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1185 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID5_PM2022-11-30T14:15:10Z, test:name_WMS-RID5_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID5_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID5_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1185_PM2022-12-06T15:06:19Z, test:name_1185_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1185_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1185_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID5_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R5" .
+test:enum_1185_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CH-5100" .
 
-test:name_WMS-RID5_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 5 description" .
+test:name_1185_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Chamber,Combustion,CP-5150,Building XX" .
 
-test:roleinclusion_WMS-RID5_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID3 .
+test:roleinclusion_1185_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
 
-test:interpretation_WMS-RID5_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R5 .
+test:interpretation_1185_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-CH-5100 .
 
-test:WMS-RID6 a famo:Record;
+test:dhid_THX-NGS-CH-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1186 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID6_PM2022-11-30T14:15:10Z, test:name_WMS-RID6_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID6_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID6_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1186_PM2022-12-06T15:06:19Z, test:name_1186_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1186_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1186_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID6_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R6" .
+test:enum_1186_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-BL-5100" .
 
-test:name_WMS-RID6_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 6 description" .
+test:name_1186_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Blower,Centrifugal,Pilot Combustion,CP-5150,Building XX" .
 
-test:roleinclusion_WMS-RID6_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID3 .
+test:roleinclusion_1186_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
 
-test:interpretation_WMS-RID6_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R6 .
+test:interpretation_1186_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-BL-5100 .
 
-test:WMS-RID7 a famo:Record;
+test:dhid_THX-NGS-BL-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1187 a famo:Record;
   famo:instantiatedIn test:wms_datasystem;
-  famo:representsSubjectOf test:enum_WMS-RID7_PM2022-11-30T14:15:10Z, test:name_WMS-RID7_PM2022-11-30T14:15:10Z,
-    test:roleinclusion_WMS-RID7_PM2022-11-30T14:15:10Z;
-  famo:hasInterpretation test:interpretation_WMS-RID7_PM2022-11-30T14:15:10Z .
+  famo:representsSubjectOf test:enum_1187_PM2022-12-06T15:06:19Z, test:name_1187_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1187_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1187_PM2022-12-06T15:06:19Z .
 
-test:enum_WMS-RID7_PM2022-11-30T14:15:10Z a famo:EntityNumberProperty;
-  famo:hasValue "R7" .
+test:enum_1187_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-FX-5100" .
 
-test:name_WMS-RID7_PM2022-11-30T14:15:10Z a famo:NameProperty;
-  famo:hasValue "role 7 description" .
+test:name_1187_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Flame Arrestor,Digester Gas,BU-5100,Low Pressure,Building XX" .
 
-test:roleinclusion_WMS-RID7_PM2022-11-30T14:15:10Z a famo:RoleOccupationRelation;
-  famo:objectIsRepresentedBy test:WMS-RID3 .
+test:roleinclusion_1187_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
 
-test:interpretation_WMS-RID7_PM2022-11-30T14:15:10Z famo:denotes test:dhid_R7 .
+test:interpretation_1187_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-FX-5100 .
+
+test:dhid_THX-DIG-FX-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1188 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1188_PM2022-12-06T15:06:19Z, test:name_1188_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1188_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1188_PM2022-12-06T15:06:19Z .
+
+test:enum_1188_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5104" .
+
+test:name_1188_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Valve,Thermal,Isolation,FX-5100,Building XX" .
+
+test:roleinclusion_1188_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
+
+test:interpretation_1188_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-V-5104 .
+
+test:dhid_THX-DIG-V-5104 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1189 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1189_PM2022-12-06T15:06:19Z, test:name_1189_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1189_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1189_PM2022-12-06T15:06:19Z .
+
+test:enum_1189_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5103" .
+
+test:name_1189_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Transmitter,Pressure,Digester Gas,BU-5100,Building XX" .
+
+test:roleinclusion_1189_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
+
+test:interpretation_1189_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-PIT-5103 .
+
+test:dhid_THX-DIG-PIT-5103 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1190 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1190_PM2022-12-06T15:06:19Z, test:name_1190_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1190_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1190_PM2022-12-06T15:06:19Z .
+
+test:enum_1190_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5104" .
+
+test:name_1190_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Transmitter,Pressure,Digester Gas,BU-5100,Building XX" .
+
+test:roleinclusion_1190_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
+
+test:interpretation_1190_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-PIT-5104 .
+
+test:dhid_THX-DIG-PIT-5104 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1191 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1191_PM2022-12-06T15:06:19Z, test:name_1191_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1191_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1191_PM2022-12-06T15:06:19Z .
+
+test:enum_1191_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5103" .
+
+test:name_1191_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Valve,Ball,Actuated,Inlet,BU-5100,Low Pressure,Building XX" .
+
+test:roleinclusion_1191_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5100 .
+
+test:interpretation_1191_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-V-5103 .
+
+test:dhid_THX-DIG-V-5103 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1192 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1192_PM2022-12-06T15:06:19Z, test:name_1192_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1192_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1192_PM2022-12-06T15:06:19Z .
+
+test:enum_1192_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-BU-5200" .
+
+test:name_1192_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Burner,Waste Gas, Building XX" .
+
+test:roleinclusion_1192_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG .
+
+test:interpretation_1192_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-BU-5200 .
+
+test:dhid_THX-DIG-BU-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1193 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1193_PM2022-12-06T15:06:19Z, test:name_1193_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1193_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1193_PM2022-12-06T15:06:19Z .
+
+test:enum_1193_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-CP-5200" .
+
+test:name_1193_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Control Panel,BU-5200,Building XX" .
+
+test:roleinclusion_1193_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1193_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-CP-5200 .
+
+test:dhid_THX-DIG-CP-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1194 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1194_PM2022-12-06T15:06:19Z, test:name_1194_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1194_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1194_PM2022-12-06T15:06:19Z .
+
+test:enum_1194_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CP-5250" .
+
+test:name_1194_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Control Panel,Combustion,Waste Gas Burner Pilot Panel CP-5200" .
+
+test:roleinclusion_1194_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1194_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-CP-5250 .
+
+test:dhid_THX-NGS-CP-5250 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1195 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1195_PM2022-12-06T15:06:19Z, test:name_1195_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1195_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1195_PM2022-12-06T15:06:19Z .
+
+test:enum_1195_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CH-5200" .
+
+test:name_1195_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Chamber,Combustion,CP-5250,Building XX" .
+
+test:roleinclusion_1195_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1195_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-CH-5200 .
+
+test:dhid_THX-NGS-CH-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1196 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1196_PM2022-12-06T15:06:19Z, test:name_1196_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1196_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1196_PM2022-12-06T15:06:19Z .
+
+test:enum_1196_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-BL-5200" .
+
+test:name_1196_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Blower,Centrifugal,Pilot Combustion,CP-5250,Building XX" .
+
+test:roleinclusion_1196_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1196_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-NGS-BL-5200 .
+
+test:dhid_THX-NGS-BL-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1197 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1197_PM2022-12-06T15:06:19Z, test:name_1197_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1197_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1197_PM2022-12-06T15:06:19Z .
+
+test:enum_1197_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-FX-5200" .
+
+test:name_1197_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Flame Arrestor,Digester Gas,BU-5200,Low Pressure,Building XX" .
+
+test:roleinclusion_1197_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1197_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-FX-5200 .
+
+test:dhid_THX-DIG-FX-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1198 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1198_PM2022-12-06T15:06:19Z, test:name_1198_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1198_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1198_PM2022-12-06T15:06:19Z .
+
+test:enum_1198_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5204" .
+
+test:name_1198_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Valve,Thermal,Isolation,FX-5200,Building XX" .
+
+test:roleinclusion_1198_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1198_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-V-5204 .
+
+test:dhid_THX-DIG-V-5204 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1199 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1199_PM2022-12-06T15:06:19Z, test:name_1199_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1199_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1199_PM2022-12-06T15:06:19Z .
+
+test:enum_1199_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5203" .
+
+test:name_1199_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Transmitter,Pressure,Digester Gas,BU-5200,Building XX" .
+
+test:roleinclusion_1199_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1199_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-PIT-5203 .
+
+test:dhid_THX-DIG-PIT-5203 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1200 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1200_PM2022-12-06T15:06:19Z, test:name_1200_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1200_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1200_PM2022-12-06T15:06:19Z .
+
+test:enum_1200_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5204" .
+
+test:name_1200_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Transmitter,Pressure,Digester Gas,BU-5200,Building XX" .
+
+test:roleinclusion_1200_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1200_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-PIT-5204 .
+
+test:dhid_THX-DIG-PIT-5204 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
+
+test:1201 a famo:Record;
+  famo:instantiatedIn test:wms_datasystem;
+  famo:representsSubjectOf test:enum_1201_PM2022-12-06T15:06:19Z, test:name_1201_PM2022-12-06T15:06:19Z,
+    test:roleinclusion_1201_PM2022-12-06T15:06:19Z;
+  famo:hasInterpretation test:interpretation_1201_PM2022-12-06T15:06:19Z .
+
+test:enum_1201_PM2022-12-06T15:06:19Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5203" .
+
+test:name_1201_PM2022-12-06T15:06:19Z a famo:NameProperty;
+  famo:hasValue "Valve,Ball,Actuated,Inlet,BU-5200,Low Pressure,Building XX" .
+
+test:roleinclusion_1201_PM2022-12-06T15:06:19Z a famo:RoleOccupationRelation;
+  famo:objectIsRepresentedBy test:THX-DIG-BU-5200 .
+
+test:interpretation_1201_PM2022-12-06T15:06:19Z famo:denotes test:dhid_THX-DIG-V-5203 .
+
+test:dhid_THX-DIG-V-5203 a famo:ActualRole;
+  famo_app:existenceAnnotation "\"To be investigated\"" .
