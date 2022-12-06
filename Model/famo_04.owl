@@ -1218,20 +1218,6 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/DescriptionProperty -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/DescriptionProperty">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty">
@@ -1474,6 +1460,20 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NameProperty -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NameProperty">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
