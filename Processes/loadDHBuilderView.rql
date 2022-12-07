@@ -42,7 +42,7 @@ SELECT
 										famo:hasValue ?etms_enum];
 				famo:representsSubjectOf [a famo:Name;
 										famo:hasValue ?etms_name];
-				famo:instantiatedIn <etms_datasystem_id>.
+				famo:instantiatedIn test:etms_datasystem.
 		}
 	#pinned scada? GIS?
 		UNION {
@@ -50,7 +50,7 @@ SELECT
 		?scadarec famo:hasInterpretation ?i_scada;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
 										famo:hasValue ?scada_enum];
-				famo:instantiatedIn <scada_datasystem_id>.
+				famo:instantiatedIn test:scada_datasystem.
 		}
 }
 #uintelligible records not displayed
