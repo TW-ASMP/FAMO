@@ -2,6 +2,10 @@
 #note: drawing data is missing, format TBD
 #note: need to test how optional clause will work in this case
 #NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+
 SELECT
 #TODO a new column
 	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
@@ -9,8 +13,8 @@ SELECT
 {			
 	#the dh entity must be an actual role (exclude "nothing-entities")
 	{
-#		?dhid a famo:ActualRole;
-#			famo:existenceAnnotation ?referent_exists.
+		?dhid a famo:ActualRole;
+			famo_app:existenceAnnotation ?referent_exists.
 		
 	#the dh entity may or may not have a defined entity number and name	
 	OPTIONAL {
