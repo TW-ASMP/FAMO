@@ -44,7 +44,7 @@ SELECT
 		?etmsrec famo:hasInterpretation ?i_etms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
 										famo:hasValue ?etms_enum];
-				famo:representsSubjectOf [a famo:Name;
+				famo:representsSubjectOf [a famo:NameProperty;
 										famo:hasValue ?etms_name];
 				famo:instantiatedIn test:etms_datasystem.
 		}
