@@ -1,6 +1,5 @@
 #note: scada link is missing from the current query, TBD
 #note: drawing data is missing, format TBD
-#note: need to test how optional clause will work in this case
 #NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
 PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
 PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
