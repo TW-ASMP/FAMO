@@ -227,60 +227,61 @@
                           "source": "row_index"
                         },
                         "valueType": {
-                          "propertyMappings": [],
-                          "type": "iri",
-                          "typeMappings": []
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "property": {
-                      "transformation": {
-                        "expression": "famo_app",
-                        "language": "prefix"
-                      },
-                      "valueSource": {
-                        "source": "constant",
-                        "constant": "existenceAnnotation"
-                      }
-                    },
-                    "values": [
-                      {
-                        "valueSource": {
-                          "source": "constant",
-                          "constant": "\"To be investigated\""
-                        },
-                        "valueType": {
-                          "type": "datatype_literal",
-                          "datatype": {
-                            "transformation": {
-                              "expression": "xsd",
-                              "language": "prefix"
-                            },
-                            "valueSource": {
-                              "columnName": "string",
-                              "source": "column"
+                          "propertyMappings": [
+                            {
+                              "property": {
+                                "transformation": {
+                                  "expression": "famo_app",
+                                  "language": "prefix"
+                                },
+                                "valueSource": {
+                                  "source": "constant",
+                                  "constant": "existenceAnnotation"
+                                }
+                              },
+                              "values": [
+                                {
+                                  "valueSource": {
+                                    "source": "constant",
+                                    "constant": "To be investigated"
+                                  },
+                                  "valueType": {
+                                    "type": "datatype_literal",
+                                    "datatype": {
+                                      "transformation": {
+                                        "expression": "xsd",
+                                        "language": "prefix"
+                                      },
+                                      "valueSource": {
+                                        "source": "constant",
+                                        "constant": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
                             }
-                          }
+                          ],
+                          "type": "iri",
+                          "typeMappings": [
+                            {
+                              "transformation": {
+                                "expression": "famo",
+                                "language": "prefix"
+                              },
+                              "valueSource": {
+                                "source": "constant",
+                                "constant": "ActualRole"
+                              }
+                            }
+                          ]
                         }
                       }
                     ]
                   }
                 ],
                 "type": "iri",
-                "typeMappings": [
-                  {
-                    "transformation": {
-                      "expression": "famo",
-                      "language": "prefix"
-                    },
-                    "valueSource": {
-                      "source": "constant",
-                      "constant": "ActualRole"
-                    }
-                  }
-                ]
+                "typeMappings": []
               }
             }
           ]
