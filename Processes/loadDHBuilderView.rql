@@ -24,7 +24,7 @@ SELECT
 		}
 	}		
 	#pinned wms
-	UNION {
+	OPTIONAL {
 		?i_wms famo:denotes ?dhid.
 		?wmsrec famo:hasInterpretation ?i_wms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
@@ -39,7 +39,7 @@ SELECT
 				}
 	#drawings (pinned?) TBD
 	#pinned etms
-		UNION {
+		OPTIONAL {
 		?i_etms famo:denotes ?dhid.
 		?etmsrec famo:hasInterpretation ?i_etms;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
@@ -49,7 +49,7 @@ SELECT
 				famo:instantiatedIn test:etms_datasystem.
 		}
 	#pinned scada? GIS?
-		UNION {
+		OPTIONAL {
 		?i_scada famo:denotes ?dhid.
 		?scadarec famo:hasInterpretation ?i_scada;
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
