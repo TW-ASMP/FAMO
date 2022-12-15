@@ -1737,8 +1737,7 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>a Record captures the information stored in a data system about a particular object. Conceptually, it is similar to a row in a table, however a Record is agnostic to any particular database schema. It refers to the entire collection of information about a particular object in a given data system. In this sense, it can be thought of as a row from a “view” created with all attributes of a particular object.</rdfs:comment>
