@@ -5,281 +5,303 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 test:1 a famo:Record;
-  famo:hasInterpretation test:interpretation_1_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_1_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_1_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_1_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_1_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-BU-5100 .
+test:interpretation_1_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-BU-5100 .
 
 test:dhid_THX-DIG-BU-5100 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_1_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_1_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-BU-5100" .
 
 test:2 a famo:Record;
-  famo:hasInterpretation test:interpretation_2_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_2_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "3" .
+  famo:hasInterpretation test:interpretation_2_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_2_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "3";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_2_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-BU-5100 .
+test:interpretation_2_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-BU-5100 .
 
-test:enum_2_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_2_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-BU-5100" .
 
 test:3 a famo:Record;
-  famo:hasInterpretation test:interpretation_3_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_3_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_3_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_3_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_3_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-CP-5100 .
+test:interpretation_3_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-CP-5100 .
 
 test:dhid_THX-DIG-CP-5100 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_3_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_3_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-CP-5100" .
 
 test:4 a famo:Record;
-  famo:hasInterpretation test:interpretation_4_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_4_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_4_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_4_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_4_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-CP-5150 .
+test:interpretation_4_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-CP-5150 .
 
 test:dhid_THX-NGS-CP-5150 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_4_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_4_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-CP-5150" .
 
 test:5 a famo:Record;
-  famo:hasInterpretation test:interpretation_5_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_5_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_5_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_5_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_5_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-CH-5100 .
+test:interpretation_5_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-CH-5100 .
 
 test:dhid_THX-NGS-CH-5100 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_5_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_5_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-CH-5100" .
 
 test:6 a famo:Record;
-  famo:hasInterpretation test:interpretation_6_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_6_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_6_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_6_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_6_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-BL-5100 .
+test:interpretation_6_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-BL-5100 .
 
 test:dhid_THX-NGS-BL-5100 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_6_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_6_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-BL-5100" .
 
 test:7 a famo:Record;
-  famo:hasInterpretation test:interpretation_7_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_7_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_7_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_7_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_7_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-FX-5100 .
+test:interpretation_7_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-FX-5100 .
 
 test:dhid_THX-DIG-FX-5100 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_7_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_7_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-FX-5100" .
 
 test:8 a famo:Record;
-  famo:hasInterpretation test:interpretation_8_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_8_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_8_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_8_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_8_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-V-5104 .
+test:interpretation_8_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-V-5104 .
 
 test:dhid_THX-DIG-V-5104 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_8_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_8_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-V-5104" .
 
 test:9 a famo:Record;
-  famo:hasInterpretation test:interpretation_9_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_9_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_9_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_9_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_9_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-PIT-5103 .
+test:interpretation_9_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-PIT-5103 .
 
 test:dhid_THX-DIG-PIT-5103 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_9_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_9_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-PIT-5103" .
 
 test:10 a famo:Record;
-  famo:hasInterpretation test:interpretation_10_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_10_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_10_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_10_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_10_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-PIT-5104 .
+test:interpretation_10_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-PIT-5104 .
 
 test:dhid_THX-DIG-PIT-5104 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_10_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_10_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-PIT-5104" .
 
 test:11 a famo:Record;
-  famo:hasInterpretation test:interpretation_11_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_11_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "1" .
+  famo:hasInterpretation test:interpretation_11_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_11_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "1";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_11_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-V-5103 .
+test:interpretation_11_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-V-5103 .
 
 test:dhid_THX-DIG-V-5103 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_11_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_11_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-V-5103" .
 
 test:12 a famo:Record;
-  famo:hasInterpretation test:interpretation_12_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_12_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_12_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_12_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_12_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-BU-5200 .
+test:interpretation_12_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-BU-5200 .
 
 test:dhid_THX-DIG-BU-5200 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_12_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_12_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-BU-5200" .
 
 test:13 a famo:Record;
-  famo:hasInterpretation test:interpretation_13_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_13_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "3" .
+  famo:hasInterpretation test:interpretation_13_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_13_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "3";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_13_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-BU-5200 .
+test:interpretation_13_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-BU-5200 .
 
-test:enum_13_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_13_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-BU-5200" .
 
 test:14 a famo:Record;
-  famo:hasInterpretation test:interpretation_14_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_14_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_14_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_14_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_14_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-CP-5200 .
+test:interpretation_14_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-CP-5200 .
 
 test:dhid_THX-DIG-CP-5200 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_14_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_14_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-CP-5200" .
 
 test:15 a famo:Record;
-  famo:hasInterpretation test:interpretation_15_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_15_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_15_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_15_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_15_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-CP-5250 .
+test:interpretation_15_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-CP-5250 .
 
 test:dhid_THX-NGS-CP-5250 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_15_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_15_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-CP-5250" .
 
 test:16 a famo:Record;
-  famo:hasInterpretation test:interpretation_16_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_16_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_16_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_16_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_16_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-CH-5200 .
+test:interpretation_16_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-CH-5200 .
 
 test:dhid_THX-NGS-CH-5200 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_16_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_16_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-CH-5200" .
 
 test:17 a famo:Record;
-  famo:hasInterpretation test:interpretation_17_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_17_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_17_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_17_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_17_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-NGS-BL-5200 .
+test:interpretation_17_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-NGS-BL-5200 .
 
 test:dhid_THX-NGS-BL-5200 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_17_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_17_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-NGS-BL-5200" .
 
 test:18 a famo:Record;
-  famo:hasInterpretation test:interpretation_18_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_18_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_18_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_18_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_18_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-FX-5200 .
+test:interpretation_18_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-FX-5200 .
 
 test:dhid_THX-DIG-FX-5200 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_18_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_18_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-FX-5200" .
 
 test:19 a famo:Record;
-  famo:hasInterpretation test:interpretation_19_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_19_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_19_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_19_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_19_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-V-5204 .
+test:interpretation_19_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-V-5204 .
 
 test:dhid_THX-DIG-V-5204 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_19_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_19_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-V-5204" .
 
 test:20 a famo:Record;
-  famo:hasInterpretation test:interpretation_20_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_20_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_20_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_20_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_20_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-PIT-5203 .
+test:interpretation_20_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-PIT-5203 .
 
 test:dhid_THX-DIG-PIT-5203 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_20_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_20_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-PIT-5203" .
 
 test:21 a famo:Record;
-  famo:hasInterpretation test:interpretation_21_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_21_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_21_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_21_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_21_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-PIT-5204 .
+test:interpretation_21_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-PIT-5204 .
 
 test:dhid_THX-DIG-PIT-5204 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_21_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_21_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-PIT-5204" .
 
 test:22 a famo:Record;
-  famo:hasInterpretation test:interpretation_22_PM2022-12-16T18:36:04Z;
-  famo:representsSubjectOf test:enum_22_PM2022-12-16T18:36:04Z;
-  famo:hasRecordLocation "2" .
+  famo:hasInterpretation test:interpretation_22_PM2022-12-16T18:51:08Z;
+  famo:representsSubjectOf test:enum_22_PM2022-12-16T18:51:08Z;
+  famo:hasRecordLocation "2";
+  famo:instantiatedIn test:dwg_datasystem .
 
-test:interpretation_22_PM2022-12-16T18:36:04Z famo:denotes test:dhid_THX-DIG-V-5203 .
+test:interpretation_22_PM2022-12-16T18:51:08Z famo:denotes test:dhid_THX-DIG-V-5203 .
 
 test:dhid_THX-DIG-V-5203 a famo:ActualRole;
   famo_app:existenceAnnotation "To be investigated" .
 
-test:enum_22_PM2022-12-16T18:36:04Z a famo:EntityNumberProperty;
+test:enum_22_PM2022-12-16T18:51:08Z a famo:EntityNumberProperty;
   famo:hasValue "THX-DIG-V-5203" .
