@@ -206,6 +206,35 @@
               }
             }
           ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "instantiatedIn"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "test",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "dwg_datasystem"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
         }
       ],
       "subject": {
