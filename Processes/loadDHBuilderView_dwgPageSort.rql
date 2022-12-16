@@ -35,7 +35,7 @@ SELECT
 											famo:hasValue ?wms_parent]]];
 				famo:instantiatedIn test:wms_datasystem.
 				}
-	#drawings (pinned?) TBD
+	#drawings
     OPTIONAL {
         ?i_dwg famo:denotes ?dhid.
         ?dwgrec famo:hasInterpretation ?i_dwg;
