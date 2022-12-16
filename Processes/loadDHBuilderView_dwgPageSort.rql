@@ -6,8 +6,8 @@ PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX test: <http://www.test.org/TW_test_data_example/>
 
 SELECT
-#TODO a new column
-	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?dwg_page ?etms_enum ?etms_name ?scada_enum 
+#note: add ?dwg_page to view page numbers
+	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
 	WHERE #match with pinned records
 {			
 	#the dh entity must be an actual role (exclude "nothing-entities")
@@ -41,6 +41,7 @@ SELECT
         ?dwgrec famo:hasInterpretation ?i_dwg;
                 famo:representsSubjectOf [a famo:EntityNumberProperty;
                 							famo:hasValue ?dwg_enum];
+				famo:instantiatedIn test:dwg_datasystem;
                 famo:hasRecordLocation ?dwg_page.
     }
 	#pinned etms
