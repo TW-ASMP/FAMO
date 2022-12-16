@@ -52,9 +52,54 @@
                           "source": "row_index"
                         },
                         "valueType": {
-                          "propertyMappings": [],
+                          "propertyMappings": [
+                            {
+                              "property": {
+                                "transformation": {
+                                  "expression": "famo_app",
+                                  "language": "prefix"
+                                },
+                                "valueSource": {
+                                  "source": "constant",
+                                  "constant": "existenceAnnotation"
+                                }
+                              },
+                              "values": [
+                                {
+                                  "valueSource": {
+                                    "source": "constant",
+                                    "constant": "To be investigated"
+                                  },
+                                  "valueType": {
+                                    "type": "datatype_literal",
+                                    "datatype": {
+                                      "transformation": {
+                                        "expression": "xsd",
+                                        "language": "prefix"
+                                      },
+                                      "valueSource": {
+                                        "source": "constant",
+                                        "constant": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
                           "type": "iri",
-                          "typeMappings": []
+                          "typeMappings": [
+                            {
+                              "transformation": {
+                                "expression": "famo",
+                                "language": "prefix"
+                              },
+                              "valueSource": {
+                                "source": "constant",
+                                "constant": "ActualRole"
+                              }
+                            }
+                          ]
                         }
                       }
                     ]
