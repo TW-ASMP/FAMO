@@ -312,7 +312,7 @@
                                 {
                                   "valueSource": {
                                     "source": "constant",
-                                    "constant": "\"To be investigated\""
+                                    "constant": "To be investigated"
                                   },
                                   "valueType": {
                                     "type": "datatype_literal",
