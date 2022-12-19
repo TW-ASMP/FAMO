@@ -1,0 +1,265 @@
+@base <http://example.com/base/> .
+@prefix famo: <http://ontology.eil.utoronto.ca/FAMO/famo/> .
+@prefix famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/> .
+@prefix test: <http://www.test.org/TW_test_data_example/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+test:19328.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_19328.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_19328.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_19328.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-BU-5100 .
+
+test:dhid_THX-DIG-BU-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_19328.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-BU-5100" .
+
+test:373866.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_373866.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_373866.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_373866.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-CP-5100 .
+
+test:dhid_THX-DIG-CP-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_373866.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-CP-5100" .
+
+test:442892.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_442892.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_442892.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_442892.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-CP-5150 .
+
+test:dhid_THX-NGS-CP-5150 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_442892.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CP-5150" .
+
+test:845375.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_845375.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_845375.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_845375.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-CH-5100 .
+
+test:dhid_THX-NGS-CH-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_845375.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CH-5100" .
+
+test:348148.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_348148.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_348148.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_348148.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-BL-5100 .
+
+test:dhid_THX-NGS-BL-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_348148.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-BL-5100" .
+
+test:881933.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_881933.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_881933.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_881933.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-FX-5100 .
+
+test:dhid_THX-DIG-FX-5100 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_881933.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-FX-5100" .
+
+test:227387.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_227387.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_227387.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_227387.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-V-5104 .
+
+test:dhid_THX-DIG-V-5104 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_227387.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5104" .
+
+test:301292.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_301292.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_301292.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_301292.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-PIT-5103 .
+
+test:dhid_THX-DIG-PIT-5103 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_301292.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5103" .
+
+test:532317.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_532317.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_532317.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_532317.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-PIT-5104 .
+
+test:dhid_THX-DIG-PIT-5104 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_532317.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5104" .
+
+test:356097.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_356097.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_356097.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_356097.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-V-5103 .
+
+test:dhid_THX-DIG-V-5103 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_356097.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5103" .
+
+test:803050.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_803050.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_803050.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_803050.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-BU-5200 .
+
+test:dhid_THX-DIG-BU-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_803050.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-BU-5200" .
+
+test:100606.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_100606.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_100606.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_100606.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-CP-5200 .
+
+test:dhid_THX-DIG-CP-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_100606.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-CP-5200" .
+
+test:958022.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_958022.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_958022.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_958022.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-CP-5250 .
+
+test:dhid_THX-NGS-CP-5250 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_958022.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CP-5250" .
+
+test:922976.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_922976.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_922976.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_922976.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-CH-5200 .
+
+test:dhid_THX-NGS-CH-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_922976.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-CH-5200" .
+
+test:480776.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_480776.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_480776.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_480776.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-NGS-BL-5200 .
+
+test:dhid_THX-NGS-BL-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_480776.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-NGS-BL-5200" .
+
+test:297934.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_297934.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_297934.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_297934.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-FX-5200 .
+
+test:dhid_THX-DIG-FX-5200 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_297934.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-FX-5200" .
+
+test:761341.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_761341.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_761341.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_761341.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-V-5204 .
+
+test:dhid_THX-DIG-V-5204 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_761341.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5204" .
+
+test:2341.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_2341.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_2341.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_2341.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-PIT-5203 .
+
+test:dhid_THX-DIG-PIT-5203 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_2341.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5203" .
+
+test:360506.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_360506.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_360506.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_360506.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-PIT-5204 .
+
+test:dhid_THX-DIG-PIT-5204 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_360506.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-PIT-5204" .
+
+test:880911.0 a famo:Record;
+  famo:instantiatedIn test:scada_datasystem;
+  famo:hasInterpretation test:interpretation_880911.0_PM2022-12-19T13:25:54Z;
+  famo:representsSubjectOf test:enum_880911.0_PM2022-12-19T13:25:54Z .
+
+test:interpretation_880911.0_PM2022-12-19T13:25:54Z famo:denotes test:dhid_THX-DIG-V-5203 .
+
+test:dhid_THX-DIG-V-5203 a famo:ActualRole;
+  famo_app:existenceAnnotation "To be investigated" .
+
+test:enum_880911.0_PM2022-12-19T13:25:54Z a famo:EntityNumberProperty;
+  famo:hasValue "THX-DIG-V-5203" .
