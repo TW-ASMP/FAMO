@@ -26,6 +26,7 @@
      xmlns:Change="http://ontology.eil.utoronto.ca/5087/1/Change/"
      xmlns:change="http://ontology.eil.utoronto.ca/5087/1/Change"
      xmlns:schema="http://schema.org/"
+     xmlns:Change1="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/"
      xmlns:activity="http://ontology.eil.utoronto.ca/5087/1/Activity"
      xmlns:resource="http://ontology.eil.utoronto.ca/5087/1/Resource"
      xmlns:mereology="http://ontology.eil.utoronto.ca/5087/1/Mereology"
@@ -241,14 +242,6 @@ Verion 0.4 focuses on:
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/functionalOperatingConstraint"/>
         <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Resource"/>
         <rdfs:comment>An example of a possible functional operating constraint wherein a Role may only be satisfied by Functions that require a certain Input(s) - i.e., due to existing infrastructure/resource availability.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/assignedToSpace -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/assignedToSpace">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -596,10 +589,9 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/locatedInSpace -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/locatedInSpace">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -1842,12 +1834,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/assignedToSpace"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/footprintRequirementSatisfiedBy"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
             </owl:Restriction>
@@ -1874,6 +1860,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/Activity/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
