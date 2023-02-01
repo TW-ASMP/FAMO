@@ -9,13 +9,15 @@ SELECT
 	?dhid ?dwgrec ?dwg_enum ?dwg_page
 	WHERE #match with pinned records
 {			
+    OPTIONAL{
 	#the dh entity must be an actual role (exclude "nothing-entities")
 		?dhid a famo:ActualRole;
 			famo_app:existenceAnnotation ?referent_exists.
 			
         ?i_dwg famo:denotes ?dhid.
-        ?dwgrec famo:hasInterpretation ?i_dwg;
-                famo:representsSubjectOf [a famo:EntityNumberProperty;
+        ?dwgrec famo:hasInterpretation ?i_dwg.
+    }
+                ?dwgrec famo:representsSubjectOf [a famo:EntityNumberProperty;
                 							famo:hasValue ?dwg_enum];
 				famo:instantiatedIn test:dwg_datasystem;
                 famo:hasRecordLocation ?dwg_page.
