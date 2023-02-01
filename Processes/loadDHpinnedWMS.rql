@@ -6,7 +6,7 @@ PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX test: <http://www.test.org/TW_test_data_example/>
 
 SELECT
-	?dhid ?wms_enum ?wms_name ?wms_parent 
+	?dhid ?wmsrec ?wms_enum ?wms_name ?wms_parent 
 	WHERE #match with pinned records
 {
     OPTIONAL {
