@@ -1,0 +1,28 @@
+#note: scada link is missing from the current query, TBD
+#note: drawing data is missing, format TBD
+#NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+
+SELECT
+	?dhid ?wms_enum ?wms_name ?wms_parent 
+	WHERE #match with pinned records
+{			
+	#the dh entity must be an actual role (exclude "nothing-entities")
+		?dhid a famo:ActualRole;
+			famo_app:existenceAnnotation ?referent_exists.
+			
+		?i_wms famo:denotes ?dhid.
+		?wmsrec famo:hasInterpretation ?i_wms;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										famo:hasValue ?wms_enum];
+				famo:representsSubjectOf [a famo:NameProperty;
+										famo:hasValue ?wms_name];
+				#role occupation property to capture required "parent" field
+				famo:representsSubjectOf [a famo:RoleOccupationRelation;
+											famo:objectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
+											famo:hasValue ?wms_parent]]];
+				famo:instantiatedIn test:wms_datasystem.
+				
+}

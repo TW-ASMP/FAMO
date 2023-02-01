@@ -1,0 +1,23 @@
+#note: scada link is missing from the current query, TBD
+#note: drawing data is missing, format TBD
+#NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+
+SELECT
+	?dhid ?dwgrec ?dwg_enum ?dwg_page
+	WHERE #match with pinned records
+{			
+	#the dh entity must be an actual role (exclude "nothing-entities")
+		?dhid a famo:ActualRole;
+			famo_app:existenceAnnotation ?referent_exists.
+			
+        ?i_dwg famo:denotes ?dhid.
+        ?dwgrec famo:hasInterpretation ?i_dwg;
+                famo:representsSubjectOf [a famo:EntityNumberProperty;
+                							famo:hasValue ?dwg_enum];
+				famo:instantiatedIn test:dwg_datasystem;
+                famo:hasRecordLocation ?dwg_page.
+				
+}
