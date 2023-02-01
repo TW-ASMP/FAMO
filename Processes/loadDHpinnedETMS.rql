@@ -8,13 +8,15 @@ PREFIX test: <http://www.test.org/TW_test_data_example/>
 SELECT
 	?dhid ?etmsrec ?etms_enum ?etms_name
 	WHERE #match with pinned records
-{			
+{	OPTIONAL {	
 	#the dh entity must be an actual role (exclude "nothing-entities")
 		?dhid a famo:ActualRole;
 			famo_app:existenceAnnotation ?referent_exists.
 			
 		?i_etms famo:denotes ?dhid.
-		?etmsrec famo:hasInterpretation ?i_etms;
+		?etmsrec famo:hasInterpretation ?i_etms.
+    }
+    ?etmsrec
 				famo:representsSubjectOf [a famo:EntityNumberProperty;
 										famo:hasValue ?etms_enum];
 				famo:representsSubjectOf [a famo:NameProperty;
