@@ -488,6 +488,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput">
@@ -1082,6 +1090,12 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
