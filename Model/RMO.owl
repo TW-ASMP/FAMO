@@ -236,14 +236,6 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/RMO/hasRecordLocation -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/RMO/hasRecordLocation">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/RMOObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/RMO/hasSubject -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/RMO/hasSubject">
@@ -257,14 +249,6 @@ Tony Huang, Toronto Water</terms:creator>
             </rdf:Description>
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/RMO/denotes"/>
         </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/RMO/inDataSystem -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/RMO/inDataSystem">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/RMOObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -465,21 +449,6 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/RecordLocation -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/RecordLocation">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/RMOThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/inDataSystem"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/DataSystem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/UninterpretableRecord -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/UninterpretableRecord">
@@ -664,12 +633,6 @@ Tony Huang, Toronto Water</terms:creator>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/hasInterpretation"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/InterpretationOfID"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RMO/hasRecordLocation"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/RecordLocation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
