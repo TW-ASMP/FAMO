@@ -1,0 +1,73 @@
+CQ 1: Given a record,  has a (designated) person made an interpretation of what it refers to?
+
+SELECT ?agent ?entity WHERE {
+<given record> rmo:hasInterpretation ?i.
+?i rmo:denotes ?entity.
+?a a rmo:interpretation;
+	rmo:leadsToInterpretation ?i.
+?agent rmo:performs ?a.
+}
+
+CQ 2: Given an interpretable record, does the object that it refers to observed to actually exist?
+Note: this formalization relies on a classification from the domain ontology of an entity as an "actual thing" (e.g. vs some non-real object)
+ASK {
+<given record> rmo:hasInterpretation ?i.
+?i rmo:denotes ?entity.
+?entity a <Actual Thing>.
+}
+
+CQ 3: Given an interpretable record, is a given recorded property value consistent with observation? Who had performed the observation, and when was it made?
+Note: there are variations of this formalization depending on how the property manifestation subclass is defined
+SELECT ?rec_val ?obs_val ?agent ?time WHERE {
+<given record> rmo:representsSubjectOf ?p_rec.
+?p rmo:hasValue ?rec_val.
+
+<field observation> rmo:finds ?p_obs.
+?p_obs rmo:hasValue ?obs_val.
+?agent rmo:performs <field observation>.
+<field observation> rmo:occursAt ?time.
+}
+
+CQ 4: Given an object, is it missing its record or does it have duplicate records in a given source?
+Part 1: is it missing its record?
+ASK {
+	?rec rmo:hasInterpretation [rmo:denotes <given object>];
+		rmo:instantiatedIn <given source>.}
+		
+Part 2: does it have duplicate records?
+ASK {
+	?rec1 rmo:hasInterpretation [rmo:denotes <given object>];
+	?rec2 rmo:hasInterpretation [rmo:denotes <given object>];
+		rmo:instantiatedIn <given source>.
+	FILTER (?rec1 != ?rec2)}
+
+CQ 5: Given an object bearing a certain property, what was the recorded value of the property at time t?
+Note: formalization shown for a data property. 
+SELECT ?val_t WHERE {
+	?rec rmo:hasInterpretation [rmo:denotes <given object>];
+		rmo:representsSubjectOf ?p.
+	?p a <given property>;
+		rmo:validAt <t>;
+		rmo:hasValue ?val_t.
+		}
+		UNION {
+	?rec rmo:hasInterpretation [rmo:denotes <given object>];
+		rmo:representedSubjectOf ?p.
+	?p a <given property>;
+		rmo:validAt <t>;
+		rmo:hasValue ?val_t.
+		}
+
+CQ 6: Given an object bearing a certain property, what was the change process that led to that property value?
+Formalized for "current property value"
+SELECT ?a WHERE {
+	?rec rmo:hasInterpretation [rmo:denotes <given object>];
+		rmo:representsSubjectOf ?p.
+	?p a <given property>.
+	?a rmo:hasOutcomeProperty ?p.
+	}
+
+CQ 7: Given a change process, who performed the process and when?
+SELECT ?agent ?time WHERE {
+	?agent rmo:performs <given process>.
+	<given process> rmo:occursAt ?time.}
