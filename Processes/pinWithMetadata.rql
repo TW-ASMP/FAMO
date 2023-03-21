@@ -1,20 +1,21 @@
-PREFIX test: <http://famo_test_namespace.org#>
-PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX iso50871: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+PREFIX time: <http://www.w3.org/2006/time#>
 
 DELETE {
     #for now, this makes the most sense
     #if desirable, we might generalize this to remove all references to the current interpretation
-    <record_id> famo:hasinterpretation ?i_current.
+    <record_id> famo:hasInterpretation ?i_current.
     ?i_current famo:interpretationOf <record_id>.
     ?i_current famo:denotes ?o.
 }
 INSERT {
 	<record_id> famo:hasInterpretation 
-            [famo:denotes <dh_id>].
-			
-	<agent> 5087:performs <activity>.
+            [famo:denotes 	<dh_id>].	
+	<agent> iso50871:performs <activity>.
 	<activity> a famo:Interpretation;
 		famo:requiresInformation <record_id>;
 		famo:producesInformation 
@@ -22,11 +23,11 @@ INSERT {
 				famo:denotes <dh_id>];
 		famo:requiresInformationAbout <dh_id>;
 		famo:leadsToInformationAbout <dh_id>;
-		5087:occursAt [5087:hasEnd [5087:inXSDDateTime <datetime>]].
+		iso50871:occursAt [time:hasEnd [time:inXSDDateTime <datetime>]].
 }
 WHERE {
     OPTIONAL {
-        <record_id> famo:hasinterpretation ?i_current.
+        <record_id> famo:hasInterpretation ?i_current.
     }
     OPTIONAL {
         ?i_current famo:interpretationOf <record_id>.
