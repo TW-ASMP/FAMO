@@ -1,0 +1,26 @@
+#note: scada link is missing from the current query, TBD
+#note: drawing data is missing, format TBD
+#NOTE: implementation consideration - we need to determine which attributes are optional from the data sources
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+
+SELECT
+	?dhid ?etmsrec ?etms_enum ?etms_name
+	WHERE #match with pinned records
+{	OPTIONAL {	
+	#the dh entity must be an actual role (exclude "nothing-entities")
+		?dhid a famo:ActualRole;
+			famo_app:existenceAnnotation ?referent_exists.
+			
+		?i_etms famo:denotes ?dhid.
+		?etmsrec famo:hasInterpretation ?i_etms.
+    }
+    ?etmsrec
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										famo:hasValue ?etms_enum];
+				famo:representsSubjectOf [a famo:NameProperty;
+										famo:hasValue ?etms_name];
+				famo:instantiatedIn test:etms_datasystem.
+				
+}

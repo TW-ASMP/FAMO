@@ -186,12 +186,6 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/Mereology/containedIn -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/Mereology/containedIn"/>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/FamoObjectProperty -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/FamoObjectProperty"/>
@@ -663,23 +657,6 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/representedObjectOf -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/representedObjectOf">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/FamoObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/representedSubjectOf -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/representedSubjectOf">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/FamoObjectProperty"/>
-        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/subjectWasRepresentedBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/mfamo/represents -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/mfamo/represents">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     

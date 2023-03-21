@@ -26,6 +26,7 @@
      xmlns:Change="http://ontology.eil.utoronto.ca/5087/1/Change/"
      xmlns:change="http://ontology.eil.utoronto.ca/5087/1/Change"
      xmlns:schema="http://schema.org/"
+     xmlns:Change1="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/"
      xmlns:activity="http://ontology.eil.utoronto.ca/5087/1/Activity"
      xmlns:resource="http://ontology.eil.utoronto.ca/5087/1/Resource"
      xmlns:mereology="http://ontology.eil.utoronto.ca/5087/1/Mereology"
@@ -37,7 +38,6 @@
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Prov.owl"/>
         <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/FAMO/mfamo/"/>
         <terms:creator xml:lang="en">Megan Katsumi, University of Toronto
 Mark Fox, University of Toronto
 Tony Huang, Toronto Water</terms:creator>
@@ -148,6 +148,12 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/5087/1/Change/existsAt -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/existsAt"/>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn"/>
@@ -169,12 +175,6 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/hasLocation -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/hasLocation"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/5087/Mereology/containedIn -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/Mereology/containedIn"/>
     
 
 
@@ -284,6 +284,14 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/decommissionedAtTime -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissionedAtTime">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/denotes -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/denotes">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -480,6 +488,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput">
@@ -499,6 +515,14 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasPredecessor -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasPredecessor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -544,6 +568,23 @@ Verion 0.4 focuses on:
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsSubjectOf"/>
+            </rdf:Description>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/denotes"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/inDataSystem -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/inDataSystem">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -588,10 +629,9 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/locatedInSpace -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/locatedInSpace">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -835,6 +875,12 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier"/>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName"/>
@@ -907,14 +953,6 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus">
@@ -981,7 +1019,7 @@ Verion 0.4 focuses on:
 
     <!-- http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation -->
 
-    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation"/>
@@ -994,7 +1032,7 @@ Verion 0.4 focuses on:
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -1052,6 +1090,12 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1076,7 +1120,7 @@ Verion 0.4 focuses on:
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Agent">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent/Agent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/authorOf"/>
@@ -1298,12 +1342,6 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representedSubjectOf"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <foaf:depiction xml:lang="en">https://www.mie.utoronto.ca/wp-content/uploads/2019/08/FASE-logo-201907.jpg</foaf:depiction>
     </owl:Class>
     
@@ -1449,6 +1487,12 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/InterpretationOfID">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/denotes"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Interpretation of Identity</rdfs:label>
     </owl:Class>
     
@@ -1522,6 +1566,14 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/TerminalRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
     </owl:Class>
     
 
@@ -1689,6 +1741,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RecordLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
             </owl:Restriction>
@@ -1712,19 +1770,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                 <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DataSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/represents"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>a Record captures the information stored in a data system about a particular object. Conceptually, it is similar to a row in a table, however a Record is agnostic to any particular database schema. It refers to the entire collection of information about a particular object in a given data system. In this sense, it can be thought of as a row from a “view” created with all attributes of a particular object.</rdfs:comment>
         <rdfs:label>Record</rdfs:label>
     </owl:Class>
@@ -1735,6 +1780,21 @@ For example, Apple manufactures a line of macbooks, which can be further divided
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RecordCorrection">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RecordValidation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RecordLocation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RecordLocation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/inDataSystem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DataSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1857,6 +1917,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/occupiedBy"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
             </owl:Restriction>
@@ -1899,6 +1965,46 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasCriticality"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1916,6 +2022,91 @@ When assigned to an asset, a role describes the responsibility/expected contribu
 
 Roles may be decomposed into separate, more specific sub-roles or aggregated into higher-level super-roles. A Role that can be decomposed is referred to as a NonTerminalRole, and a Role that cannot be decomposed is referred to as a TerminalRole. TerminalRoles and NonTerminalRoles are disjoint. A Role may be defined as supported by or supporting another Role. This describes a procedural dependency between roles wherein the performance of one role is required in order to enable the performance of another role. This supporting relationship can only be defined between sibling Roles (i.e. Roles that are children of the same, Conjunctive Role). A Role must have an associated location. This describes the (approximate) region in space where the role is required to be fulfilled. A single Role may be satisfied by multiple Capabilities. It is possible (though undesirable) for there to not exist any Capabilities that satisfy a particular Role.&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">FAMO Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RoleCriticalityProperty -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RoleCriticalityProperty">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Note: it may be useful to define a &quot;criticality&quot; datatype in the future instead of enumerating the integer values in the definition</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
