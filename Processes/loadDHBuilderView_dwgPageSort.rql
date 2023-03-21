@@ -6,6 +6,7 @@ PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX test: <http://www.test.org/TW_test_data_example/>
 
 SELECT
+#note: add ?dwg_page to view page numbers
 	?referent_exists ?dh_enum ?dh_name ?dh_parent ?wms_enum ?wms_name ?wms_parent ?dwg_enum ?etms_enum ?etms_name ?scada_enum 
 	WHERE #match with pinned records
 {			
@@ -40,7 +41,8 @@ SELECT
         ?dwgrec famo:hasInterpretation ?i_dwg;
                 famo:representsSubjectOf [a famo:EntityNumberProperty;
                 							famo:hasValue ?dwg_enum];
-                famo:instantiatedIn test:dwg_datasystem.
+				famo:instantiatedIn test:dwg_datasystem;
+                famo:hasRecordLocation ?dwg_page.
     }
 	#pinned etms
 		OPTIONAL {
@@ -60,6 +62,8 @@ SELECT
 										famo:hasValue ?scada_enum];
 				famo:instantiatedIn test:scada_datasystem.
 		}
+	    FILTER (?dwg_page IN ("1","3"))
+		#note: an enumerated list of page numbers is given in the example above, but ranges (e.g. ?dwg_page < "3") could also be specified
 }
 #uintelligible records not displayed
 #records interpreted as "nothing" not displayed
