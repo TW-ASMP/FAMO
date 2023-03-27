@@ -1,0 +1,42 @@
+=== Query 1: insert temporary asset ===
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+# note: it is expected that the body of the insert statement be generated at the application (control) layer
+INSERT DATA {
+	temp:compliance_form_dummy_asset rdf:type <asset class>.
+	temp:compliance_form_dummy_asset <property 1> <value 1>.
+	temp:compliance_form_dummy_asset <property 2> <value 2>.
+	temp:compliance_form_dummy_asset <property 3> <value 3>.
+	# ... for all properties defined for the given asset type
+	}
+	
+
+=== Query 2: retrieve related compliance docs ===
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+PREFIX comp: <http://ontology.eil.utoronto.ca/FAMO/compliance/>
+#details (in particular the select variables) TBD based upon specification of results view from TH
+
+select ?name ?compliance ?procedure where { 
+ temp:compliance_form_dummy_asset rdf:type ?assetclass.
+    ?workplan comp:appliesToAssetType ?assetclass;
+        comp:name ?name;
+   		comp:activityType ?activitytype;
+   		comp:hasProcedure ?procedure.
+    BIND (EXISTS {
+        ?workplan comp:supports [a comp:ComplianceRelatedSection].    
+        } AS ?compliance)
+} 
+
+=== Query 3: delete temporary asset ===
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+# note: it is expected that the body of the insert statement be generated at the application (control) layer
+DELETE DATA {
+	temp:compliance_form_dummy_asset rdf:type <asset class>.
+	temp:compliance_form_dummy_asset <property 1> <value 1>.
+	temp:compliance_form_dummy_asset <property 2> <value 2>.
+	temp:compliance_form_dummy_asset <property 3> <value 3>.
+	# ... for all properties defined for the given asset type
+	}
