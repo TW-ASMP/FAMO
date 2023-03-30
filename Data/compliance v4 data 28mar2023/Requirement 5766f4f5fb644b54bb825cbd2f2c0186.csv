@@ -1,0 +1,954 @@
+﻿Requirement Name,📕 TO REMOVE: Document Name,📜 Document,Requirement Section,📝 Requirement Text,TO REMOVE 🕝Frequency,🏗️ Satisfied by (Activity),🌎Grounded By (Requirement),🌎Is Grounding (Requirement),👯Applies to (Asset Class),Class Attributes Note,TO REMOVE 👷🏾‍♂️Performed By (Trade),Reg Fully Grounded,TO REMOVE - URL,Work Comments,Name Text,📕 Source Document
+ANSI Z358.1-2014 on Annual Personal Wash Maintenance,ANSI Z358.1-2014,https://www.notion.so/ANSI-Z358-1-2014-1f27904d34b844c69c94621fa19b2462,8.1.3.2,All personal wash units shall be inspected and maintained in accordance with manufacturer's instructions and shall meet applicable regulatory requirements.,1 year,https://www.notion.so/Annual-Personal-Wash-Maintenance-7d785cfeef19400c8467e2fba21ead44,,,https://www.notion.so/personal-wash-55454bfae9fd487ea8e5d962cb58b2b6,,,,,,"ANSI Z358.1-2014, Section: 8.1.3.2",
+ANSI Z358.1-2014 on weekly inspection of self-contained emergency wash equipment,ANSI Z358.1-2014,https://www.notion.so/ANSI-Z358-1-2014-1f27904d34b844c69c94621fa19b2462,"4.6.3, 5.5.3, 6.5.3, 7.5.3, 8.1.3.2, 8.2.4.3","4.6.3 Self-contained emergency showers shall be visually checked weekly to determine if flushing fluid needs to be changed or supplemented. Such inspection shall be conducted in accordance with manufacturer's instructions.
+5.5.3 Self-contained eyewashes shall be visually checked weekly to determine if flushing fluid needs to be changed or supplemented. Such inspection shall be conducted in accordance with manufacturer's instructions.
+6.5.3 Self-contained eye/face washes shall be visually checked weekly to determine if flushing fluid needs to be changed or supplemented. Such shall be conducted in accordance with manufacturer's instructions.
+7.5.3 Self-contained combination units shall be visually checked weekly to determine if flushing fluid needs to be changed or supplemented. Such inspection shall be conducted in accordance with manufacturer's instructions.
+8.1.3.2 All personal wash units shall be inspected and maintained in accordance with manufacturer's instructions and shall meet applicable regulatory requirements.
+8.2.4.3 Self-contained drench hoses shall be visually checked weekly to determine if flushing fluid needs to be changed or supplemented. Such inspection shall be conducted in accordance with manufacturer's instructions.",1 week,https://www.notion.so/Self-contained-Emergency-Wash-Weekly-Activity-4d98a647c54743349467fc4d7eedb223,,,https://www.notion.so/self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho-723948b08a1340bba89ae5bad289382c,,,,https://webstore.ansi.org/Search/Find?in=1&st=z358.1,,"ANSI Z358.1-2014, Section: 4.6.3, 5.5.3, 6.5.3, 7.5.3, 8.1.3.2, 8.2.4.3",
+ANSI Z358.1-2014 on Plumbed Emergency Wash Annual Test,ANSI Z358.1-2014,https://www.notion.so/ANSI-Z358-1-2014-1f27904d34b844c69c94621fa19b2462,"4.6.5, 4.5.7, 5.5.5, 5.4.7, 6.5.5, 6.4.7, 7.5.5, 7,4,6","4.6.5 All emergency showers shall be inspected annually to assure conformance with Section 4.5 requirements of this standard.
+4.5.7 When the plumbed emergency shower is installed, its performance shall be verified in accordance with the following procedures:
+(1) With the unit correctly connected to the flushing fluid source and the valve(s) closed, visually check the piping connections for leaks.
+(2) Open the valve to the full open position. The valve shall remain open without requiring further use of the operator's hands.
+(3) With the valve in the fully opened position, measure the diameter of the spray pattern. It shall be a minimum of 50.8 cm (20 in.) at 152.4 cm (60 in.) above the standing surface. The flushing fluid shall be substantially dispersed throughout the pattern.
+(4) Using the flowmeter or other means, determine that the rate of flow is at least 75.7 liters per minute (20 gpm).
+(5) Using a temperature gauge or other means, determine that the flushing fluid is tepid.
+5.5.5 All eyewashes shall be inspected annually to assure conformance with Section 5.4 requirements of this standard.
+5.4.7 When the plumbed eyewash is installed, its performance shall be verified in accordance with the following procedures:
+(1) With the unit correctly connected to the flushing fluid source and the valve(s) closed, visually check the piping connections for leaks.
+(2) Open the valve to the full open position. The valve shall remain open without requiring further use of the operator's hands.
+(3) With the valve in the fully open position, make sure that both eyes will be washed simultaneously at a velocity low enough to be non-injurious to the user.
+(4) Using the flowmeter or other means, determine that the rate of flow is at least 1.5 liters per minute (0.4 gpm). A test gauge similar to the one pictured in Illustration 7 can be used to verify minimum flow characteristics.
+(5) Using a temperature gauge or other means, determine that the flushing fluid is tepid.
+6.5.5 All eye/face washes shall be inspected annually to assure conformance with Section 6.4 requirements of this standard.
+6.4.7 When the plumbed eye/face wash is installed, its performance shall be verified in accordance with the following procedures:
+(1) With the unit correctly connected to the flushing fluid source and the valve(s) closed, visually check the piping connections for leaks.
+(2) Open the valve to the full open position. The valve shall remain open without requiring further use of the operator's hands.
+(3) With the valve in the fully opened position make sure that both eyes and face will be washed simultaneously at a velocity low enough to be non-injurious to the user.
+(4) Using the flowmeter or other means, determine that the rate of flow is at least 11.4 liters per minute (3.0 gpm). A test gauge similar to the one pictured in Illustration 7 can be used to verify minimum flow characteristics.
+(5) Using a temperature gauge or other means, determine that the flushing fluid is tepid.
+7.5.5 All combination units shall be inspected annually to assure conformance with Section 7.4 requirements of this standard.
+7.4.6 When the combination unit is installed, its performance shall be verified in accordance with the following procedures:
+(1) With the unit correctly connected to the flushing fluid source and the valve(s) closed, visually check the piping connections for leaks.
+(2) Open the emergency shower and eyewash or eye/face wash valves to the full open position. The valves shall remain open without requiring further use of the operator's hands.
+(3) Activate the valves and check the performance of the emergency shower, eyewash and eye/face wash valves as described in Sections 4.5.7, 5.4.7 and 6.4.7 respectively, while operating simultaneously.
+(4) Using a temperature gauge or other means, determine that the flushing fluid is tepid.
+NOTE: Where hand-held drench hoses are part of the combination unit, the flow and pressure shall be specified by the manufacturer.",1 year,https://www.notion.so/Plumbed-Emergency-Wash-Annual-Test-fecf211200054d6c834be1ce7e28fc2f,,,https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq-cfe435427a4b464797d2b0567d6c0886,,,,,,"ANSI Z358.1-2014, Section: 4.6.5, 4.5.7, 5.5.5, 5.4.7, 6.5.5, 6.4.7, 7.5.5, 7,4,6",
+ANSI Z358.1-2014 on weekly inspection of plumbed emergency wash equipment,ANSI Z358.1-2014,https://www.notion.so/ANSI-Z358-1-2014-1f27904d34b844c69c94621fa19b2462,"4.6.2, 5.5.2, 6.5.2, 7.5.2, 8.2.4.2, B7","4.6.2 Plumbed emergency showers shall be activated weekly for a period long enough to verify operation and ensure that flushing fluid is available. (See Appendix B7)
+5.5.2 Plumbed eyewashes shall be activated weekly for a period long enough to verify operation and ensure that flushing fluid is available. (See Appendix B7)
+6.5.2 Plumbed eye/face washes shall be activated weekly for a period long enough to verify operation and ensure that flushing fluid is available. (See Appendix B7)
+7.5.2 Plumbed combination units shall be activated weekly for a period long enough to verify operation and ensure that flushing fluid is available. (See Appendix B7)
+8.2.4.2 Plumbed drench hoses shall be activated weekly for a period long enough to verify operation and ensure that flushing fluid is available.
+B7. Weekly Activation for Plumbed Emergency Eyewash and Shower Equipment. The intent of the weekly activation to be conducted on plumbed emergency eyewash and shower equipment is to ensure that there is a flushing fluid supply at the head of the device and to clear the supply line of any sediment build-up that could prevent fluid from being delivered to the head of the device and minimize microbial contamination due to stagnant water. The duration of this test is dependent on the volume of water contained in the unit itself and all sections of pipework that do not form part of a constant circulation system (also known as “dead leg” portions). Water in these sections is stagnant until a flow is activated by opening a valve. The goal is to flush out stagnant water in the dead leg completely. Where",,https://www.notion.so/Plumbed-Emergency-Wash-Weekly-Activity-2aca09adeff84ed48b379c1420cddf7d,,,https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq-cfe435427a4b464797d2b0567d6c0886,,,,,,"ANSI Z358.1-2014, Section: 4.6.2, 5.5.2, 6.5.2, 7.5.2, 8.2.4.2, B7",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.E","Ontario Regulation 220/01 Code Adoption
+  Document",,5.2.Table 1.E,Inspect pressure vessels fitted with a quick-opening door and de-aerators annually,Annually,https://www.notion.so/TSSA-Regulated-Pressure-Vessel-Quick-Opening-db12996c43d24a5bb0cdf6b9feec25a7,,,https://www.notion.so/Defined-boiler-with-quick-opening-door-and-deaerator-9553d511957f43d7a3a812dcf2009e60,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Legs--Regs/BPV-CAD-AMENDMENTS_JUNE-28_FINAL.PDF,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.E",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.C","Ontario Regulation 220/01 Code Adoption
+  Document",,5.2.Table 1.C,"Inspect low pressure boilers (internally and externally) every 2 years
+",2 Years,https://www.notion.so/TSSA-Regulated-Pressure-Vessel-Low-Pressure-Boiler-75f072be3e1a4c82b483ee2f091b2f60,,,https://www.notion.so/Defined-low-pressure-boiler-5eeee1ea46e34890ac3dcf134c0ef010,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Legs--Regs/BPV-CAD-AMENDMENTS_JUNE-28_FINAL.PDF,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.C",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.D","Ontario Regulation 220/01 Code Adoption
+  Document",,5.2.Table 1.D,Inspect cushion tanks and hydropneumatic tanks every 3 years,3 Years,https://www.notion.so/TSSA-Regulated-Pressure-Vessel-Cushion-Tanks-Hydropneumatics-Tanks-d7be48a89848480c88728e392891f126,,,,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Legs--Regs/BPV-CAD-AMENDMENTS_JUNE-28_FINAL.PDF,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.D",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.D","Ontario Regulation 220/01 Code Adoption
+  Document",,5.2.Table 1.D,Inspect pressure vessels every 3 years,3 Years,"https://www.notion.so/Pressure-Vessel-b941b9fc81ba4203ade9611f196742ab, https://www.notion.so/TSSA-Regulated-Pressure-Vessel-Cushion-Tanks-Hydropneumatics-Tanks-d7be48a89848480c88728e392891f126",,,https://www.notion.so/Defined-TSSA-regulated-pressure-vessel-78b0cef71ccf46ca8d74fa04ea01406e,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Legs--Regs/BPV-CAD-AMENDMENTS_JUNE-28_FINAL.PDF,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 5.2.Table 1.D",
+Government of Canada Drugs and Medical Devices Monthly Inspection,,https://www.notion.so/Government-of-Canada-Drugs-and-Medical-Devices-ba689278f32447c1a610b1387390db1d,Toronto Document,"AED Cabinet Monthly Inspection
+- Verify responder kit and AED are in good working order by using attached checklist
+- Record checklist items at: https://toronto.trackmyaed.ca/
+- After record is entered, close work order
+- Report all missing and/or damaged equipment to 416-392-3491
+
+Inspect the following below:
+A. AED unit:
+1) Cabinet alarm sounds when door opened/activated
+2) AED readiness indicator displayed
+→ ZOLL AED Plus – Green check mark
+→ PHILIPS - Flashing green light with no audible chirp
+→ MEDTRONIC -”OK” with no service/maintenance icon present
+3) Electrodes within expiration date and installed in AED
+4) Spare electrodes (within expiration date) in AED carrying case
+5) AED responder kit attached to AED
+B. Responder kit includes:
+1) Pocket face mask or shield (1)
+2) Disposable gloves (2 pairs)
+3) Rake razor (1)
+4) Small garbage bag (1)
+5) Scissors (1)
+6) Towel (1)
+7) Hand Cleaner (1)
+8) Security seal for responder kit (optional)",Monthly,https://www.notion.so/Automated-External-Defibrillator-AED-f67a5f5c18bf463c9d10e1ae7ca7fd91,,,https://www.notion.so/automated-external-defibrillator-AED-d698d38ee9364f2da9cabf772bb4adef,,Staff,,https://toronto.trackmyaed.ca/,"Requirement text not found + No requirement text source
+#SourceUnknown. Checklist not found. Needs registration for more information. 
+- Aug 31 AJ: Requirement text was referred from Toronto Paramedic Services. The checklist is from the same site. As per Susan, the checklist has been uploaded into WMS. ",", Section: Toronto Document",
+"Toronto Municipal Code 851, Section: 851-8 D (11) (c)",Toronto Municipal Code 851,https://www.notion.so/TORONTO-MUNICIPAL-CODE-CHAPTER-851-WATER-SUPPLY-965814862153491d974d6815d00a3d55,851-8 D (11) (c),"851-8 11 (c) Owners shall cause the inspections and testing of a backflow prevention device 
+to be performed: [Amended 2017-04-28 by By-law 461-2017]
+[1] Upon the installation of the backflow prevention device;
+[2] Immediately, and no later than 72 hours after the backflow prevention device is cleaned, repaired, replaced, serviced or overhauled;
+[3] When the backflow prevention device is relocated;
+[4] Annually; 
+[5] As required by this chapter and standards and specifications, including 
+CSA - B64 Series Standards and AWWA standards for test procedures; and
+[6] As may be required by the General Manager.
+",As per the activity,https://www.notion.so/Backflow-Preventer-50d4df3f4f8c44cc9ee1882e4f033a14,,,https://www.notion.so/backflow-preventer-820677d0c7e44520a83d328e2e371d97,,Contractor,No,https://www.toronto.ca/legdocs/municode/1184_851.pdf,,"Toronto Municipal Code 851, Section: 851-8 D (11) (c)",
+"CSA B64.10-17, Section: 4.3.1",CSA B64.10-17,,4.3.1,"The results shall be reported on the form appropriate for the types of backflow preventer and procedure. ",As per the activity,https://www.notion.so/Backflow-Preventer-Report-896e8fd701b54fe89508585b6eb50d97,,,https://www.notion.so/backflow-preventer-820677d0c7e44520a83d328e2e371d97,,Contractor,,https://www.csagroup.org/store/product/B64.10-17%25100B64.10.1-17/,,"CSA B64.10-17, Section: 4.3.1",
+"AWWA Backflow Prevention and Cross-Connection Control, Section: ",AWWA Backflow Prevention and Cross-Connection Control,,,,,https://www.notion.so/Backflow-Preventer-Inspection-dd1bb8dc367842fcac2cb066ddec49f2,,,https://www.notion.so/backflow-preventer-820677d0c7e44520a83d328e2e371d97,,Contractor,,https://engage.awwa.org/PersonifyEbusiness/Store/Product-Details/productId/50277934,#CannotAccessMissingDetail,"AWWA Backflow Prevention and Cross-Connection Control, Section: ",
+"CSA B64.10-17, Section: 8",CSA B64.10-17,,8,"8 Field test requirements and pass/fail criteria
+Notes:
+1) Recommended field test procedures are provided in Annex A.
+2) For the purposes of this Clause, the term ""stabilized"" means that the gouge reading can be fluctuating but not descending.
+8.1 PVB devices
+8.1.1 General 
+To be recorded as ""passed"", a PVB device shall comply with the requirements of Clauses 8.1.2, 8.1.3, and 8.1.4. If ""failed"" is recorded in one or more of these tests, the PVB device shall be recorded as ""failed"". The test results shall be recorded as specified in Clause 4.3.1 (see Table 1).
+8.1.2 Air inlet valve
+8.1.2.1 Requirements
+The air inlet valve shall begin to open when the internal pressure in the PVB device is at least 6.9 kPa higher than atmospheric pressure and shall be fully open when the water drains from the PVB device.
+8.1.2.2
+Pass/fail criteria if the air inlet valve begins to open when the internal pressure in the PVB device is at least 6.9 kPa higher than atmospheric pressure and is fully open when the water drains from the PVB device, the test shall be recorded as ""opened/passed"".
+if one or both requirements are not met, the test shall be recorded as ""failed to open/failed"".
+8.1.3 Check valve
+8.1.3.1 Requirements The check valve shall close tight for a minimum period of 2 min or until the gauge reading stabilizes, in the direction of flow, when the inlet pressure is at least 6.9 kPa higher than the outlet pressure.
+8.1.3.2 Pass/fail criteria If the check valve closes tight for a minimum period of 2 min or until the gauge reading stabilizes, in the direction of flow, when the inlet pressure is at least 6.9 kPa higher than the outlet pressure, the test shall be recorded as ""closed tight/passed"".
+if the check valve does not close tight for a minimum period of 2 min or until the gauge reading stabilizes, the test shall be recorded as ""leaked/failed"".
+8.1.4 Static line pressure
+8.1.4.1 Requirements The static inlet line pressure shall be measured at the time of the test and recorded on the test report form.
+8.1.4.2 Pass/fail criteria if the static inlet line pressure at the time of testing is a) recorded on the test report form, the test shall be recorded as ""passed""; and b) not recorded on the test report form, the test shall be recorded as ""failed"".
+
+",As per the activity,https://www.notion.so/Backflow-Preventer-Field-Test-ed36b2eec4d3460ea9637aef7c6b7151,,,https://www.notion.so/backflow-preventer-820677d0c7e44520a83d328e2e371d97,,Contractor,,https://www.csagroup.org/store/product/B64.10-17%25100B64.10.1-17/,,"CSA B64.10-17, Section: 8",
+"Ontario Regulation 220/01 Code Adoption
+Document, Section: 1.37.a","Ontario Regulation 220/01 Code Adoption
+  Document",,1.37.a,"1.37 a. Power boilers 
+i. steam service operating pressure above 103 kPa (15 psig) shall have a system test or lift test annually and shall be serviced every five years, 
+ii. hot water service operating pressure above 1100 kPa (160 psig) or above the temperature 121oC (250oF) shall have a system test or lift test annually and shall be serviced every five years;",Annually,https://www.notion.so/Power-Boiler-016508e7909e4ade9096c69120d1fa06,,,https://www.notion.so/Defined-power-boiler-e5c173ed817241ca90e86c9d617f329c,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Final-BPV-CAD-Amendment-2017.pdf,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37.a",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37 b. i","Ontario Regulation 220/01 Code Adoption
+  Document",,1.37 b. i,"1.37 b. Heating boilers
+i. up to and including a maximum pressure of 1100 kPa (160 psig) at a maximum temperature of 121oC (250oF) shall have a manual lift test or system test every two years and serviced every six years,
+ii. steam service operating up to and including a maximum pressure of 103 kPa (15 psig) shall have a manual lift test annually and shall be serviced every five years
+",5 Years,,,,https://www.notion.so/Defined-heating-hot-water-service-boiler-4a423241f2fb4511ae2889feb6e314b1,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Final-BPV-CAD-Amendment-2017.pdf,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37 b. i",
+"OSHA 1910.184, Section: 1910.184(e)(3)(i)",OSHA 1910.184,,https://www.osha.gov/laws-regs/interlinking/standards/1910.184(e)(3)(i),"In addition to the inspection required by paragraph (d) of this section, a thorough periodic inspection of alloy steel chain slings in use shall be made on a regular basis, to be determined on the basis of (A) frequency of sling use; (B) severity of service conditions; (C) nature of lifts being made; and (D) experience gained on the service life of slings used in similar circumstances. Such inspections shall in no event be at intervals greater than once every 12 months.",Annually,https://www.notion.so/Chain-Sling-Inspection-Frequency-Verification-89a8cbfff9b643b380228c05f93fb152,,,https://www.notion.so/chain-sling-955b89ab1b20474f97408041a9afa7f3,,Contractor,Yes,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.184,Grounded by activity,"OSHA 1910.184, Section: 1910.184(e)(3)(i)",
+"OSHA 1910.184, Section: 1910.184(d)",OSHA 1910.184,,https://www.osha.gov/laws-regs/interlinking/standards/1910.184(d),"Inspections
+Each day before being used, the sling and all fastenings and attachments shall be inspected for damage or defects by a competent person designated by the employer. Additional inspections shall be performed during sling use, where service conditions warrant. Damaged or defective slings shall be immediately removed from service.",Prior to use,"https://www.notion.so/Chain-Sling-Inspection-For-Safe-Usage-242e96dc5d92460f9e02c9dd79189aa3, https://www.notion.so/Wire-Mesh-Sling-Inspection-For-Safe-Usage-9615c395bdc54194a7e265b45b170972, https://www.notion.so/Web-Sling-Inspection-For-Safe-Usage-e3ce8e366b0f48c7ac99ebd0eba55e13, https://www.notion.so/Wire-Rope-Sling-Inspection-For-Safe-Usage-4194969a55204b3e8265922d01d24214",,,"https://www.notion.so/chain-sling-955b89ab1b20474f97408041a9afa7f3, https://www.notion.so/web-sling-18eee6561af54394a626fe98b74b1d6e, https://www.notion.so/wire-mesh-sling-f8ddec4643a9403f93c5209d6874a4ed, https://www.notion.so/wire-rope-sling-77c5233ab77743378ce0b629bfb2ea27",,Staff,Maybe,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.184,"The activities for different slings needs to be divided ","OSHA 1910.184, Section: 1910.184(d)",
+"ASTM F1052-14, Section: 4.2",ASTM F1052-14,,4.2,"4.2 Pressure testing of vapour protective suits should be conducted at a frequency recommended by the manufacturer but no less often than upon receipt of the garment after each wearing if the suit is to be reused, and at least annually thereafter. 
+Pressure Test and Inspection of the level 'A' front entry suit
+1. Check the bag for any damage
+2. Check the bag zipper is moving freely
+3. Check the expiry date of the suit
+4. The suit should be pressure tested and inspected by the manufacturers every 1 year
+",Annually,https://www.notion.so/Chemical-Suit-Inspection-For-Safe-Usage-Condition-333385d9a07f4814a077bf668152f448,,,https://www.notion.so/chemical-suit-025feed46e6e47b686172d5446426cdc,,Contractor,,https://webstore.ansi.org/standards/astm/astmf105209,#CannotAccess,"ASTM F1052-14, Section: 4.2",
+"CSA B149.6-20, Section: 13.5.1",CSA B149.6-20,,13.5.1,"13.5 Maintenance of compressors and relief devices
+13.5.1 For inspection and test purposes, all compressors, relief devices, and pressure limiting equipment shall be subjected to at least annual inspections and to such tests as are necessary to determine that
+a) they are in good mechanical condition;
+b) they are adequate, from the standpoint of capacity and reliability of operation, for the service in which they are employed;
+c) they are properly installed and protected from dirt, liquids, or other conditions that might prevent proper and safe operation; and
+d) the relief devices are set to function at the correct pressure.
+
+13.5.2 Records of the inspections and tests specified in Clause 13.5.1 shall be maintained, as well as records of all corrective actions taken.",Annually,https://www.notion.so/Gaseous-Fuel-Handling-compressor-and-Pressure-relive-device-bb984fde70e64fe4ac4a5de7e9c5c82b,,,"https://www.notion.so/pressure-relieving-equipment-f292f850f3c5432592437d1d0c59785d, https://www.notion.so/compressor-e99402a5b7fb42259fd9ee919bbad33d",,"Contractor, See Note",,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,"#CannotAccess
+SC: This CSA Standard is accessible on CCOHS. I have included the excerpt for qualified personnel (sec. 4.3.2 in B149.6-15). ","CSA B149.6-20, Section: 13.5.1",
+"CSA C282-19, Section: ",CSA C282-19,,,"1. Consumables:
+a) Inspect auxiliary supply tank fuel level (gas pressure) and main tank level (gas pressure) (if applicable). There
+shall be a minimum supply of 2 h (see Clause 7.3.1).
+b) Inspect lubricating oil level.
+c) Inspect engine coolant level.
+d) Inspect engine, generator, fuel tank(s), and cooling systems for leakage.
+e) Inspect for proper operation of fuel transfer pump (if applicable).
+f) Inspect fuel filter for contamination if filter is equipped with a transparent bowl.
+2. Starter system:
+a) Inspect electric starter for cleanliness, mounting, and terminal security.
+b) Air starter:
+i. Inspect air tanks for pressure.
+ii. Inspect valves for leakage.
+iii. Test auxiliary engine and compressor for proper operation.
+iv. Bleed off any condensation.
+3. Batteries and charging equipment:
+a) Inspect electrical connections for tightness and evidence of corrosion.
+b) Inspect battery for cleanliness and dryness between terminals.
+c) Inspect charger electrical connections for cleanliness and tightness.
+4. Engine:
+a) Test lubricant and/or coolant heaters for proper operation.
+b) Inspect governor control linkages and oil level (if applicable).
+c) Inspect fuel pump oil sump (if applicable).
+d) Inspect fan belts for correct tension and wear.
+5. Control panel:
+a) Inspect control panel covers for security.
+b) Test annunciator lamps to confirm that they are operational.
+c) Inspect control panel settings (ensure that the unit is ready for automatic start-up).
+d) Test remote visual and audible trouble signals at the building fire alarm panel.
+6. Inspect air control louvre settings to ensure proper operation.
+7. Test emergency lighting unit(s).
+8. Verify whether room temperature is above 10 °C.
+9. Inspect generator and transfer switch room(s) for cleanliness and accessibility to all components of the emergency
+system.
+10. Correct all defects found during inspections and tests.
+11. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).",Weekly,"https://www.notion.so/Generator-Starter-System-Inspect-Electrical-Starter-28ab9cf0063e450e9bc5bb784287b17c, https://www.notion.so/Generator-Starter-System-Inspect-Air-Tank-cf0e7304bb6945318406552d512b332d, https://www.notion.so/Generator-Starter-System-Inspect-Valve-8f08fe5bf2044b14afcfc33792450ad1, https://www.notion.so/Generator-Starter-System-Inspect-Auxiliary-Engine-and-Compressor-6092814806f245c993da39ed8ca30a38, https://www.notion.so/Generator-Starter-System-Condensation-Bleed-Off-d7437f59c92848a3bf4dcd4686a6f75c, https://www.notion.so/Generator-Consumables-Main-Tank-Fuel-Level-31a8b8173c0d41e5b0f5bed131db9961, https://www.notion.so/Generator-Consumable-Oil-Level-9d107730e8474ee1b51b1829c5806217, https://www.notion.so/Generator-Consumables-Engine-Coolant-Level-e2a63b786acc4995be3dfda5ecf590f2, https://www.notion.so/Generator-Consumables-Check-system-for-Leakage-bbbb0f8cdbb842e284eb7d78babab7e3, https://www.notion.so/Generator-Consumables-Inspect-Fuel-Transfer-Pump-5f3d263129a543ffbb313dd3846b358b, https://www.notion.so/Generator-Consumables-Inspect-Fuel-Filter-eac78faf05d54899b53bed5ff136f9fd, https://www.notion.so/Generator-Batteries-and-Charging-Equipment-Inspect-Battery-Cells-668addff31d34cc9a54435fec7d2cb98, https://www.notion.so/Generator-Batteries-and-Charging-Equipment-Test-Battery-Cells-4a0c7c84acca4d54aec12d1ca82b267a, https://www.notion.so/Generator-Batteries-and-Charging-Equipment-Inspect-Electrical-Connections-91de2b77721844e289c60b3f3a1017c9, https://www.notion.so/Generator-Batteries-and-Charging-Equipment-Inspect-Battery-for-Cleanliness-8657bd972d4d42d0a328de568bc18595, https://www.notion.so/Generator-Batteries-and-Charging-Equipment-Inspect-Charger-Connections-4baee3a37e834041996512fa8b818321, https://www.notion.so/Generator-Engine-Test-Lubricant-Heater-cac542ace8c14cc7b49629c25cfa1bb2, https://www.notion.so/Generator-Engine-Test-Coolant-Heater-85a5ad3d1d6b4c4990296ef159c25758, https://www.notion.so/Generator-Engine-Inspect-Linkages-46ad697ee05a438bac7fd7f06b6037a2, https://www.notion.so/Generator-Engine4-Check-oil-level-8d80f0496cc646ab905ee5eb87900d01, https://www.notion.so/Generator-Engine-Inspect-Fuel-Pump-Oil-e9cd9df0f46347ad969c3497a7a14343, https://www.notion.so/Generator-Engine-Inspect-Fan-c5d7496b203f40a79c252190cce083f5, https://www.notion.so/Generator-Control-Panel-Inspect-Control-Panel-367261a65cb143969af3927f728c5b9d, https://www.notion.so/Generator-Control-Panel-Test-Annunciator-Panel-78bcfcf0093d48e6a36f0ed29964df84, https://www.notion.so/Generator-Control-Panel-Inspect-Control-Panel-Setting-cbf0a6f3d3d3464294cbc79cefa9ca46, https://www.notion.so/Generator-Control-Panel-Test-Trouble-Signals-283eb43adc9e4905a3ad75e8b3dd4918, https://www.notion.so/Generator-Control-Panel-Inspect-Louvre-227092741c0b43ce9475a7ef9b4457e0, https://www.notion.so/Generator-Control-Panel-Test-Emergency-Light-7847786bb68b4839932c04b12e06065a, https://www.notion.so/Generator-Control-Panel-Verify-Room-Temperature-a9a71dee52a2436ca4688bb7f7bcddf7, https://www.notion.so/Generator-Control-Panel-Inspect-for-Cleanliness-366e9ef3e2394aec8f96b39e9a873310, https://www.notion.so/Generator-Control-Panel-Fix-the-Defects-8d76e40430fa4e6aa1ff3a0b00573500, https://www.notion.so/Generator-Control-Panel-PM-Data-Recording-eb4ecccc747949daaa7268676d554c39",,,https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,Staff,,https://www.csagroup.org/store/product/C282-15/,"#CannotAccess
+ #ToPurchase","CSA C282-19, Section: ",
+"CSA C282-15, Section: ",CSA C282-15,,,"1. Complete all items specified in CSA 282:19 Table 2 for Weekly inspection, test and maintenance.
+2. Test and verify the entire system as follows:
+a) Simulate a failure of the normal electrical supply to the building.
+b) Verify that the battery charger current output increases while cranking.
+c) Operate the system under at least 40% of the rated load for 60 min.
+d) Operate all automatic transfer switches under load.
+e) Inspect brush operation for sparking, if applicable.
+f) Inspect for bearing seal leakage.
+g) Inspect for correct operation of all auxiliary equipment, e.g., radiator shutter control, coolant pumps, fuel
+transfer pumps, oil coolers, and engine room ventilation system(s).
+h) Record the readings for all instruments in the log (see Clause 11.5.3) and verify that they are normal.
+i) Drain the exhaust system condensate trap.
+3. Inspect block heater hoses and wires.
+4. Batteries and charging equipment:
+a) Inspect all battery cells for correct electrolyte fill level (applicable to vented or flooded lead-acid batteries
+only). As a safer alternative, perform a battery conductance test using a conductance tester. Record test
+results in the log book for trending purposes.
+b) Test all battery cells for correct electrolyte-specific gravity (applicable to vented or flooded lead-acid batteries
+only). This inspection may be omitted if the conductance test in Item a) is performed.
+5. Correct all defects found during inspections and tests.
+6. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).
+7. Inspect all electrical components to ensure proper function.",Monthly,"https://www.notion.so/Generator-Simulate-a-Failure-679d030e18d24e58b603dc6895b2c770, https://www.notion.so/Generator-Load-Test-30-a11c184b55c04fc1b82b5e227315946d, https://www.notion.so/Generator-Operate-Transfer-Switch-b073c9adc5de444ebe04643342a1ef5c, https://www.notion.so/Generator-Inspect-Brush-Operation-6a6e4e0180db4170af992ed5f7d6006e, https://www.notion.so/Generator-Inspect-Bearing-Seal-6c434e12cb514351b5cbf3251aca67d3, https://www.notion.so/Generator-Check-Operations-5e38f7d20422464da1b12af7f7937ca0, https://www.notion.so/Generator-PM-Data-Record-81444c7e130240539f1e43249087fec4, https://www.notion.so/Generator-Drain-Exhaust-System-ed3babcdf92a46ccb6af6d57dd70fc5f, https://www.notion.so/Generator-Inspect-Block-Heater-80e9a39ad7fc48d899529fc98aa0d549, https://www.notion.so/Generator-Fix-the-Defects-0da1fd6a02854c89b552c36cec88dc54, https://www.notion.so/Generator-PM-Data-Record-cc37715c47cf4e8e876a3ab1a584d681",,,https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,"Assignment Uncertain, See Note",,https://www.csagroup.org/store/product/C282-15/,"#CannotAccess
+
+SC:  I think this has to be done by a contractor. This requirement applies to emergency generators only.
+
+SC: I think the classification of diesel generator should be changed to emergency generator - thoughts?
+
+July 26 2022: SC tagged the task to be performed by the contractors, but TH suggested that most sites performs the monthly by their own.  Thus labor has been tagged with Staff & Contractors. ","CSA C282-15, Section: ",
+"CSA C282-15, Section: ",CSA C282-15,,,"1. Complete all items specified in CSA C282:19 Tables 2 and 3.
+2. Inspect and clean engine crankcase breathers.
+3. Inspect and clean all engine linkages.
+4. Lubricate the engine governor and ventilation system.
+5. Test protective devices for proper operation.
+6. Before start-up, perform two full cranking cycles (as specified in Clauses 10.4.1 and 10.4.2). Near the end of each
+cycle (and while still cranking), measure and record the lowest indicated battery voltage. If the measured voltage is
+less than 80% of the battery's rated voltage, replace the battery. Alternatively, perform a battery load test using a
+suitable load tester.
+7. Inspect ventilation system belt(s).
+8. Correct all defects found during inspections and tests.
+9. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).",6 months,https://www.notion.so/Generator-Semi-Annual-5a54c392194545a4ae6920630d0e57d3,,,https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,"Contractor, See Note",,https://www.csagroup.org/store/product/C282-15/,#CannotAccess,"CSA C282-15, Section: ",
+"CSA C282-15, Section: ",CSA C282-15,,,"1. Complete all items specified in CSA C282:19 Tables 2 to 4. For the load test (item 2. (c) in Table 3) increase the
+minimum load to 40% of the rated load for 60 minutes.
+2. Control panel (see Clause B.29):
+a) Open all inspection covers and inspect all electrical connections.
+b) Test breakers for proper operation.
+c) Clean insulators and bushings.
+d) Test voltage regulator for proper operation.
+e) Operate all moving parts to ensure that they move freely.
+f) Clean and dress contacts as necessary.
+g) Remove all dust.
+h) Check gauge calibration.
+i) For off-site fueled generators, turn position-indicating gas valve to off-position to ensure valve rotates properly
+and that the audible alarm on generator control panel is activated.
+3. Engine:
+a) Change engine lubrication oil and filters.
+b) Test strength of coolant and chemical protection level of coolant inhibitors.
+c) Change fuel filters, clean strainer(s), and verify that the fuel supply valve is open.
+d) Inspect the exhaust system. Check and record the back pressure of the exhaust system to ensure that it
+complies with the engine manufacturer’s requirements, and compare with previous readings.
+e) Clean and lubricate linkages.
+f) Inspect air filters.
+g) Inspect all mechanical connections.
+h) Inspect all electrical connections.
+i) Inspect all external surfaces of heat exchanger(s) and clean as necessary.
+j) Inspect all belts and hoses and replace if necessary.
+k) Test and inspect ignition system(s). Replace any defective components.
+l) Inspect coolant pump(s) for leaks and external wear [if belt driven, remove the belt(s) first].
+4. Diesel fuel storage tank(s):
+The fuel oil in any storage tank (and auxiliary supply tank, if used) shall be tested in accordance with Clause 11.5.5,
+and if the fuel oil fails the test, it shall be:
+a) drained and refilled with fresh fuel in accordance with Article 6.5.1.5 of the National Fire Code of Canada; or
+b) full filtered to remove water, scale, bacteria, and oxidized gums/resins in order to minimize filter clogging and
+ensure diesel start-up (see Clause B.30 for commentary).
+Note: The bottom(s) of the tank(s) shall be also tested chemically for water. When the fuel is filtered, it shall be
+treated with a suitable conditioner and stabilizer to minimize degradation while in storage.
+5. Generator:
+a) Test surge suppressor and rotating rectifier on brushless machines.
+b) Grease bearings (replace old grease with new) (if applicable).
+c) Clean commutator and slip rings (if applicable).
+d) Clean rotor and stator windings using clean compressed air.
+e) Inspect coupling bolts and alignment.
+f) Inspect conduits for tightness.
+g) Inspect windings at rotor and stator slots.
+h) Inspect all electrical connections.
+6. Overcurrent protective devices:
+a) Electrically isolate all overcurrent protective devices.
+b) Remove all dust.
+c) Test devices for proper operation.
+7. Transfer switches:
+a) Isolate transfer switch, open all inspection covers, and inspect all electrical connections.
+b) Operate all moving parts to ensure that they move freely.
+c) Clean and dress contacts as required.
+d) Remove all dust.
+e) Clean and lubricate linkages.
+8. Infrared thermal imaging:
+Perform infrared thermal imaging of the normal power supply (preferred) side of each transfer switch. Ensure
+that the normal power supply side of each transfer switch has been loaded to at least 40% of the circuit rating
+of the normal power supply feeder for at least 60 min and that the load does not drop below 40% during the
+imaging. Scan all electrical connections, contacts, and energized components.
+At the end of the 60 min load test (Item 2 c), Table 3), with the emergency power supply system (all
+components) still operating under at least 40% load, perform infrared thermal imaging of all components from
+the point where the load bank cables will be connected (for the 2 h full load test), through to and including the
+load side of each transfer switch. Scan all electrical connections, contacts, circuit breakers, and energized
+components.
+After at least 60 min of the emergency generator full load test (see Clause 11.3), with the emergency generator
+still operating under full load, conduct infrared thermal imaging of all components from the load terminals of
+each alternator through to the connection point for the load bank cables. Scan all electrical connections,
+contacts, circuit breakers, and energized components.
+Correct any components or connections that displayed unacceptably high temperatures or unacceptable
+differences in temperature between phases, during the tests in Items a), b), and c) above.
+Repeat the infrared thermal imaging for any components and connections that were serviced, repaired, or
+replaced following the scans performed in Items a), b), or c) above.
+9. Lubricate door locks and hinges (if necessary), especially those of outdoor enclosures.
+10. Conduct a 2 h full load test (see Clause 11.3).
+11. As needed, review and provide instruction on the technical requirements specified in Tables 2 to 4 with the
+person(s) responsible for carrying out the work.
+12. Correct all defects found during inspections and tests.
+13. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).",Annually,https://www.notion.so/Generator-Annual-592b99d12c1c40178063c969f8c7b7b6,,"https://www.notion.so/National-Fire-Code-of-Canada-2015-Section-6-5-1-5-01ba5fd9e81f46c78363d59604064d7f, https://www.notion.so/National-Fire-Code-of-Canada-2015-Section-A-6-5-1-5-1-228306cc8f48494c915041e62a4479fb",https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,"Contractor, See Note",,https://www.csagroup.org/store/product/C282-15/,#CannotAccess,"CSA C282-15, Section: ",
+"National Fire Code of Canada 2015, Section: 6.5.1.5",National Fire Code of Canada 2015,,6.5.1.5,"6.5.1.5. Supply of Fresh Fuel
+1) Liquid fuel storage tanks shall be drained and refilled with fresh fuel at intervals
+not greater than 12 months. (See Note A-6.5.1.5.(1).)",Annually,https://www.notion.so/Generator-Fuel-Storage-Tank-0d91d62548d64b1ebec3ed55f1c77bb7,https://www.notion.so/CSA-C282-15-Section-9fbb62aee57d4501a7cb24cbcddfd71b,,https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,Contractor,Yes,https://publications.gc.ca/collections/collection_2019/cnrc-nrc/NR24-27-2018-eng.pdf,,"National Fire Code of Canada 2015, Section: 6.5.1.5",
+"National Fire Code of Canada 2015, Section: A-6.5.1.5.(1)",National Fire Code of Canada 2015,,A-6.5.1.5.(1),"A-6.5.1.5.(1) This can be achieved by replenishment as the result of the routine test program required
+by Article 6.5.1.1.",Annually,https://www.notion.so/Generator-Fuel-Storage-Tank-Test-Program-574a8c7a4a674f898651ceab9a1dcb48,https://www.notion.so/CSA-C282-15-Section-9fbb62aee57d4501a7cb24cbcddfd71b,,https://www.notion.so/diesel-generator-1f2356ecf8e34f1a81f4bff1c3c3a45b,,Contractor,Yes,https://publications.gc.ca/collections/collection_2019/cnrc-nrc/NR24-27-2018-eng.pdf,,"National Fire Code of Canada 2015, Section: A-6.5.1.5.(1)",
+"CSA B149.6-20, Section: 13.8",CSA B149.6-20,,13.8,"13.8 Drip trap maintenance (continuous-flow type)
+13.8.1 A continuous-flow-type drip trap, including associated vent/siphon breaker piping and drain line, shall be kept clean at all times to ensure continuous operation.
+13.8.2 A periodic inspection and maintenance schedule shall be established and include the following:
+a) ensuring that the water level is at a proper operating height; and
+b) checking for continuous flow (trickling) of separated water to drain.",,"https://www.notion.so/Gaseous-Fuel-Handling-drip-trap-PM-to-Ensure-Continuous-Operation-8f278f66db2e4ef9a69441f3a755623e, https://www.notion.so/Gaseous-Fuel-Handling-drip-trap-Inspection-Frequency-Verification-8bc83648fedc436a9a4afa3bc38d62f8",,,https://www.notion.so/drip-trap-53258c3739b64abd9467cb1b73590838,,"Assignment Uncertain, See Note, Staff",,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,"#CannotAccessMissingDetail
+SC: I don’t think I entered this. The CSA Standard (2015 version) is accessible on CCOHS. Please refer to sec. 4.3.2 in CSA B149.6-15
+Aj July 28: I checked the standards, they are the same. ","CSA B149.6-20, Section: 13.8",
+"Ontario Regulation 212/01, Section: 15",Ontario Regulation 212/01,,15,"O.Reg 212
+Duty to maintain safe operating condition
+15. An owner or user of an appliance, equipment, a work or any other thing employed in the handling or use of gas shall ensure that the appliance, equipment, work or thing employed in the handling or use of gas is maintained in a safe operating condition. O. Reg. 212/01, s. 15
+
+","#freqIn{CSA B149.6-20,13.5.1}",https://www.notion.so/Gaseous-Fuel-Handling-b3e6d36e85664fb2beb934844fd35f10,,,"https://www.notion.so/drip-trap-53258c3739b64abd9467cb1b73590838, https://www.notion.so/gaseous-fuel-handling-equipment-b67f88c1f72c4d94939f7701a64f0065, https://www.notion.so/Defined-fuel-compressor-aa3ee547111a42569e0e3dffb1e761dd",,Contractor,Maybe,https://www.ontario.ca/laws/regulation/010212,,"Ontario Regulation 212/01, Section: 15",
+"TSSA, 2000 - Ontario Regulation 209/01, Section: 32",Ontario Regulation 209/01,https://www.notion.so/TSSA-2000-Ontario-Regulation-209-01-347bbc0f1b244179aca1127df84680b5,32,"32. (1) An owner of an elevating device shall ensure that the elevating device is not used or operated unless it is maintained by a registered contractor in accordance with the requirements of this section.
+(2) The methods and intervals of maintenance of an elevating device shall be determined by the owner or a contractor on behalf of the owner, on the basis of,
+    (a) the inherent quality and age of the device;
+    (b) the specifications for maintenance of the manufacturer, manufacturer's agent or of the contractor; and
+    (c) the frequency and method of use of the device.
+(3) The maintenance of an elevating device shall include,
+    (a) an inspection and examination at regular intervals of all parts and functions of the elevating device;
+    (b) cleaning, lubricating and adjusting all its parts at regular intervals and repairing or replacing worn or defective components in order to prevent the device from becoming unsafe for operation;
+    (c) repairing or replacing damaged or broken parts;
+    (d) such other examinations or work as is required by this Regulation, the applicable code or standard referred to in the code adoption document or by an inspector. 
+(4) A person who carries out an inspection referred to in clause (3) (a) shall ensure that the elevating device is in a safe operating condition and shall take all steps and reasonable precautions in the circumstances to ensure that the parts and functions will remain in a safe operating condition until the next scheduled inspection and examination. 
+(5) Where a part of an elevating device is replaced for any reason, the replacement part shall be at least equivalent to the original part as specified in the design submission or as supplied by the manufacturer of the original part. 
+(6) Despite subsections (1) and (3), a person other than a registered contractor may,
+    (a) carry out jobs of a housekeeping nature in the load-carrying unit of an elevating device or in the area giving access to it.","As per activity
+",https://www.notion.so/Elevator-Maintenance-15a67e6c2ea74d25ad45fea8c012856d,"https://www.notion.so/CSA-B44-16-Section-8-6-1-7-2ef1b621bcbf47d6a7eb1f8108c462d8, https://www.notion.so/CSA-B44-16-Section-Table-N-1-1696734b108940f8b72cb2ca5432d896",,https://www.notion.so/elevator-56c048cdefa947dbba5d327d093dcac0,,Contractor,Maybe,https://www.ontario.ca/laws/regulation/010209,,"Ontario Regulation 209/01, Section: 32",
+"CSA B44-16, Section: 8.6.1.7",CSA B44-16,"https://www.notion.so/CSA-B44-16-24a91f36ce8448a5a2f5f7c7712dc5ef, https://www.notion.so/TSSA-2000-CAD-277-19-cf753607aed44d0c880d6a5bfd7c1185",8.6.1.7,"CSA B44-16
+8.6.1.7 Periodic Tests
+The frequency of maintenance and tests shall conform to the following;
+(a) Where a Maintenance Control Program is in effect,
+(1) the maintenance frequency shall be established as prescribed in 8.6, but in no case shall the interval between maintenance visits to an elevating device, excluding wind tower elevators, exceed three months, nor shall it exceed the manufacturer’s specified limit or other imposed limit which is less than three months (see CAD 2.9 for example of a one-month limit),",3 months,https://www.notion.so/Elevator-Establish-frequency-d57dd0cabff54ef89ae132ac570419cf,,https://www.notion.so/TSSA-2000-Ontario-Regulation-209-01-Section-32-b94ba6d5a1a541d4835848258714052d,https://www.notion.so/elevator-56c048cdefa947dbba5d327d093dcac0,,Contractor,,https://www.csagroup.org/store/product/ASME%20A17.1-2016%25100CSA%20B44-16/,"TH: Could you please OCR the entire Section 6 and insert it into the page of this column?
+
+AJ: Do you mean entire 8.6 section?","CSA B44-16, Section: 8.6.1.7",
+"CSA B44-16, Section: Table N-1",CSA B44-16,"https://www.notion.so/CSA-B44-16-24a91f36ce8448a5a2f5f7c7712dc5ef, https://www.notion.so/TSSA-2000-CAD-277-19-cf753607aed44d0c880d6a5bfd7c1185",Table N-1,"(2) testing shall be performed at intervals specified in Appendix N, such that;
+(a) category 1 tests are performed annually,
+(b) category 3 tests are performed every 3 years and
+(c) category 5 tests are performed every 5 years
+
+Note: Please refer to the image in the Requirement Name column",N/A,https://www.notion.so/Elevator-Frequency-Requirement-Details-464b0ae464094beda0c766a25a3e348b,,https://www.notion.so/TSSA-2000-Ontario-Regulation-209-01-Section-32-b94ba6d5a1a541d4835848258714052d,https://www.notion.so/elevator-56c048cdefa947dbba5d327d093dcac0,,Contractor,,https://www.csagroup.org/store/product/ASME%20A17.1-2016%25100CSA%20B44-16/,,"CSA B44-16, Section: Table N-1",
+"Ontario Regulation 209/01, Section: 34
+",Ontario Regulation 209/01,https://www.notion.so/TSSA-2000-Ontario-Regulation-209-01-347bbc0f1b244179aca1127df84680b5,"34
+","34. (1) Every owner of an elevating device and every contractor shall maintain a logbook for each elevating device that they own or maintain, and the logbook shall contain up-to-date data on,
+    (a) all maintenance functions required to be recorded in the logbook by the applicable code, standard or requirement referred to in the code adoption document or any applicable director's order; and
+    (b) such other data as are required to be kept in the logbook by this Regulation.  
+(2) The logbook shall be kept for a period of at least five years from the date of the last entry in the logbook.  
+(3) The logbook data shall be readily available at the location of the elevating device to an inspector, maintenance mechanic and other persons designated by the owner. 
+",after each maintenance event,https://www.notion.so/Elevator-Logbook-6279c061bd2f410c9cff3f2556e220b2,https://www.notion.so/CSA-B44-16-Section-8-6-1-4-1-86a3b3f803c24f45a971b637f950688f,,https://www.notion.so/elevator-56c048cdefa947dbba5d327d093dcac0,,Contractor,Yes,https://www.ontario.ca/laws/regulation/010209,,"Ontario Regulation 209/01, Section: 34
+",
+"CSA B44-16, Section: 8.6.1.4.1",CSA B44-16,"https://www.notion.so/CSA-B44-16-24a91f36ce8448a5a2f5f7c7712dc5ef, https://www.notion.so/TSSA-2000-CAD-277-19-cf753607aed44d0c880d6a5bfd7c1185",8.6.1.4.1,"8.6.1.4.1 On-Site Maintenance Records
+(a) Maintenance Control Program Records
+(1) A record that shall include the maintenance tasks listed with the associated requirements of Section 8.6 identified in the Maintenance Control Program (8.6.1.2.1), other tests (see 8.6.1.2.2), examinations and adjustments, and the specified scheduled intervals shall be maintained.
+(2) The specified scheduled maintenance intervals (see Section 1.3) shall, as applicable, be based on the criteria given in 8.6.1.2.1(e).
+(3) MCP records shall be viewable on-site by elevator personnel in either hard copy or electronic format acceptable to the authority having jurisdiction and shall include, but are not limited to, the following: (a) site name and address (b) service provider name (c) conveyance identification (I.D.) and type
+(4) date of record (e) a description of the maintenance task, interval, and associated requirements of Section 8.6 (f) indication of completion of maintenance task",after each maintenance event,https://www.notion.so/Elevator-Logbook-6279c061bd2f410c9cff3f2556e220b2,,https://www.notion.so/Ontario-Regulation-209-01-Section-34-5c91241ae7c2452cac8a9c5158671935,https://www.notion.so/elevator-56c048cdefa947dbba5d327d093dcac0,,Contractor,,https://www.csagroup.org/store/product/ASME%20A17.1-2016%25100CSA%20B44-16/,,"CSA B44-16, Section: 8.6.1.4.1",
+"CSA B44-16, Section: 2.9",,"https://www.notion.so/CSA-B44-16-24a91f36ce8448a5a2f5f7c7712dc5ef, https://www.notion.so/TSSA-2000-CAD-277-19-cf753607aed44d0c880d6a5bfd7c1185",2.9,"2.9 Hydraulic Elevating Device Oil Loss Monitoring Program
+2.9.1 Every contractor who maintains a hydraulic elevating device with buried cylinders or buried piping shall ensure there is a written oil loss monitoring program.
+2.9.2 A “hydraulic elevating device” means a non-portable device for hoisting and lowering or moving persons or freight and includes an elevator, dumbwaiter, manlift, incline lift, construction hoist, stage lift, platform lift and special elevating device that incorporates one or more hydraulic cylinders.
+2.9.3 The purpose of the oil loss monitoring program is to identify any loss of oil which cannot be accounted for in the hydraulic system.
+2.9.4 If a contractor performs maintenance on a hydraulic elevating device with buried cylinders or buried piping, the contractor shall ensure that a written oil loss monitoring program is developed and maintained before the contractor performs work on the hydraulic elevating device.
+2.9.5 The oil loss monitoring program shall include:
+    (a) the requirement to provide an oil loss monitoring log (“OLM log”) for each hydraulic elevating device with buried cylinders or buried piping;
+    (b) the requirement for the OLM log to reference the elevating device installation number;
+    (c) the requirement to establish a fixed reference level for the oil and the requirement to mark the reference level on the tank, dip stick or other suitable location via permanent means;
+Note: “permanent” implies affixed in such a manner so as to not be easily removed or repositioned.
+    (d) the requirement to document in the OLM log the location of the mark for the fixed reference level;
+    (e) the requirement to check that the oil level is at the established reference point when the device is level with the lowest landing during each scheduled maintenance visit;
+    (f) if the fixed reference level needs to be intentionally adjusted, the requirement to document and record the changes to the established reference level and reason for establishing the new reference level;
+    (g) the requirement to record in the OLM log any quantity of oil added or removed from the hydraulic system;
+    (h) that during each maintenance visit, even if no oil is added, the requirement to record in the OLM log the oil level and the date of the scheduled maintenance visit;
+    (i) if oil is added or removed, the requirement to record in the OLM log the dates oil was added or removed from the hydraulic system;
+    (j) the requirement to record in the OLM log the reason oil was added to or removed from the hydraulic system;
+    (k) the requirement to record in the OLM log the mechanic’s printed and legible name, signature and certification number for every entry made;
+    (l) the requirement to keep the OLM log in the elevator machine room, in a readily identifiable location;
+    (m) the requirement that the OLM log be kept in the elevator machine room for a period of at least five years from the date of the last entry in the OLM log;
+    (n) the requirement to never allow oil levels to exceed the fixed reference level for the oil level;
+    (o) the requirement to record in the OLM log the frequency of oil monitoring activities;
+    (p) if there is any oil loss which cannot be accounted for, the requirement to immediately remove a hydraulic elevating device from service until the cause for the oil loss is determined and the cause and associated remedy noted in the OLM log;
+   (q) the requirement to report in writing any oil loss attributed to leaks in buried cylinders or buried piping to the TSSA Elevating Devices Director within 7 days;
+    (r) the requirement to provide maintenance personnel adequate training related to the contractor’s oil loss monitoring program;
+    (s) the requirement to maintain up-to-date written records showing who provided and who received the training referred to in (r), the nature of the training and the date when it was provided. A record of training shall be available to the TSSA upon request.
+    (t) the requirement that the contractor’s oil loss monitoring program be posted or otherwise available in the machine room, and (u) the requirement that the collection containers shall not exceed 19 L (5 gal) per cylinder.
+2.9.6 Oil that is returned to the hydraulic system from recovery containers, either by manual means or automatically via scavenger pumps, need not be recorded.
+Note 1: if oil from recovery containers is not suitable for return to the tank, it must be measured, and an equivalent amount must be added to the system when recovery containers are emptied. If additional oil is needed to reach the fixed reference level, it must be recorded as new oil.
+Note 2: As of May 1, 2015 every hydraulic elevating device (including elevators, dumbwaiters, manlifts, incline lifts, construction hoists, stage lifts, platform lifts and special elevating devices) required mitigation (replacement or other means) to protect against single bottom cylinder failures. Where single bottom cylinders continue to exist with supplemental hazard mitigation, or where buried piping remains, the Oil Loss Monitoring requirements of 2.9 apply.",At every maintenance visit,https://www.notion.so/Elevator-Maintenance-15a67e6c2ea74d25ad45fea8c012856d,,,,,,,,,", Section: 2.9",
+"CSA Z259.17-16, Section: 12.3",CSA Z259.17-16,,12.3,"12.3
+Employers shall ensure a competent person performs an annual documented inspection of all fall-protection equipment and systems. More frequent inspections might be required if specified by the manufacturer or the design engineer. The intervals specified in Table 5 for each item shall apply in the absence of such recommendations. Equipment used under harsh conditions or higher frequency of use shall be inspected more frequently than specified in Table 5.
+",Annually,"https://www.notion.so/Fall-Protection-5d0aa5f210d64ba19afed46f78623216, https://www.notion.so/Fall-Protection-Equipment-Inspection-f0b2a4283ab74aa1936e62d88a69e96e",,,https://www.notion.so/fall-protection-equipment-28ad3a88878f4625a6b5b3c99a20071e,,Contractor,,https://www.csagroup.org/store/product/Z259.17-16/,,"CSA Z259.17-16, Section: 12.3",
+"CSA Z259.17-16, Section: Table 5",CSA Z259.17-16,,Table 5,"Please refer to the image in the “requirement name” column. ",As per Activity,https://www.notion.so/Fall-Protection-Frequency-Details-0f02c406b7ab4e129ec3be1af272e18d,,,https://www.notion.so/fall-protection-equipment-28ad3a88878f4625a6b5b3c99a20071e,,"Contractor, See Note",,https://www.csagroup.org/store/product/Z259.17-16/,,"CSA Z259.17-16, Section: Table 5",
+"CSA Z259.17-16, Section: 12.7",CSA Z259.17-16,,12.7,"12.7
+A record shall be created for each active fall-protection equipment and system. The record shall include the following:
+a) the details specified in Table 6
+b) Documentation on the maintenance and servicing history of all equipment, which shall be readily available until the equipment is permanently removed from service.",Annually,"https://www.notion.so/Fall-Protection-Log-Book-577fbb4119b842b9b0fe42d162728526, https://www.notion.so/Fall-Protection-Equipment-Inspection-f0b2a4283ab74aa1936e62d88a69e96e",,,https://www.notion.so/fall-protection-equipment-28ad3a88878f4625a6b5b3c99a20071e,,"Contractor, See Note",,https://www.csagroup.org/store/product/Z259.17-16/,,"CSA Z259.17-16, Section: 12.7",
+"CSA Z259.17-16, Section: Table 6",CSA Z259.17-16,,Table 6,"Please refer to the image in the “requirement name” column. ",N/A,https://www.notion.so/Fall-Protection-Log-Book-Requirement-Details-43d325321fc24739a77f9d74d97324db,,,https://www.notion.so/fall-protection-equipment-28ad3a88878f4625a6b5b3c99a20071e,,Contractor,,https://www.csagroup.org/store/product/Z259.17-16/,,"CSA Z259.17-16, Section: Table 6",
+"Ontario Regulation 1101/90, Section: 8. (1)",Ontario Regulation 1101/90,,8. (1),"O. Reg 1101
+Every employer employing not more than five workers in any one shift at a place of employment shall provide and maintain at the place of employment a first aid station with a first aid box containing as a minimum,
+(a) a current edition of a standard St. John Ambulance First Aid Manual;
+(b) 1 card of safety pins; and
+(c) dressings consisting of,
+(i) 12 adhesive dressings individually wrapped,
+(ii) 4 sterile gauze pads, 3 inches square,
+(iii) 2 rolls of gauze bandage, 2 inches wide,
+(iv) 2 field dressings, 4 inches square or 2 four-inch sterile bandage compresses, and
+(v) 1 triangular bandage. R.R.O. 1990, Reg. 1101, s. 8 (1).
+","Quarterly
+#freqIn{O.Reg 1101/90, 1.6}",https://www.notion.so/SP-36A-First-Aid-Station-Inspection-for-Less-Than-5-Workers-3198c5403d3047e0bfebe1514f26f280,,https://www.notion.so/Ontario-Regulation-1101-90-Section-1-6-89973628b42748b7b057a3ddb73a22e1,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.ontario.ca/laws/regulation/901101,,"Ontario Regulation 1101/90, Section: 8. (1)",
+"Ontario Regulation 1101/90, Section: 1.6 ",Ontario Regulation 1101/90,,"1.6 ","1.6.
+Employers shall inspect first aid boxes and their contents at not less than quarter-yearly intervals and shall mark the inspection card for each box with the date of the most recent inspection and the signature of the person making the inspection.  R.R.O. 1990, Reg. 1101, s. 6.",Quarterly,https://www.notion.so/First-Aid-Station-c8053578c4e34845998a2ff4ab6ee7d6,https://www.notion.so/Ontario-Regulation-1101-90-Section-8-1-25663e0e58ef478893663346fd6b9a53,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.ontario.ca/laws/regulation/901101,"No Procedure required, because the OReg that is grounding the Std has an activity. ","Ontario Regulation 1101/90, Section: 1.6 ",
+"Ontario Regulation 1101/90, Section: 9. (1)",Ontario Regulation 1101/90,,9. (1),"O. Reg 1101
+Every employer employing more than five workers and not more than fifteen workers in any one shift at a place of employment shall provide and maintain a first aid station with a first aid box containing as a minimum,
+(a) a current edition of a standard St. John Ambulance First Aid Manual;
+(b) 1 card of safety pins; and
+(c) dressings consisting of,
+(i) 24 adhesive dressings individually wrapped,
+(ii) 12 sterile gauze pads, 3 inches square,
+(iii) 4 rolls of 2-inch gauze bandage,
+(iv) 4 rolls of 4-inch gauze bandage,
+(v) 4 sterile surgical pads suitable for pressure dressings, individually wrapped,
+(vi) 6 triangular bandages,
+(vii) 2 rolls of splint padding, and
+(viii) 1 roll-up splint. R.R.O. 1990, Reg. 1101, s. 9 (1).
+","Quarterly
+#freqIn{O.Reg 1101/90, 1.6}",https://www.notion.so/SP-36B-First-Aid-Station-Inspection-for-more-than-5-less-than-15-Workers-b2e331c8945d4cd48eec90d5227752f2,,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.ontario.ca/laws/regulation/901101,,"Ontario Regulation 1101/90, Section: 9. (1)",
+"Ontario Regulation 1101/90, Section: 10. (1)",Ontario Regulation 1101/90,,10. (1),"O. Reg 1101
+Every employer employing more than fifteen and fewer than 200 workers in any one shift at a place of employment shall provide and maintain at the place of employment one stretcher, two blankets and a first aid station with a first aid box containing as a minimum,
+(a) a current edition of a standard St. John Ambulance First Aid Manual;
+(b) 24 safety pins;
+(c) 1 basin, preferably stainless steel; and
+(d) dressings consisting of,
+(i) 48 adhesive dressings, individually wrapped,
+(ii) 2 rolls of adhesive tape, 1 inch wide,
+(iii) 12 rolls of 1-inch gauze bandage,
+(iv) 48 sterile gauze pads, 3 inches square,
+(v) 8 rolls of 2-inch gauze bandage,
+(vi) 8 rolls of 4-inch gauze bandage,
+(vii) 6 sterile surgical pads suitable for pressure dressings, individually wrapped,
+(viii) 12 triangular bandages,
+(ix) splints of assorted sizes, and
+(x) 2 rolls of splint padding. R.R.O. 1990, Reg. 1101, s. 10 (1).
+","Quarterly
+#freqIn{O.Reg 1101/90, 1.6}",https://www.notion.so/SP-36C-First-Aid-Station-Inspection-for-more-than-15-less-than-200-Workers-bff4e08246874ff0bf47458196957d63,,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.ontario.ca/laws/regulation/901101,,"Ontario Regulation 1101/90, Section: 10. (1)",
+"Ontario Regulation 1101/90, Section: 11. (1)",Ontario Regulation 1101/90,,11. (1),"O. Reg 1101
+Every employer employing 200 or more workers in any one shift at a place of employment shall provide and maintain a first aid room equipped with,
+(a) a current edition of a standard St. John Ambulance First Aid Manual;
+(b) instruments consisting of,
+(i) dressing scissors,
+(ii) dressing forceps,
+(iii) safety pins,
+(iv) graduated medicine glass,
+(v) tongue depressors, and
+(vi) applicators, cotton tipped;
+(c) denatured ethyl alcohol;
+(d) dressings consisting of,
+(i) adhesive dressings, individually wrapped,
+(ii) sterile gauze pads of assorted sizes, individually wrapped,
+(iii) gauze bandages of assorted sizes,
+(iv) adhesive plaster,
+(v) absorbent cotton,
+(vi) triangular bandages,
+(vii) splints of assorted sizes, and
+(viii) splint padding; and
+(e) furnishings consisting of,
+(i) hot and cold running water,
+(ii) 3 washbasins, preferably stainless steel,
+(iii) 1 instrument sterilizer,
+(iv) 1 cabinet for surgical dressings,
+(v) 1 enamel foot bath,
+(vi) 1 sanitary disposal receptacle with lid,
+(vii) 1 first aid box containing as a minimum the items required by subsection 9 (1), for use by the attendant at the scene of an accident before the patient is moved to the first aid room or general hospital,
+(viii) 1 couch curtained off or in a separate cubicle,
+(ix) 1 stretcher, and
+(x) 2 blankets. R.R.O. 1990, Reg. 1101, s. 11 (1).
+","Quarterly
+#freqIn{O.Reg 1101/90, 1.6}",https://www.notion.so/SP-36D-First-Aid-Station-Inspection-for-more-than-200-Workers-5c5f580476d84fc4a92315ad1fad3094,,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.ontario.ca/laws/regulation/901101,"In case where the frequency has been mentioned in the exact requirement section, but somewhere in the document.- does that needs to be sited/in another row?   Solution: Place the frequency in the same row adding another “-” (point).","Ontario Regulation 1101/90, Section: 11. (1)",
+"Ontario Regulation 1101/90, Section: 1.  (1)
+1.6 ( Frequency)",Ontario Regulation 1101/90,,"1.  (1)
+1.6 ( Frequency)"," A first aid station shall contain,
+(a) a first aid box containing the items required by this Regulation; and
+(b) a notice board displaying,
+(i) the Board�s poster known as Form 82,
+(ii) the valid first aid certificates of qualification of the trained workers on duty, and
+(iii) an inspection card with spaces for recording the date of the most recent inspection of the first aid box and the signature of the person making the inspection
+","Quarterly
+#freqIn{O.Reg 1101/90, 1.6}","https://www.notion.so/SP-36A-First-Aid-Station-Inspection-for-Less-Than-5-Workers-3198c5403d3047e0bfebe1514f26f280, https://www.notion.so/SP-36B-First-Aid-Station-Inspection-for-more-than-5-less-than-15-Workers-b2e331c8945d4cd48eec90d5227752f2, https://www.notion.so/SP-36C-First-Aid-Station-Inspection-for-more-than-15-less-than-200-Workers-bff4e08246874ff0bf47458196957d63, https://www.notion.so/SP-36D-First-Aid-Station-Inspection-for-more-than-200-Workers-5c5f580476d84fc4a92315ad1fad3094",,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,"https://www.ontario.ca/laws/regulation/901101 ",,"Ontario Regulation 1101/90, Section: 1.  (1)
+1.6 ( Frequency)",
+"Ontario Regulation 1101/90, Section: ",Ontario Regulation 1101/90,,,(i) the Boards poster known as Form 82,N/A,"https://www.notion.so/SP-36A-First-Aid-Station-Inspection-for-Less-Than-5-Workers-3198c5403d3047e0bfebe1514f26f280, https://www.notion.so/SP-36B-First-Aid-Station-Inspection-for-more-than-5-less-than-15-Workers-b2e331c8945d4cd48eec90d5227752f2, https://www.notion.so/SP-36C-First-Aid-Station-Inspection-for-more-than-15-less-than-200-Workers-bff4e08246874ff0bf47458196957d63, https://www.notion.so/SP-36D-First-Aid-Station-Inspection-for-more-than-200-Workers-5c5f580476d84fc4a92315ad1fad3094",,,https://www.notion.so/first-aid-station-2e24f653fb404291ad14e0fb3aad5ca7,,Staff,Yes,https://www.wsib.ca/en/case-injury-poster-form-82,,"Ontario Regulation 1101/90, Section: ",
+"Ontario Regulation 851/90, Section: 51. (1) (b)",Ontario Regulation 851/90,,51. (1) (b),"O. Reg 851 S 51 (1) - A lifting device shall be, 
+(b) thoroughly examined by a competent person to determine its capability of handling the maximum load as rated
+i) prior to being used for the first time, and
+ii) thereafter as often as necessary but not less frequently than recommended by the manufacturer and in any case, at least once a year, and a permanent record shall be kept, signed by the competent person doing the examination. 
+Refer to General Inspection Requirements Document for Detail","As per manufacturer, and at least once a year, prior to use
+#freqIn{AssetManual}",https://www.notion.so/Fixed-Crane-6953615380794822aeda42b7d44ec99f,"https://www.notion.so/CSA-B167-16-Section-6-4-1-a43259f529d542098ab47625bf5edb71, https://www.notion.so/CSA-B167-16-Section-6-4-2-e718332fd61241d183067953feca4f25, https://www.notion.so/CSA-B167-16-Section-6-5-2-f091049861c941b79d38dc77967cead0",,https://www.notion.so/fixed-crane-7b50cdbb21e24ff49e1054bac3a6dd60,,Contractor,Maybe,https://www.ontario.ca/laws/regulation/900851,"TH4.28: yellow highlight is not applied to a specialized part. ","Ontario Regulation 851/90, Section: 51. (1) (b)",https://www.notion.so/Ontario-Regulation-851-90-8a3c2b21ee154fec84a5ebec71dcea79
+"Ontario Regulation 851/90, Section: 51. (1) (b)",Ontario Regulation 851/90,,51. (1) (b),"O. Reg 851 S 51 (1) - A lifting device shall be, 
+(b) thoroughly examined by a competent person to determine its capability of handling the maximum load as rated
+i) prior to being used for the first time, and
+ii) thereafter as often as necessary but not less frequently than recommended by the manufacturer and in any case, at least once a year, and a permanent record shall be kept, signed by the competent person doing the examination. 
+Refer to General Inspection Requirements Document for Detail","As per manufacturer, and at least once a year, prior to use
+#perOEM",https://www.notion.so/Forklift-Hourly-a56b5da3bf834c29a73bc7c29660eea9,"https://www.notion.so/CSA-B335-15-Section-8-4-2-4ea54cdcaa254e67b2bfd5f7554a17d0, https://www.notion.so/CSA-B335-15-Section-8-2-3-97d4c71906a6464a90168d51011349cc",,https://www.notion.so/forklift-c8f9f61245874c79b021444f950c804f,,Contractor,Yes,https://www.ontario.ca/laws/regulation/900851,"An activity to keep the maintenance record is present in the activity sheet. ","Ontario Regulation 851/90, Section: 51. (1) (b)",
+"CSA B167-16, Section: 6.4.1",CSA B167-16,,6.4.1,"6.4 Frequent inspection
+6.4.1 General
+The crane shall be inspected for defects, malfunctions, and damage at the intervals specified in Items a) to d), and shall be observed during operation to identify any problems that arise between periodic inspections. Visual and audible examinations shall be recorded in the maintenance log book (i.e., paper or electronic) or crane management software program by a competent person with findings of deficiencies at the following intervals:
+a) Class A (standby or infrequent service) and Class B (light service): monthly;
+b) Classes C and D (moderate and heavy service): weekly to monthly;
+c) Classes E and F (severe and continuously service): daily to weekly; and
+d) Special service: as recommended by the manufacturer or an engineer.",As per standards,"https://www.notion.so/Fixed-Crane-Inspection-bfb5b4e819a94499a3bb1bb618994017, https://www.notion.so/Fixed-Crane-Weekly-Inspection-08c353a243364638895481287b9d9047, https://www.notion.so/Fixed-Crane-Monthly-Inspection-21def28741d041418116651f7b507a16, https://www.notion.so/Fixed-Crane-Daily-Inspection-0a7e6a23ecca42eea75e880971cb5c6d",,https://www.notion.so/Ontario-Regulation-851-90-Section-51-1-b-4383725d390e44519d1894276d64710d,https://www.notion.so/fixed-crane-7b50cdbb21e24ff49e1054bac3a6dd60,,Contractor,,https://www.csagroup.org/store/product/B167-16/,,"CSA B167-16, Section: 6.4.1",
+"CSA B167-16, Section: 6.4.2",CSA B167-16,,6.4.2,"Frequent inspection shall be conducted according to the manufacturer's instructions for inspections. At a minimum, the components listed in items a) to h) shall be inspected during the frequent inspection. Procedures for frequent inspections carried out by maintenance in the field. Defects, malfunctions, and damage found during the inspection of items a) to h) shall be addressed by a competent person. Frequent inspections shall include
+a) all operational functions;
+b) lines, tanks, valves, pumps, and  other parts of air of hydraulic systems (for leakage);
+c) hooks, for deformations, wear or cracking;
+d) hook, latches, where present;
+e) hoist ropes or load chains;
+f) limit devices, for proper functioning;
+g) function labels for operator; and
+h) brakes.","#freqIn{AssetManual}
+",https://www.notion.so/Fixed-Crane-28d4c40780094f97a9ff3b8920d96044,,https://www.notion.so/Ontario-Regulation-851-90-Section-51-1-b-4383725d390e44519d1894276d64710d,https://www.notion.so/fixed-crane-7b50cdbb21e24ff49e1054bac3a6dd60,,Contractor,,https://www.csagroup.org/store/product/B167-16/,,"CSA B167-16, Section: 6.4.2",https://www.notion.so/CSA-B167-16-955f93af3b36492c826caf4ecb71a51b
+"CSA B167-16, Section: 6.5.2",CSA B167-16,,6.5.2,"6.5.2 Inspection targets for periodic inspection
+6.5.2.1 General Deficiencies shall be examined to determine whether they can affect the safe operation of the crane. At a minimum, the inspection shall include the items specified in Clause 6.4.2 (frequent inspections) as well as inspection for the following deficiencies:
+a) deformed, cracked, or corroded members (e.g., transmission shaft);
+b) missing or visibly loose bolts in the supporting structure;
+c) cracked welds;
+d) sheaves and drum cracks, distortion, and wear;
+e) worn, corroded, cracked, or distorted parts such as pins, exposed or open bearings, bushings, shafting, couplings, gears, bumpers, and trolley stops;
+f) glazing, scoring, warping, contamination, or wear of electrical and mechanical brakes;
+g) visible damage to hooks, retaining nuts, and safety latches;
+h) deformed or worn hooks (for compliance with the manufacturer's recommendations);
+i) evidence of pitting or deterioration of electrical contacts;
+j) interference with the free operation of buttons and controls;
+k) damaged insulation on the electrical wire, cables, and controls;
+I) damaged, deformed, or misaligned festoon system or bus bars;
+m) malfunction of heaters (e.g., gearbox, brake, or motor heaters), as can be determined without disassembly;
+n) inadequate performance or reliability of the limit switch;
+o) worn and/or damaged trolley and bridge wheel assemblies;
+p) cracked, distorted, or worn guided rollers (e.g., on rack and pinion hoist, on trolleys or bridges);
+q) malfunction controlled lowering motion;
+r) wear, cracks, or corrosion of wire rope, load chain, end clamps, or rope clips; Note: Annex 6 outlines inspection criteria for wire rope.
+s) rope reeving (for compliance with crane manufacturer's specifications);
+t) safeguards and shields for moving equipment;
+u) legibility of critical marks and labels (e.g., warning signs, rated load labels);
+v) inadequate oil level (e.g., gearbox oil or hydraulic reservoir oil); and
+w) corroded, cracked, or distorted lower blocks.","As per standards
+Note: Check the screen shot in the “requirement name” column for further details. ",https://www.notion.so/Fixed-Crane-Inspection-019447a70abb4da88342eec6dfdbca4f,,https://www.notion.so/Ontario-Regulation-851-90-Section-51-1-b-4383725d390e44519d1894276d64710d,https://www.notion.so/fixed-crane-7b50cdbb21e24ff49e1054bac3a6dd60,,Contractor,,https://www.csagroup.org/store/product/B167-16/,,"CSA B167-16, Section: 6.5.2",
+"(fixed gas detector), Section:",a to be discovered doc on fixed gas detector,,,"Perform Accuracy check
+Test functioning of chlorine/SO2 gas detectors and alarms as follows:
+1) Ensure you have operational approval before performing this task.
+2) Disable the scrubber alarm.
+3) Using a test gas, expose the sensor to CL2/SO2 (5 ppm).
+4) Check that the appropriate sensor indicates on the receiver.
+5) Press Accept / Reset button at receiver to clear alarm.
+6) If the sensor has failed, initiate an immediate to replace/repair the sensor and capture repair information in a corrective work order in WMS.
+7) Enable the scrubber alarms.
+8) Verify PCS functionality and associated alarms, as applicable.
+9) Inform operations that the task as assigned is completed.
+",,https://www.notion.so/Fixed-gas-detector-Inspection-For-Safe-Usage-Condition-4ab1dad32b364b62a989ee0bc1879e62,,,https://www.notion.so/fixed-gas-detector-f9e2027f0e0342e784b0229cc5e5e5b1,,Contractor,,,"- Check WMS for inspection details - suggested by Susan
+Found functioning test procedure from FCL site. Checked other sites but could not find. 
+- Unable to find the source of the procedure from WMS. 
+- No mention of gas detector in 850
+#SourceUnknown","a to be discovered doc on fixed gas detector, Section: ",
+"ANSI ASC A14.3-2008 (R2018)
+Ladders - Fixed - Safety Requirements",,,9.3,"The inspection must include all the major components rungs, side rails, supports, fasteners, anchors, Ladder Safety System, backside and front side clearances/obstructions, hatches, hatch opening arms, grab bars, platforms, and side rail extension anchors",Annual or as required for underground fixed ladders,,,,https://www.notion.so/fixed-ladder-20fd58dbecb7487ba70b8c577d3be64a,,Contractor,,https://www.academia.edu/39732161/ANSI_A14_3_2008_Standard_for_Ladders,Added this to address the inspection criteria for fixed ladders - described in 9.3 (ANSI A14.3),", Section: 9.3",
+"CSA B335-15, Section: 8.4.2",CSA B335-15,,8.4.2,"8.4.2 Inspection Fork inspection shall be carried out carefully, by trained personnel, with the aim of detecting any damage, failure, deformation, etc., that might impair safe use. Any fork that shows such a defect shall be withdrawn from service and shall not be returned to service unless it has been satisfactorily repaired in accordance with Clause 8.4.3.
+Lift truck forks shall be inspected for the following:
+a) Surface cracks — The fork shall be thoroughly examined visually for cracks and, if considered necessary, subjected to a non-destructive crack detection process, with special attention paid to the heel and welds attaching all mounting components to the fork blank. This inspection for cracks shall also include any special mounting mechanisms of the fork blank to the fork carrier, including bolt-type mountings and forged upper mounting arrangements for hook- or shaft-type carriages. The forks shall not be returned to service if surface cracks are detected.
+b) Straightness of blade and shank — The straightness of the upper face of the blade and the front face of the shank shall be checked. If the deviation from straightness exceeds 0.5% of the length of the blade and the height of the shank, respectively, the fork shall not be returned to service until it has been repaired in accordance with Clause 8.4.3.
+c) Fork angle (upper face of the blade to load face of the shank) — Any fork that has a deviation greater than 3° from the original specification shall not be returned to service. The rejected fork shall be reset and tested in accordance with Clause 8 4 3.
+d) Difference in height of fork tips — The difference in height of one set of forks when mounted on the fork carrier shall be checked. If the difference in tip heights exceeds 3% of the length of the blade, the set of forks shall not be returned to service until repaired in accordance with Clause 8.4.3. e) Positioning lock (when originally provided) — It shall be confirmed that the positioning lock is in good repair and correct working order. If any fault is found, the fork shall be withdrawn from service until satisfactory repairs have been effected
+f) Wear
+i) Fork blade and shank — The fork blade and shank shall be thoroughly checked for wear, with special attention paid to the vicinity of the heel. If the thickness is reduced to 90% or less of the original thickness, the fork shall not be returned to service.
+ii) Fork hooks (when originally provided) — The support face of the top hook and the retaining faces of both hooks shall be checked for wear, crushing, and other local deformations. If these are apparent to such an extent that the clearance between the fork and the fork carrier becomes excessive, the fork shall not be returned to service until repaired in accordance with Clause 8.4.3.
+g) Legibility of marking (when originally provided) — If the fork marking is not clearly legible, it shall be renewed. Marking shall be renewed according to instructions from the original supplier.","As per manufacturer, and at least once a year, prior to use
+#perOEM",https://www.notion.so/Forklift-Inspection-ab77160fc5ef4818ad4bab237f61eba6,,https://www.notion.so/Ontario-Regulation-851-90-Section-51-1-b-66b52dd8077b4725bc183b998d66c207,https://www.notion.so/forklift-c8f9f61245874c79b021444f950c804f,,Contractor,,https://www.csagroup.org/store/product/B335-15/,Clause 8.4.3 is for repair and testing related.,"CSA B335-15, Section: 8.4.2",
+"CSA B335-15, Section: 8.2.3",CSA B335-15,,8.2.3,"8.2.3 Service report inspections
+Service report inspections consist of three types:
+a) A planned maintenance inspection, which is carried out by a trained, qualified maintenance technician. This inspection should occur in accordance with the manufacturer's recommended interval. In the absence of such recommendations, it should be conducted approximately every 200 h.
+b) An annual planned maintenance inspection, which is carried out by a trained, qualified maintenance technician. This inspection should occur approximately every 2000 h, or annually, whichever comes first.
+c) A lifting capacity inspection, which is a planned maintenance inspection carried out by a trained, qualified maintenance technician. This inspection is carried out to determine whether the lift truck is capable of handling the maximum load specified on the nameplate. This inspection shall be carried out prior to the lift truck being used for the first time, each time the lift truck is acquired by a new owner, and as often as recommended by the manufacturer, but no less than once per year.",As per standards,"https://www.notion.so/Forklift-Hourly-Service-Report-Inspection-76e017a72409410f86575a30b88f1b72, https://www.notion.so/Forklift-Pre-Use-Service-Report-Inspection-d0c5f3a4ffda41478ed280da23f80a7b, https://www.notion.so/Forklift-2000hr-Annually-Service-Report-Inspection-5cc9ac040bcf458ebc4ed5bfa9acf67d",,https://www.notion.so/Ontario-Regulation-851-90-Section-51-1-b-66b52dd8077b4725bc183b998d66c207,https://www.notion.so/forklift-c8f9f61245874c79b021444f950c804f,,Contractor,,https://www.csagroup.org/store/product/B335-15/,,"CSA B335-15, Section: 8.2.3",
+"CAN/CGSB 2-65.7-2007, Section: ",CAN/CGSB 2-65.7-2007,,,"Inspect for rips or signs of wear. Replace immediately if rips or holes are found.
+
+For soiled lifejackets:
+Use mild soap and water.
+Rinse thoroughly.
+Air-dry out of direct sunlight and away from direct heat",Annually,"https://www.notion.so/Life-Jacket-Inspection-Annually-31c50038d4b346bdb3ff02309fdc557f, https://www.notion.so/Life-Jacket-Annual-Inspection-fb3d1ae705a04f66aa97cbe18b62ef76",,,https://www.notion.so/life-jacket-d3984c9a53d147fe8155d6d6e9a94657,,Staff,,,"#CannotAccessMissingDetail
+New activity created to meet the requirement. 
+An activity not required by standards or reg BUT important- has been kept to be performed annually and tagged here. ","CAN/CGSB 2-65.7-2007, Section: ",
+"N/A - Youtube, Section: ",N/A - Youtube,,,"Inspect for holes, cracks or signs of damage (including UV). Replace immediately if any is found.
+",#perOEM,https://www.notion.so/Life-Ring-Visual-Annual-Inspection-943d76c6ca104877846b7cb0984e432b,,,https://www.notion.so/life-ring-033f9bf7c8e6495dae8ad0f1e2f8126b,,Staff,,https://www.youtube.com/watch?v=4gEdbgOMKSg,"-No reference available. 
+-Susan to find reference. ( as per last discussion)
+- Susan provided youtube link.
+#SourceUnknown
+TH: I think we should have our own SOP then","N/A - Youtube, Section: ",
+"CSA B311-02, Section: Appendix A",CSA B311-02,,Appendix A,Refer to attached picture of Appendix A,,,,,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,,,https://www.csagroup.org/store/product/CAN%25100CSA-B311-02/,Not related to maintenance,"CSA B311-02, Section: Appendix A",
+"TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019, Section: 4.3",TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019,,4.3,"4.3 Inspection and Testing of Safety Brake
+4.3.1 The inspection and testing of a safety brake on an endless belt type manlift required in subsection 33.(2) of the Regulation shall ensure compliance with clause 5.2.2.3 of CSA Standard B311-M1979, Safety Code for Manlifts and Supplement No. 1 1984.
+4.3.2 The inspection and testing of a safety device and overspeed governor on a counter-balanced or power type manlift required in subsection 33.(3) of the Regulation shall ensure compliance with clause 6.11.8 or 7.6.8.2, as the case may be, of CSA Standard B311-M1979, Safety Code for Manlifts and Supplement No.1 1984.
+","As per part category 
+#freqIn{8.6.1.7.(a).(2) }","https://www.notion.so/Manlift-Safety-Break-96252df7007c4e52a5a0dffe1e103679, https://www.notion.so/Manlift-Safety-Break-Frequency-c446f30518a647d0ace426e59ef83c67","https://www.notion.so/CSA-B311-M1979-Section-5-2-2-3-3-1-3-frequency-7fe410026aec481fb174aceaacac3eb9, https://www.notion.so/CSA-B311-M1979-Section-7-6-8-2-3-1-3-frequency-c9711b0bdade480b963efb2fc9cb9d9b",,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor,Yes,https://www.tssa.org/en/elevating-devices/resources/Documents/ED-277-19-CAD.pdf,,"TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019, Section: 4.3",
+"TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019, Section: 8.6.1.7",TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019,,8.6.1.7,"8.6.1.7
+The frequency of maintenance and tests shall conform to the following;
+(a) Where a Maintenance Control Program is in effect,
+(1) the maintenance frequency shall be established as prescribed in 8.6, but in no case shall the interval between maintenance visits to an elevating device excluding wind tower elevators exceed three months, nor shall it exceed the manufacturer’s specified limit or other imposed limit which is less than three months (see CAD 2.9 for example of a one month limit), and
+
+(a) category 1 tests are performed annually,
+(b) category 3 tests are performed every 3 years and
+(c) category 5 tests are performed every 5 years.","As per part category
+#freqIn{AssetManual}",https://www.notion.so/Manlift-Quarterly-Inspection-e4f7b4ed85b545f7b9eaaffc416c863e,https://www.notion.so/CSA-B311-1984-R2002-Section-Appendix-C2-8cfc82a567d9411d9c76e4eedc1d4f0f,,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor,No,https://www.tssa.org/en/elevating-devices/resources/Documents/ED-277-19-CAD.pdf,"Case where both the manual and given frequency has been ,mentioned 
++ The maintenance references are as per specifics of the asset- see 8.6.1.2A
+
+AJ- July 13: No Activity related to Man lift was present in the sheet. New activity to fill the maintenance log has been created. 
+
+A,b,c are not covered specifically in any standards. ","TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019, Section: 8.6.1.7",
+"CSA B311-M1979, Section: 5.2.2.3
+-3.1.3 (frequency)",CSA B311-M1979,,"5.2.2.3
+-3.1.3 (frequency)","5.2.2.3 Safety Brake
+5.2.2.3.1 A safety brake that is mechanically applied and manually released shall be applied directly to the head pulley. This safety brake shall be capable of stopping and holding the head pulley when the descending side of the belt is loaded with 110 kg on each step and at 120% of rated speed. This safety brake shall be automatically applied and cut the power to the motor and operating brake when the rated speed is exceeded by 20% or upon occurrence of reverse rotation of the head pulley.
+5.2.2.3.2 The safety brake shall be applied automatically in the event of line power disruption or interruption whether induced by the over-speed detection device, the reverse rotation device, or other means. The manual release of the safety brake shall be effected by means available only to qualified personnel.
+5.2.2.3.3 The speed over the sensing device shall be sealed after the acceptance test.",#freqIn{https://www.notion.so/e8aab4d346a04952ab9424b0018775b3},https://www.notion.so/Manlift-Safety-Break-96252df7007c4e52a5a0dffe1e103679,,https://www.notion.so/TSSA-Elevating-Devices-Code-Adoption-Document-Amendment-277-19-May-3-2019-Section-4-3-b9ac309f4ff24e57b22d5773935e69f3,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor,,https://www.csagroup.org/store/product/B311-M1979/,"TH: I would break this into 2 rows - one for section 5 and one for 3. In the section 5 row, you would still refer to section 3 for frequency (Done)","CSA B311-M1979, Section: 5.2.2.3
+-3.1.3 (frequency)",
+"CSA B311-1984 (R2002), Section: Appendix C2",CSA B311-1984 (R2002),,Appendix C2,"C2. Manuals 
+The manufacturer should supply an instruction, operating, and maintenance manual, and the owner of the manlift should comply with the recommendations of the manufacturer in regard to periodic maintenance checks. The owner should keep a record of these maintenance checks in the form of a log in which all entries are signed by the person who carried out the checks.",#perOEM,https://www.notion.so/Manlift-Maintenance-Log-8d93d718ece24469a10db28edbfc7cec,,https://www.notion.so/TSSA-Elevating-Devices-Code-Adoption-Document-Amendment-277-19-May-3-2019-Section-8-6-1-7-b23827458f7346ea881f8ae586f14c6a,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor or Staff,,https://www.csagroup.org/store/product/B311S1-1984/,"AJ- July 13: No Activity related to Man lift was present in the sheet. New activity to fill the maintenance log has been created. ","CSA B311-1984 (R2002), Section: Appendix C2",
+"CSA B311-M1979, Section: 7.6.8.2
+-3.1.3 (frequency)",CSA B311-M1979,,3.1.3,"3.1.3 The manufacturer shall supply an instruction, operating, and maintenance manual, and the owner of the manlift shall comply with the recommendations of the manufacturer in regard to periodic maintenance checks. The owner shall keep a record of these maintenance checks in the form of a log in which all entries are signed by the person who carried out the checks.",#perOEM,,,https://www.notion.so/TSSA-Elevating-Devices-Code-Adoption-Document-Amendment-277-19-May-3-2019-Section-4-3-b9ac309f4ff24e57b22d5773935e69f3,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,,,https://www.csagroup.org/store/product/B311-M1979/,"Its about the car safety- not the maintenance of it. ","CSA B311-M1979, Section: 3.1.3",
+"CSA B354.1-04, Section: 5.3.4",CSA B354.1-04,,5.3.4,"Annual inspection shall be performed by a qualified person. Items to be inspected shall include, but not limited to, the following:
+(a) outrigger and outrigger housing (boxes), including the condition and torque of the ring gear bolts;
+(b) platform rotating, elevating, and levelling mechanisms;
+(c) main turret rotating mechanism, including the condition and torgue of the ring geat bolts;
+(d) brakes
+(e) all tie down points
+(f) boom section, pins, cylder rod ends, and levelling devices;
+(g) switches for wiring and all electrical connections;
+(h) manufacturer's outstanding safety bulletins;
+(i) other items as specified by the manufacturer",Annually,https://www.notion.so/Man-Lift-Annual-Inspection-6658820b2c29433f9fbedf65025e0989,,,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor,,https://www.csagroup.org/store/product/2702056/,,"CSA B354.1-04, Section: 5.3.4",
+"CSA B354.1-04, Section: 5.3.3",CSA B354.1-04,,5.3.3,"5.3.3 Periodic inspection This inspection shall be performed after 200 h of use or after a period recommended by the manufacturer, whichever comes first. The interval between inspections may vary depending on the aerial platform's activity, severity of use, and the working environment. Periodic inspections shall be performed by a qualified person. This inspection shall include the requirements of Clause 5.3.2 and items that shall include, but not be limited to, the following: 
+(a) loose bolts, nuts, and pins;
+(b) hydraulic oil filter for cracks and leaks, metal chips or pieces on the filter that may denote failure in the pumps, motors, or cylinder, evidence of rubber particles on the filter element that may indicate deterioration of hose, 0-ring, or other rubber components;
+(c) fuel filter for function;
+(d) fan belts for adjustment and excessive wear;
+(e) hydraulic hoses for cracks, leaks, and blistering, and evidence of excessive abrasion on all flexible and rigid hoses; (
+f) hydraulic pumps and motors for cracks or leaks, leaks at joints, seal leaks, loss of operating speed, excessive heating of fluid, and loss of pressure;
+(g) hydraulic cylinders for drifting caused by fluid leak across the holding valve or the piston, rod seal leakage, scored and nicked cylinder rods, dented barrel, and unusual noises or vibration;
+(h) all control mechanisms for wear and response time;
+(i) interlocks, slope warning system, and limit switches;
+(j) all chain and cable mechanisms for adjustment and worn or damaged parts; and
+(k) other items as specified by the manufacturer.","200hrs OR as per manufacturer 
+#freqIn{AssetManual}",https://www.notion.so/Man-Lift-200-Hr-Inspection-109846bd5294440caf8342cdeb73fc02,,,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Contractor,,https://www.csagroup.org/store/product/2702056/,SC: Standard refers to a “qualified person”,"CSA B354.1-04, Section: 5.3.3",
+"CSA B354.1-04, Section: 5.3.2",CSA B354.1-04,,5.3.2,"5.3.2 Daily prestart inspection All components that have a direct bearing on the safe operation of the aerial platform and whose status can change from day to day with use shall be visually inspected on a daily basis by the operator. In addition, these components, where applicable, practicable, and possible, shall be observed during operation for defects that could affect the safe operation of the aerial platform. Items such as, but not restricted to, the following shall be regularly inspected for defects and shall also be observed during operation and between regular inspections for defects:
+(a) tires and wheels for cuts, obvious loose or missing lug nuts, broken tie rods, and adequate tire pressure;
+(b) all fluids, such as fuel, engine oil, coolants, and battery fluid, for proper level;
+(c) hydraulic hoses for leaks or loose connections;
+(d) all quick disconnect hoses for proper connection;
+(e) structural components for obvious damage, broken parts, and cracks in welds;
+f) ladder or steps for damage and debris (ladder shall be firmly secured to the platform);
+(g) beacon and warning lights for missing and defective lens or caps;
+(h) operating and emergency controls for proper function;
+(i) placards and warning signs for cleanliness, readability of control markings, rated capacity, and operating manual(s);
+(j) platform assembly for loose and missing parts, missing or loose lock pins and bolts, and proper placement of the footswitch;
+(k) platform floor for structural damage, holes or cracked welds, dirt, grease, or oil that can create a hazard;
+(I) access gate for ease of movement, missing parts, latched and locking capabilities;
+(m) fall protection system;
+(n) safety devices for malfunction;
+(o) proper operation of elevating, rotating, and drive functions;
+(p) brakes for stopping capabilities;
+(q) a horn for proper function;
+(r) outriggers and stabilizers; and
+(s) other items as specified by the manufacturer.",Prior to use daily,"https://www.notion.so/Manlift-Daily-Pre-use-Inspection-494dd26bebfd4bec84e59dc6cbcbd6d0, https://www.notion.so/Manlift-Maintenance-Log-8d93d718ece24469a10db28edbfc7cec",,,https://www.notion.so/man-lift-984d27c22a124110b0aec6db691f9cac,,Staff,,https://www.csagroup.org/store/product/2702056/,,"CSA B354.1-04, Section: 5.3.2",
+"ANSI Z358.1-2014, Section: ",ANSI Z358.1-2014,,,"Inspect:
+- Equipment safety sign is highly visible and area around Equipment is well lit
+- Have instructions for its use or treatment displayed on the flushing Equipment or as near as practical
+- Ensure unit is protected from freezing and is not exposed to temperatures over 38 degrees C
+- Ensure unit has the capacity to deliver immediate flushing fluid without being injurious to the user
+",,https://www.notion.so/Personal-Eyewash-Portable-36d807bce2cc488fa1b5919a8be96288,,,,,Staff,,https://webstore.ansi.org/Search/Find?in=1&st=z358.1,#CannotAccessMissingDetail,"ANSI Z358.1-2014, Section: ",
+"CAN/CGSB 65.11-M88, Section: ",CAN/CGSB 65.11-M88,,,"Perform Visual Inspection:
+Inspect for rips, tears, excessive abrasion or holes. Check all seams are securely sewn, and the cover, straps and hardware are still strong.
+
+Perform the Oral Inflation Valve Test:
+Fully inflate the PFD using the oral inflator, and then hold the valve under water. If bubbles appear, deflate the PFD and re-inflate it again.
+
+Perform the Leak Test:
+To test for air leakage, orally inflate PFD until firm and then let it sit inflated for 16 hours. A PFD with a leak in it will not hold its firmness and should be replaced.
+
+Check for dirt and corrosion and replace all corroded parts.
+
+Check Bobbin (for auto-inflate model):
+Inflatable PFDs may use a bobbin activation system. Inspect the pill to make sure it�s still intact and replace the pill if it looks compromised.
+
+Record �Annual� in permanent ink on the PFD service record label.",Annually,"https://www.notion.so/Personal-Floatation-Device-PFD-A-Inspection-77508a296dc240e7928809e5d8c741fd, https://www.notion.so/Personal-Floatation-Device-PFD-B-Oral-Valve-test-3dd296ed27c9430f8133119cd20cb40b, https://www.notion.so/Personal-Floatation-Device-PFD-C-Leak-Test-64d3302deb764774b45816e5ff29be13",,,https://www.notion.so/personal-floatation-device-PFD-877bbbcaedd743f48d1f9619e0103ffb,,Staff,,,#CannotAccessMissingDetail,"CAN/CGSB 65.11-M88, Section: ",
+"Ontario Regulation 632/05, Section: 18.",Ontario Regulation 632/05,,18.,"18.
+(3) The person performing the tests shall use calibrated instruments that are in good working order and are appropriate for the hazards identified in the relevant assessment.  O. Reg. 632/05, s. 18 (3).
+(4) The employer shall ensure that the results of every sample of a test are recorded, subject to subsection (5).  O. Reg. 632/05, s. 18 (4).
+(5) If the tests are performed using continuous monitoring, the employer shall ensure that test results are recorded at adequate intervals.  O. Reg. 632/05, s. 18 (5).
+(6) The tests shall be performed in a manner that does not endanger the health or safety of the person performing them.  O. Reg. 632/05, s. 18 (6).
+(7) In this section,
+“sample” means an individual reading of the composition of the atmosphere in the confined space; (“prélèvement”)
+“test” means a collection of samples. (“essai”)  O. Reg. 632/05, s. 18 (7).
+
+
+","#freqIn{I&DS Health & Safety SP 10} related to the bump test and calibration check
+
+actual calibration frequency is #perOEM
+","https://www.notion.so/Personal-Gas-Meter-1f721524252045ae8e8ad3f17ce6e6e8, https://www.notion.so/Personal-gas-meter-detector-Test-Data-Record-d3faddfebe6a4b91a3e2ee9c9a7e63ba","https://www.notion.so/I-DS-Health-Safety-SP-10-2019-Section-03e31e90515d4fd5a2cfa4241ccd6b62, https://www.notion.so/Section-Personal-Gas-Meter-51c5a213c2084718bf72e534dd0c467f",,https://www.notion.so/personal-gas-meter-1df8bfffdf0a4f02a052ed8cd5b63191,,"See Note, Staff",Maybe,https://www.ontario.ca/laws/regulation/050632,"TH: This requirement requires us to 1) check the calibration before use. 2) to perform calibration. 3) based on TW stand, perform bump test before use. 
+
+[X] Agam: index our City requirement 
+
+SC: http://insideto.toronto.ca/clusterb/hr/hns/files/safety-procedures/atmospheric-test-record.pdf
+
+July 29 AJ: The procedure does not need to be created. Plant will use the mfg documentation to perform the test. Requirements for the test and fail criteria has been given. ","Ontario Regulation 632/05, Section: 18.",
+"I&DS Health & Safety SP 10 (2019), Section: ",I&DS Health & Safety SP 10 (2019),,,"Please click on the link in URL column for details. ",#perOEM,https://www.notion.so/Personal-Gas-Meter-7f1edea39f8a495681d9c1472ef01751,,https://www.notion.so/Ontario-Regulation-632-05-Section-18-2a667c7563204f3cb201df17cf8fe586,https://www.notion.so/personal-gas-meter-1df8bfffdf0a4f02a052ed8cd5b63191,,Contractor,,http://insideto.toronto.ca/clusterb/hr/hns/files/safety-procedures/gas-detection-equipment.pdf,,"I&DS Health & Safety SP 10 (2019), Section: ",
+", Section: Personal Gas Meter",,,,"Refer to the details in “Requirement Name” column. ",Pre-use,https://www.notion.so/Personal-Gas-Meter-Bump-test-fd478df46883421ca90bf33e4ac91cc7,,https://www.notion.so/Ontario-Regulation-632-05-Section-18-2a667c7563204f3cb201df17cf8fe586,https://www.notion.so/personal-gas-meter-1df8bfffdf0a4f02a052ed8cd5b63191,,"See Note, Staff",,https://sps-support.honeywell.com/s/article/What-does-Honeywell-Analytics-recommend-on-Gas-Detection-Bump-Test-and-Calibration-Frequency-Interval,"Requirement text not found in the sited source(s).
+CSA C22.2 No. 152-M1984 
+O-Reg 632/05 42 (1) (3) - 632/05 ends at 22 sections. 
+#SourceUnknown
+
+This has been incorporated into an activity",", Section: ",
+"Ontario Regulation 851/90, Section: 73",Ontario Regulation 851/90,,73,"73. A portable ladder shall,
+(a) be free from broken or loose members or other faults;
+(b) have non-slip feet;
+(c) be placed on a firm footing;
+(d) where it,
+(i) exceeds six metres in length and is not securely fastened, or
+(ii) is likely to be endangered by traffic,
+be held in place by one or more workers while being used; and
+(e) when not securely fastened, be inclined so that the horizontal distance from the top support to the foot of the ladder is not less than 1/4 and not more than 1/3 of the length of the ladder.  ","Prior to use, during use",https://www.notion.so/SP-25-Fixed-Vertical-Ladder-Inspection-72e58f6552e6450ea89a4575d32e4943,,,https://www.notion.so/portable-ladder-79fddffa402d41d1aee6c4e68bce3341,,Staff,Yes,https://www.ontario.ca/laws/regulation/900851,"Activity modified to fully ground the Reg. ","Ontario Regulation 851/90, Section: 73",
+"CSA B149.6-20, Section: 13.7",CSA B149.6-20,,13.7,"13.7 Pressure/vacuum-relief valve protective housing maintenance
+Regularly scheduled inspections shall be made of each housing containing pressure-limiting equipment or relief devices to determine whether the housing is in good physical condition and adequately vented. The condition of the housing access openings shall be examined to ensure that they do not present a safety hazard.",,https://www.notion.so/Pressure-Vacuum-Relief-Valve-5b3aeda3a7cb4e75ba683d79df04fa2b,,,https://www.notion.so/pressure-relieving-equipment-f292f850f3c5432592437d1d0c59785d,,"Contractor, See Note",,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,"#CannotAccessMissingDetail
+New Classification needs to be created for housing? TH: No need for new classification
+SC: I don’t think I entered this. The CSA Standard (2015 version) is accessible on CCOHS. Please refer to sec. 4.3.2 in CSA B149.6-15","CSA B149.6-20, Section: 13.7",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37.d.","Ontario Regulation 220/01 Code Adoption
+  Document",,1.37,"1.37 d. Other pressure vessels and piping systems not listed above, including boilers other than steam or hot water service, shall be serviced every 3 years.
+",3 Years,https://www.notion.so/Pressure-Vessel-Pressure-Vessels-and-Piping-systems-4faf25d5136f4ca08cd4cbde2f9f1a06,,,"https://www.notion.so/Defined-TSSA-regulated-pressure-vessel-78b0cef71ccf46ca8d74fa04ea01406e, https://www.notion.so/piping-system-315f3959781f42bd81154d50fa751f1b",,Contractor,,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Final-BPV-CAD-Amendment-2017.pdf,AJ May 10/22: Does piping needs to be added to the EH&S scope?,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37",
+"ASTM F1236-96 (2012), Section: 1910.137 (c) (2) (iii)",ASTM F1236-96 (2012),,1910.137 (c) (2) (iii),"Inspect rubber insulation gloves/sleeves for the following
+- A hole, tear, puncture, or cut;
+- Ozone cutting or ozone checking (a series of interlacing cracks produced by ozone on rubber under mechanical stress);
+- Embedded foreign objects;
+- Texture changes such as: swelling, softening, hardening, or becoming sticky or inelastic; or
+- Any other defect that damages the insulating properties",6 months,"https://www.notion.so/Rubber-Insulating-Gloves-effectiveness-Inspection-3bc4d3b9865a41f0b2218296c489a1f3, https://www.notion.so/Rubber-Insulating-Sleeves-Inspection-1e4622b0740044e29852ceb65f35efba",,,"https://www.notion.so/rubber-insulating-gloves-4ceeba85fd22426fb48479b1827dcbc3, https://www.notion.so/rubber-insulating-sleeves-043b3ee7f2be4dc09c36122eb8ed7786",,"Contractor, See Note",,https://webstore.ansi.org/standards/astm/astmf1236962012,"#CannotAccess, #NoPurchase","ASTM F1236-96 (2012), Section: 1910.137 (c) (2) (iii)",
+"ASTM F496-20, Section: ",ASTM F496-20,,,Complete air test as per ASTM F496-20,6 months,"https://www.notion.so/Rubber-Insulating-Gloves-Air-Test-101a7f7164d6491b8e59108011181fa6, https://www.notion.so/Rubber-Insulating-Sleeves-Air-Test-8f4c275c48db40c5896181513ed92c21",,,"https://www.notion.so/rubber-insulating-gloves-4ceeba85fd22426fb48479b1827dcbc3, https://www.notion.so/rubber-insulating-sleeves-043b3ee7f2be4dc09c36122eb8ed7786",,Contractor,,https://webstore.ansi.org/Standards/ASTM/ASTMF49620,"#CannotAccessMissingDetail, #NoPurchase","ASTM F496-20, Section: ",
+"Ontario Regulation 213/91, Section: 132. (1)",Ontario Regulation 213/91,,132. (1),"132. (1) A professional engineer shall inspect and give a written opinion as to the structural adequacy of a centre pole scaffold used in silo construction when required by subsection (2). O. Reg. 213/91, s. 132 (1).
+
+(2) An inspection shall be performed on the earlier of,
+
+(a) the twenty-fourth time the scaffold is erected following the most recent inspection; or
+
+(b) for a scaffold used in the construction of,
+
+(i) a monolithic silo, two years after the scaffold is erected or after the most recent inspection, and
+
+(ii) a stave silo, one year after the scaffold is erected or after the most recent inspection. O. Reg. 213/91, s. 132 (2).
+
+(3) The employer responsible for constructing the silo shall keep with a scaffold every written opinion by a professional engineer concerning the scaffold while it is in use on a project. O. Reg. 213/91, s. 132 (3).
+
+(4) The employer responsible for constructing the silo shall record information about the frequency of use of the scaffold in a log book which shall be kept with the scaffold while it is in use on a project. , s. 132 (4).",As per activity,https://www.notion.so/Scaffold-Inspection-Frequency-188e5dc48cdd4f888dc24b3409fefe4e,,,https://www.notion.so/scaffold-4961170b77b24110a3655ba7386b04c4,,"Contractor, See Note",No,https://www.ontario.ca/laws/regulation/910213,"AJ: All the inspection is required by professional engineer. 
+Do we consider this as an inspection? (I dont think so)
+#########################
+
+SC: For scaffolds with drawings we are not required to inspect it every time it is erected.","Ontario Regulation 213/91, Section: 132. (1)",
+"CSA Z797-18, Section: 8.2",CSA Z797-18,,8.2,"Prior to being place into service, an engineered scaffold shall be inspected by the person responsible for the design drawings or their delegate to ensure compliance with the Standard (Z797-18) and the design drawings. A record of inspection shall be kept in accordance with clause 8.6.
+
+",Prior to being placed into service,,,,https://www.notion.so/scaffold-4961170b77b24110a3655ba7386b04c4,,,,https://www.csagroup.org/store/product/Z797-18/,"To be performed by contractor or engineer. ","CSA Z797-18, Section: 8.2",
+"CSA Z797-18, Section: 8.3",CSA Z797-18,,8.3,"8.3 Inspection by user before use A scaffold shall be inspected before initial use by the user or by a competent person acting for the user who has been trained in accordance with the requirements of Clause 9, to determine that
+a) there are no missing or improperly fitted components;
+b) there is no part or component that is damaged or unusable;
+c) the loading and use of the scaffold are in accordance with the duty rating; and
+d) a method is in place for the communication of the results of the inspection (see Clause 7.2.3).
+A record of this inspection shall be kept in accordance with Clause 8.6.",Prior to use,https://www.notion.so/Scaffold-Inspection-for-Safe-Use-a65e0b383eb04e5bb5edcb899edd6787,,,https://www.notion.so/scaffold-4961170b77b24110a3655ba7386b04c4,,Staff,,https://www.csagroup.org/store/product/Z797-18/,"Mentioned Clause 9 is regarding training. ","CSA Z797-18, Section: 8.3",
+"CSA Z797-18, Section: 8.4",CSA Z797-18,,8.4,"8.4 Periodic inspection 
+The requirements for periodic inspection are as follows:
+a) A competent person shall inspect the scaffold at intervals, according to the requirements of the authority having jurisdiction, or daily where that authority has not made a requirement, to ensure
+i) the scaffold is being properly maintained and is not undergoing detrimental deformation;
+ii) the scaffold is capable of withstanding all loads, including expected eccentric loads; and
+iii) the duty rating of the scaffold has been communicated to the user (see Clause 7.4.1).
+b) A competent person might determine that inspections shall be performed more frequently than as specified in Item a) because of factors such as, but not limited to, the type of environment in which the scaffold is being used and the structure to which the scaffold is tied.
+c) The required inspection frequency and the dates of inspections shall be communicated to the user.
+d) A record of this inspection shall be kept in accordance with Clause 8.6.",Daily,https://www.notion.so/Scaffold-Inspection-for-Safe-Use-a65e0b383eb04e5bb5edcb899edd6787,,,https://www.notion.so/scaffold-4961170b77b24110a3655ba7386b04c4,,Staff,,https://www.csagroup.org/store/product/Z797-18/,Standard grounded by activity.,"CSA Z797-18, Section: 8.4",
+"CSA Z797-18, Section: 8.6",CSA Z797-18,,8.6,"8.6 Documentation and recordkeeping
+The following shall be readily available at the site where the scaffold is located:
+a) records of all inspections, as required in Clauses 8.2 to 8.4; and
+b) design or erection drawings (as applicable), manufacturer's specifications, and supplier's literature.",Daily,https://www.notion.so/Scaffold-PM-Data-Recording-764f6dc94c714d909e26c2b2782be9f5,,,https://www.notion.so/scaffold-4961170b77b24110a3655ba7386b04c4,,Staff,,https://www.csagroup.org/store/product/Z797-18/,"New activity has been created to meet the standards requirement. ","CSA Z797-18, Section: 8.6",
+", Section: SCBA",,,,"Hydrostatic Test for Steel or Aluminum, a calibrated expansion pressure test of the structural integrity of cylinders. 
+Hydrostatic Test for Composite (i.e. Fibreglass, Kevlar, Carbon-wrapped or Hoop-Wound), a calibrated expansion pressure test of the structural integrity of cylinders. 
+
+Hydrostatic test must be completed at a qualified service centre
+
+Steel and aluminum cylinders do not have a specified ""end of service"" life, but must be removed from service upon failure of a hydrostatic test.",5 Years,"https://www.notion.so/Self-contained-breathing-apparatus-SCBA-Hydrostatic-Test-7610a2fcb3294591bccabeb3a85e0f8b, https://www.notion.so/Self-contained-breathing-apparatus-SCBA-Hydrostatic-Test-Inspection-3e57ac9f687040098c67c98a9a174c98",,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,,"Requirement text not found in the sited source(s). 
+#SourceUnknown
+#UnknownPerformer",", Section: ",
+"CSA-Z94.4-18, Section: 11.3.3.1.1",CSA-Z94.4-18,,11.3.3.1.1,"11.3.3.1 General requirements for inspection of steel, aluminum, and fibre-reinforced cylinders
+11.3.3.1.1 A qualified person shall Inspect cylinders externally and internally In accordance with
+a) CSA B339 and CSA B340;
+b) CGA C-6, C-6.1, or C-6.2, as applicable;
+c) applicable transport regulations; and
+d) the manufacturer's Instructions.
+Notes: 1) Visual internal inspections are required for all cylinders at the time of their hydrostatic testing; see Clouse 11.6.2 for hydrostatic testing requirements. 2) In Canada, applicable transport regulations are issued by Transport Canada under the Transportation of Dangerous Goods Act.
+11.3.3.1.2 All composite SCBA cylinders (e.g., fibreglass, Kevlar, carbon-wrapped, or hoop-wound) shall be removed from service no later than 15 years from their date of manufacture.
+11.3.3.1.3 Steel and aluminum cylinders over 15 years old shall have the interior of the cylinder inspected at least annually by a qualified person when these cylinders are in current use. Note: This Clouse does not extend the service life of cylinders.",Annually,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-General-Inspection-Requirement-55b809f34274490caa6bb6b2de04d630,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CAN%25100CSA-Z94.4-18/,"Maintenance, Inspect, Maintaine","CSA-Z94.4-18, Section: 11.3.3.1.1",
+"CSA 339-18, Section: 24.2.9.1",CSA 339-18,,24.2.9.1,"24.2.9.1 The containers identified in Clause 24.2.9.3 and used exclusively for the corresponding services indicated therein may be periodically requalified by external visual reinspection without pressure retesting.
+Visual reinspections shall be performed in accordance with CGA C-6, C-6.1, or C-6.3, as applicable.","#freqIn{CGA C-6, C-6.1, C-6.3}","https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-CGA-C-6-a7de57012f0c400ba90ae533c1ae900f, https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-General-Inspection-Requirement-55b809f34274490caa6bb6b2de04d630, https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-CGA-C-6-3-980928f9382e43b2ab18dfa76de11ff7",,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CSA%25100ANSI-C22.2%20NO.%20339-18/,#UnknownPerformer,"CSA 339-18, Section: 24.2.9.1",
+"CGA C-6, Section: ",CGA C-6,,,"Comment: may need to purchase, but is contractor task",,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-CGA-C-6-a7de57012f0c400ba90ae533c1ae900f,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Contractor, See Note",,https://portal.cganet.com/Publication/Details.aspx?id=C-6,"#CannotAccessMissingDetail
+#UnknownPerformer
+
+","CGA C-6, Section: ",
+"CGA C-6.1, Section: ",CGA C-6.1,,,"Comment: may need to purchase, but is contractor task",,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-CGA-C-6-1-cb14c1b4e5554d3493100c27e4bc02b6,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Contractor, See Note",,https://portal.cganet.com/Publication/Details.aspx?id=C-6.1,"#CannotAccessMissingDetail
+#UnknownPerformer
+
+See note in CGA C-6","CGA C-6.1, Section: ",
+"CGA C-6.3, Section: ",CGA C-6.3,,,"Comment: may need to purchase, but is contractor task",,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-CGA-C-6-3-980928f9382e43b2ab18dfa76de11ff7,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Contractor, See Note",,https://portal.cganet.com/Publication/Details.aspx?id=C-6.3,"#CannotAccessMissingDetail
+#UnknownPerformer
+
+See note in CGA C-6","CGA C-6.3, Section: ",
+"CSA 339-18, Section: 24.2.9.2",CSA 339-18,,24.2.9.2,"24.2.9.2 The requalification period for containers requalified by external visual reinspection, as specified in Clause 24.2.9.1, shall be 5 years. An extension to 10 years may be permitted, provided the container is confined to a service in compliance with the following:
+a) the lading is a liquefied gas;
+b) the LC5o of the lading, by reason of toxicity, is not less than 5000 mL/m3;
+c) the LC5o of the lading, by reason of a corrosion effect on tissues of the respiratory tract, is not less than 5000 mL/m3; and d) contamination of the lading by water does not make the lading corrosive to the metals of containment. Note: LC50 is defined in the Transportation of Dangerous Goods Regulations.",5 Years,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-Containers-Requalification-971ae3110e0846e48045bcb19aecc463,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Contractor, See Note",,https://www.csagroup.org/store/product/CSA%25100ANSI-C22.2%20NO.%20339-18/,"#UnknownPerformer
+
+See note in CGA C-6","CSA 339-18, Section: 24.2.9.2",
+"CSA 339-18, Section: 24.2.9.3",CSA 339-18,,24.2.9.3,"24.2.9.3 The visual inspection in lieu of the pressure retest may be used on the following containers:
+a) TC-3AM, DOT-3A, TC-3AAM, DOT-3AA, DOT-3B, TC-3ANM, TC-3ASM, DOT-3A480X, DOT-3BN, TC-4AAM33, DOT-4AA480, TC-4BM, DOT-4B, TC-4BAM, DOT-4BA, TC-4BWM, DOT-4BW, DOT-4B240FLW,TC-4BM17ET, DOT-4B240ET, TC-4EM, and DOT-4E containers used to transport a liquefied or nonliquefied noncorrosive gas that requires a marked service pressure not exceeding 3.5 MPa;
+b) ICC-3, TC-3AM, DOT-3A, TC-3AAM, DOT-3AA, TC-3ASM, DOT-3B, TC-4BM, DOT-4B, TC-4BAM, DOT-4BA, TC-4BWM, and DOT-4BW containers used exclusively to transport hydrogen fluoride, anhydrous. TC-4BM, DOT-4B, TC-4BAM, and DOT-4BA cylinders shall be of welded construction only. All cylinders shall be cleaned to bare metal before reinspection;
+c) TC-4BM, DOT-4B, TC-4BAM, DOT-4BA containers of welded construction only, and TC-4BWM and DOT-4BW cylinders used to transport ethyleneimine, inhibited;
+d) steel or nickel cylinders used to transport nickel carbonyl; and
+e) cylinders used to transport flammable or corrosive liquids without addition of compressed gas.",N/A,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-Visual-Inspection-24f007483fff43f8a47b55642f2e7e7e,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CSA%25100ANSI-C22.2%20NO.%20339-18/,#UnknownPerformer,"CSA 339-18, Section: 24.2.9.3",
+"CSA-Z94.4-18, Section: 11.6.2",CSA-Z94.4-18,,11.6.2,"11.6.2 Hydrostatic test
+11.6.2.1 Cylinders shall be hydrostatically tested at a frequency and in the manner described in CSA B339 and CM B340. Note: Hydrostatic tests are required every 5 years for all SCBA cylinders.
+11.6.2.2 Hydrostatic testing shall be performed by a registered facility in accordance with the requirements of CSA B339 and CSA B340.",5 Years,"https://www.notion.so/Self-contained-breathing-apparatus-SCBA-Hydrostatic-Test-Inspection-3e57ac9f687040098c67c98a9a174c98, https://www.notion.so/Self-contained-breathing-apparatus-SCBA-Hydrostatic-Test-7610a2fcb3294591bccabeb3a85e0f8b",,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CAN%25100CSA-Z94.4-18/,,"CSA-Z94.4-18, Section: 11.6.2",
+"CSA 339-18, Section: Table 29",CSA 339-18,,Table 29,"Please refer to the image in the “requirement name” column. ",As per activity,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-Containers-Requalification-Period-d917c5dff91e4c1fac667f7f1028806b,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CSA%25100ANSI-C22.2%20NO.%20339-18/,,"CSA 339-18, Section: Table 29",
+", Section: ",,,,"Breathing air must be replaced 
+
+All components (cylinders, hoses, regulator, pressure gauges, facepiece, harness)
+Fit test and ensure all appropriate staff have practiced use of SCBA equipment 
+
+Inspect tank for date stamp of last hydrostatic test 
+
+Replace air in tanks Cylinder inspected internally and externally by qualified service technician 
+
+Apparatus components (hoses, regulator, pressure gauges, facepiece, harness, etc.) inspected by qualified service technician Regulator flow test performed by qualified service technician
+
+",,https://www.notion.so/Self-contained-breathing-apparatus-SCBA-Fit-Test-Parts-Inspection-87a7dc56836145b986b868e60c36c885,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",,,"Requirement text not found in the sited source(s). 
+#SourceUnknown",", Section: ",
+"CSA-Z94.4-18, Section: 11.5.5.2",CSA-Z94.4-18,,11.5.5.2,"11.5.5.2 Prior to using a SCBA cylinder that has not been used in any 12-month period, the air shall be discarded by slowly depressurizing the cylinder to the atmosphere and refilling it with compressed breathing air meeting the requirements of CSA Z180.1.",Annually,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-Unused-Cylinder-45833118aa0e413d98f182a26495a8ae,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",,https://www.csagroup.org/store/product/CAN%25100CSA-Z94.4-18/,"SC: Once again, this is for reference to the contractor, if we are inspection SCBA annually and refilling after use we will meet this requirement","CSA-Z94.4-18, Section: 11.5.5.2",
+"CSA-Z94.4-18, Section: 11.3.3.1.3",CSA-Z94.4-18,,11.3.3.1.3,"11.3.3.1.3 Steel and aluminum cylinders over 15 years old shall have the interior of the cylinder inspected at least annually by a qualified person when these cylinders are in current use. Note: This Clouse does not extend the service life of cylinders
+
+",Annually,https://www.notion.so/Self-contained-Breathing-Apparatus-SCBA-Cylinder-Interior-Inspection-6f9c7b50aaea40b18f1a6dd74a8e1a74,,,https://www.notion.so/self-contained-breathing-apparatus-SCBA-f705efefb80041cebfd4dbaddcbfc261,,Contractor,,https://www.csagroup.org/store/product/CAN%25100CSA-Z94.4-18/,,"CSA-Z94.4-18, Section: 11.3.3.1.3",
+"Ontario Regulation 224, Section: SPILL PREVENTION AND CONTINGENCY PLANS",Ontario Regulation 224,,SPILL PREVENTION AND CONTINGENCY PLANS,"Inspect and ensure spill kit is sealed. If seal is broken, verify contents, replenish and re-seal.",,https://www.notion.so/Spill-Kit-Inspection-For-Safe-Usage-Condition-7c8506b0636e4b9695f7d40afa6f98ef,,,https://www.notion.so/spill-kit-7b850b3ad84240f6bc14fd25362b2404,,Staff,No,,"Requirement text not found in the sited source(s).
+#SourceUnknown
+Need to list the Items to be present in the kit. 
+SC:Aug 25:  Refer to the inventory list provided by the manufacturer. 
+- Upladate in WMS upon replenishing the inventory. ","Ontario Regulation 224, Section: SPILL PREVENTION AND CONTINGENCY PLANS",
+"CSA B149.6-20, Section: 13.6",CSA B149.6-20,,13.6,"13.6 Valve maintenance
+Valves that are necessary for the safe operation of the digester gas system shall be checked and serviced, including lubrication when necessary, at intervals sufficiently frequent to ensure their satisfactory operation. The frequency of such checking and servicing shall be Identified in the written instructions specified in Clause 13.1.2",,https://www.notion.so/Gaseous-Fuel-Handling-Valves-7fde951badb44063af40a7332d83a24b,,,,,"Assignment Uncertain, Assignment Verifed, Staff",,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,"#CannotAccessMissingDetail
+Many different activities needs to be performed for various valves. There are 27 different activities that is to be performed on valves in the DIG-PM. 
+#Discuss
+July 29 AJ: TH to make modification to the classification and add in some attributes.","CSA B149.6-20, Section: 13.6",
+"CSA B149.6-20, Section: 13.1.2",CSA B149.6-20,,13.1.2,,,https://www.notion.so/Gaseous-Fuel-Handling-Valve-Inspection-Frequency-af916491155e4ba2b475eae4c7680492,,,,,Contractor,,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,#CannotAccessMissingDetail,"CSA B149.6-20, Section: 13.1.2",
+"AMSE B30.9-2018, Section: 9-5.9.5",AMSE B30.9-2018,,9-5.9.5,"Web sling should be removed from service and be discarded if the following conditions are found:
+
+- Missing or illegible sling identification
+- Acid or caustic burns
+- Melting or charring of any part of the sling
+- Holes, tears, cuts, or snags
+- Broken or worn stitching in load-bearing splices
+- Excessive wear or abrasion
+- Knots in any part of the sling
+- Discoloration and brittle or stiff areas on any part of the sling, which may indicate chemical or UV damage
+- Fittings that are pitted, corroded, cracked, bent, twisted, gouged, or broken
+- For hooks, removal criteria as stated in ASME B30.10
+- For rigging hardware, removal criteria as stated in ASME B30.26
+- Other conditions, including visible damage, that cause doubt to the continued use of the sling ",Annually,https://www.notion.so/Web-Sling-Inspection-For-Safe-Usage-e3ce8e366b0f48c7ac99ebd0eba55e13,,,https://www.notion.so/web-sling-18eee6561af54394a626fe98b74b1d6e,,Contractor,,https://www.asme.org/codes-standards/find-codes-standards/b30-9-slings,"#CannotAccess, #ToPurchase","AMSE B30.9-2018, Section: 9-5.9.5",
+"ASME B30.10, Section: ",ASME B30.10,,,,,https://www.notion.so/Web-Sling-Inspection-be371e93d64d4e5c8426e073f4f71d08,,,https://www.notion.so/web-sling-18eee6561af54394a626fe98b74b1d6e,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",,https://www.asme.org/codes-standards/find-codes-standards/b30-10-hooks,"#CannotAccessMissingDetail
+SC: Not sure I added this?
+Aj July 27: It has been added by myself , as these are referred in the requirement. 
+Since the source requirement is to be performed by the contractor, these referenced requirements are to be performed by the contractors as well. ","ASME B30.10, Section: ",
+"ASME B30.26, Section: ",ASME B30.26,,,,,https://www.notion.so/Web-Sling-Inspection-be371e93d64d4e5c8426e073f4f71d08,,,https://www.notion.so/web-sling-18eee6561af54394a626fe98b74b1d6e,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",,https://www.asme.org/codes-standards/find-codes-standards/b30-26-rigging-hardware,"#CannotAccessMissingDetail
+SC: Not sure I added this?
+Aj July 27: It has been added by myself , as these are referred in the requirement. 
+Since the source requirement is to be performed by the contractor, these referenced requirements are to be performed by the contractors as well. ","ASME B30.26, Section: ",
+"ASME B30.9-2018, Section: 9-3.9.5",ASME B30.9-2018,,9-3.9.5,"Wire Mesh Sling
+a) Missing or illegible sling identification
+b) Broken weld or a broken brazed joint along the sling edge
+c) Broken wire in any part of the mesh
+d) Reduction in wire diameter of 25% due to abrasion or 15% due to corrosion
+e) Lack of flexibility due to distortion of the mesh
+f) Distortion of the choker fitting so the depth of the slot is increased by more than 10%
+g) Distortion of either end fitting so the width of the eye-opening is decreased by more than 10%
+h) 15% reduction of the original cross-sectional area of any point around the hook opening of the end fitting
+i) Visible distortion of either end fitting out if its plane
+j) Cracked end fitting
+k) Slings in which the spirals are locked or without free articulation shall not be used
+f) ittings that are pitted, corroded, cracked, bent, twisted, gouged, or broken
+g) Other conditions, including visible damage, that cause doubt as to the continued use of the sling",Annually,https://www.notion.so/Wire-Mesh-Sling-Inspection-For-Safe-Usage-9615c395bdc54194a7e265b45b170972,,,https://www.notion.so/wire-mesh-sling-f8ddec4643a9403f93c5209d6874a4ed,,Contractor,,https://webstore.ansi.org/Standards/ASME/ASMEB302018,"#CannotAccess
+-All points here mentions different component.","ASME B30.9-2018, Section: 9-3.9.5",
+", Section: ",,,,"Wire Rope sling should be removed from service and be discarded if the following conditions are found:
+1. Missing or illegible sling identification. If the tag is missing or illegible, the inspector should remove the sling from service and send it to the manufacturer for current or updated certification, tagging, and testing.
+2. Broken Wires: For strand-laid grommets and single-part slings, ten randomly distributed broken wires in one rope lay, or five broken wires in one strand in one rope lay. For cable laid, cable laid grommets and multi-part slings, use the following:
+How to Inspect Wire Rope Slings According to ASME B30.9 Standards: Broken Wires Chart
+3. Distortion: Kinking, crushing, birdcaging or other damage which distorts the rope structure. The main thing to look for is wires or strands that are pushed out of their original positions in the rope.
+4. Heat Damage: Any metallic discoloration, fusing of wires or loss of internal lubricant caused by exposure to heat.
+5. Damaged End Attachments: Cracked, bent or broken end fittings caused by abuse, wear or damage.
+6. Bent Hooks: No more than 5 percent over the normal throat openings, measured at the narrowest point from the plane of the unbent hook (see ASME B30.10 Hooks).
+7. Corrosion: Severe corrosion of the rope or end attachments which has caused pitting or binding of wires should be cause for replacing the sling. Light surface rust does not substantially affect strength of a sling.
+8. Pulled Eye Splices: Any evidence that eye splices have slipped, tucked strands have moved or pressed sleeves show serious damage may be sufficient cause to reject a sling.
+9. Unbalance: A very common cause of damage is the kink which results from pulling through a loop while using a sling, thus causing wires and strands to be deformed and pushed out of their original position. This unbalances the sling, reducing its strength.
+10. Kinks: Are tightened loops with permanent strand distortion that result from improper handling when a rope is being installed or while in service. A kink happens when a loop is permitted to form and then is pulled down tight, causing permanent distortion of the strands. The damage is irreparable and the sling must be taken out of service.
+11. Doglegs: Are permanent bends caused by improper use or handling. If the dogleg is severe, the sling must be removed from service. If the dogleg is minor, (exhibiting no strand distortion) and cannot be observed when the sling is under tension, the area of the minor dogleg should be marked for observation and the sling can remain in service.",Annually,https://www.notion.so/Wire-Rope-Sling-Inspection-For-Safe-Usage-c0a06449171644d7922bd2415022de12,,,https://www.notion.so/wire-rope-sling-77c5233ab77743378ce0b629bfb2ea27,,Contractor,,,"Requirement text not found + requirement from which source(s)?
+-All points here mentions different component.
+#SourceUnknown",", Section: ",
+"OSHA 1910.184, Section: 1910.184(f)(5)
+",OSHA 1910.184,,"1910.184(f)(5)
+","1910.184(f)(5)
+Removal from service. Wire rope slings shall be immediately removed from service if any of the following conditions are present:
+1910.184(f)(5)(i)
+Ten randomly distributed broken wires in one rope lay, or five broken wires in one strand in one rope lay.
+1910.184(f)(5)(ii)
+Wear or scraping of one-third the original diameter of outside individual wires.
+1910.184(f)(5)(iii)
+Kinking, crushing, bird caging or any other damage resulting in distortion of the wire rope structure.
+1910.184(f)(5)(iv)
+Evidence of heat damage.
+1910.184(f)(5)(v)
+End attachments that are cracked, deformed or worn.
+1910.184(f)(5)(vi)
+Hooks that have been opened more than 15 percent of the normal throat opening measured at the narrowest point or twisted more than 10 degrees from the plane of the unbent hook.
+1910.184(f)(5)(vii)
+Corrosion of the rope or end attachments.
+
+","Annually
+#freqIn{OSHA 1910.184(e)(3)(i)}",https://www.notion.so/Wire-Rope-Sling-Inspection-For-Safe-Usage-4194969a55204b3e8265922d01d24214,,,https://www.notion.so/wire-rope-sling-77c5233ab77743378ce0b629bfb2ea27,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",No,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.184,SC: I could not find a Canadian comparable requirement/regulation so I used OSHA. This should be inspection prior to every use and inspected annually to ensure it is still in good working condition.,"OSHA 1910.184, Section: 1910.184(f)(5)
+",
+"OSHA 1910.184, Section: 1910.184(e)(3)(i)I
+-",OSHA 1910.184,,"https://www.osha.gov/laws-regs/interlinking/standards/1910.184(e)(3)(i)I
+-","https://www.osha.gov/laws-regs/interlinking/standards/1910.184(e)(3)(i)In addition to the inspection required by paragraph (d) of this section, a thorough periodic inspection of alloy steel chain slings in use shall be made on a regular basis, to be determined on the basis of 
+(A) frequency of sling use; 
+(B) severity of service conditions; 
+(C) nature of lifts being made; and 
+(D) experience gained on the service life of slings used in similar circumstances. Such inspections shall in no event be at intervals greater than once every 12 months.
+1910.184(e)(3)(ii)The employer shall make and maintain a record of the most recent month in which each alloy steel chain sling was thoroughly inspected, and shall make such record available for examination.",Annually,https://www.notion.so/Wire-Rope-Sling-Inspection-Frequency-Verification-ed7074eef32440b79035f8d429f34b2a,,,https://www.notion.so/wire-rope-sling-77c5233ab77743378ce0b629bfb2ea27,,"Assignment Uncertain, Assignment Verifed, Contractor, See Note",No,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.184,SC: I could not find a Canadian comparable requirement/regulation so I used OSHA. This should be inspection prior to every use and inspected annually to ensure it is still in good working condition.,"OSHA 1910.184, Section: 1910.184(e)(3)(i)I
+-",
+"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37 b. ii","Ontario Regulation 220/01 Code Adoption
+  Document",,1.37 b. ii,"1.37 b. Heating boilers
+i. up to and including a maximum pressure of 1100 kPa (160 psig) at a maximum temperature of 121oC (250oF) shall have a manual lift test or system test every two years and serviced every six years,
+ii. steam service operating up to and including a maximum pressure of 103 kPa (15 psig) shall have a manual lift test annually and shall be serviced every five years
+",5 Years,,,,https://www.notion.so/Defined-heating-steam-service-boiler-3bf2c1f79bf143f78164120f9a46f80b,,Contractor,No,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Final-BPV-CAD-Amendment-2017.pdf,,"Ontario Regulation 220/01 Code Adoption
+  Document, Section: 1.37 b. ii",
