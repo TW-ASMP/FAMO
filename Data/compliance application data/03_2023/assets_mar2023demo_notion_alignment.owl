@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.eil.utoronto.ca/FAMO/assets#"
+     xml:base="http://ontology.eil.utoronto.ca/FAMO/assets"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets">
+        <terms:title>Toronto Water Asset Hierarchy</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/hasDeaerator -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/hasDeaerator">
+        <rdfs:label>Has deaerator?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/hasQuickOpeningDoor -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/hasQuickOpeningDoor">
+        <rdfs:label>Has quick opening door?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained">
+        <rdfs:label>Is self-contained?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/maximumOutletTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/maximumOutletTemperature">
+        <rdfs:label>Maximum outlet temperature?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure">
+        <rdfs:label>Operating pressure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/serviceType -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType">
+        <rdfs:label>Service type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/Boiler -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/hasDeaerator"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/hasQuickOpeningDoor"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/maximumOutletTemperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>both</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>hot water service</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>steam service</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/EmergencyShower -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EmergencyShower">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/Eyewash -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Eyewash">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Asset -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
+    
+
+
+    <!-- https://www.notion.so/Defined-boiler-with-quick-opening-door-and-deaerator -->
+
+    <owl:Class rdf:about="https://www.notion.so/Defined-boiler-with-quick-opening-door-and-deaerator">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.notion.so/Defined-low-pressure-boiler -->
+
+    <owl:Class rdf:about="https://www.notion.so/Defined-low-pressure-boiler">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.notion.so/Personal-Eyewash-Portable -->
+
+    <owl:Class rdf:about="https://www.notion.so/Personal-Eyewash-Portable">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
