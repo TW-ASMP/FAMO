@@ -148,6 +148,23 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -243,6 +260,18 @@ Tony Huang, Toronto Water</terms:creator>
         <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Agent"/>
         <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Trade"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasUnitOfMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasUnitOfMeasure"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasValue"/>
     
 
 
@@ -380,9 +409,9 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasProcedure -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasNumericalValue -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasProcedure"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasNumericalValue"/>
     
 
 
@@ -395,6 +424,12 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/name -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/name"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/procedure -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/procedure"/>
     
 
 
@@ -424,7 +459,9 @@ Tony Huang, Toronto Water</terms:creator>
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime">
+        <rdfs:comment>specifies the estimated duration of work in hours</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -638,13 +675,13 @@ Tony Huang, Toronto Water</terms:creator>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/publicationDate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/revisionDate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -660,7 +697,14 @@ Tony Huang, Toronto Water</terms:creator>
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Duration -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Duration"/>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Duration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -721,6 +765,25 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Measure -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Measure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasUnitOfMeasure"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasNumericalValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ProvincialLegislation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ProvincialLegislation">
@@ -755,13 +818,6 @@ Tony Huang, Toronto Water</terms:creator>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/identifier"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>a Requirement is an Information Content Entity. In the context of compliance, a requirement is defined with respect to to some asset type (note that this may be expanded to include roles and individual assets in the future).</rdfs:comment>
     </owl:Class>
     
@@ -772,12 +828,6 @@ Tony Huang, Toronto Water</terms:creator>
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Section"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/content"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/sectionNumber"/>
@@ -828,6 +878,12 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/UnitOfMeasure"/>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/WorkRequirement -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/WorkRequirement">
@@ -864,13 +920,13 @@ Tony Huang, Toronto Water</terms:creator>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasProcedure"/>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/name"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/name"/>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/procedure"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -878,6 +934,13 @@ Tony Huang, Toronto Water</terms:creator>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Work Requirement is a specific type of Requirement that defines  the work required on a particular asset at the level of a specific Activity.</rdfs:comment>

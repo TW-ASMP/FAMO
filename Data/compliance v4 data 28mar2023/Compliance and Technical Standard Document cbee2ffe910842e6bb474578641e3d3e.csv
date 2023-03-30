@@ -1,0 +1,47 @@
+﻿ID,Official Doc Number,Official Document Name,Document Type,Version Publication Date,Latest Ver Revision Date,Official URL,📊 Requirement
+doc_1,CCOHS Emergency Showers,Emergency Eyewash & Shower Standard,Technical Standard,02-Mar-23,,https://www.ccohs.ca/oshanswers/safety_haz/emer_showers.html,
+doc_2,ANSI Z358.1-2014,Emergency Eyewash & Shower Standard,Technical Standard,02-Jan-14,,https://webstore.ansi.org/Search/Find?in=1&st=z358.1,"https://www.notion.so/ANSI-Z358-1-2014-on-Annual-Personal-Wash-Maintenance-efb1f6fa36034dc7b91170f6fb1fafec, https://www.notion.so/ANSI-Z358-1-2014-on-weekly-inspection-of-self-contained-emergency-wash-equipment-77451d7bcf5f408381776a02d9f7102b, https://www.notion.so/ANSI-Z358-1-2014-on-Plumbed-Emergency-Wash-Annual-Test-3acee35a8e9849c8aaa13fc4ef55bd18, https://www.notion.so/ANSI-Z358-1-2014-on-weekly-inspection-of-plumbed-emergency-wash-equipment-62c03bbbbbd048e6aef8f4ee101b8a00"
+doc_3,BPV-20-01 R1,Boilers and Pressure Vessels Safety Program - Code Adoption Document Amendment,Regulation,01-Dec-20,12-Jan-21,https://www.tssa.org/en/boilers-pressure-vessels/resources/Documents/Legs--Regs/BPV-CAD-AMENDMENTS_JUNE-28_FINAL.PDF,
+doc_4,"TORONTO MUNICIPAL CODE
+CHAPTER 851, WATER SUPPLY",Toronto Municipal Code Chapter 851 Schedule 5 Backflow Preventers,By-Law,01-Apr-19,,https://www.toronto.ca/legdocs/municode/1184_851.pdf,https://www.notion.so/Toronto-Municipal-Code-851-Section-851-8-D-11-c-7ada0492d8e44c5592e51af7c3305efb
+doc_5,CSA B64.10:17,Selection and Installation of Backflow Preventers/Maintenance and Field Testing of Backflow Preventers,Technical Standard,02-Jan-19,04-Jan-21,https://www.csagroup.org/store/product/B64.10-17%25100B64.10.1-17/,
+doc_6,"AWWA Backflow
+  Prevention and Cross-Connection Control",AWWA Backflow Prevention and Cross-Connection Control,Technical Standard,02-Jan-15,,https://engage.awwa.org/PersonifyEbusiness/Store/Product-Details/productId/50277934,
+doc_7,OSHA 1910.184,"Slings - Chain, Wire-Rope, Metal Mesh, Natural and Synthetic Fiber-Rope, Synthetic Web ",Technical Standard,15-Apr-19,,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.184,
+doc_8,AMSE B30.9-2018,Slings,Technical Standard,04-Jan-21,,https://www.asme.org/codes-standards/find-codes-standards/b30-9-slings,
+doc_9,ASME B30.26,Rigging Hardware,Technical Standard,02-Jan-15,,https://www.asme.org/codes-standards/find-codes-standards/b30-26-rigging-hardware,
+doc_10,ASME B30.10,Hooks,Technical Standard,02-Jan-19,,https://www.asme.org/codes-standards/find-codes-standards/b30-10-hooks,
+doc_11,ASTM F1052-14,Standard Test Method For Pressure Testing Vapor Protective Ensembles,Technical Standard,02-Jan-14,,https://webstore.ansi.org/standards/astm/astmf105209,
+doc_12,CSA B149.6-20,Code for digester gas and utilization,Technical Standard,02-Jan-20,,https://www.csagroup.org/store/product/CSA%25100ANSI%20B149.6%3A20/,
+doc_13,CSA C282-19,Emergency electrical power supply for buildings,Technical Standard,02-Jan-19,,https://www.csagroup.org/store/product/CSA%20C282%3A19/,
+doc_14,National Fire Code of Canada 2015,National Fire Code of Canada 2015,Legislation,02-Jan-15,28-Sep-18,https://publications.gc.ca/collections/collection_2019/cnrc-nrc/NR24-27-2018-eng.pdf,
+doc_15,"TSSA, 2000 - Ontario Regulation 209/01",ELEVATING DEVICES,Regulation,01-Jul-22,,https://www.ontario.ca/laws/regulation/010209,"https://www.notion.so/TSSA-2000-Ontario-Regulation-209-01-Section-32-b94ba6d5a1a541d4835848258714052d, https://www.notion.so/Ontario-Regulation-209-01-Section-34-5c91241ae7c2452cac8a9c5158671935"
+doc_16,CSA B44-16,Safety code for elevators and escalators,Technical Standard,04-Jan-16,,https://www.csagroup.org/store/product/ASME%20A17.1-2016%25100CSA%20B44-16/,"https://www.notion.so/CSA-B44-16-Section-8-6-1-7-2ef1b621bcbf47d6a7eb1f8108c462d8, https://www.notion.so/CSA-B44-16-Section-Table-N-1-1696734b108940f8b72cb2ca5432d896, https://www.notion.so/CSA-B44-16-Section-8-6-1-4-1-86a3b3f803c24f45a971b637f950688f, https://www.notion.so/CSA-B44-16-Section-2-9-0fcfb4893c9742ba8d20b5dcc11df64c"
+doc_17,"TSSA, 2000 - CAD-277-19",Elevating Devices Code Adoption Document Amendment,Regulation,03-May-19,,https://www.tssa.org/en/elevating-devices/resources/Documents/ED-277-19-CAD.pdf,"https://www.notion.so/CSA-B44-16-Section-8-6-1-7-2ef1b621bcbf47d6a7eb1f8108c462d8, https://www.notion.so/CSA-B44-16-Section-Table-N-1-1696734b108940f8b72cb2ca5432d896, https://www.notion.so/CSA-B44-16-Section-8-6-1-4-1-86a3b3f803c24f45a971b637f950688f, https://www.notion.so/CSA-B44-16-Section-2-9-0fcfb4893c9742ba8d20b5dcc11df64c"
+doc_18,CSA B167-16,"Overhead cranes, gantry cranes, monorails, hoists, and jib cranes",Technical Standard,04-Jan-16,,https://www.csagroup.org/store/product/B167-16/,
+doc_19,CSA B311-02,Safety code for manlifts,Technical Standard,04-Jan-02,04-Jan-22,https://www.csagroup.org/store/product/CAN%25100CSA-B311-02/,
+doc_20,CSA B335-15,Safety standard for lift trucks,Technical Standard,02-Jan-15,02-Jan-20,https://www.csagroup.org/store/product/B335-15/,
+doc_21,CSA Z797-18,Code of practice for access scaffold,Technical Standard,02-Jan-18,,https://www.csagroup.org/store/product/Z797-18/,
+doc_22,CSA Z259.17-16,Selection and use of active fall-protection equipment and systems,Technical Standard,04-Jan-16,02-Jan-20,https://www.csagroup.org/store/product/Z259.17-16/,
+doc_23,Ontario Regulation 1101/90,FIRST AID REQUIREMENTS,Regulation,31-Dec-90,,https://www.ontario.ca/laws/regulation/901101,
+doc_24,Ontario Regulation 851/90,INDUSTRIAL ESTABLISHMENTS,Regulation,22-Jul-22,,https://www.ontario.ca/laws/regulation/900851,
+doc_25,Ontario Regulation 212/01,GASEOUS FUELS,Regulation,15-Mar-15,,https://www.ontario.ca/laws/regulation/010212,
+doc_26,Ontario Regulation 777/21,Ontario Electrical Safety Code (OESC),Technical Standard,05-May-22,,https://esasafe.com/role/oesc/,
+doc_27,Ontario Regulation 224,SPILL PREVENTION AND CONTINGENCY PLANS,Regulation,31-Oct-11,,https://www.ontario.ca/laws/regulation/070224,
+doc_28,Ontario Regulation 213/91,CONSTRUCTION PROJECTS,Regulation,01-Jul-21,,https://www.ontario.ca/laws/regulation/910213,
+doc_29,Ontario Regulation 632/05,CONFINED SPACES,Regulation,01-Jul-16,,https://www.ontario.ca/laws/regulation/050632,
+doc_30,IEC 60079-29-3:2014,Gas detectors - Guidance on functional safety of fixed gas detection systems,Technical Standard,02-Jan-14,,https://www.csagroup.org/store/product/iec_000645/,
+doc_31,I&DS Health & Safety SP 10 (2019),Unable to access the link,,,,http://insideto.toronto.ca/clusterb/hr/hns/files/safety-procedures/gas-detection-equipment.pdf,
+doc_32,CAN/CGSB 2-65.7-2007,Life Jackets,Regulation,01-Jun-07,,https://publications.gc.ca/site/eng/9.544852/publication.html,
+doc_33,MSC 81 (70),Life Saving Appliance,Technical Standard,11-Dec-98,,https://www.liscr.com/sites/default/files/liscr_imo_resolutions/MSC.81%2870%29.pdf,
+doc_34,CAN/CGSB 65.11-M88,Personal Life-saving Appliances,Regulation,22-Jul-10,,https://tc.canada.ca/en/marine-transportation/marine-safety/chapter-ii-personal-life-saving-appliances,
+doc_35,ASTM F1236-96 (2012),Standard Guide For Visual Inspection Of Electrical Protective Rubber Products,Technical Standard,02-Jan-18,,https://webstore.ansi.org/standards/astm/astmf1236962012,
+doc_36,ASTM F496-20,Standard Specification For In-Service Care Of Insulating Gloves And Sleeves,Technical Standard,02-Jan-20,,https://webstore.ansi.org/Standards/ASTM/ASTMF49620,
+doc_37,CSA-Z94.4-18,"Selection, use, and care of respirators",Technical Standard,02-Jan-18,,https://www.csagroup.org/store/product/CAN%25100CSA-Z94.4-18/,
+doc_38,CSA 339-18,Hand-held motor-operated electric tools — Safety — Particular requirements for chain beam saws,Technical Standard,02-Jan-18,,https://www.csagroup.org/store/product/CSA%25100ANSI-C22.2%20NO.%20339-18/,
+doc_39,CGA C-6,Standard for Visual Inspection of Steel Compressed Gas Cylinders,Technical Standard,01-Sep-22,,https://portal.cganet.com/Publication/Details.aspx?id=C-6,
+doc_40,CGA C-6.1,Standard for Visual Inspection of High Pressure Aluminum Alloy Compressed Gas Cylinders,Technical Standard,01-Aug-19,,https://portal.cganet.com/Publication/Details.aspx?id=C-6.1,
+doc_41,CGA C-6.3,Standard for Visual Inspection of Low Pressure Aluminum Alloy Compressed Gas Cylinders,Technical Standard,02-Jul-19,,https://portal.cganet.com/Publication/Details.aspx?id=C-6.3,
+doc_42,Government of Canada Drugs and Medical Devices,Automated External Defibrillators (AEDs),Technical Standard,10-Feb-16,,https://www.canada.ca/en/health-canada/services/drugs-medical-devices/automated-external-defibrillators-aeds.html,https://www.notion.so/Government-of-Canada-Drugs-and-Medical-Devices-Monthly-Inspection-cc58c3b7f87141e1bfba92acdd49c687
+doc_43,"Defibrillator Registration and Public Access Act, 2019, S.O. 2020, c. 8 - Bill 141",Automated External Defibrillators (AEDs),Regulation,18-Jun-20,,https://www.ontario.ca/laws/statute/s20008,
+doc_44,CCOHS - First Aid - Automated External Defibrillator (AED),First Aid - Automated External Defibrillator (AED),Technical Standard,23-Mar-23,,"https://www.ccohs.ca/oshanswers/hsprograms/firstaid_aed.html#:~:text=What%20is%20an%20Automated%20External%20Defibrillator%3F,-Back%20to%20top&text=An%20automated%20external%20defibrillator%20(AED,the%20heart%20unexpectedly%20stops%20beating.",

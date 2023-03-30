@@ -1,0 +1,274 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "properPartOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "toString(cells[\"📜 Document\"].value).replace(/[-][\\d\\w]*$/,\"\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "name"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Requirement Name",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "sectionNumber"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Requirement Section",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "description"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "📝 Requirement Text",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "appliesToAssetType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/assets/\" + replace(replace(cells[\"👯Applies to (Asset Class)\"].value,\"https://www.notion.so/\",\"\"),/[-][\\d\\w]*$/,\"\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "groundedBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "cells[\"🏗️ Satisfied by (Activity)\"].value.replace(/[-][\\d\\w]*$/,\"\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "groundedBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "toString(cells[\"🌎Grounded By (Requirement)\"].value).replace(/[-][\\d\\w]*$/,\"\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "grounds"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "toString(cells[\"🌎Is Grounding (Requirement)\"].value).replace(/[-][\\d\\w]*$/,\"\")",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "\"https://www.notion.so/\" + replaceChars(toString(cells[\"Requirement Name\"].value), \" .\", \"--\")",
+          "language": "grel"
+        },
+        "valueSource": {
+          "source": "row_index"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "comp",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "RequirementSection"
+          }
+        }
+      ]
+    }
+  ]
+}
