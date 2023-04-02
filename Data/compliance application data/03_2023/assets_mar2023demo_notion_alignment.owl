@@ -191,28 +191,9 @@
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/cfe435427a4b464797d2b0567d6c0886 -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/https://www.notion.so/plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/cfe435427a4b464797d2b0567d6c0886">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -225,6 +206,27 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+        <rdfs:label>plumbed-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-shower-eq</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/723948b08a1340bba89ae5bad289382c -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/723948b08a1340bba89ae5bad289382c">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/isSelfContained"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+        <rdfs:label>self-contained-emergency-eyewash-or-shower-equipment-COMPLETE-DEF-Class-emergency-eyewash-or-sho</rdfs:label>
     </owl:Class>
     
 
@@ -235,26 +237,20 @@
     
 
 
-    <!-- https://www.notion.so/Defined-boiler-with-quick-opening-door-and-deaerator -->
+    <!-- https://www.notion.so/5eeee1ea46e34890ac3dcf134c0ef010 -->
 
-    <owl:Class rdf:about="https://www.notion.so/Defined-boiler-with-quick-opening-door-and-deaerator">
+    <owl:Class rdf:about="https://www.notion.so/5eeee1ea46e34890ac3dcf134c0ef010">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+        <rdfs:label>Defined-low-pressure-boiler</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.notion.so/Defined-low-pressure-boiler -->
+    <!-- https://www.notion.so/9553d511957f43d7a3a812dcf2009e60 -->
 
-    <owl:Class rdf:about="https://www.notion.so/Defined-low-pressure-boiler">
+    <owl:Class rdf:about="https://www.notion.so/9553d511957f43d7a3a812dcf2009e60">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
-    </owl:Class>
-    
-
-
-    <!-- https://www.notion.so/Personal-Eyewash-Portable -->
-
-    <owl:Class rdf:about="https://www.notion.so/Personal-Eyewash-Portable">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/EyewashOrShower"/>
+        <rdfs:label>Defined-boiler-with-quick-opening-door-and-deaerator</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

@@ -1,0 +1,230 @@
+@base <http://example.com/base/> .
+@prefix comp: <http://ontology.eil.utoronto.ca/FAMO/compliance/> .
+@prefix ex: <http://example.com/data/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:3af06669e839444f9afb7595d600e25b a comp:TechnicalStandard;
+  comp:documentNumber "CCOHS Emergency Showers";
+  comp:name "Emergency Eyewash & Shower Standard";
+  comp:publicationDate "March 2, 2023"^^xsd:date .
+
+ex:1f27904d34b844c69c94621fa19b2462 a comp:TechnicalStandard;
+  comp:documentNumber "ANSI Z358.1-2014";
+  comp:name "Emergency Eyewash & Shower Standard";
+  comp:publicationDate "January 2, 2014"^^xsd:date .
+
+ex:f9b7c79ba0ed444a96b87dbb52107a27 a comp:Regulation;
+  comp:documentNumber "BPV-20-01 R1";
+  comp:name "Boilers and Pressure Vessels Safety Program - Code Adoption Document Amendment";
+  comp:publicationDate "December 1, 2020"^^xsd:date;
+  comp:revisionDate "January 12, 2021"^^xsd:date .
+
+ex:965814862153491d974d6815d00a3d55 a comp:By-Law;
+  comp:documentNumber """TORONTO MUNICIPAL CODE
+CHAPTER 851, WATER SUPPLY""";
+  comp:name "Toronto Municipal Code Chapter 851 Schedule 5 Backflow Preventers";
+  comp:publicationDate "April 1, 2019"^^xsd:date .
+
+ex:97c8b6a309fb4ad8b3b4e7e8df2b5657 a comp:TechnicalStandard;
+  comp:documentNumber "CSA B64.10:17";
+  comp:name "Selection and Installation of Backflow Preventers/Maintenance and Field Testing of Backflow Preventers";
+  comp:publicationDate "January 2, 2019"^^xsd:date;
+  comp:revisionDate "January 4, 2021"^^xsd:date .
+
+ex:d64d413c8cb34b8a94281e7e644ad7ac a comp:TechnicalStandard;
+  comp:documentNumber """AWWA Backflow
+  Prevention and Cross-Connection Control""";
+  comp:name "AWWA Backflow Prevention and Cross-Connection Control";
+  comp:publicationDate "January 2, 2015"^^xsd:date .
+
+ex:85425f103d0a466c97a1ae1be109a3f6 a comp:TechnicalStandard;
+  comp:documentNumber "OSHA 1910.184";
+  comp:name "Slings - Chain, Wire-Rope, Metal Mesh, Natural and Synthetic Fiber-Rope, Synthetic Web ";
+  comp:publicationDate "April 15, 2019"^^xsd:date .
+
+ex:8ced14db65034875a3d9991580c5e0ba a comp:TechnicalStandard;
+  comp:documentNumber "AMSE B30.9-2018";
+  comp:name "Slings";
+  comp:publicationDate "January 4, 2021"^^xsd:date .
+
+ex:38e8adac815c484b9d8f3d92bde6e32f a comp:TechnicalStandard;
+  comp:documentNumber "ASME B30.26";
+  comp:name "Rigging Hardware";
+  comp:publicationDate "January 2, 2015"^^xsd:date .
+
+ex:a70a4b793167402db24d0aa7645bb53e a comp:TechnicalStandard;
+  comp:documentNumber "ASME B30.10";
+  comp:name "Hooks";
+  comp:publicationDate "January 2, 2019"^^xsd:date .
+
+ex:41e2e3b7e48e41449fd518768ed4d38e a comp:TechnicalStandard;
+  comp:documentNumber "ASTM F1052-14";
+  comp:name "Standard Test Method For Pressure Testing Vapor Protective Ensembles";
+  comp:publicationDate "January 2, 2014"^^xsd:date .
+
+ex:4077ddf7f62a4449bea54965c199f2da a comp:TechnicalStandard;
+  comp:documentNumber "CSA B149.6-20";
+  comp:name "Code for digester gas and utilization";
+  comp:publicationDate "January 2, 2020"^^xsd:date .
+
+ex:dc572d4824524cb194b43c1dbf275a81 a comp:TechnicalStandard;
+  comp:documentNumber "CSA C282-19";
+  comp:name "Emergency electrical power supply for buildings";
+  comp:publicationDate "January 2, 2019"^^xsd:date .
+
+ex:39617b05e363466d9684de2616a66b76 a comp:Legislation;
+  comp:documentNumber "National Fire Code of Canada 2015";
+  comp:name "National Fire Code of Canada 2015";
+  comp:publicationDate "January 2, 2015"^^xsd:date;
+  comp:revisionDate "September 28, 2018"^^xsd:date .
+
+ex:347bbc0f1b244179aca1127df84680b5 a comp:Regulation;
+  comp:documentNumber "TSSA, 2000 - Ontario Regulation 209/01";
+  comp:name "ELEVATING DEVICES";
+  comp:publicationDate "July 1, 2022"^^xsd:date .
+
+ex:24a91f36ce8448a5a2f5f7c7712dc5ef a comp:TechnicalStandard;
+  comp:documentNumber "CSA B44-16";
+  comp:name "Safety code for elevators and escalators";
+  comp:publicationDate "January 4, 2016"^^xsd:date .
+
+ex:cf753607aed44d0c880d6a5bfd7c1185 a comp:Regulation;
+  comp:documentNumber "TSSA, 2000 - CAD-277-19";
+  comp:name "Elevating Devices Code Adoption Document Amendment";
+  comp:publicationDate "May 3, 2019"^^xsd:date .
+
+ex:955f93af3b36492c826caf4ecb71a51b a comp:TechnicalStandard;
+  comp:documentNumber "CSA B167-16";
+  comp:name "Overhead cranes, gantry cranes, monorails, hoists, and jib cranes";
+  comp:publicationDate "January 4, 2016"^^xsd:date .
+
+ex:465a1fd092d74607a5bb2545db5569c3 a comp:TechnicalStandard;
+  comp:documentNumber "CSA B311-02";
+  comp:name "Safety code for manlifts";
+  comp:publicationDate "January 4, 2002"^^xsd:date;
+  comp:revisionDate "January 4, 2022"^^xsd:date .
+
+ex:56397eb7db8d475a8391a38a9fd524c1 a comp:TechnicalStandard;
+  comp:documentNumber "CSA B335-15";
+  comp:name "Safety standard for lift trucks";
+  comp:publicationDate "January 2, 2015"^^xsd:date;
+  comp:revisionDate "January 2, 2020"^^xsd:date .
+
+ex:7f0c223047194dcd8b9603bbc617431d a comp:TechnicalStandard;
+  comp:documentNumber "CSA Z797-18";
+  comp:name "Code of practice for access scaffold";
+  comp:publicationDate "January 2, 2018"^^xsd:date .
+
+ex:669b4bdb3eb047aa9ecd7833a7cea7fe a comp:TechnicalStandard;
+  comp:documentNumber "CSA Z259.17-16";
+  comp:name "Selection and use of active fall-protection equipment and systems";
+  comp:publicationDate "January 4, 2016"^^xsd:date;
+  comp:revisionDate "January 2, 2020"^^xsd:date .
+
+ex:4a6da48d5024415ba2707be1f2f98f34 a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 1101/90";
+  comp:name "FIRST AID REQUIREMENTS";
+  comp:publicationDate "December 31, 1990"^^xsd:date .
+
+ex:8a3c2b21ee154fec84a5ebec71dcea79 a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 851/90";
+  comp:name "INDUSTRIAL ESTABLISHMENTS";
+  comp:publicationDate "July 22, 2022"^^xsd:date .
+
+ex:9ff610db447f440599232bcede0ce481 a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 212/01";
+  comp:name "GASEOUS FUELS";
+  comp:publicationDate "March 15, 2015"^^xsd:date .
+
+ex:d123e9f8cb184917bb0d5d04014447cf a comp:TechnicalStandard;
+  comp:documentNumber "Ontario Regulation 777/21";
+  comp:name "Ontario Electrical Safety Code (OESC)";
+  comp:publicationDate "May 5, 2022"^^xsd:date .
+
+ex:66b4f2e5c26c4b9f8697871e60106efa a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 224";
+  comp:name "SPILL PREVENTION AND CONTINGENCY PLANS";
+  comp:publicationDate "October 31, 2011"^^xsd:date .
+
+ex:9de05c0d82314a90badc70c7ea823c6e a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 213/91";
+  comp:name "CONSTRUCTION PROJECTS";
+  comp:publicationDate "July 1, 2021"^^xsd:date .
+
+ex:e03be12b4d7e403aa4a06db8c4110f27 a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 632/05";
+  comp:name "CONFINED SPACES";
+  comp:publicationDate "July 1, 2016"^^xsd:date .
+
+ex:b597d18dbfbc4686a2e92489da715ae9 a comp:TechnicalStandard;
+  comp:documentNumber "IEC 60079-29-3:2014";
+  comp:name "Gas detectors - Guidance on functional safety of fixed gas detection systems";
+  comp:publicationDate "January 2, 2014"^^xsd:date .
+
+ex:a09760a229a44c6abf010bcf59aee9d9 comp:documentNumber "I&DS Health & Safety SP 10 (2019)";
+  comp:name "Unable to access the link" .
+
+ex:6bbc1f72d5304f0285a5bfcfd7b87c70 a comp:Regulation;
+  comp:documentNumber "CAN/CGSB 2-65.7-2007";
+  comp:name "Life Jackets";
+  comp:publicationDate "June 1, 2007"^^xsd:date .
+
+ex:4434cbb58d8a4fe1aee930e0f493a74a a comp:TechnicalStandard;
+  comp:documentNumber "MSC 81 (70)";
+  comp:name "Life Saving Appliance";
+  comp:publicationDate "December 11, 1998"^^xsd:date .
+
+ex:ac42f2ac94c34a2d94ee5671b508b07c a comp:Regulation;
+  comp:documentNumber "CAN/CGSB 65.11-M88";
+  comp:name "Personal Life-saving Appliances";
+  comp:publicationDate "July 22, 2010"^^xsd:date .
+
+ex:c3ede1dca3274db0ad75e5ce130db111 a comp:TechnicalStandard;
+  comp:documentNumber "ASTM F1236-96 (2012)";
+  comp:name "Standard Guide For Visual Inspection Of Electrical Protective Rubber Products";
+  comp:publicationDate "January 2, 2018"^^xsd:date .
+
+ex:3833b53ed61141498917630f7a6b9b81 a comp:TechnicalStandard;
+  comp:documentNumber "ASTM F496-20";
+  comp:name "Standard Specification For In-Service Care Of Insulating Gloves And Sleeves";
+  comp:publicationDate "January 2, 2020"^^xsd:date .
+
+ex:bb424abbc8c441c9981cc8cdfa35cb02 a comp:TechnicalStandard;
+  comp:documentNumber "CSA-Z94.4-18";
+  comp:name "Selection, use, and care of respirators";
+  comp:publicationDate "January 2, 2018"^^xsd:date .
+
+ex:6067b58505ef4bcfb75bf1da84896961 a comp:TechnicalStandard;
+  comp:documentNumber "CSA 339-18";
+  comp:name "Hand-held motor-operated electric tools — Safety — Particular requirements for chain beam saws";
+  comp:publicationDate "January 2, 2018"^^xsd:date .
+
+ex:13765cc5a4fd4b3da32132fb8fccdf2e a comp:TechnicalStandard;
+  comp:documentNumber "CGA C-6";
+  comp:name "Standard for Visual Inspection of Steel Compressed Gas Cylinders";
+  comp:publicationDate "September 1, 2022"^^xsd:date .
+
+ex:71165270f2a745d6bb210749fd7930eb a comp:TechnicalStandard;
+  comp:documentNumber "CGA C-6.1";
+  comp:name "Standard for Visual Inspection of High Pressure Aluminum Alloy Compressed Gas Cylinders";
+  comp:publicationDate "August 1, 2019"^^xsd:date .
+
+ex:1eaa6bf95c88453bbb9d64131a99f6a3 a comp:TechnicalStandard;
+  comp:documentNumber "CGA C-6.3";
+  comp:name "Standard for Visual Inspection of Low Pressure Aluminum Alloy Compressed Gas Cylinders";
+  comp:publicationDate "July 2, 2019"^^xsd:date .
+
+ex:ba689278f32447c1a610b1387390db1d a comp:TechnicalStandard;
+  comp:documentNumber "Government of Canada Drugs and Medical Devices";
+  comp:name "Automated External Defibrillators (AEDs)";
+  comp:publicationDate "February 10, 2016"^^xsd:date .
+
+ex:7036ca43eda2422dab7d219c0503dab8 a comp:Regulation;
+  comp:documentNumber "Defibrillator Registration and Public Access Act, 2019, S.O. 2020, c. 8 - Bill 141";
+  comp:name "Automated External Defibrillators (AEDs)";
+  comp:publicationDate "June 18, 2020"^^xsd:date .
+
+ex:82fd0e58605245fda8f584593ad909d6 a comp:TechnicalStandard;
+  comp:documentNumber "CCOHS - First Aid - Automated External Defibrillator (AED)";
+  comp:name "First Aid - Automated External Defibrillator (AED)";
+  comp:publicationDate "March 23, 2023"^^xsd:date .
