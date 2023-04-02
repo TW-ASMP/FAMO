@@ -3,7 +3,8 @@
   "namespaces": {
     "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/"
+    "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/",
+    "ex": "http://www.example_compliance_data.org/"
   },
   "subjectMappings": [
     {
@@ -22,11 +23,12 @@
           "values": [
             {
               "transformation": {
-                "expression": "toString(cells[\"📜 Document\"].value).replace(/[-][\\d\\w]*$/,\"\")",
-                "language": "grel"
+                "expression": "ex",
+                "language": "prefix"
               },
               "valueSource": {
-                "source": "row_index"
+                "columnName": "Doc ID",
+                "source": "column"
               },
               "valueType": {
                 "propertyMappings": [],
@@ -116,7 +118,7 @@
           "values": [
             {
               "valueSource": {
-                "columnName": "📝 Requirement Text",
+                "columnName": "Requirement Text",
                 "source": "column"
               },
               "valueType": {
@@ -149,11 +151,12 @@
           "values": [
             {
               "transformation": {
-                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/assets/\" + replace(replace(cells[\"👯Applies to (Asset Class)\"].value,\"https://www.notion.so/\",\"\"),/[-][\\d\\w]*$/,\"\")",
-                "language": "grel"
+                "expression": "assets",
+                "language": "prefix"
               },
               "valueSource": {
-                "source": "row_index"
+                "columnName": "Class ID",
+                "source": "column"
               },
               "valueType": {
                 "propertyMappings": [],
@@ -177,39 +180,12 @@
           "values": [
             {
               "transformation": {
-                "expression": "cells[\"🏗️ Satisfied by (Activity)\"].value.replace(/[-][\\d\\w]*$/,\"\")",
-                "language": "grel"
+                "expression": "ex",
+                "language": "prefix"
               },
               "valueSource": {
-                "source": "row_index"
-              },
-              "valueType": {
-                "propertyMappings": [],
-                "type": "iri",
-                "typeMappings": []
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
-              "constant": "groundedBy"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "toString(cells[\"🌎Grounded By (Requirement)\"].value).replace(/[-][\\d\\w]*$/,\"\")",
-                "language": "grel"
-              },
-              "valueSource": {
-                "source": "row_index"
+                "columnName": "Act ID",
+                "source": "column"
               },
               "valueType": {
                 "propertyMappings": [],
@@ -233,11 +209,12 @@
           "values": [
             {
               "transformation": {
-                "expression": "toString(cells[\"🌎Is Grounding (Requirement)\"].value).replace(/[-][\\d\\w]*$/,\"\")",
-                "language": "grel"
+                "expression": "ex",
+                "language": "prefix"
               },
               "valueSource": {
-                "source": "row_index"
+                "columnName": "Req ID (is grounding)",
+                "source": "column"
               },
               "valueType": {
                 "propertyMappings": [],
@@ -250,11 +227,12 @@
       ],
       "subject": {
         "transformation": {
-          "expression": "\"https://www.notion.so/\" + replaceChars(toString(cells[\"Requirement Name\"].value), \" .\", \"--\")",
-          "language": "grel"
+          "expression": "ex",
+          "language": "prefix"
         },
         "valueSource": {
-          "source": "row_index"
+          "columnName": "Req ID",
+          "source": "column"
         }
       },
       "typeMappings": [
