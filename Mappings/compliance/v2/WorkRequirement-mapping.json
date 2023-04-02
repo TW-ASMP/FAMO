@@ -3,7 +3,9 @@
   "namespaces": {
     "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ex": "http://www.example_compliance_data.org/",
+    "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/"
   },
   "subjectMappings": [
     {
@@ -27,64 +29,6 @@
               },
               "valueSource": {
                 "columnName": "Activity Type",
-                "source": "column"
-              },
-              "valueType": {
-                "propertyMappings": [],
-                "type": "iri",
-                "typeMappings": []
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
-              "constant": "requiresResourceType"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "comp",
-                "language": "prefix"
-              },
-              "valueSource": {
-                "columnName": "Resources",
-                "source": "column"
-              },
-              "valueType": {
-                "propertyMappings": [],
-                "type": "iri",
-                "typeMappings": []
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
-              "constant": "requiresTrade"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "comp",
-                "language": "prefix"
-              },
-              "valueSource": {
-                "columnName": "Trade",
                 "source": "column"
               },
               "valueType": {
@@ -136,46 +80,27 @@
             },
             "valueSource": {
               "source": "constant",
-              "constant": "appliesToAssetType"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "comp",
-                "language": "prefix"
-              },
-              "valueSource": {
-                "columnName": "Applies to Class",
-                "source": "column"
-              },
-              "valueType": {
-                "propertyMappings": [],
-                "type": "iri",
-                "typeMappings": []
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
               "constant": "procedure"
             }
           },
           "values": [
             {
               "valueSource": {
-                "columnName": "Activity Procedure Recommended Action",
+                "columnName": "Activity Description",
                 "source": "column"
               },
               "valueType": {
-                "type": "literal"
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
               }
             }
           ]
@@ -227,39 +152,12 @@
           "values": [
             {
               "transformation": {
-                "expression": "toString(cells[\"More General Activity Parent\"].value).replace((/[-][\\d\\w]*$/),\"\")",
-                "language": "grel"
+                "expression": "ex",
+                "language": "prefix"
               },
               "valueSource": {
-                "source": "row_index"
-              },
-              "valueType": {
-                "propertyMappings": [],
-                "type": "iri",
-                "typeMappings": []
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
-              "constant": "groundedBy"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "toString(cells[\"More Specific Activity Child\"].value).replace((/[-][\\d\\w]*$/),\"\")",
-                "language": "grel"
-              },
-              "valueSource": {
-                "source": "row_index"
+                "columnName": "Parent ID",
+                "source": "column"
               },
               "valueType": {
                 "propertyMappings": [],
@@ -305,7 +203,7 @@
                     "values": [
                       {
                         "transformation": {
-                          "expression": "\"https://www.notion.so/\" + cells[\"Freq Numeral\"].value + cells[\"Freq Literal\"].value",
+                          "expression": "\"https://www.notion.so/\" + toString(cells[\"Freq Numeral\"].value).replace(\".\",\"\") + cells[\"Freq Literal\"].value",
                           "language": "grel"
                         },
                         "valueSource": {
@@ -414,11 +312,12 @@
       ],
       "subject": {
         "transformation": {
-          "expression": "\"https://www.notion.so/\" + cells[\"Activity Name (TO CHANGE TO ACTIVITY CODE)\"].value.replace(/[\\s*]/,\"-\").replace(\".\",\"-\").replace(\",\",\"\")",
-          "language": "grel"
+          "expression": "ex",
+          "language": "prefix"
         },
         "valueSource": {
-          "source": "row_index"
+          "columnName": "Act ID",
+          "source": "column"
         }
       },
       "typeMappings": [

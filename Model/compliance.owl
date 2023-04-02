@@ -213,6 +213,7 @@ Tony Huang, Toronto Water</terms:creator>
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/groundedBy">
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
