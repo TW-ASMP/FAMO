@@ -4,7 +4,7 @@
     "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/",
-    "ex": "http://www.example_compliance_data.org/"
+    "ex": "http://example.com/data/"
   },
   "subjectMappings": [
     {
