@@ -1,0 +1,78 @@
+# query update in progress to reflect compliance model v4
+
+=== Query 1: insert temporary asset ===
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+# note: it is expected that the body of the insert statement be generated at the application (control) layer
+INSERT DATA {
+	temp:compliance_form_dummy_asset rdf:type <asset class>.
+	temp:compliance_form_dummy_asset <property 1> <value 1>.
+	temp:compliance_form_dummy_asset <property 2> <value 2>.
+	temp:compliance_form_dummy_asset <property 3> <value 3>.
+	# ... for all properties defined for the given asset type
+	}
+	
+
+=== Query 2a: retrieve related compliance activities ===
+=== updated for v4 ===
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+PREFIX comp: <http://ontology.eil.utoronto.ca/FAMO/compliance/>
+
+select ?name ?compliance ?procedure where {
+    #a work requirement that applies to the asset 
+ temp:compliance_form_dummy_asset rdf:type ?assetclass.
+    ?req comp:appliesToAssetType ?assetclass;
+         a comp:WorkRequirement;
+         comp:name ?name.
+    # optional because procedure isn't always (currently) specified in the data
+    OPTIONAL {?req comp:procedure ?procedure.}
+    
+    BIND (EXISTS {
+            ?req comp:grounds [a comp:ComplianceRelatedSection].    
+        } AS ?compliance)
+}
+
+=== Query 2b: retrieve related compliance requirements (documents) ===
+=== updated for v4, TBD if this is correct ===
+PREFIX comp: <http://ontology.eil.utoronto.ca/FAMO/compliance/>
+PREFIX temp: <http://example.com/tempdata/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+#note: would like to rename and reorganize headings for clarity but can do later
+select ?workplan ?req_name ?docnumber ?docname ?compliance ?section ?content ?workplan_name where 
+{
+    #a requirement that applies to the asset 
+    { 
+ temp:compliance_form_dummy_asset rdf:type ?assetclass.
+    ?workplan comp:appliesToAssetType ?assetclass;
+              comp:grounds ?req.
+    OPTIONAL {?workplan comp:name ?workplan_name.}
+        
+    
+    ?req comp:properPartOf ?defdoc.
+    OPTIONAL {?req comp:name ?req_name.}
+    OPTIONAL {?req comp:sectionNumber ?section.}
+    OPTIONAL {?req comp:description ?content.}
+    
+#    OPTIONAL {?req comp:grounds [comp:name ?grounds_req_name]}
+    
+	OPTIONAL {?defdoc comp:documentNumber ?docnumber.}
+    OPTIONAL {?defdoc comp:name ?docname.}            
+    BIND ( EXISTS {?defdoc a comp:ComplianceRequirementDocument} AS ?compliance)
+}
+
+}
+
+
+=== Query 3: delete temporary asset ===
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX temp: <http://example.com/tempdata/>
+# note: it is expected that the body of the insert statement be generated at the application (control) layer
+DELETE DATA {
+	temp:compliance_form_dummy_asset rdf:type <asset class>.
+	temp:compliance_form_dummy_asset <property 1> <value 1>.
+	temp:compliance_form_dummy_asset <property 2> <value 2>.
+	temp:compliance_form_dummy_asset <property 3> <value 3>.
+	# ... for all properties defined for the given asset type
+	}

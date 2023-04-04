@@ -228,3 +228,9 @@ ex:82fd0e58605245fda8f584593ad909d6 a comp:TechnicalStandard;
   comp:documentNumber "CCOHS - First Aid - Automated External Defibrillator (AED)";
   comp:name "First Aid - Automated External Defibrillator (AED)";
   comp:publicationDate "March 23, 2023"^^xsd:date .
+
+ex:882e6e40cf8b485892110353e7299b95 a comp:Regulation;
+  comp:documentNumber "Ontario Regulation 220/01";
+  comp:name "BOILERS AND PRESSURE VESSELS";
+  comp:publicationDate "January 1, 2000"^^xsd:date;
+  comp:revisionDate "July 1, 2018"^^xsd:date .
