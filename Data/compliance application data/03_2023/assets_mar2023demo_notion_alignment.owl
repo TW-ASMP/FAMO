@@ -211,6 +211,133 @@
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/e5c173ed817241ca90e86c9d617f329c -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/e5c173ed817241ca90e86c9d617f329c">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/maximumOutletTemperature"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130</owl:hasValue>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot water service</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">105</owl:hasValue>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steam service</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200</owl:hasValue>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot water service</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+        <rdfs:label>Defined: power boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/3bf2c1f79bf143f78164120f9a46f80b -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/3bf2c1f79bf143f78164120f9a46f80b">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steam service</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/5eeee1ea46e34890ac3dcf134c0ef010"/>
+        <rdfs:comment>Note: full definition omitted for now to test queries with GraphDB</rdfs:comment>
+        <rdfs:label>Defined: heating steam service boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/4a423241f2fb4511ae2889feb6e314b1 -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/4a423241f2fb4511ae2889feb6e314b1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/maximumOutletTemperature"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/operatingPressure"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1100</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/serviceType"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot water service</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/5eeee1ea46e34890ac3dcf134c0ef010"/>
+        <rdfs:label>Defined: heating hot water service boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/5eeee1ea46e34890ac3dcf134c0ef010 -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/5eeee1ea46e34890ac3dcf134c0ef010">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/3bf2c1f79bf143f78164120f9a46f80b"/>
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/4a423241f2fb4511ae2889feb6e314b1"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+        <rdfs:comment>note that the protege parser requires a space after the &lt;= symbol</rdfs:comment>
+        <rdfs:label>Defined-low-pressure-boiler</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/assets/723948b08a1340bba89ae5bad289382c -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/723948b08a1340bba89ae5bad289382c">
@@ -231,27 +358,33 @@
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Asset -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/assets/9553d511957f43d7a3a812dcf2009e60 -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
-    
-
-
-    <!-- https://www.notion.so/5eeee1ea46e34890ac3dcf134c0ef010 -->
-
-    <owl:Class rdf:about="https://www.notion.so/5eeee1ea46e34890ac3dcf134c0ef010">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
-        <rdfs:label>Defined-low-pressure-boiler</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.notion.so/9553d511957f43d7a3a812dcf2009e60 -->
-
-    <owl:Class rdf:about="https://www.notion.so/9553d511957f43d7a3a812dcf2009e60">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/9553d511957f43d7a3a812dcf2009e60">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/hasDeaerator"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/hasQuickOpeningDoor"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/assets/Boiler"/>
         <rdfs:label>Defined-boiler-with-quick-opening-door-and-deaerator</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Asset -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
 </rdf:RDF>
 
 

@@ -4,7 +4,7 @@
     "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "ex": "http://www.example_compliance_data.org/",
+    "ex": "http://example.com/data/",
     "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/"
   },
   "subjectMappings": [
@@ -80,40 +80,7 @@
             },
             "valueSource": {
               "source": "constant",
-              "constant": "procedure"
-            }
-          },
-          "values": [
-            {
-              "valueSource": {
-                "columnName": "Activity Description",
-                "source": "column"
-              },
-              "valueType": {
-                "type": "datatype_literal",
-                "datatype": {
-                  "transformation": {
-                    "expression": "xsd",
-                    "language": "prefix"
-                  },
-                  "valueSource": {
-                    "source": "constant",
-                    "constant": "string"
-                  }
-                }
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "comp",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
-              "constant": "identifier"
+              "constant": "name"
             }
           },
           "values": [
@@ -305,6 +272,68 @@
                     }
                   }
                 ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "appliesToAssetType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "assets",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Class ID",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "procedure"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Activity Procedure Recommended Action",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
               }
             }
           ]
