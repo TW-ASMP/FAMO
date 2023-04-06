@@ -41,7 +41,6 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 #note: would like to rename and reorganize headings for clarity but can do later
 select ?workplan ?req_name ?docnumber ?docname ?compliance ?section ?content ?workplan_name where 
-{
     #a requirement that applies to the asset 
     { 
  temp:compliance_form_dummy_asset rdf:type ?assetclass.
@@ -60,8 +59,6 @@ select ?workplan ?req_name ?docnumber ?docname ?compliance ?section ?content ?wo
 	OPTIONAL {?defdoc comp:documentNumber ?docnumber.}
     OPTIONAL {?defdoc comp:name ?docname.}            
     BIND ( EXISTS {?defdoc a comp:ComplianceRequirementDocument} AS ?compliance)
-}
-
 }
 
 
