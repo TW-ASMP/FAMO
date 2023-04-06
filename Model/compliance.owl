@@ -620,6 +620,17 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementSection -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementSection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/properPartOf"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementDocument"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection"/>
         <rdfs:comment>a Compliance Requirement Section is one that is part of a Compliance Requirement Document.</rdfs:comment>
     </owl:Class>
