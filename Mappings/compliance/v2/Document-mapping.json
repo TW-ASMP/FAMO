@@ -67,9 +67,12 @@
           },
           "values": [
             {
+              "transformation": {
+                "expression": "cells[\"Version Publication Date\"].value.toDate().toString('yyyy-MM-dd')",
+                "language": "grel"
+              },
               "valueSource": {
-                "columnName": "Version Publication Date",
-                "source": "column"
+                "source": "row_index"
               },
               "valueType": {
                 "type": "datatype_literal",
