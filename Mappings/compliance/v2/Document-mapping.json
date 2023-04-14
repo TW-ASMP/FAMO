@@ -103,9 +103,12 @@
           },
           "values": [
             {
+              "transformation": {
+                "expression": "cells[\"Latest Ver Revision Date\"].value.toDate().toString('yyyy-MM-dd')",
+                "language": "grel"
+              },
               "valueSource": {
-                "columnName": "Latest Ver Revision Date",
-                "source": "column"
+                "source": "row_index"
               },
               "valueType": {
                 "type": "datatype_literal",

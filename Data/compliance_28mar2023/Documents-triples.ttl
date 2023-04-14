@@ -17,7 +17,7 @@ ex:f9b7c79ba0ed444a96b87dbb52107a27 a comp:Regulation;
   comp:documentNumber "BPV-20-01 R1";
   comp:name "Boilers and Pressure Vessels Safety Program - Code Adoption Document Amendment";
   comp:publicationDate "2020-12-01"^^xsd:date;
-  comp:revisionDate "January 12, 2021"^^xsd:date .
+  comp:revisionDate "2021-01-12"^^xsd:date .
 
 ex:965814862153491d974d6815d00a3d55 a comp:By-Law;
   comp:documentNumber """TORONTO MUNICIPAL CODE
@@ -29,7 +29,7 @@ ex:97c8b6a309fb4ad8b3b4e7e8df2b5657 a comp:TechnicalStandard;
   comp:documentNumber "CSA B64.10:17";
   comp:name "Selection and Installation of Backflow Preventers/Maintenance and Field Testing of Backflow Preventers";
   comp:publicationDate "2019-01-02"^^xsd:date;
-  comp:revisionDate "January 4, 2021"^^xsd:date .
+  comp:revisionDate "2021-01-04"^^xsd:date .
 
 ex:d64d413c8cb34b8a94281e7e644ad7ac a comp:TechnicalStandard;
   comp:documentNumber """AWWA Backflow
@@ -76,7 +76,7 @@ ex:39617b05e363466d9684de2616a66b76 a comp:Legislation;
   comp:documentNumber "National Fire Code of Canada 2015";
   comp:name "National Fire Code of Canada 2015";
   comp:publicationDate "2015-01-02"^^xsd:date;
-  comp:revisionDate "September 28, 2018"^^xsd:date .
+  comp:revisionDate "2018-09-28"^^xsd:date .
 
 ex:347bbc0f1b244179aca1127df84680b5 a comp:Regulation;
   comp:documentNumber "TSSA, 2000 - Ontario Regulation 209/01";
@@ -102,13 +102,13 @@ ex:465a1fd092d74607a5bb2545db5569c3 a comp:TechnicalStandard;
   comp:documentNumber "CSA B311-02";
   comp:name "Safety code for manlifts";
   comp:publicationDate "2002-01-04"^^xsd:date;
-  comp:revisionDate "January 4, 2022"^^xsd:date .
+  comp:revisionDate "2022-01-04"^^xsd:date .
 
 ex:56397eb7db8d475a8391a38a9fd524c1 a comp:TechnicalStandard;
   comp:documentNumber "CSA B335-15";
   comp:name "Safety standard for lift trucks";
   comp:publicationDate "2015-01-02"^^xsd:date;
-  comp:revisionDate "January 2, 2020"^^xsd:date .
+  comp:revisionDate "2020-01-02"^^xsd:date .
 
 ex:7f0c223047194dcd8b9603bbc617431d a comp:TechnicalStandard;
   comp:documentNumber "CSA Z797-18";
@@ -119,7 +119,7 @@ ex:669b4bdb3eb047aa9ecd7833a7cea7fe a comp:TechnicalStandard;
   comp:documentNumber "CSA Z259.17-16";
   comp:name "Selection and use of active fall-protection equipment and systems";
   comp:publicationDate "2016-01-04"^^xsd:date;
-  comp:revisionDate "January 2, 2020"^^xsd:date .
+  comp:revisionDate "2020-01-02"^^xsd:date .
 
 ex:4a6da48d5024415ba2707be1f2f98f34 a comp:Regulation;
   comp:documentNumber "Ontario Regulation 1101/90";
@@ -233,4 +233,4 @@ ex:882e6e40cf8b485892110353e7299b95 a comp:Regulation;
   comp:documentNumber "Ontario Regulation 220/01";
   comp:name "BOILERS AND PRESSURE VESSELS";
   comp:publicationDate "2000-01-01"^^xsd:date;
-  comp:revisionDate "July 1, 2018"^^xsd:date .
+  comp:revisionDate "2018-07-01"^^xsd:date .
