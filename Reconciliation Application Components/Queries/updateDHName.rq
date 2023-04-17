@@ -1,0 +1,15 @@
+PREFIX test: <http://famo_test_namespace.org#>
+PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+DELETE {
+   test:DHID_ROLE_S1ID2 genprop:hasName ?name.
+}
+INSERT {
+    test:DHID_ROLE_S1ID2 genprop:hasName "role description 2"^^xsd:string.
+}
+WHERE {
+    OPTIONAL {
+        test:DHID_ROLE_S1ID2 genprop:hasName ?name.
+    }
+}

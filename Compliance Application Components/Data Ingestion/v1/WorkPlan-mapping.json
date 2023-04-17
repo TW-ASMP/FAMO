@@ -1,0 +1,206 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "name"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Work Plan Name",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "activityType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "comp",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Prescribes ActivityType (Activity Type)",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "requiresResourceType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/\" + cells[\"Requires Resource (Type)\"].value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "requiresTrade"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "comp",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Requires Trade (Type)",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "wrenchTime"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Wrench Time",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "appliesToAssetType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "comp",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Applies to (Asset Type)",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasProcedure"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "hasProcedure",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/workplan_\" + cells[\"ID\"].value",
+          "language": "grel"
+        },
+        "valueSource": {
+          "source": "row_index"
+        }
+      },
+      "typeMappings": []
+    }
+  ]
+}

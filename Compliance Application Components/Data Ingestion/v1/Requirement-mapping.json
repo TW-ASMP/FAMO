@@ -1,0 +1,215 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "definedIn"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/doc_\" + cells[\"part of (document)\"].value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "name"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Section (Requirement)\nRequirement Section Summary",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "sectionNumber"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "defined In (Section instance(s))\nSection Number",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "content"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Section Content",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "appliesToAssetType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "comp",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Applies to (Asset Type)",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "supportedBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/workplan_\" + cells[\"Supported By (work plan)\"].value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "groundedBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/reqt_\" + cells[\"Grounded By (requirement section)\"].value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "\"http://ontology.eil.utoronto.ca/FAMO/compliance/reqt_\" + cells[\"ID\"].value",
+          "language": "grel"
+        },
+        "valueSource": {
+          "source": "row_index"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "comp",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "RequirementSection"
+          }
+        }
+      ]
+    }
+  ]
+}

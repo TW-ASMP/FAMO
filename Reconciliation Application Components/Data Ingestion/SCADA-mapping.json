@@ -1,0 +1,241 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "famo": "http://ontology.eil.utoronto.ca/FAMO/famo/",
+    "famo_app": "http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/",
+    "test": "http://www.test.org/TW_test_data_example/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "instantiatedIn"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "test",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "scada_datasystem"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasInterpretation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.test.org/TW_test_data_example/interpretation_\"+cells[\"Role UID\"].value+\"_PM\"+now().toString()",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "denotes"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "expression": "\"http://www.test.org/TW_test_data_example/dhid_\"+cells[\"Entity Number\"].value",
+                          "language": "grel"
+                        },
+                        "valueSource": {
+                          "source": "row_index"
+                        },
+                        "valueType": {
+                          "propertyMappings": [
+                            {
+                              "property": {
+                                "transformation": {
+                                  "expression": "famo_app",
+                                  "language": "prefix"
+                                },
+                                "valueSource": {
+                                  "source": "constant",
+                                  "constant": "existenceAnnotation"
+                                }
+                              },
+                              "values": [
+                                {
+                                  "valueSource": {
+                                    "source": "constant",
+                                    "constant": "To be investigated"
+                                  },
+                                  "valueType": {
+                                    "type": "datatype_literal",
+                                    "datatype": {
+                                      "transformation": {
+                                        "expression": "xsd",
+                                        "language": "prefix"
+                                      },
+                                      "valueSource": {
+                                        "columnName": "string",
+                                        "source": "column"
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "type": "iri",
+                          "typeMappings": [
+                            {
+                              "transformation": {
+                                "expression": "famo",
+                                "language": "prefix"
+                              },
+                              "valueSource": {
+                                "source": "constant",
+                                "constant": "ActualRole"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.test.org/TW_test_data_example/enum_\"+cells[\"Role UID\"].value+\"_PM\"+now().toString()",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "Entity Number",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "datatype_literal",
+                          "datatype": {
+                            "transformation": {
+                              "expression": "xsd",
+                              "language": "prefix"
+                            },
+                            "valueSource": {
+                              "source": "constant",
+                              "constant": "string"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "EntityNumberProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "test",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Role UID",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Record"
+          }
+        }
+      ]
+    }
+  ]
+}
