@@ -1,8 +1,0 @@
-﻿Role UID,Entity Number,Description,Parent Number,Criticality
-WMS-RID1,R1,role 1 description,,2
-WMS-RID2,R2,role 2 description,WMS-RID1,2
-WMS-RID3,R3wrong,role 3 description,WMS-RID2,2
-WMS-RID4,R4,role 4 description,WMS-RID3,3
-WMS-RID5,R5,role 5 description,WMS-RID3,3
-WMS-RID6,R6,role 6 description,WMS-RID3,3
-WMS-RID7,R7,role 7 description,WMS-RID3,3

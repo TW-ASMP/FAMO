@@ -1,0 +1,11 @@
+PREFIX test: <http://famo_test_namespace.org#>
+PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+
+
+INSERT DATA {
+	<dh_id> a <entity_type>;
+		famoapp:existenceAnnotation "To be investigated"^^xsd:string;
+		famo:hasName <description>.
+}

@@ -1,7 +1,0 @@
-PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
-PREFIX test: <http://www.test.org/TW_test_data_example/>
-ASK {
-	<rec1> famo:instantiatedIn ?ds.
-	?rec2 famo:hasInterpretation [famo:denotes <dhid>];
-				famo:instantiatedIn ?ds.
-}

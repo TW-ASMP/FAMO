@@ -1,0 +1,16 @@
+PREFIX test: <http://famo_test_namespace.org#>
+PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+
+DELETE {
+    ?x famo:hasLCS ?z.
+}
+INSERT {
+    ?x famo:hasLCS ?y.
+}
+WHERE {
+    ?rec famo:indicates [a famo:AssetLCSProperty;
+         					famo:hasValue ?y];
+              famo:hasInterpretation [famo:denotes ?x].
+}
