@@ -1,0 +1,252 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "comp": "http://ontology.eil.utoronto.ca/FAMO/compliance/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "assets": "http://ontology.eil.utoronto.ca/FAMO/assets/",
+    "ex": "http://example.com/data/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "properPartOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Doc ID",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "name"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Requirement Name",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "sectionNumber"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Requirement Section",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "description"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Requirement Text",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "string"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "appliesToAssetType"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "assets",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Class ID",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "groundedBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Act ID",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "comp",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "grounds"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Req ID (is grounding)",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Req ID",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "comp",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "RequirementSection"
+          }
+        }
+      ]
+    }
+  ]
+}

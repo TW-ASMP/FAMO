@@ -1,0 +1,10 @@
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+select ?dwg_page where { 
+        ?i_dwg famo:denotes <dhid>
+        ?dwgrec famo:hasInterpretation ?i_dwg;
+                famo:representsSubjectOf [a famo:EntityNumberProperty;
+                							famo:hasValue ?dwg_enum];
+				famo:instantiatedIn <ds>;
+                famo:hasRecordLocation ?dwg_page.
+} 
