@@ -306,6 +306,30 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfter -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfter"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfterActivityType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfterActivityType"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBeforeActivityType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBeforeActivityType"/>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAgent -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAgent">
@@ -911,6 +935,18 @@ Tony Huang, Toronto Water</terms:creator>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAsset"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfter"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
