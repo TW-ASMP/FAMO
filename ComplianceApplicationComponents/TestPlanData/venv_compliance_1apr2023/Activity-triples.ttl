@@ -17,9 +17,9 @@ ex:3198c5403d3047e0bfebe1514f26f280 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_SP-36A-First-Aid-Station-Inspection-for-Less-Than-5-Workers>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/40Month> .
+  comp:hasValue <https://www.notion.so/4Month> .
 
-<https://www.notion.so/40Month> a comp:Measure;
+<https://www.notion.so/4Month> a comp:Measure;
   comp:hasNumericalValue 4.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -35,7 +35,7 @@ ex:b2e331c8945d4cd48eec90d5227752f2 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_SP-36B-First-Aid-Station-Inspection-for--more-than-5-less-than-15-Workers>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/40Month> .
+  comp:hasValue <https://www.notion.so/4Month> .
 
 ex:bff4e08246874ff0bf47458196957d63 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -49,7 +49,7 @@ ex:bff4e08246874ff0bf47458196957d63 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_SP-36C-First-Aid-Station-Inspection-for--more-than-15-less-than-200-Workers>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/40Month> .
+  comp:hasValue <https://www.notion.so/4Month> .
 
 ex:5c5f580476d84fc4a92315ad1fad3094 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -63,7 +63,7 @@ ex:5c5f580476d84fc4a92315ad1fad3094 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_SP-36D-First-Aid-Station-Inspection-for--more-than-200-Workers>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/40Month> .
+  comp:hasValue <https://www.notion.so/4Month> .
 
 ex:72e58f6552e6450ea89a4575d32e4943 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -77,9 +77,9 @@ ex:72e58f6552e6450ea89a4575d32e4943 a comp:WorkRequirement;
 5) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_SP-25-Fixed-Vertical-Ladder-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
-<https://www.notion.so/10Year> a comp:Measure;
+<https://www.notion.so/1Year> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -110,7 +110,7 @@ ex:50d4df3f4f8c44cc9ee1882e4f033a14 a comp:WorkRequirement;
 4) Inform operations that the task as assigned is completed.""" .
 
 <https://www.notion.so/duration_Backflow-Preventer> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:31c50038d4b346bdb3ff02309fdc557f a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -127,7 +127,7 @@ ex:31c50038d4b346bdb3ff02309fdc557f a comp:WorkRequirement;
 8) Products that indicate failure in any of the above-given areas must be repaired or replaced. """ .
 
 <https://www.notion.so/duration_Life-Jacket-Inspection-Annually> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:77508a296dc240e7928809e5d8c741fd a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -149,7 +149,7 @@ ex:77508a296dc240e7928809e5d8c741fd a comp:WorkRequirement;
 13) Record the PFD service day and year with permanent ink on the PFD service record label. """ .
 
 <https://www.notion.so/duration_Personal-Floatation-Device-(PFD)-A-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:3dd296ed27c9430f8133119cd20cb40b a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -163,7 +163,7 @@ ex:3dd296ed27c9430f8133119cd20cb40b a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Personal-Floatation-Device-(PFD)-B-Oral-Valve-test>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:64d3302deb764774b45816e5ff29be13 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -177,7 +177,7 @@ ex:64d3302deb764774b45816e5ff29be13 a comp:WorkRequirement;
 5) Record \"Annual\" in permanent ink on the PFD service record label.""" .
 
 <https://www.notion.so/duration_Personal-Floatation-Device-(PFD)-C-Leak-Test-> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:fb3d1ae705a04f66aa97cbe18b62ef76 a comp:WorkRequirement;
   comp:activityType comp:Clean;
@@ -192,7 +192,7 @@ Rinse thoroughly.
 Air-dry out of direct sunlight and away from direct heat""" .
 
 <https://www.notion.so/duration_Life-Jacket-Annual-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:943d76c6ca104877846b7cb0984e432b a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -206,7 +206,7 @@ ex:943d76c6ca104877846b7cb0984e432b a comp:WorkRequirement;
 5) Products that indicate failure in any of the above-given areas must be repaired or replaced. """ .
 
 <https://www.notion.so/duration_Life-Ring-Visual-Annual-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:3bc4d3b9865a41f0b2218296c489a1f3 a comp:WorkRequirement;
   comp:wrenchTime 0.25;
@@ -222,9 +222,9 @@ ex:3bc4d3b9865a41f0b2218296c489a1f3 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Rubber-Insulating-Gloves-effectiveness-Inspection>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
-<https://www.notion.so/60Month> a comp:Measure;
+<https://www.notion.so/6Month> a comp:Measure;
   comp:hasNumericalValue 6.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -237,7 +237,7 @@ ex:101a7f7164d6491b8e59108011181fa6 a comp:WorkRequirement;
 2) If the rubber gloves are not compliant, create a work request in WMS to replace and retest the rubber insulating gloves.""" .
 
 <https://www.notion.so/duration_Rubber-Insulating-Gloves-Air-Test> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
 ex:1e4622b0740044e29852ceb65f35efba a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -253,7 +253,7 @@ ex:1e4622b0740044e29852ceb65f35efba a comp:WorkRequirement;
 2) If damage is found, create a work request in WMS to replace and re-inspect the rubber insulating sleeves.""" .
 
 <https://www.notion.so/duration_Rubber-Insulating-Sleeves-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
 ex:8f4c275c48db40c5896181513ed92c21 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -264,7 +264,7 @@ ex:8f4c275c48db40c5896181513ed92c21 a comp:WorkRequirement;
 2) If the rubber sleeves are not compliant, create a work request in WMS to replace and retest the rubber insulating sleeves.""" .
 
 <https://www.notion.so/duration_Rubber-Insulating-Sleeves-Air-Test> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
 ex:680e55460236460f8031d669d33b57da a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -282,7 +282,7 @@ ex:680e55460236460f8031d669d33b57da a comp:WorkRequirement;
 If the emergency eye-wash or shower station is not compliant, notify the plant operations and create a work request in WMS""" .
 
 <https://www.notion.so/duration_Emergency-Wash-Annual-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:ecdf440f6df24d45aacc3392c66a82f5 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -295,9 +295,9 @@ ex:ecdf440f6df24d45aacc3392c66a82f5 a comp:WorkRequirement;
 4) Report any obstructions, damage, improper flow, or potential problems to the area supervisor.""" .
 
 <https://www.notion.so/duration_Emergency-eyewash-or-shower--general> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
-<https://www.notion.so/10Week> a comp:Measure;
+<https://www.notion.so/1Week> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Week .
 
@@ -324,7 +324,7 @@ ex:968fd8c63a1d438882cdad12458e5b95 a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Eye/face-station-plumbed> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:894f470c64324738880a024789b35467 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -339,7 +339,7 @@ ex:894f470c64324738880a024789b35467 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Self-contained-breathing-apparatus-(SCBA)> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year>, <https://www.notion.so/30Year>, <https://www.notion.so/50Year> .
+  comp:hasValue <https://www.notion.so/1Year>, <https://www.notion.so/3Year>, <https://www.notion.so/5Year> .
 
 ex:7610a2fcb3294591bccabeb3a85e0f8b a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -351,9 +351,9 @@ ex:7610a2fcb3294591bccabeb3a85e0f8b a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Self-contained-breathing-apparatus-(SCBA):-Hydrostatic-Test>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/50Year> .
+  comp:hasValue <https://www.notion.so/5Year> .
 
-<https://www.notion.so/50Year> a comp:Measure;
+<https://www.notion.so/5Year> a comp:Measure;
   comp:hasNumericalValue 5.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -373,7 +373,7 @@ ex:86f2a8c08fb64141b8e05b1f863fb018 a comp:WorkRequirement;
   comp:procedure """1) Perform \"Hydrostatic Test\" for composite SCBA cylinder.
 2) Remove the cylinder from service upon failure of a hydrostatic test.""" .
 
-<https://www.notion.so/30Year> a comp:Measure;
+<https://www.notion.so/3Year> a comp:Measure;
   comp:hasNumericalValue 3.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -395,7 +395,7 @@ ex:1049bc15ba324a2cb0688cf9f7f12b77 a comp:WorkRequirement;
 3)  If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Consumables-Fuel-Level-Check> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:31a8b8173c0d41e5b0f5bed131db9961 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -407,7 +407,7 @@ ex:31a8b8173c0d41e5b0f5bed131db9961 a comp:WorkRequirement;
 3)  If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Consumables--Main-Tank-Fuel-Level> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:9d107730e8474ee1b51b1829c5806217 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -425,7 +425,7 @@ SAFETY WARNING: the oil may be hot after a load test, take all PPE precautions t
 NOTE: use the machine oil type specified by the OEM for the top-up.""" .
 
 <https://www.notion.so/duration_Generator:-Consumable-Oil-Level> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:e2a63b786acc4995be3dfda5ecf590f2 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -439,7 +439,7 @@ ex:e2a63b786acc4995be3dfda5ecf590f2 a comp:WorkRequirement;
 5) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Consumables-Engine-Coolant-Level> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:bbbb0f8cdbb842e284eb7d78babab7e3 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -452,7 +452,7 @@ ex:bbbb0f8cdbb842e284eb7d78babab7e3 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Consumables-Check-system-for-Leakage> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:5f3d263129a543ffbb313dd3846b358b a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -467,7 +467,7 @@ NOTE: The pump is usually located at or near the fuel filter/fuel water separato
 
 <https://www.notion.so/duration_Generator:-Consumables-Inspect-Fuel-Transfer-Pump->
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:eac78faf05d54899b53bed5ff136f9fd a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -481,7 +481,7 @@ ex:eac78faf05d54899b53bed5ff136f9fd a comp:WorkRequirement;
 4. If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Consumables-Inspect-Fuel-Filter> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:28ab9cf0063e450e9bc5bb784287b17c a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -496,7 +496,7 @@ ex:28ab9cf0063e450e9bc5bb784287b17c a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Starter-System-Inspect-Electrical-Starter>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:cf0e7304bb6945318406552d512b332d a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -510,7 +510,7 @@ Specified value: For air direct starting: 2.94 MPa {30 kgf/cm2} [427 psi] For ai
 4) If the specification of the air tank differs from the above specification, corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Starter-System-Inspect-Air-Tank> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:8f08fe5bf2044b14afcfc33792450ad1 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -523,7 +523,7 @@ ex:8f08fe5bf2044b14afcfc33792450ad1 a comp:WorkRequirement;
 4) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Starter-System-Inspect-Valve> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:6092814806f245c993da39ed8ca30a38 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -536,7 +536,7 @@ ex:6092814806f245c993da39ed8ca30a38 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Starter-System-Inspect-Auxiliary-Engine-and-Compressor>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:d7437f59c92848a3bf4dcd4686a6f75c a comp:WorkRequirement;
   comp:activityType comp:Drain;
@@ -551,7 +551,7 @@ ex:d7437f59c92848a3bf4dcd4686a6f75c a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Starter-System-Condensation-Bleed-Off>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:668addff31d34cc9a54435fec7d2cb98 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -567,7 +567,7 @@ ex:668addff31d34cc9a54435fec7d2cb98 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Batteries-and-Charging-Equipment-Inspect-Battery-Cells>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:4a0c7c84acca4d54aec12d1ca82b267a a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -583,7 +583,7 @@ ex:4a0c7c84acca4d54aec12d1ca82b267a a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Batteries-and-Charging-Equipment-Test-Battery-Cells>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:91de2b77721844e289c60b3f3a1017c9 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -600,7 +600,7 @@ ex:91de2b77721844e289c60b3f3a1017c9 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Batteries-and-Charging-Equipment-Inspect-Electrical-Connections>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:8657bd972d4d42d0a328de568bc18595 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -614,7 +614,7 @@ ex:8657bd972d4d42d0a328de568bc18595 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Batteries-and-Charging-Equipment-Inspect-Battery-for-Cleanliness>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:4baee3a37e834041996512fa8b818321 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -628,7 +628,7 @@ ex:4baee3a37e834041996512fa8b818321 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Batteries-and-Charging-Equipment-Inspect-Charger-Connections>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:cac542ace8c14cc7b49629c25cfa1bb2 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -641,7 +641,7 @@ ex:cac542ace8c14cc7b49629c25cfa1bb2 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Engine-Test-Lubricant-Heater> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:85a5ad3d1d6b4c4990296ef159c25758 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -653,7 +653,7 @@ ex:85a5ad3d1d6b4c4990296ef159c25758 a comp:WorkRequirement;
 2) Check the coolant temperature, verify the temperature is above 15 degC.""" .
 
 <https://www.notion.so/duration_Generator:-Engine-Test-Coolant-Heater> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:46ad697ee05a438bac7fd7f06b6037a2 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -666,7 +666,7 @@ ex:46ad697ee05a438bac7fd7f06b6037a2 a comp:WorkRequirement;
 3) If an issue is discovered, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.   """ .
 
 <https://www.notion.so/duration_Generator:-Engine-Inspect-Linkages> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:8d80f0496cc646ab905ee5eb87900d01 a comp:WorkRequirement;
   comp:activityType comp:Check;
@@ -680,7 +680,7 @@ ex:8d80f0496cc646ab905ee5eb87900d01 a comp:WorkRequirement;
 NOTE: use the machine oil type specified by the governor OEM""" .
 
 <https://www.notion.so/duration_Generator:-Engine4-Check-oil-level> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:e9cd9df0f46347ad969c3497a7a14343 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -695,7 +695,7 @@ ex:e9cd9df0f46347ad969c3497a7a14343 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Engine-Inspect-Fuel-Pump-Oil> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:c5d7496b203f40a79c252190cce083f5 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -708,7 +708,7 @@ ex:c5d7496b203f40a79c252190cce083f5 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Engine-Inspect-Fan> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:367261a65cb143969af3927f728c5b9d a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -721,7 +721,7 @@ ex:367261a65cb143969af3927f728c5b9d a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Inspect-Control-Panel> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:78bcfcf0093d48e6a36f0ed29964df84 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -733,7 +733,7 @@ ex:78bcfcf0093d48e6a36f0ed29964df84 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Test-Annunciator-Panel> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:cbf0a6f3d3d3464294cbc79cefa9ca46 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -746,7 +746,7 @@ ex:cbf0a6f3d3d3464294cbc79cefa9ca46 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Inspect-Control-Panel-Setting>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:283eb43adc9e4905a3ad75e8b3dd4918 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -759,7 +759,7 @@ ex:283eb43adc9e4905a3ad75e8b3dd4918 a comp:WorkRequirement;
 4) If the alarm failed to activate, \"create a work request with “Repair from Predictive\" work type to repair the generating unit audible trouble signals alarm.""" .
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Test-Trouble-Signals> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:227092741c0b43ce9475a7ef9b4457e0 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -774,7 +774,7 @@ NOTE: use the recommended lubrication type specified by the OEM; Never use penet
 """ .
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Inspect-Louvre> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:7847786bb68b4839932c04b12e06065a a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -786,7 +786,7 @@ ex:7847786bb68b4839932c04b12e06065a a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Test-Emergency-Light> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:a9a71dee52a2436ca4688bb7f7bcddf7 a comp:WorkRequirement;
   comp:activityType comp:Check;
@@ -799,7 +799,7 @@ ex:a9a71dee52a2436ca4688bb7f7bcddf7 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Verify-Room-Temperature>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:366e9ef3e2394aec8f96b39e9a873310 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -813,7 +813,7 @@ ex:366e9ef3e2394aec8f96b39e9a873310 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Inspect-for-Cleanliness>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:8d76e40430fa4e6aa1ff3a0b00573500 a comp:WorkRequirement;
   comp:activityType comp:Service;
@@ -822,7 +822,7 @@ ex:8d76e40430fa4e6aa1ff3a0b00573500 a comp:WorkRequirement;
   comp:procedure "If corrective action/repair is required related to the proper operation of the generator and its parts, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair." .
 
 <https://www.notion.so/duration_Generator:-Control-Panel-Fix-the-Defects> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:eb4ecccc747949daaa7268676d554c39 a comp:WorkRequirement;
   comp:activityType comp:Record;
@@ -832,7 +832,7 @@ ex:eb4ecccc747949daaa7268676d554c39 a comp:WorkRequirement;
   comp:procedure "Record all inspections, tests, and corrective actions in the log. If log is missing, contact the supervisor to find out the missing information & complete the log. " .
 
 <https://www.notion.so/duration_Generator:-Control-Panel-PM-Data-Recording> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:679d030e18d24e58b603dc6895b2c770 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -848,9 +848,9 @@ ex:679d030e18d24e58b603dc6895b2c770 a comp:WorkRequirement;
 7) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Simulate-a-Failure> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
-<https://www.notion.so/10Month> a comp:Measure;
+<https://www.notion.so/1Month> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -868,7 +868,7 @@ ex:a11c184b55c04fc1b82b5e227315946d a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Load-Test-30%25> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:b073c9adc5de444ebe04643342a1ef5c a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -882,7 +882,7 @@ ex:b073c9adc5de444ebe04643342a1ef5c a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Operate-Transfer-Switch> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:6a6e4e0180db4170af992ed5f7d6006e a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -894,7 +894,7 @@ ex:6a6e4e0180db4170af992ed5f7d6006e a comp:WorkRequirement;
 4) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Inspect-Brush-Operation> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:6c434e12cb514351b5cbf3251aca67d3 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -904,7 +904,7 @@ ex:6c434e12cb514351b5cbf3251aca67d3 a comp:WorkRequirement;
 2)  If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Generator:-Inspect-Bearing-Seal> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:5e38f7d20422464da1b12af7f7937ca0 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -919,7 +919,7 @@ ex:5e38f7d20422464da1b12af7f7937ca0 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Check-Operations> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:81444c7e130240539f1e43249087fec4 a comp:WorkRequirement;
   comp:activityType comp:Record;
@@ -939,7 +939,7 @@ ex:81444c7e130240539f1e43249087fec4 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator-PM-Data-Record> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:ed3babcdf92a46ccb6af6d57dd70fc5f a comp:WorkRequirement;
   comp:activityType comp:Service;
@@ -951,7 +951,7 @@ ex:ed3babcdf92a46ccb6af6d57dd70fc5f a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Generator:-Drain-Exhaust-System> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:80e9a39ad7fc48d899529fc98aa0d549 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -963,7 +963,7 @@ ex:80e9a39ad7fc48d899529fc98aa0d549 a comp:WorkRequirement;
 4) If the block heater has failed, initiate an immediate repair to repair the block heater and capture the repair information in a WMS work order with “Repair from Predictive” work type.""" .
 
 <https://www.notion.so/duration_Generator:-Inspect-Block-Heater> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:0da1fd6a02854c89b552c36cec88dc54 a comp:WorkRequirement;
   comp:activityType comp:Service;
@@ -972,7 +972,7 @@ ex:0da1fd6a02854c89b552c36cec88dc54 a comp:WorkRequirement;
   comp:procedure "During all of the above tests and inspections if corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair." .
 
 <https://www.notion.so/duration_Generator:-Fix-the-Defects> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:cc37715c47cf4e8e876a3ab1a584d681 a comp:WorkRequirement;
   comp:activityType comp:Record;
@@ -992,7 +992,7 @@ maintenance have been restored to their intended operating condition. Note: A pe
 meeting all of the requirements of this Standard is available from CSA (C282 Logbook).""" .
 
 <https://www.notion.so/duration_Generator:-PM-Data-Record> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:7fd08ba68328457b8df3029429bb9d0c a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1000,7 +1000,7 @@ ex:7fd08ba68328457b8df3029429bb9d0c a comp:WorkRequirement;
   comp:specifiesFrequency <https://www.notion.so/duration_Generator> .
 
 <https://www.notion.so/duration_Generator> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month>, <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/6Month>, <https://www.notion.so/1Year> .
 
 ex:b2c7ed8eb6ac4a4989b8346ca163ceb6 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1265,7 +1265,7 @@ ex:1d42d9aef2ee470f8144e5a2d5ec73a0 a comp:WorkRequirement;
 -experience gained on the service life of slings used in similar circumstances""" .
 
 <https://www.notion.so/duration_Web-Sling:-Inspection-Frequency-Verification> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:e3ce8e366b0f48c7ac99ebd0eba55e13 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1299,9 +1299,7 @@ ex:facb71c1c26942299d7e72af594a44fb a comp:WorkRequirement;
 (D) experience gained on the service life of slings used in similar circumstances. Such inspections shall in no event be at intervals greater than once every 12 months.""" .
 
 <https://www.notion.so/duration_Web-Sling:-Alloy-Steel-Chain-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
-
-ex:24379a0de32e4f93bc2fe95dfa323367 a comp:WorkRequirement .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:89a8cbfff9b643b380228c05f93fb152 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1315,7 +1313,7 @@ ex:89a8cbfff9b643b380228c05f93fb152 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Chain-Sling:-Inspection-Frequency-Verification> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:242e96dc5d92460f9e02c9dd79189aa3 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1331,7 +1329,7 @@ ex:242e96dc5d92460f9e02c9dd79189aa3 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Chain-Sling:-Inspection-For-Safe-Usage> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:ed7074eef32440b79035f8d429f34b2a a comp:WorkRequirement;
   comp:name "Wire Rope Sling: Inspection Frequency Verification";
@@ -1344,7 +1342,7 @@ ex:ed7074eef32440b79035f8d429f34b2a a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Wire-Rope-Sling:-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:c0a06449171644d7922bd2415022de12 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1365,7 +1363,7 @@ How to Inspect Wire Rope Slings According to ASME B30.9 Standards: Broken Wires 
 11. Doglegs: Are permanent bends caused by improper use or handling. If the dogleg is severe, the sling must be removed from service. If the dogleg is minor, (exhibiting no strand distortion) and cannot be observed when the sling is under tension, the area of the minor dogleg should be marked for observation and the sling can remain in service.""" .
 
 <https://www.notion.so/duration_Wire-Rope-Sling:-Inspection-For-Safe-Usage> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:776ed11c315048f5aa7b8d6476abd37e a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1380,7 +1378,7 @@ ex:776ed11c315048f5aa7b8d6476abd37e a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Chain-Sling-(alloy-steel-chain-sling):-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:1f35d2da57a24d22937e6d333939323d a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1394,7 +1392,7 @@ ex:1f35d2da57a24d22937e6d333939323d a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Wire-Rope-Sling-(alloy-steel-chain-sling):-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:35d3a871cdcf4c0fb43a118abbc5bfe7 a comp:WorkRequirement;
   comp:name "Wire Mesh Sling: Inspection Frequency Verification";
@@ -1407,7 +1405,7 @@ ex:35d3a871cdcf4c0fb43a118abbc5bfe7 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Wire-Mesh-Sling:-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:9615c395bdc54194a7e265b45b170972 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1444,7 +1442,7 @@ ex:b63e04a4e60f462194cb8d7567168536 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Wire-Mesh-Sling-(alloy-steel-chain-slings):-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:5d0aa5f210d64ba19afed46f78623216 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1459,7 +1457,7 @@ a) the details specified in Table 6
 b) Documentation on the maintenance and servicing history of all equipment, which shall be readily available until the equipment is permanently removed from service.""" .
 
 <https://www.notion.so/duration_Fall-Protection-> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:f6a881308a9247d8adc094b70d4ed9a8 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1472,7 +1470,7 @@ ex:f6a881308a9247d8adc094b70d4ed9a8 a comp:WorkRequirement;
 4) Report any obstructions, damage, improper flow, or potential problems to the area supervisor.""" .
 
 <https://www.notion.so/duration_Emergency-Eyewash-Station--plumbed> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:0f13c103c8c04d048741bd14538c04fb a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1498,7 +1496,7 @@ ex:0f13c103c8c04d048741bd14538c04fb a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Emergency-shower---plumbed> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:8ea343c7143548b0b48583e1227c7851 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1520,7 +1518,7 @@ ex:8ea343c7143548b0b48583e1227c7851 a comp:WorkRequirement;
 - Manufacturer's instructions for operation and maintenance are readily available2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Emergency-shower--portable/self-contained> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:1ae0fe8ad7194f47b089f0b191132b6a a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1544,7 +1542,7 @@ ex:1ae0fe8ad7194f47b089f0b191132b6a a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Emergency-Eyewash-Station--portable/self-contained->
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:36d807bce2cc488fa1b5919a8be96288 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1559,7 +1557,7 @@ ex:36d807bce2cc488fa1b5919a8be96288 a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Personal-Eyewash--Portable-> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:2bf5b33bc08342d391d7b4f21cff6373 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1585,7 +1583,7 @@ ex:2bf5b33bc08342d391d7b4f21cff6373 a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Combination-eyewash/shower--plumbed> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:5683182503ea4cad94456f997dfc3e58 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1609,7 +1607,7 @@ ex:5683182503ea4cad94456f997dfc3e58 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Combination-eyewash/shower--portable/self-contained>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:333385d9a07f4814a077bf668152f448 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1625,7 +1623,7 @@ Note: If corrective action/repair is required, create a work request with the �
 
 <https://www.notion.so/duration_Chemical-Suit:-Inspection-For-Safe-Usage-Condition>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:7c8506b0636e4b9695f7d40afa6f98ef a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1636,9 +1634,9 @@ ex:7c8506b0636e4b9695f7d40afa6f98ef a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Spill-Kit:-Inspection-For-Safe-Usage-Condition> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/30Month> .
+  comp:hasValue <https://www.notion.so/3Month> .
 
-<https://www.notion.so/30Month> a comp:Measure;
+<https://www.notion.so/3Month> a comp:Measure;
   comp:hasNumericalValue 3.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -1654,9 +1652,9 @@ Refer to General Inspection Requirements Document for Detail
 Note: If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Forklift:-Hourly> a comp:Duration;
-  comp:hasValue <https://www.notion.so/2000Metered%20Run-Hour> .
+  comp:hasValue <https://www.notion.so/200Metered%20Run-Hour> .
 
-<https://www.notion.so/2000Metered%20Run-Hour> a comp:Measure;
+<https://www.notion.so/200Metered%20Run-Hour> a comp:Measure;
   comp:hasNumericalValue 200.0;
   comp:hasUnitOfMeasure comp:Metered%20Run-Hour .
 
@@ -1671,7 +1669,7 @@ ex:f003d13633e448438d688680ccea1290 a comp:WorkRequirement;
 -experience gained on the service life of slings used in similar circumstances""" .
 
 <https://www.notion.so/duration_Gaseous-Fuel-Handling-Valves> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:7fde951badb44063af40a7332d83a24b a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1694,7 +1692,7 @@ ex:8bc83648fedc436a9a4afa3bc38d62f8 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Gaseous-Fuel-Handling-drip-trap-Inspection-Frequency-Verification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:8f278f66db2e4ef9a69441f3a755623e a comp:WorkRequirement;
   comp:wrenchTime 0.25;
@@ -1722,7 +1720,7 @@ ex:8b100bc7c55d4e0885265bc8997ae56e a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Gaseous-Fuel-Handling-compressor-and-Pressure-relive-device>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:bb984fde70e64fe4ac4a5de7e9c5c82b a comp:WorkRequirement;
   comp:wrenchTime 0.25;
@@ -1742,7 +1740,7 @@ ex:6460d3ddc1b74a51bca8c39dad20aadc a comp:WorkRequirement;
   comp:specifiesFrequency <https://www.notion.so/duration_Pressure-Vessel> .
 
 <https://www.notion.so/duration_Pressure-Vessel> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year>, <https://www.notion.so/30Year> .
+  comp:hasValue <https://www.notion.so/1Year>, <https://www.notion.so/3Year> .
 
 ex:b941b9fc81ba4203ade9611f196742ab a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1775,9 +1773,9 @@ ex:b8b268d895ec489b869cfaec9f9a3ec3 a comp:WorkRequirement;
   comp:procedure "Perform a manual lift test or system test of the piping system." .
 
 <https://www.notion.so/duration_Piping-System> a comp:Duration;
-  comp:hasValue <https://www.notion.so/20Year> .
+  comp:hasValue <https://www.notion.so/2Year> .
 
-<https://www.notion.so/20Year> a comp:Measure;
+<https://www.notion.so/2Year> a comp:Measure;
   comp:hasNumericalValue 2.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -1813,9 +1811,9 @@ ex:df439f4843cb4555929cafbf623ae55e a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Drench-Hose--Plumbed> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
-<https://www.notion.so/10Week> a comp:Measure;
+<https://www.notion.so/1Week> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Week .
 
@@ -1840,7 +1838,7 @@ ex:da051b47dc1a41869dcb6cd78eebebaf a comp:WorkRequirement;
 2) If corrective action/repair is required, create a work request with the “Repair from Preventive” work type in WMS to carry out the required repair.""" .
 
 <https://www.notion.so/duration_Drench-Hose--Portable/self-contained> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:6953615380794822aeda42b7d44ec99f a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -1853,9 +1851,9 @@ ii) thereafter as often as necessary but not less frequently than recommended by
 """ .
 
 <https://www.notion.so/duration_Fixed-Crane> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
-<https://www.notion.so/10Year> a comp:Measure;
+<https://www.notion.so/1Year> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -1883,9 +1881,9 @@ ex:5e97ce81a251494f891a881ec0fcca18 a comp:WorkRequirement;
 """ .
 
 <https://www.notion.so/duration_Elevating-Work-Platform> a comp:Duration;
-  comp:hasValue <https://www.notion.so/30Month>, <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/3Month>, <https://www.notion.so/1Year> .
 
-<https://www.notion.so/30Month> a comp:Measure;
+<https://www.notion.so/3Month> a comp:Measure;
   comp:hasNumericalValue 3.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -1960,7 +1958,7 @@ ex:188e5dc48cdd4f888dc24b3409fefe4e a comp:WorkRequirement;
 (4) The employer responsible for constructing the silo shall record information about the frequency of use of the scaffold in a log book which shall be kept with the scaffold while it is in use on a project. , s. 132 (4).""" .
 
 <https://www.notion.so/duration_Scaffold:-Inspection-Frequency> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:764f6dc94c714d909e26c2b2782be9f5 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2030,7 +2028,7 @@ v) inadequate oil level (e.g., gearbox oil or hydraulic reservoir oil); and
 w) corroded, cracked, or distorted lower blocks.""" .
 
 <https://www.notion.so/duration_Fixed-Crane:-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Daily> .
+  comp:hasValue <https://www.notion.so/1Daily> .
 
 ex:4ab1dad32b364b62a989ee0bc1879e62 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2051,7 +2049,7 @@ Test functioning of chlorine/SO2 gas detectors and alarms as follows:
 
 <https://www.notion.so/duration_Fixed-gas-detector:-Inspection-For-Safe-Usage-Condition>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:1f721524252045ae8e8ad3f17ce6e6e8 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2071,9 +2069,9 @@ A monitor shall be calibrated:
 - When a monitor has been exposed to extreme conditions (e.g., dropped, electrical shock, high gas concentrations, or extreme temperatures)""" .
 
 <https://www.notion.so/duration_Personal-Gas-Meter> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month>, <https://www.notion.so/Pre-use> .
+  comp:hasValue <https://www.notion.so/6Month>, <https://www.notion.so/Pre-use> .
 
-<https://www.notion.so/60Month> a comp:Measure;
+<https://www.notion.so/6Month> a comp:Measure;
   comp:hasNumericalValue 6.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -2164,7 +2162,7 @@ ex:e4f7b4ed85b545f7b9eaaffc416c863e a comp:WorkRequirement;
   comp:procedure "Perform quarterly inspection of the Man Lift on quarterly basis as per the standards and recommendations from the manufacturers. " .
 
 <https://www.notion.so/duration_Manlift:-Quarterly-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/30Month> .
+  comp:hasValue <https://www.notion.so/3Month> .
 
 ex:96252df7007c4e52a5a0dffe1e103679 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2196,7 +2194,7 @@ ii) Fork hooks (when originally provided) — The support face of the top hook a
 g) Legibility of marking (when originally provided) — If the fork marking is not clearly legible, it shall be renewed. Marking shall be renewed according to instructions from the original supplier.""" .
 
 <https://www.notion.so/duration_Forklift:-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:207f3745241646808c35b8a284164009 a comp:WorkRequirement .
 
@@ -2215,7 +2213,11 @@ ex:15a67e6c2ea74d25ad45fea8c012856d a comp:WorkRequirement;
 (c) repairing or replacing damaged or broken parts;
 (d) such other examinations or work as is required by this Regulation, the applicable code or standard referred to in the code adoption document or by an inspector. """ .
 
-<https://www.notion.so/duration_Elevator:-Maintenance> a comp:Duration .
+<https://www.notion.so/duration_Elevator:-Maintenance> a comp:Duration;
+  comp:hasValue <https://www.notion.so/Month> .
+
+<https://www.notion.so/Month> a comp:Measure;
+  comp:hasUnitOfMeasure comp:Month .
 
 ex:d57dd0cabff54ef89ae132ac570419cf a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -2229,16 +2231,19 @@ The frequency of maintenance and tests shall conform to the following;
 example of a one month limit),""" .
 
 <https://www.notion.so/duration_Elevator:-Establish-frequency> a comp:Duration;
-  comp:hasValue <https://www.notion.so/30Month> .
+  comp:hasValue <https://www.notion.so/3Month> .
 
 ex:6279c061bd2f410c9cff3f2556e220b2 a comp:WorkRequirement;
+  comp:activityType comp:Record;
   comp:name "Elevator: Logbook";
   comp:specifiesFrequency <https://www.notion.so/duration_Elevator:-Logbook>;
-  comp:procedure """34. (1) Every owner of an elevating device and every contractor shall maintain a log book for each elevating device that they own or maintain, and the log book shall contain up-to-date data on,
-(a) all maintenance functions required to be recorded in the log book by the applicable code, standard or requirement referred to in the code adoption document or any applicable director's order; and
-(b) such other data as are required to be kept in the log book by this Regulation.  O. Reg. 209/01, s. 34 (1);
-(2) The log book shall be kept for a period of at least five years from the date of the last entry in the log book.  O. Reg. 209/01, s. 34 (2).
-(3) The log book data shall be readily available at the location of the elevating device to an inspector, maintenance mechanic and other persons designated by the owner. """ .
+  comp:procedure """34. 
+(1) Every owner of an elevating device and every contractor shall maintain a logbook for each elevating device that they own or maintain, and the logbook shall contain up-to-date data on,
+    (a) all maintenance functions required to be recorded in the logbook by the applicable code, standard or requirement referred to in the code adoption document or any applicable director's order; and
+    (b) such other data as are required to be kept in the logbook by this Regulation.  O. Reg. 209/01, s. 34 (1);
+(2) The logbook shall be kept for a period of at least five years from the date of the last entry in the logbook.  O. Reg. 209/01, s. 34 (2).
+(3) The logbook data shall be readily available at the location of the elevating device to an inspector, maintenance mechanic and other persons designated by the owner. O. Reg. 209/01, s. 34 (3).
+""" .
 
 <https://www.notion.so/duration_Elevator:-Logbook> a comp:Duration;
   comp:hasValue <https://www.notion.so/As%20Per%20Usage> .
@@ -2254,9 +2259,9 @@ ex:21def28741d041418116651f7b507a16 a comp:WorkRequirement;
 a) Class A (standby or infrequent service) and Class B (light service):""" .
 
 <https://www.notion.so/duration_Fixed-Crane:-Monthly-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
-<https://www.notion.so/10Month> a comp:Measure;
+<https://www.notion.so/1Month> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Month .
 
@@ -2268,7 +2273,7 @@ ex:08c353a243364638895481287b9d9047 a comp:WorkRequirement;
 b) Classes C and D (moderate and heavy service): weekly to monthly;""" .
 
 <https://www.notion.so/duration_Fixed-Crane:-Weekly-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:0a7e6a23ecca42eea75e880971cb5c6d a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2278,9 +2283,9 @@ ex:0a7e6a23ecca42eea75e880971cb5c6d a comp:WorkRequirement;
 c) Classes E and F (severe and continuously service): daily to weekly""" .
 
 <https://www.notion.so/duration_Fixed-Crane:-Daily-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Daily> .
+  comp:hasValue <https://www.notion.so/1Daily> .
 
-<https://www.notion.so/10Daily> a comp:Measure;
+<https://www.notion.so/1Daily> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Daily .
 
@@ -2297,7 +2302,7 @@ ex:c446f30518a647d0ace426e59ef83c67 a comp:WorkRequirement;
   comp:procedure "Determine frequency to meet TSSA Elevating Devices Code Adoption  Document Amendment 277-19 May 3 2019, Section: 4.3 standards inspection as per manufacturer recommendation and usage. " .
 
 <https://www.notion.so/duration_Manlift:-Safety-Break-Frequency-> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:76e017a72409410f86575a30b88f1b72 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2308,9 +2313,9 @@ ex:76e017a72409410f86575a30b88f1b72 a comp:WorkRequirement;
 a) A planned maintenance inspection, which is carried out by a trained, qualified maintenance technician. This inspection should occur in accordance with the manufacturer's recommended interval. In the absence of such recommendations, it should be conducted approximately every 200 h.""" .
 
 <https://www.notion.so/duration_Forklift:-Hourly-Service-Report-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/2000Metered%20Run-Hour> .
+  comp:hasValue <https://www.notion.so/200Metered%20Run-Hour> .
 
-<https://www.notion.so/2000Metered%20Run-Hour> a comp:Measure;
+<https://www.notion.so/200Metered%20Run-Hour> a comp:Measure;
   comp:hasNumericalValue 200.0;
   comp:hasUnitOfMeasure comp:Metered%20Run-Hour .
 
@@ -2324,7 +2329,7 @@ b) An annual planned maintenance inspection, which is carried out by a trained, 
 
 <https://www.notion.so/duration_Forklift:-2000hr/Annually-Service-Report-Inspection>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:d0c5f3a4ffda41478ed280da23f80a7b a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2335,9 +2340,9 @@ ex:d0c5f3a4ffda41478ed280da23f80a7b a comp:WorkRequirement;
 c) A lifting capacity inspection, which is a planned maintenance inspection carried out by a trained, qualified maintenance technician. This inspection is carried out to determine whether the lift truck is capable of handling the maximum load specified on the nameplate. This inspection shall be carried out prior to the lift truck being used for the first time, each time the lift truck is acquired by a new owner, and as often as recommended by the manufacturer, but no less than once per year.""" .
 
 <https://www.notion.so/duration_Forklift:-Pre-Use-Service-Report-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Pre-use> .
+  comp:hasValue <https://www.notion.so/1Pre-use> .
 
-<https://www.notion.so/10Pre-use> a comp:Measure;
+<https://www.notion.so/1Pre-use> a comp:Measure;
   comp:hasNumericalValue 1.0;
   comp:hasUnitOfMeasure comp:Pre-use .
 
@@ -2348,9 +2353,7 @@ ex:464b0ae464094beda0c766a25a3e348b a comp:WorkRequirement;
   comp:procedure """(2) testing shall be performed at intervals specified in Appendix N, such that;
 (a) category 1 tests are performed annually,
 (b) category 3 tests are performed every 3 years and
-(c) category 5 tests are performed every 5 years
-
-Note: Please refer to the image in the Requirement Name column""" .
+(c) category 5 tests are performed every 5 years""" .
 
 <https://www.notion.so/duration_Elevator:-Frequency-Requirement-Details> a comp:Duration;
   comp:hasValue <https://www.notion.so/Asset%20Manual> .
@@ -2416,7 +2419,7 @@ Notes: 1) Visual internal inspections are required for all cylinders at the time
 
 <https://www.notion.so/duration_Self-contained-Breathing-Apparatus-(SCBA):-General-Inspection-Requirement>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:a7de57012f0c400ba90ae533c1ae900f a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2456,7 +2459,7 @@ c) the LC5o of the lading, by reason of a corrosion effect on tissues of the res
 
 <https://www.notion.so/duration_Self-contained-Breathing-Apparatus-(SCBA):-Containers-Requalification>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:24f007483fff43f8a47b55642f2e7e7e a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2470,7 +2473,11 @@ d) steel or nickel cylinders used to transport nickel carbonyl; and
 e) cylinders used to transport flammable or corrosive liquids without addition of compressed gas.""" .
 
 <https://www.notion.so/duration_Self-contained-Breathing-Apparatus-(SCBA):-Visual-Inspection>
-  a comp:Duration .
+  a comp:Duration;
+  comp:hasValue <https://www.notion.so/N/A> .
+
+<https://www.notion.so/N/A> a comp:Measure;
+  comp:hasUnitOfMeasure <http://ontology.eil.utoronto.ca/FAMO/compliance/N/A> .
 
 ex:3e57ac9f687040098c67c98a9a174c98 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -2481,7 +2488,8 @@ ex:3e57ac9f687040098c67c98a9a174c98 a comp:WorkRequirement;
 11.6.2.2 Hydrostatic testing shall be performed by a registered facility in accordance with the requirements of CSA B339 and CSA B340.""" .
 
 <https://www.notion.so/duration_Self-contained-breathing-apparatus-(SCBA):-Hydrostatic-Test-Inspection>
-  a comp:Duration .
+  a comp:Duration;
+  comp:hasValue <https://www.notion.so/N/A> .
 
 ex:87a7dc56836145b986b868e60c36c885 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -2520,7 +2528,7 @@ ex:45833118aa0e413d98f182a26495a8ae a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Self-contained-Breathing-Apparatus-(SCBA):-Unused-Cylinder>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:6f9c7b50aaea40b18f1a6dd74a8e1a74 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2531,7 +2539,7 @@ ex:6f9c7b50aaea40b18f1a6dd74a8e1a74 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Self-contained-Breathing-Apparatus-(SCBA):-Cylinder-Interior-Inspection>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:5a54c392194545a4ae6920630d0e57d3 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2551,7 +2559,7 @@ suitable load tester.
 9. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).""" .
 
 <https://www.notion.so/duration_Generator:-Semi-Annual> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
 ex:592b99d12c1c40178063c969f8c7b7b6 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2637,7 +2645,7 @@ person(s) responsible for carrying out the work.
 13. Record all inspections, tests, and corrective actions in the log (see Clause 11.5.3).""" .
 
 <https://www.notion.so/duration_Generator:-Annual> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:0d91d62548d64b1ebec3ed55f1c77bb7 a comp:WorkRequirement;
   comp:activityType comp:Change;
@@ -2648,7 +2656,7 @@ ex:0d91d62548d64b1ebec3ed55f1c77bb7 a comp:WorkRequirement;
 not greater than 12 months. (See Note A-6.5.1.5.(1).)""" .
 
 <https://www.notion.so/duration_Generator:-Fuel-Storage-Tank> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:574a8c7a4a674f898651ceab9a1dcb48 a comp:WorkRequirement;
   comp:activityType comp:Test;
@@ -2657,7 +2665,7 @@ ex:574a8c7a4a674f898651ceab9a1dcb48 a comp:WorkRequirement;
   comp:procedure " Achieve National Fire Code of Canada 2015, Section: 6.5.1.5 requirement by following A-6.5.1.5.(1).)" .
 
 <https://www.notion.so/duration_Generator:-Fuel-Storage-Tank-Test-Program> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:be371e93d64d4e5c8426e073f4f71d08 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2673,16 +2681,25 @@ ex:be371e93d64d4e5c8426e073f4f71d08 a comp:WorkRequirement;
 
 ex:75f072be3e1a4c82b483ee2f091b2f60 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
-  comp:name "TSSA Regulated Pressure Vessel: Low Pressure Boiler";
-  comp:specifiesFrequency <https://www.notion.so/duration_TSSA-Regulated-Pressure-Vessel:-Low-Pressure-Boiler>;
+  comp:name "2 year internal and external inspection of low pressure boiler";
+  comp:specifiesFrequency <https://www.notion.so/duration_2-year-internal-and-external-inspection-of-low-pressure-boiler>;
   comp:appliesToAssetType assets:5eeee1ea46e34890ac3dcf134c0ef010;
-  comp:procedure "Perform internal and external inspection per CSA ???" .
+  comp:procedure """TEMP: 2 year internal and external inspection of low pressure boiler
+1. Shut down the boiler: Before starting the internal inspection, shut down the boiler and isolate it from any sources of energy, such as electrical power and fuel.
+2. Prepare the boiler for inspection: Drain the water from the boiler and remove any internal components that may obstruct the inspection, such as the burner or heat exchanger.
+3. Conduct a visual inspection: Use a flashlight or inspection camera to inspect the interior of the boiler for signs of corrosion, scale buildup, cracks, or other damage. Pay particular attention to areas that are prone to corrosion, such as the water-side surfaces of the tubes or the rear of the boiler.
+4. Conduct thickness testing: Use an ultrasonic thickness gauge to measure the thickness of the boiler walls and tubes. Record the readings and compare them to the manufacturer's specifications or any applicable regulations or standards.
+5. Check the refractory: Inspect the refractory lining, if present, for signs of wear or damage. Repair or replace any damaged areas as needed.
+6. Inspect the water-side components: Inspect the water-side components, such as the water tank, piping, and valves, for signs of leaks or corrosion. Clean or replace any fouled or worn components.
+7. Inspect the combustion chamber and heat exchanger: Inspect the combustion chamber and heat exchanger for signs of damage, corrosion, or soot buildup. Clean or replace any fouled or damaged components.
+8. Reassemble the boiler: After completing the inspection, reassemble the boiler and refill it with water. Test the operation of the boiler to ensure it is functioning properly.
+9. Document the inspection: Record the inspection results and any repairs or replacements in a logbook or other documentation. Note any recommendations for future inspections or repairs.""" .
 
-<https://www.notion.so/duration_TSSA-Regulated-Pressure-Vessel:-Low-Pressure-Boiler>
+<https://www.notion.so/duration_2-year-internal-and-external-inspection-of-low-pressure-boiler>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/20Year> .
+  comp:hasValue <https://www.notion.so/2Year> .
 
-<https://www.notion.so/20Year> a comp:Measure;
+<https://www.notion.so/2Year> a comp:Measure;
   comp:hasNumericalValue 2.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -2700,13 +2717,22 @@ ex:936704a0a7fc4af8a421e5174b10acab a comp:WorkRequirement;
 
 ex:9b8a24728e78450cbe397e33aa19ae04 a comp:WorkRequirement;
   comp:activityType comp:Test;
-  comp:name "1 year lift test of power boilers";
-  comp:specifiesFrequency <https://www.notion.so/duration_1-year-lift-test-of-power-boilers>;
+  comp:name "1 year safety and pressure relieving valve lift test of power boilers";
+  comp:specifiesFrequency <https://www.notion.so/duration_1-year-safety-and-pressure-relieving-valve-lift-test-of-power-boilers>;
   comp:appliesToAssetType assets:e5c173ed817241ca90e86c9d617f329c;
-  comp:procedure "#TH comment: plan to inherit from generic version of boiler lift-test procedure" .
+  comp:procedure """TEMP: 1 year safety and pressure relieving valve lift test of power boilers
+1. Verify the boiler is in a safe state: Before conducting the lift test, ensure the boiler is not in operation and has been isolated from any sources of energy, such as electrical power and fuel.
+2. Identify the PSD: Locate the PSD on the boiler and verify that it is the correct type and model for the application.
+3. Prepare for the test: Ensure that you have the necessary equipment and tools for conducting the test, such as a pressure gauge, lifting equipment, and any personal protective equipment (PPE) required.
+4. Install the pressure gauge: Connect the pressure gauge to the inlet side of the PSD and verify that it is calibrated and accurate.
+5. Apply pressure: Use the lifting equipment to slowly apply pressure to the inlet side of the PSD until it lifts and allows the pressure to vent. Monitor the pressure gauge to ensure that the pressure at which the PSD lifts is within the specified range.
+6. Record the results: Record the pressure at which the PSD lifted, the date of the test, and any other relevant information, such as the name of the person conducting the test.
+7. Reset the PSD: After completing the test, reset the PSD and verify that it is functioning properly.
+8. Perform a functional test: Conduct a functional test of the boiler to ensure that the PSD is providing adequate protection under normal operating conditions.""" .
 
-<https://www.notion.so/duration_1-year-lift-test-of-power-boilers> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+<https://www.notion.so/duration_1-year-safety-and-pressure-relieving-valve-lift-test-of-power-boilers>
+  a comp:Duration;
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:4a3c98c1150f40599b46d9ae110c8b46 a comp:WorkRequirement;
   comp:name "Power";
@@ -2720,12 +2746,20 @@ ex:1806eacd786d40599ab206366679174f a comp:WorkRequirement;
   comp:name "5 year service of power boilers";
   comp:specifiesFrequency <https://www.notion.so/duration_5-year-service-of-power-boilers>;
   comp:appliesToAssetType assets:e5c173ed817241ca90e86c9d617f329c;
-  comp:procedure "?" .
+  comp:procedure """TEMP: 5 year service of power boilers
+1. Shut down the boiler: Before starting any service work, shut down the boiler and isolate it from any sources of energy, such as electrical power and fuel.
+2. Inspect the boiler: Conduct a visual inspection of the boiler and its components, looking for signs of damage, leaks, or other issues. Check the flame pattern and burner operation, and inspect the combustion chamber, heat exchanger, and flue.
+3. Clean the boiler: Use a vacuum or brush to remove any debris or buildup from the combustion chamber, heat exchanger, and flue. Clean the burner, pilot assembly, and any other components as needed.
+4. Check the safety controls: Test the safety controls, such as the pressure relief valve, low-water cutoff, and high-limit control, to ensure they are functioning properly.
+5. Inspect the venting system: Inspect the venting system to ensure it is clear of any obstructions and properly sized for the boiler. Check for signs of corrosion or damage.
+6. Replace or repair components: Replace any worn or damaged components, such as gaskets, seals, or sensors. Repair or replace any leaking pipes or fittings.
+7. Test the boiler: Restart the boiler and test its operation, including the fuel delivery system, combustion, and temperature control. Verify that it is operating within the manufacturer's specifications and any applicable regulations or standards.
+8. Document the service: Record the service work performed, including any repairs or component replacements, in a logbook or other documentation. Note any recommendations for future service or repairs.""" .
 
 <https://www.notion.so/duration_5-year-service-of-power-boilers> a comp:Duration;
-  comp:hasValue <https://www.notion.so/50Year> .
+  comp:hasValue <https://www.notion.so/5Year> .
 
-<https://www.notion.so/50Year> a comp:Measure;
+<https://www.notion.so/5Year> a comp:Measure;
   comp:hasNumericalValue 5.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -2856,7 +2890,7 @@ ex:6658820b2c29433f9fbedf65025e0989 a comp:WorkRequirement;
 (i) other items as specified by the manufacturer""" .
 
 <https://www.notion.so/duration_Man-Lift:-Annual-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:109846bd5294440caf8342cdeb73fc02 a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -2875,9 +2909,9 @@ f) hydraulic pumps and motors for cracks or leaks, leaks at joints, seal leaks, 
 (j) all chain and cable mechanisms for adjustment """ .
 
 <https://www.notion.so/duration_Man-Lift:-200-Hr-Inspection> a comp:Duration;
-  comp:hasValue <https://www.notion.so/2000Metered%20Cycle> .
+  comp:hasValue <https://www.notion.so/200Metered%20Cycle> .
 
-<https://www.notion.so/2000Metered%20Cycle> a comp:Measure;
+<https://www.notion.so/200Metered%20Cycle> a comp:Measure;
   comp:hasNumericalValue 200.0;
   comp:hasUnitOfMeasure comp:Metered%20Cycle .
 
@@ -2897,7 +2931,7 @@ ex:c8053578c4e34845998a2ff4ab6ee7d6 a comp:WorkRequirement;
 Employers shall inspect first aid boxes and their contents at not less than quarter-yearly intervals and shall mark the inspection card for each box with the date of the most recent inspection and the signature of the person making the inspection.  R.R.O. 1990, Reg. 1101, s. 6.""" .
 
 <https://www.notion.so/duration_First-Aid-Station> a comp:Duration;
-  comp:hasValue <https://www.notion.so/30Month> .
+  comp:hasValue <https://www.notion.so/3Month> .
 
 ex:df337da4fbe147128cdd807aff13c6db a comp:WorkRequirement;
   comp:name "Confined Space";
@@ -3037,7 +3071,7 @@ ex:4d98a647c54743349467fc4d7eedb223 a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Weekly-self-contained-emergency-eyewash-or-shower-inspection>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:2aca09adeff84ed48b379c1420cddf7d a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -3049,7 +3083,7 @@ ex:2aca09adeff84ed48b379c1420cddf7d a comp:WorkRequirement;
 
 <https://www.notion.so/duration_weekly-plumbed-emergency-eyewash-or-shower-inspection>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Week> .
+  comp:hasValue <https://www.notion.so/1Week> .
 
 ex:de20f8f0b7db402bb03f0b9aa372ec07 a comp:WorkRequirement .
 
@@ -3061,7 +3095,7 @@ ex:7d785cfeef19400c8467e2fba21ead44 a comp:WorkRequirement;
 * if manufacturer’s instruction cannot be found at the site of the equipment or anywhere else reasonably accessible, initiate follow-up work request to replace the instruction.""" .
 
 <https://www.notion.so/duration_Annual-personal-wash-maintenance> a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:fecf211200054d6c834be1ce7e28fc2f a comp:WorkRequirement;
   comp:activityType comp:Check;
@@ -3081,7 +3115,7 @@ ex:fecf211200054d6c834be1ce7e28fc2f a comp:WorkRequirement;
 
 <https://www.notion.so/duration_Annual-plumbed-emergency-eyewash-or-shower-test> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/10Month> .
+  comp:hasValue <https://www.notion.so/1Month> .
 
 ex:a43c47065c2344a8bd38237c673258fa a comp:WorkRequirement;
   comp:activityType comp:Inspect;
@@ -3097,42 +3131,66 @@ ex:8e836e02a5a84c0ba0cd1a448497a235 a comp:WorkRequirement;
   comp:specifiesFrequency <https://www.notion.so/duration_Sample:-EL-1-1> .
 
 <https://www.notion.so/duration_Sample:-EL-1-1> a comp:Duration;
-  comp:hasValue <https://www.notion.so/60Month> .
+  comp:hasValue <https://www.notion.so/6Month> .
 
 ex:2dcc6df4655f46579ff6ed82cf0b1573 a comp:WorkRequirement;
   comp:activityType comp:Test;
   comp:name "1 year manual lift test of low-pressure steam service boiler ";
   comp:specifiesFrequency <https://www.notion.so/duration_1-year-manual-lift-test-of-low-pressure-steam-service-boiler->;
   comp:appliesToAssetType assets:3bf2c1f79bf143f78164120f9a46f80b;
-  comp:procedure "TBD by contractor" .
+  comp:procedure """TEMP: 1 year manual lift test of low-pressure steam service boiler 
+1. Verify the boiler is in a safe state: Before conducting the lift test, ensure the boiler is not in operation and has been isolated from any sources of energy, such as electrical power and fuel.
+2. Identify the PSD: Locate the PSD on the boiler and verify that it is the correct type and model for the application.
+3. Prepare for the test: Ensure that you have the necessary equipment and tools for conducting the test, such as a pressure gauge, lifting equipment, and any personal protective equipment (PPE) required.
+4. Install the pressure gauge: Connect the pressure gauge to the inlet side of the PSD and verify that it is calibrated and accurate.
+5. Apply pressure: Use the lifting equipment to slowly apply pressure to the inlet side of the PSD until it lifts and allows the pressure to vent. Monitor the pressure gauge to ensure that the pressure at which the PSD lifts is within the specified range.
+6. Record the results: Record the pressure at which the PSD lifted, the date of the test, and any other relevant information, such as the name of the person conducting the test.
+7. Reset the PSD: After completing the test, reset the PSD and verify that it is functioning properly.
+8. Perform a functional test: Conduct a functional test of the boiler to ensure that the PSD is providing adequate protection under normal operating conditions.""" .
 
 <https://www.notion.so/duration_1-year-manual-lift-test-of-low-pressure-steam-service-boiler->
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/10Year> .
+  comp:hasValue <https://www.notion.so/1Year> .
 
 ex:7924c800daf041189183396657f98623 a comp:WorkRequirement;
   comp:activityType comp:Test;
   comp:name "2-year lift or system test of low-pressure hot water boiler";
   comp:specifiesFrequency <https://www.notion.so/duration_2-year-lift-or-system-test-of-low-pressure-hot-water-boiler>;
   comp:appliesToAssetType assets:4a423241f2fb4511ae2889feb6e314b1;
-  comp:procedure "TBD by contractor" .
+  comp:procedure """TEMP: 2-year lift or system test of low-pressure hot water boiler
+1. Verify the boiler is in a safe state: Before conducting the lift test, ensure the boiler is not in operation and has been isolated from any sources of energy, such as electrical power and fuel.
+2. Identify the PSD: Locate the PSD on the boiler and verify that it is the correct type and model for the application.
+3. Prepare for the test: Ensure that you have the necessary equipment and tools for conducting the test, such as a pressure gauge, lifting equipment, and any personal protective equipment (PPE) required.
+4. Install the pressure gauge: Connect the pressure gauge to the inlet side of the PSD and verify that it is calibrated and accurate.
+5. Apply pressure: Use the lifting equipment to slowly apply pressure to the inlet side of the PSD until it lifts and allows the pressure to vent. Monitor the pressure gauge to ensure that the pressure at which the PSD lifts is within the specified range.
+6. Record the results: Record the pressure at which the PSD lifted, the date of the test, and any other relevant information, such as the name of the person conducting the test.
+7. Reset the PSD: After completing the test, reset the PSD and verify that it is functioning properly.
+8. Perform a functional test: Conduct a functional test of the boiler to ensure that the PSD is providing adequate protection under normal operating conditions.""" .
 
 <https://www.notion.so/duration_2-year-lift-or-system-test-of-low-pressure-hot-water-boiler>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/20Year> .
+  comp:hasValue <https://www.notion.so/2Year> .
 
 ex:5a84e3c22b6340ab8863736ac044d26c a comp:WorkRequirement;
   comp:activityType comp:Service;
   comp:name "6-year service of low-pressure hot water boiler";
   comp:specifiesFrequency <https://www.notion.so/duration_6-year-service-of-low-pressure-hot-water-boiler>;
   comp:appliesToAssetType assets:4a423241f2fb4511ae2889feb6e314b1;
-  comp:procedure "TBD by contractor" .
+  comp:procedure """TEMP: 6-year service of low-pressure hot water boiler
+1. Shut down the boiler: Before starting any service work, shut down the boiler and isolate it from any sources of energy, such as electrical power and fuel.
+2. Inspect the boiler: Conduct a visual inspection of the boiler and its components, looking for signs of damage, leaks, or other issues. Check the flame pattern and burner operation, and inspect the combustion chamber, heat exchanger, and flue.
+3. Clean the boiler: Use a vacuum or brush to remove any debris or buildup from the combustion chamber, heat exchanger, and flue. Clean the burner, pilot assembly, and any other components as needed.
+4. Check the safety controls: Test the safety controls, such as the pressure relief valve, low-water cutoff, and high-limit control, to ensure they are functioning properly.
+5. Inspect the venting system: Inspect the venting system to ensure it is clear of any obstructions and properly sized for the boiler. Check for signs of corrosion or damage.
+6. Replace or repair components: Replace any worn or damaged components, such as gaskets, seals, or sensors. Repair or replace any leaking pipes or fittings.
+7. Test the boiler: Restart the boiler and test its operation, including the fuel delivery system, combustion, and temperature control. Verify that it is operating within the manufacturer's specifications and any applicable regulations or standards.
+8. Document the service: Record the service work performed, including any repairs or component replacements, in a logbook or other documentation. Note any recommendations for future service or repairs.""" .
 
 <https://www.notion.so/duration_6-year-service-of-low-pressure-hot-water-boiler> a
     comp:Duration;
-  comp:hasValue <https://www.notion.so/60Year> .
+  comp:hasValue <https://www.notion.so/6Year> .
 
-<https://www.notion.so/60Year> a comp:Measure;
+<https://www.notion.so/6Year> a comp:Measure;
   comp:hasNumericalValue 6.0;
   comp:hasUnitOfMeasure comp:Year .
 
@@ -3141,10 +3199,18 @@ ex:3a887ae5a58c4106b952f22909d4cbc2 a comp:WorkRequirement;
   comp:name "5-year service of low-pressure steam service boiler";
   comp:specifiesFrequency <https://www.notion.so/duration_5-year-service-of-low-pressure-steam-service-boiler>;
   comp:appliesToAssetType assets:3bf2c1f79bf143f78164120f9a46f80b;
-  comp:procedure "TBD by contractor" .
+  comp:procedure """TEMP: 5-year service of low-pressure steam service boiler 
+1. Shut down the boiler: Before starting any service work, shut down the boiler and isolate it from any sources of energy, such as electrical power and fuel.
+2. Inspect the boiler: Conduct a visual inspection of the boiler and its components, looking for signs of damage, leaks, or other issues. Check the flame pattern and burner operation, and inspect the combustion chamber, heat exchanger, and flue.
+3. Clean the boiler: Use a vacuum or brush to remove any debris or buildup from the combustion chamber, heat exchanger, and flue. Clean the burner, pilot assembly, and any other components as needed.
+4. Check the safety controls: Test the safety controls, such as the pressure relief valve, low-water cutoff, and high-limit control, to ensure they are functioning properly.
+5. Inspect the venting system: Inspect the venting system to ensure it is clear of any obstructions and properly sized for the boiler. Check for signs of corrosion or damage.
+6. Replace or repair components: Replace any worn or damaged components, such as gaskets, seals, or sensors. Repair or replace any leaking pipes or fittings.
+7. Test the boiler: Restart the boiler and test its operation, including the fuel delivery system, combustion, and temperature control. Verify that it is operating within the manufacturer's specifications and any applicable regulations or standards.
+8. Document the service: Record the service work performed, including any repairs or component replacements, in a logbook or other documentation. Note any recommendations for future service or repairs.""" .
 
 <https://www.notion.so/duration_5-year-service-of-low-pressure-steam-service-boiler>
   a comp:Duration;
-  comp:hasValue <https://www.notion.so/50Year> .
+  comp:hasValue <https://www.notion.so/5Year> .
 
 ex:64514df9efef48a0a32b6b54a4faf34a a comp:WorkRequirement .
