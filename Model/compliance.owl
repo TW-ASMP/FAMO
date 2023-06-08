@@ -173,14 +173,6 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/activityType -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/activityType">
-        <rdfs:comment>identifies the Activity type (class name) required to actualize a Work Plan</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/actualizedBy -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/actualizedBy">
@@ -199,7 +191,7 @@ Tony Huang, Toronto Water</terms:creator>
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType">
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/groundedBy"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType"/>
         </owl:propertyChainAxiom>
         <rdfs:comment>identifies the Asset type (class name) that a Work Plan applies to</rdfs:comment>
@@ -213,18 +205,15 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/elaboratesOn -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/explicitlyDefinedIn -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/elaboratesOn"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/explicitlyDefinedIn"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/groundedBy -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/extractedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/groundedBy">
-        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/extractedFrom"/>
     
 
 
@@ -233,16 +222,28 @@ Tony Huang, Toronto Water</terms:creator>
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/isElaborationFor"/>
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/elaboratesOn"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasDecomposition"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasDecomposition -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasDecomposition"/>
     
 
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasPreviousVersion -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasPreviousVersion"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasReference -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasReference"/>
     
 
 
@@ -264,12 +265,6 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/hasValue -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasValue"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/isElaborationFor -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/isElaborationFor"/>
     
 
 
@@ -298,10 +293,29 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/prescribesActivityType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/prescribesActivityType">
+        <rdfs:comment>identifies the Activity type (class name) required to actualize a Work Plan</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/properPartOf -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/properPartOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/referencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/referencedBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/hasReference"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -327,6 +341,12 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBeforeActivityType -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBeforeActivityType"/>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredDuring -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredDuring"/>
     
 
 
@@ -364,9 +384,9 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/specifiedIn -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiedIn"/>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent"/>
     
 
 
@@ -550,55 +570,27 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingDocument -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingDocument">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Document"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedDocument"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedDocument"/>
         <rdfs:comment>a Document that grounds some Compliance Document.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingSection -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingRequirement -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingSection">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingRequirement">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedDocument"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirement"/>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection"/>
-        <rdfs:comment>a Compliance Grounding Requirement Section is one that grounds some Compliance Requirement Section or Compliance Requirement Document.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedRequirement"/>
     </owl:Class>
     
 
@@ -619,18 +611,55 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedRequirement -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedRequirement">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingSection"/>
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementSection"/>
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceGroundingRequirement"/>
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirement"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirement -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/extractedFrom"/>
+                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementDocument"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/extractedFrom"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Section"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/properPartOf"/>
+                                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementDocument"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedRequirement"/>
     </owl:Class>
     
 
@@ -649,34 +678,6 @@ Tony Huang, Toronto Water</terms:creator>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedDocument"/>
         <rdfs:comment>Note that Environmental Compliance Approval and Drinking Water Quality Management System - related documents still need to be accounted for.</rdfs:comment>
         <rdfs:comment>a Document is defined as a Compliance Document based on its type, for example if it is a kind of Regulation of Legislation.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementSection -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementSection">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/properPartOf"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRequirementDocument"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceRelatedSection"/>
-        <rdfs:comment>a Compliance Requirement Section is one that is part of a Compliance Requirement Document.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceWorkPlan -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/ComplianceWorkPlan">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/WorkRequirement"/>
     </owl:Class>
     
 
@@ -750,15 +751,25 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Grounding -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Grounding">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Reference"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Incorporation -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Incorporation">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Reference"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasDecomposition"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -823,23 +834,27 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/Reference -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Reference">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/definedBy"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Agent"/>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesContent"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiedIn"/>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/hasReference"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/explicitlyDefinedIn"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/isElaborationFor"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A Reference identifies the assertion of an elaboration relationship between two Information Content Entities. References may be asserted by an agent, capturing an interpretation of the intent of more general content and knowledge of more specific content. They may also be explicitly specified in an Information Content Entity.</rdfs:comment>
@@ -860,28 +875,102 @@ Tony Huang, Toronto Water</terms:creator>
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/InformationContentEntity"/>
         <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/Section"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/extractedFrom"/>
+                        <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Document"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>a Requirement is an Information Content Entity. In the context of compliance, a requirement is defined with respect to to some asset type (note that this may be expanded to include roles and individual assets in the future).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/RequirementSection">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Section"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/sectionNumber"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/actualizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>a RequirementSection is an information content entity that is both a Section and a (Work) Requirement. It comprises part of a Document and its contents specify a requirement</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAsset"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfter"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredDuring"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresResource"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresTrade"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Trade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesFrequency"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/procedure"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAssetOffline"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Work Requirement is a specific type of Requirement that defines  the work required on a particular asset at the level of a specific Activity.</rdfs:comment>
     </owl:Class>
     
 
@@ -937,90 +1026,10 @@ Tony Huang, Toronto Water</terms:creator>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Requirement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/activityType"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/prescribesActivityType"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/actualizedBy"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAsset"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Asset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredAfter"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresResource"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Resource"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresResourceType"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresTrade"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Trade"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/specifiesFrequency"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Duration"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/name"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/procedure"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAssetOffline"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/wrenchTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/identifier"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>A Work Requirement is a specific type of Requirement that defines  the work required on a particular asset at the level of a specific Activity.</rdfs:comment>
     </owl:Class>
     
 
