@@ -344,6 +344,12 @@ Tony Huang, Toronto Water</terms:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBy"/>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiredDuring -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredDuring"/>
@@ -352,9 +358,7 @@ Tony Huang, Toronto Water</terms:creator>
 
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAgent -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAgent">
-        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Agent"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/requiresAgent"/>
     
 
 
@@ -913,6 +917,12 @@ Tony Huang, Toronto Water</terms:creator>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBefore"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/requiredBy"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/compliance/Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
