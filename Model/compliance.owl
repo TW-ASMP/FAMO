@@ -190,10 +190,6 @@ Tony Huang, Toronto Water</terms:creator>
     <!-- http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/grounds"/>
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/compliance/appliesToAssetType"/>
-        </owl:propertyChainAxiom>
         <rdfs:comment>identifies the Asset type (class name) that a Work Plan applies to</rdfs:comment>
     </owl:ObjectProperty>
     
