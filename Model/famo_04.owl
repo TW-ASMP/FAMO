@@ -2089,6 +2089,14 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation">

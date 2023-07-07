@@ -245,7 +245,7 @@
                     },
                     "valueSource": {
                       "source": "constant",
-                      "constant": "RoleOccupationRelation"
+                      "constant": "RoleInclusionRelation"
                     }
                   }
                 ]
