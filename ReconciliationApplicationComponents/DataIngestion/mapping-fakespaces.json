@@ -1,0 +1,357 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "ex": "http://example.com/data/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "famo": "http://ontology.eil.utoronto.ca/FAMO/famo/",
+    "gen_prop": "https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Facility",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "containedInSpace"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Facility",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "FacilityArea",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "containedInSpace"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "FacilityArea",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Building",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "containedInSpace"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Building",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Level",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "containedInSpace"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Level",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "Room",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "gen_prop",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasIdentifier"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "SpaceNum",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "gen_prop",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasDescription"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "Description",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "containedInSpace"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ex",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "Room",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ex",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "InteriorArea",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "PhysicalSpace"
+          }
+        }
+      ]
+    }
+  ]
+}
