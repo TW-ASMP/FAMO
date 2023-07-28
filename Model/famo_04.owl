@@ -994,6 +994,15 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/motorSize -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/motorSize">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
+        <rdfs:comment>Status of this data property TBD. Added to enable test data representation.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1198,6 +1207,13 @@ Verion 0.4 focuses on:
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/motorSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An asset is some object owned by a person or organization that is perceived to have some monetary value or useful function.
 
 An asset may have some role (context-dependent) and has some capability (this need not be the same as its function, but may exceed it).
@@ -1242,6 +1258,14 @@ All assets have at least one, but possibly more, capability(s). This Capability(
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ClassMembershipRelation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ClassMembershipRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
     </owl:Class>
     
 
@@ -1520,6 +1544,29 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/MotorsizeProperty -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/MotorsizeProperty">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Status of this class TBD. Added to enable test data representation.</rdfs:comment>
     </owl:Class>
     
 

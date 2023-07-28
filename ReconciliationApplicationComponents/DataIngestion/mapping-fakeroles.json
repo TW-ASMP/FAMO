@@ -1,0 +1,463 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "gen_prop": "https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/",
+    "ex": "http://example.com/data/",
+    "famo": "http://ontology.eil.utoronto.ca/FAMO/famo/"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasInterpretation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_interpretation\" + cells[\"Role\"].value",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "denotes"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "expression": "ex",
+                          "language": "prefix"
+                        },
+                        "valueSource": {
+                          "columnName": "Role",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "propertyMappings": [],
+                          "type": "iri",
+                          "typeMappings": [
+                            {
+                              "transformation": {
+                                "expression": "famo",
+                                "language": "prefix"
+                              },
+                              "valueSource": {
+                                "source": "constant",
+                                "constant": "Role"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsObjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_roleinclusion\" + cells[\"Subrole\"].value +\"_\" +  now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_enum\" + cells[\"Role\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "EntityNum",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "literal"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "EntityNumberProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_desc\" + cells[\"Role\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "Description",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "literal"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "NameProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_status\" + cells[\"Role\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "RoleStatus",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "literal"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "RoleStatusProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_criticality\" + cells[\"Role\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "Criticality",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "literal"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "RoleCriticalityProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_location\" + cells[\"Role\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "objectIsRepresentedBy"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "expression": "ex",
+                          "language": "prefix"
+                        },
+                        "valueSource": {
+                          "columnName": "Space",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "propertyMappings": [],
+                          "type": "iri",
+                          "typeMappings": []
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "RoleLocationRelation"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "\"http://www.example.com/data/wms_rec_\" + cells[\"Role\"].value",
+          "language": "grel"
+        },
+        "valueSource": {
+          "source": "row_index"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Record"
+          }
+        },
+        {
+          "transformation": {
+            "expression": "famo",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "RoleCriticalityProperty"
+          }
+        }
+      ]
+    }
+  ]
+}
