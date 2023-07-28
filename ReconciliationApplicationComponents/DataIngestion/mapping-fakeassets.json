@@ -1,8 +1,8 @@
 {
   "baseIRI": "http://example.com/base/",
   "namespaces": {
-    "ex": "http://example.com/data/",
     "gen_prop": "https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/",
+    "ex": "http://example.com/data/",
     "famo": "http://ontology.eil.utoronto.ca/FAMO/famo/"
   },
   "subjectMappings": [
@@ -22,7 +22,7 @@
           "values": [
             {
               "transformation": {
-                "expression": "\"http://www.example.com/data/wms_spaceinterpretation\" + cells[\"Space\"].value",
+                "expression": "\"http://www.example.com/data/wms_assetinterpretation\" + cells[\"Asset\"].value",
                 "language": "grel"
               },
               "valueSource": {
@@ -48,7 +48,7 @@
                           "language": "prefix"
                         },
                         "valueSource": {
-                          "columnName": "Space",
+                          "columnName": "Asset",
                           "source": "column"
                         },
                         "valueType": {
@@ -74,81 +74,13 @@
             },
             "valueSource": {
               "source": "constant",
-              "constant": "representsObjectOf"
-            }
-          },
-          "values": [
-            {
-              "transformation": {
-                "expression": "\"http://www.example.com/data/wms_spaceinclusion\" + cells[\"ContainsSpace\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
-                "language": "grel"
-              },
-              "valueSource": {
-                "source": "row_index"
-              },
-              "valueType": {
-                "propertyMappings": [
-                  {
-                    "property": {
-                      "transformation": {
-                        "expression": "famo",
-                        "language": "prefix"
-                      },
-                      "valueSource": {
-                        "source": "constant",
-                        "constant": "subjectIsRepresentedBy"
-                      }
-                    },
-                    "values": [
-                      {
-                        "transformation": {
-                          "expression": "\"http://www.example.com/data/wmsspace_rec_\" + cells[\"ContainsSpace\"].value",
-                          "language": "grel"
-                        },
-                        "valueSource": {
-                          "source": "row_index"
-                        },
-                        "valueType": {
-                          "propertyMappings": [],
-                          "type": "iri",
-                          "typeMappings": []
-                        }
-                      }
-                    ]
-                  }
-                ],
-                "type": "iri",
-                "typeMappings": [
-                  {
-                    "transformation": {
-                      "expression": "famo",
-                      "language": "prefix"
-                    },
-                    "valueSource": {
-                      "source": "constant",
-                      "constant": "SpaceInclusionRelation"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "property": {
-            "transformation": {
-              "expression": "famo",
-              "language": "prefix"
-            },
-            "valueSource": {
-              "source": "constant",
               "constant": "representsSubjectOf"
             }
           },
           "values": [
             {
               "transformation": {
-                "expression": "\"http://www.example.com/data/wms_spaceid\" + cells[\"Space\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "expression": "\"http://www.example.com/data/wms_assetnum\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
                 "language": "grel"
               },
               "valueSource": {
@@ -170,7 +102,7 @@
                     "values": [
                       {
                         "valueSource": {
-                          "columnName": "SpaceNum",
+                          "columnName": "AssetNum",
                           "source": "column"
                         },
                         "valueType": {
@@ -211,7 +143,7 @@
           "values": [
             {
               "transformation": {
-                "expression": "\"http://www.example.com/data/wms_spacename\" + cells[\"Space\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "expression": "\"http://www.example.com/data/wms_serialnum\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
                 "language": "grel"
               },
               "valueSource": {
@@ -233,7 +165,7 @@
                     "values": [
                       {
                         "valueSource": {
-                          "columnName": "Description",
+                          "columnName": "SerialNum",
                           "source": "column"
                         },
                         "valueType": {
@@ -252,7 +184,245 @@
                     },
                     "valueSource": {
                       "source": "constant",
-                      "constant": "NameProperty"
+                      "constant": "SerialNumberProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_assetclass\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasObject"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "language": "raw"
+                        },
+                        "valueSource": {
+                          "columnName": "AssetClass",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "propertyMappings": [],
+                          "type": "iri",
+                          "typeMappings": []
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "ClassMembershipRelation"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_assetstatus\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "hasValue"
+                      }
+                    },
+                    "values": [
+                      {
+                        "valueSource": {
+                          "columnName": "State",
+                          "source": "column"
+                        },
+                        "valueType": {
+                          "type": "literal"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "AssetLCSProperty"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representsObjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "\"http://www.example.com/data/wms_assetrole\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "subjectIsRepresentedBy"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "expression": "\"http://www.example.com/data/wms_rec_\" + cells[\"Role\"].value",
+                          "language": "grel"
+                        },
+                        "valueSource": {
+                          "source": "row_index"
+                        },
+                        "valueType": {
+                          "propertyMappings": [],
+                          "type": "iri",
+                          "typeMappings": []
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "RoleOccupationRelation"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "famo",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "representSubjectOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(isNotNull(cells[\"MotorSize\"].value), (\"http://www.example.com/data/wms_motorsize\" + cells[\"Asset\"].value +\"_\" + now().toString('ddMMyyyy_Hmmss')),null)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "MotorsizeProperty"
                     }
                   }
                 ]
@@ -263,7 +433,7 @@
       ],
       "subject": {
         "transformation": {
-          "expression": "\"http://www.example.com/data/wmsspace_rec_\" + cells[\"Space\"].value",
+          "expression": "\"http://www.example.com/data/wms_assetrec_\" + cells[\"Asset\"].value",
           "language": "grel"
         },
         "valueSource": {

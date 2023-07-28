@@ -98,9 +98,49 @@
                 "source": "row_index"
               },
               "valueType": {
-                "propertyMappings": [],
+                "propertyMappings": [
+                  {
+                    "property": {
+                      "transformation": {
+                        "expression": "famo",
+                        "language": "prefix"
+                      },
+                      "valueSource": {
+                        "source": "constant",
+                        "constant": "subjectIsRepresentedBy"
+                      }
+                    },
+                    "values": [
+                      {
+                        "transformation": {
+                          "expression": "\"http://www.example.com/data/wms_rec_\" + cells[\"Subrole\"].value",
+                          "language": "grel"
+                        },
+                        "valueSource": {
+                          "source": "row_index"
+                        },
+                        "valueType": {
+                          "propertyMappings": [],
+                          "type": "iri",
+                          "typeMappings": []
+                        }
+                      }
+                    ]
+                  }
+                ],
                 "type": "iri",
-                "typeMappings": []
+                "typeMappings": [
+                  {
+                    "transformation": {
+                      "expression": "famo",
+                      "language": "prefix"
+                    },
+                    "valueSource": {
+                      "source": "constant",
+                      "constant": "RoleInclusionRelation"
+                    }
+                  }
+                ]
               }
             }
           ]
