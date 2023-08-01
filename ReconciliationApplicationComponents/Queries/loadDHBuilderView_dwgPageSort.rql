@@ -30,7 +30,7 @@ SELECT
 				famo:representsSubjectOf [a famo:NameProperty;
 										famo:hasValue ?wms_name];
 				#role occupation property to capture required "parent" field
-				famo:representsSubjectOf [a famo:RoleOccupationRelation;
+				famo:representsSubjectOf [a famo:RoleInclusionRelation;
 											famo:objectIsRepresentedBy [famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_parent]]];
 				famo:instantiatedIn test:wms_datasystem.

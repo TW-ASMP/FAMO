@@ -1,0 +1,24 @@
+On 100 lowest level role records, the parent role assignment changed from one value to another value, and a new manifestation is created.  How long does it take to perform this change and complete the incremental reasonings. 
+
+# query for individual role update
+# TBD: can we do 100 in a single query or is it "better" (safer? more efficient) to do one at a time?
+
+PREFIX test: <http://famo_test_namespace.org#>
+PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+PREFIX ex: <http://example.com/data/>
+
+INSERT {
+#new property manifestation
+#new present-tense relations
+#new past-tense relations with previous property
+}
+
+DELETE {
+#delete old present-tenese relations 
+}
+
+WHERE {
+
+}
