@@ -1,19 +1,19 @@
 title:: 🈳Template Inventory
 
 -
-- ## [[👩🏻‍⚖️decision]]
+- ### [[👩🏻‍⚖️decision]]
   template:: 👩🏻‍⚖️decision
   initiative::
   tentative:: yes
   still-relevant:: yes
 - ---
-- ## [[🧠to keep in mind]]:
+- ### [[🧠to keep in mind]]:
   template:: 🧠to keep in mind
   initiative::
   keep-until-date::
   embedded-in-mind:: no
 - ---
-- ## [[🤝🏻meeting note]]
+- ### [[🤝🏻meeting note]]
   template:: 🤝🏻meeting
   initiative::
   notable-attendees::
