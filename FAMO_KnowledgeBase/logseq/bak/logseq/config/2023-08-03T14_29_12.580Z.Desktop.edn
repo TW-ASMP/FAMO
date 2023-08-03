@@ -292,7 +292,7 @@
  ;;  :journal?        false} ; Default value: false
 
  ;; Favorites to list on the left sidebar
- :favorites ["🧠to keep in mind" "🧭topic inventory" "🈳Template Inventory" "💡insight" "insight" "🧭inventory of entities" "inventory of entities 🧾" "Inventory of Entities" "How to Use Logseq for Project"]
+ :favorites ["💡insight" "💡insight on" "🧭topic inventory" "🈳Template Inventory" "👩🏻‍⚖️decision" "🤴🏻decision" "🧠to keep in mind" "Logseq Guide" "insight" "🧭inventory of entities" "inventory of entities 🧾" "Inventory of Entities"]
 
  ;; Set flashcards interval.
  ;; Expected value:
