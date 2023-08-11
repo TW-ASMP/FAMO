@@ -1,6 +1,6 @@
 On 100 lowest level role records, the parent role assignment changed from one value to another value, and a new manifestation is created.  How long does it take to perform this change and complete the incremental reasonings. 
 
-# query for individual role update
+# query for individual role update given: (1) the record ID <ex:role1_recid> to move (2) the target record ID <ex:newparentrole_rec> to define as the new parent and (3) <newPropertyID> a system-generated ID for the new property manifestation
 # TBD: can we do 100 in a single query or is it "better" (safer? more efficient) to do one at a time?
 
 PREFIX test: <http://famo_test_namespace.org#>
@@ -10,15 +10,30 @@ PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
 PREFIX ex: <http://example.com/data/>
 
 INSERT {
-#new property manifestation
-#new present-tense relations
-#new past-tense relations with previous property
+#new property manifestation with new present-tense relations
+<ex:role1_recid> famo:isSubjectOf <newPropertyID>.
+<newPropertyID> a famo:RoleInclusionRelation.
+<newPropertyID> famo:objectIsRepresentedBy <ex:newparentrole_rec>.
+
+#new past-tense relations (inverses too) with previous property
+<ex:role1_recid> famo:wasSubjectOf ?old_property_id.
+?old_property_id famo:subjectWasRepresentedBy <ex:role1_recid>.
+?oldparentrole_rec famo:wasObjectOf ?old_property_id.
+?old_property_id famo:objectWasRepresentedBy ?oldparentrole_rec.
 }
 
 DELETE {
 #delete old present-tenese relations 
+<ex:role1_recid> famo:isSubjectOf ?old_property_id.
+?old_property_id famo:subjectIsRepresentedBy <ex:role1_recid>.
+?oldparentrole_rec famo:isObjectOf ?old_property_id.
+?old_property_id famo:objectIsRepresentedBy ?oldparentrole_rec.
 }
 
 WHERE {
-
+#delete old present-tenese relations 
+<ex:role1_recid> famo:isSubjectOf ?old_property_id.
+?old_property_id famo:subjectIsRepresentedBy <ex:role1_recid>.
+?oldparentrole_rec famo:isObjectOf ?old_property_id.
+?old_property_id famo:objectIsRepresentedBy ?oldparentrole_rec.
 }
