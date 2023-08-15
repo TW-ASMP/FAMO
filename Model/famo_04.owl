@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://ontology.eil.utoronto.ca/FAMO/famo"
      xml:base="http://ontology.eil.utoronto.ca/FAMO/famo"
-     xmlns:OM="http://ontology.eil.utoronto.ca/5087/1/OM"
+     xmlns:OM="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM"
      xmlns:WV="http://www.wurvoc.org/vocabularies/WV"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://creativecommons.org/ns#"
@@ -14,30 +14,30 @@
      xmlns:bibo="http://purl.org/ontology/bibo"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:om-1="http://www.wurvoc.org/vocabularies/om-1.8/"
-     xmlns:prov="http://ontology.eil.utoronto.ca/5087/1/Prov"
+     xmlns:prov="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Prov"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:time="http://ontology.eil.utoronto.ca/5087/1/Time"
+     xmlns:time="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time"
      xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:agent="http://ontology.eil.utoronto.ca/5087/1/Agent"
+     xmlns:agent="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent"
      xmlns:prov1="http://www.w3.org/ns/prov#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:Change="http://ontology.eil.utoronto.ca/5087/1/Change/"
-     xmlns:change="http://ontology.eil.utoronto.ca/5087/1/Change"
+     xmlns:Change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/"
+     xmlns:change="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change"
      xmlns:schema="http://schema.org/"
      xmlns:Change1="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/"
-     xmlns:activity="http://ontology.eil.utoronto.ca/5087/1/Activity"
-     xmlns:resource="http://ontology.eil.utoronto.ca/5087/1/Resource"
-     xmlns:mereology="http://ontology.eil.utoronto.ca/5087/1/Mereology"
+     xmlns:activity="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity"
+     xmlns:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource"
+     xmlns:mereology="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
-     xmlns:spatialloc="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc">
+     xmlns:spatialloc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc">
     <owl:Ontology rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/">
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity.owl"/>
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change.owl"/>
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Prov.owl"/>
-        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Prov.owl"/>
+        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc.owl"/>
         <terms:creator xml:lang="en">Megan Katsumi, University of Toronto
 Mark Fox, University of Toronto
 Tony Huang, Toronto Water</terms:creator>
@@ -148,33 +148,33 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Change/existsAt -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/existsAt"/>
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn"/>
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Organization/hasGoal -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/Organization/hasGoal"/>
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/associatedLocation -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/associatedLocation"/>
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/hasLocation -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/hasLocation -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/hasLocation"/>
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/hasLocation"/>
     
 
 
@@ -229,7 +229,7 @@ Verion 0.4 focuses on:
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/functionalOperatingConstraint"/>
-        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
         <rdfs:comment>An example of a possible functional operating constraint wherein a Role may only be satisfied by a Function that is achieved via a specific type of Activity.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -239,7 +239,7 @@ Verion 0.4 focuses on:
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyResources">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/functionalOperatingConstraint"/>
-        <rdfs:range rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Resource"/>
+        <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
         <rdfs:comment>An example of a possible functional operating constraint wherein a Role may only be satisfied by Functions that require a certain Input(s) - i.e., due to existing infrastructure/resource availability.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -275,7 +275,7 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/containedInSpace -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/containedInSpace">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Mereology/containedIn"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn"/>
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -756,7 +756,7 @@ Verion 0.4 focuses on:
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <rdfs:domain rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Function"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/5087/1/Organization/hasGoal"/>
+            <rdf:Description rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal"/>
             <rdf:Description>
                 <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput"/>
             </rdf:Description>
@@ -869,21 +869,21 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/hasName -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/hasName"/>
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier"/>
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName"/>
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName"/>
     
 
 
@@ -920,7 +920,7 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties/hasIdentifier"/>
+        <rdfs:subPropertyOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -1014,76 +1014,76 @@ Verion 0.4 focuses on:
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Activity/Activity -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Activity/State -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Activity/State"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation">
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/OM/AmountOfMoney -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/OM/AmountOfMoney"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Organization/Goal -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Organization/Goal"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Organization/Organization -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Organization/Organization"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Resource/Asset -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Resource/Asset"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Resource/Resource -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Resource/Resource"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/5087/1/Time/Instant -->
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time/Instant -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/5087/1/Time/Instant"/>
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time/Instant"/>
     
 
 
@@ -1096,7 +1096,7 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Activity -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Activity">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:subClassOf>
@@ -1139,7 +1139,7 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/org#memberOf"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1159,7 +1159,7 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasMonetaryValue"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OM/AmountOfMoney"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1189,7 +1189,7 @@ Verion 0.4 focuses on:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/hasName"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1238,7 +1238,7 @@ All assets have at least one, but possibly more, capability(s). This Capability(
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Asset"/>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1395,32 +1395,32 @@ A footprint represents a simple 2D shape, without orientation. It is therefore d
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/existsAt"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/achievedByActivity"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/affectsResource"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Resource"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasInput"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/State"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/State"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1542,7 +1542,7 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Agent"/>
     </owl:Class>
     
@@ -1556,7 +1556,7 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Asset"/>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1653,7 +1653,7 @@ TBD: For our purposes, is this level of the product representation necessary? Or
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasManufacturer"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Organization/Organization"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1728,7 +1728,7 @@ For example, Apple manufactures a line of macbooks, which can be further divided
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/Manifestation"/>
+        <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation"/>
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -1904,32 +1904,32 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change/existsAt"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Organization/hasGoal"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Organization/Goal"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/associatedLocation"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation"/>
                 <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#Feature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity/Activity"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyResources"/>
-                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Resource"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2006,7 +2006,7 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/5087/1/OrganizationStructure/hasName"/>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2174,7 +2174,7 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Resource/Asset"/>
+                <owl:onClass rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
