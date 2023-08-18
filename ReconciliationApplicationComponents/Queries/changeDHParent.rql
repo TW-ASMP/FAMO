@@ -1,0 +1,22 @@
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX iso50871: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+#Given an <entity>, and a <destination entity>, move the child from its current parent to the destination entity (do this in a single transaction, without triggering rule 1 or 2).
+#given parameters: dh ids vs "enums"?
+#	designators subject to error? require specification of designator type
+
+DELETE {
+	<child entity> famo:subRoleOf ?parentid.
+}
+
+INSERT {
+	<child entity> famo:subRoleOf <third entity>.
+}
+
+WHERE {
+	<child entity> famo:subRoleOf ?parentid.
+}

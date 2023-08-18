@@ -33,11 +33,11 @@
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:spatialloc="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc">
     <owl:Ontology rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/">
-        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity.owl"/>
-        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change.owl"/>
-        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties.owl"/>
-        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Prov.owl"/>
-        <owl:imports rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Activity.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Change.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/Prov.owl"/>
+        <owl:imports rdf:resource="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl"/>
         <terms:creator xml:lang="en">Megan Katsumi, University of Toronto
 Mark Fox, University of Toronto
 Tony Huang, Toronto Water</terms:creator>
