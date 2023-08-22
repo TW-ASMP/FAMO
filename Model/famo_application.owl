@@ -65,6 +65,14 @@ Tony Huang, Toronto Water</dc:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/isRepresentedAsChildOfRole -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/isRepresentedAsChildOfRole">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsChildRoleOfRecord -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsChildRoleOfRecord">

@@ -1,15 +1,28 @@
-PREFIX test: <http://famo_test_namespace.org#>
-PREFIX famo: <http://ontology.eil.utoronto.ca/famo#>
+PREFIX test: <http://www.test.org/TW_test_data_example/>
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famoapp: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
+PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
 
+#input from datahub:
+#create a new role (proposed, but not merged, new wms record) as the child of another (existing) role in the wms
+#<dhid_p> to be specified as input
+#<dhid_n> to be system generated
+#<enum_n> to be specified as input
+#assume other attributes (e.g. entity number) to be provided separately
 
-INSERT DATA {
-	<dh_id> a <entity_type>;
-		famoapp:existenceAnnotation "To be investigated"^^xsd:string;
-		famo:hasDesignator <designator>;
-		<designator_type> <designator>;
-		famo:hasName <description>;
-		famo:subRoleOf [famo:hasDesignator <parentid>; 
-									<designator_type> <parentid>.]
+INSERT {
+	?rec1 famo:representsObjectOf test:new_role_1.
+	test:new_role_inclusion_pm famo:hasSubject test:new_role_1;
+    	famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]];
+		famo:assertedBy test:test_user.
+	test:new_role_1 a famo:Role;
+        famo:hasEntityNumber "THX-TEST-ENUM-0000"^^xsd:string;
+		famoapp:existenceAnnotation "To be investigated"^^xsd:string.
+}
+WHERE {
+    ?rec1 famo:hasInterpretation [famo:denotes test:dhid_THX-DIG-BU-5100];
+          famo:instantiatedIn test:wms_datasystem.
+       BIND(now() as ?now)
 }
