@@ -24,7 +24,6 @@
 Mark Fox, University of Toronto
 Tony Huang, Toronto Water</dc:creator>
         <dc:title xml:lang="en">Famo Data Hub Application Extension</dc:title>
-        <vann:preferredNamespacePrefix xml:lang="en">famo_app</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/</vann:preferredNamespaceUri>
         <owl:versionInfo xml:lang="en">An extension of FAMO 0.4 with application-specific terms.</owl:versionInfo>
     </owl:Ontology>
@@ -56,6 +55,18 @@ Tony Huang, Toronto Water</dc:creator>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasObject -->
+
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/denotes"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
     
 
 

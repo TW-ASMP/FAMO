@@ -6,58 +6,55 @@ PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX test: <http://www.test.org/TW_test_data_example/>
 
 #load wms-oriented tree, relative to a specified root note (given an entity number value)
-SELECT ?referent_exists ?wms_enum ?wms_name ?wms_parent ?dhid ?dh_enum ?dh_name ?dh_parent ?dwg_enum ?etms_enum ?scada_enum 
+SELECT DISTINCT ?referent_exists ?wms_rec ?wms_enum ?wms_name ?wms_parent ?dhid ?dh_enum ?dh_name ?dh_parent ?dwg_enum ?etms_enum ?scada_enum 
 	WHERE #match with pinned records
 {		
 	#the record is for the specified entity number, or it represents a child of the specified entity number	
-    {
-        {
-            ?wms_rec famo:representsSubjectOf [a famo:EntityNumberProperty;
-										famo:hasValue <enum in quotations>].
-        }
-        UNION
-        {
-            ?wms_rec famo_app:representsChildRoleOfRecord+ 
-                    [famo:representsSubjectOf [a famo:EntityNumberProperty;
-                                                         famo:hasValue <enum in quotations>]].
-        }
-     }
-	 #it denotes a dh entity, which must be an actual role (exclude "nothing-entities")
-		?wms_rec famo:hasInterpretation ?i_wms;
-           famo:instantiatedIn test:wms_datasystem.
-		?i_wms famo:denotes ?dhid.
+       
+        { #root based on entity number
+            ?dhid famo:hasEntityNumber "THX-DIG-BU-5100".
+            # the dh entity must be an actual role, which must be an actual role (exclude "nothing-entities")
 		?dhid a famo:ActualRole;
 			famo_app:existenceAnnotation ?referent_exists.
-
-    
+        }
+    UNION { #root based on wms entity number (if dh unspecified) - this part is unnecessary if we can guarantee entity numbers defined for all dhids
+        ?i_wms famo:denotes ?dhid.
+		?wms_rec famo:hasInterpretation ?i_wms;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										famo:hasValue "THX-DIG-BU-5100"];
+          famo:instantiatedIn test:wms_datasystem.
+    }
+        UNION
+        {
+            ?dhid famo_app:isRepresentedAsChildOfRole+ ?dh_p.
+            ?r_p famo:hasInterpretation [famo:denotes ?dh_p];
+                 famo:representsSubjectOf [a famo:EntityNumberProperty;
+                                                         famo:hasValue "THX-DIG-BU-5100"].
+                    # the dh entity must be an actual role, which must be an actual role (exclude "nothing-entities")
+		?dhid a famo:ActualRole;
+			famo_app:existenceAnnotation ?referent_exists.
+        }    
 	#the dh entity may or may not have a defined entity number, name, or child role
 	OPTIONAL {?dhid famo:hasEntityNumber ?dh_enum}.
 	OPTIONAL {?dhid famo:hasName ?dh_name}.
-	OPTIONAL {?dhid famo:subRoleOf ?dh_parent}.
+    OPTIONAL {?x a famo:RoleInclusionRelation;
+                    famo:hasObject ?dh_parent;
+                    famo:hasSubject ?dhid}.
     
-  #optional wms fields: enum, name, and child
-	OPTIONAL {?wms_rec 		famo:representsSubjectOf [a famo:NameProperty;
+  		#pinned wms (optional)
+		OPTIONAL {
+		{?i_wms famo:denotes ?dhid.
+		?wms_rec famo:hasInterpretation ?i_wms;
+				famo:representsSubjectOf [a famo:EntityNumberProperty;
+										famo:hasValue ?wms_enum];
+          famo:instantiatedIn test:wms_datasystem.}
+          #optional wms fields: enum, name, and child
+		OPTIONAL {?wms_rec 		famo:representsSubjectOf [a famo:NameProperty;
 											famo:hasValue ?wms_name]}.
-  OPTIONAL {?wms_rec famo:representsSubjectOf [a famo:EntityNumberProperty;
+  		OPTIONAL {?wms_rec famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_enum]}.
-	OPTIONAL {?wms_rec famo_app:representsChildRoleOfRecord [famo:representsSubjectOf [a famo:EntityNumberProperty;
+		OPTIONAL {?wms_rec famo_app:representsChildRoleOfRecord [famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_parent]]}.
-															
-	#pinned etms (optional)
-		OPTIONAL {
-		?i_etms famo:denotes ?dhid.
-		?etmsrec famo:hasInterpretation ?i_etms;
-				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										famo:hasValue ?etms_enum];
-				famo:instantiatedIn test:etms_datasystem.
-		}
-	#pinned scada (optional)
-		OPTIONAL {
-		?i_scada famo:denotes ?dhid.
-		?scadarec famo:hasInterpretation ?i_scada;
-				famo:representsSubjectOf [a famo:EntityNumberProperty;
-										famo:hasValue ?scada_enum];
-				famo:instantiatedIn test:scada_datasystem.
 		}
 				
 }

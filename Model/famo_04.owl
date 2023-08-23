@@ -538,12 +538,8 @@ Verion 0.4 focuses on:
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsSubjectOf"/>
-            </rdf:Description>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf"/>
-            </rdf:Description>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy"/>
+            <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/denotes"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>

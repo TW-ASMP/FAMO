@@ -13,11 +13,12 @@ PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
 #assume other attributes (e.g. entity number) to be provided separately
 
 INSERT {
-	?rec1 famo:representsObjectOf test:new_role_1.
-	test:new_role_inclusion_pm famo:hasSubject test:new_role_1;
-    	famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]];
+	?rec1 famo:representsObjectOf test:new_role_inclusion_pm.
+	test:new_role_inclusion_pm a famo:RoleInclusionRelation;
+    	famo:hasSubject test:new_role_1;
+     famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]];
 		famo:assertedBy test:test_user.
-	test:new_role_1 a famo:Role;
+	test:new_role_1 a famo:ActualRole;
         famo:hasEntityNumber "THX-TEST-ENUM-0000"^^xsd:string;
 		famoapp:existenceAnnotation "To be investigated"^^xsd:string.
 }

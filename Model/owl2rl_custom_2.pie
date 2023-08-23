@@ -1395,7 +1395,7 @@ Id: record_role_parent
   -----------------------
 	x <famo_app:representsChildRoleOfRecord> y
 
-}
+
 
 /*
 Inference of role inclusion
@@ -1406,5 +1406,6 @@ Id: role_representedas_parent
 	p <famo:hasObject> y
   -----------------------
 	x <famo_app:isRepresentedAsChildOfRole> y
+	}
 
 }
