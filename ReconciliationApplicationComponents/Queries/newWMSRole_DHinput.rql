@@ -16,8 +16,7 @@ INSERT {
 	?rec1 famo:representsObjectOf test:new_role_inclusion_pm.
 	test:new_role_inclusion_pm a famo:RoleInclusionRelation;
     	famo:hasSubject test:new_role_1;
-     famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]];
-		famo:assertedBy test:test_user.
+     	famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]].
 	test:new_role_1 a famo:ActualRole;
         famo:hasEntityNumber "THX-TEST-ENUM-0000"^^xsd:string;
 		famoapp:existenceAnnotation "To be investigated"^^xsd:string.

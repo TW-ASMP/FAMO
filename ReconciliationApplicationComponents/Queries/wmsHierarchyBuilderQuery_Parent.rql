@@ -6,6 +6,8 @@ PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX test: <http://www.test.org/TW_test_data_example/>
 
 #load wms-oriented tree, relative to a specified root note (given an entity number value)
+#note: this query can be slightly simplified if we can assume that all dh entities will have entity numbers defined
+#note: still need to modify this query to allow for project-specific filtering (the current version returns information according to all current property manifestations)
 SELECT DISTINCT ?referent_exists ?wms_rec ?wms_enum ?wms_name ?wms_parent ?dhid ?dh_enum ?dh_name ?dh_parent ?dwg_enum ?etms_enum ?scada_enum 
 	WHERE #match with pinned records
 {		
@@ -56,6 +58,23 @@ SELECT DISTINCT ?referent_exists ?wms_rec ?wms_enum ?wms_name ?wms_parent ?dhid 
 		OPTIONAL {?wms_rec famo_app:representsChildRoleOfRecord [famo:representsSubjectOf [a famo:EntityNumberProperty;
 											famo:hasValue ?wms_parent]]}.
 		}
+		
+				#pinned etms (optional)
+			OPTIONAL {
+			?i_etms famo:denotes ?dhid.
+			?etmsrec famo:hasInterpretation ?i_etms;
+					famo:representsSubjectOf [a famo:EntityNumberProperty;
+											famo:hasValue ?etms_enum];
+					famo:instantiatedIn test:etms_datasystem.
+			}
+		#pinned scada (optional)
+			OPTIONAL {
+			?i_scada famo:denotes ?dhid.
+			?scadarec famo:hasInterpretation ?i_scada;
+					famo:representsSubjectOf [a famo:EntityNumberProperty;
+											famo:hasValue ?scada_enum];
+					famo:instantiatedIn test:scada_datasystem.
+			}
 				
 }
 #uintelligible records not displayed
