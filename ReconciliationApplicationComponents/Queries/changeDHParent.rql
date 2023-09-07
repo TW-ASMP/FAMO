@@ -5,19 +5,69 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX genprop: <http://ontology.eil.utoronto.ca/5087/1/1/GenericProperties/>
 PREFIX time: <http://www.w3.org/2006/time#>
 
-#Given an <entity>, and a <destination entity>, move the child from its current parent to the destination entity (do this in a single transaction, without triggering rule 1 or 2).
-#given parameters: dh ids vs "enums"?
-#	designators subject to error? require specification of designator type
+# Given an <entity>, and a <destination entity>, move the child from its current parent to the destination entity (do this in a single transaction, without triggering rule 1 or 2).
+# Assume all specified entities exist - at least in the datahub (not necessarily represented by records in the wms)
+# This query removes the old parent from the current assertions (assumption that this will eventually be done in the "working graph copy", not directly in the wms records)
 
 DELETE {
-	<child entity> famo:subRoleOf ?parentid.
+	#remove present-tense assertions 
+  ?p famo:hasSubject <dhid>.
+  ?p rdf:type famo:RoleInclusionRelation.
+  ?p famo:hasObject ?y.
+	
+	#if asserted in wms, remove present tense record assertions
+	?wms_rec famo:representsSubjectOf ?p.
+	?wms_rec_pold famo:representsObjectOf ?p.
 }
 
 INSERT {
-	<child entity> famo:subRoleOf <third entity>.
+	#add new property manifestation and relationships at timestamp
+	<pm_n> famo:existsAt [time:hasBeginning [time:inXSDDateTimepStamp ?now]].
+	
+	#relate pm_n to dh_id and new parent, dh_pnew
+  <pm_n> famo:hasSubject <dhid>.
+  <pm_n> rdf:type famo:RoleInclusionRelation.
+  <pm_n> famo:hasObject <dh_pnew>.
+	
+	#insert present tense record relationships, if applicable
+	?wms_rec famo:representsSubjectOf <dh_pnew>.
+	?wms_rec_pnew famo:representsObjectOf <dh_pnew>.
+	
+	#if asserted in wms, add past tense record assertions
+	?wms_rec famo:representedSubjectOf ?p.
+	?wms_rec_pold famo:representedObjectOf ?p.
 }
 
 WHERE {
-#optional?
-	<child entity> famo:subRoleOf ?parentid.
+	#the current time
+	BIND(now() as ?now)
+
+	#child entity's existing parent entity, dh_pold
+  ?p famo:hasSubject <dhid>.
+  ?p rdf:type famo:RoleInclusionRelation.
+  ?p famo:hasObject ?dh_pold.
+	
+# the child entity may be pinned to a wms record that represents the role inclusion relation
+OPTIONAL {
+	?i_wms famo:denotes <dhid>.
+	?wms_rec famo:hasInterpretation ?i_wms;
+  	famo:instantiatedIn test:wms_datasystem;
+		famo:representsSubjectOf ?p.
+					}
+					
+#the parent entity may be pinned to a wms record that represents the role inclusion relation
+OPTIONAL {
+	?ipold_wms famo:denotes ?dh_pold.
+	?wms_rec_pold famo:hasInterpretation ?ipold_wms;
+  	famo:instantiatedIn test:wms_datasystem;
+		famo:representsObjectOf ?p.
+					}
+					
+#the destination parent entity may be (must be?) pinned to a wms record
+OPTIONAL {
+	?ipnew_wms famo:denotes <dh_pnew>.
+	?wms_rec_pnew famo:hasInterpretation ?ipnew_wms;
+  	famo:instantiatedIn test:wms_datasystem.
+					}
+					
 }

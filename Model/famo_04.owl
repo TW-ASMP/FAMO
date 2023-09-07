@@ -554,6 +554,23 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/inState -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/inState">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/participatesInState"/>
+        <rdfs:comment>identifies a State that the object is considered to “hold” at some time. This is a specialization of participatesIn, as some objects may be considered to participate in a state but not have the state themselves. For example, if a light switch is in a failed state, the lightbulb may participate in that state in that it cannot be turned on, but the lightbulb itself is not in the failed state.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/indicatesState -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/indicatesState">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/installedAtTime -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/installedAtTime">
@@ -656,6 +673,15 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/participatesInState -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/participatesInState">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <rdfs:comment>identifies a State that the object participates in</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/physicalOperatingConstraint -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/physicalOperatingConstraint">
@@ -698,9 +724,25 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/representsAssetInState -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/representsAssetInState">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -1676,6 +1718,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/indicatesState"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Record"/>
             </owl:Restriction>
@@ -1722,8 +1770,20 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsAssetInState"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2161,6 +2221,27 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Specification_Performance">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact"/>
         <rdfs:comment>Added for demo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/State -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/State">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState"/>
+                <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>FAMO State</rdfs:label>
     </owl:Class>
     
 
