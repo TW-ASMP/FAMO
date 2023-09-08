@@ -118,6 +118,22 @@ Tony Huang, Toronto Water</dc:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/beginOfExistsAtXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/beginOfExistsAtXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/endOfExistsAtXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/endOfExistsAtXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existenceAnnotation -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existenceAnnotation">
@@ -152,6 +168,38 @@ Tony Huang, Toronto Water</dc:creator>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existsAtXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existsAtXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasBeginningXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasBeginningXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasEndXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasEndXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
     </owl:DatatypeProperty>
 </rdf:RDF>
 
