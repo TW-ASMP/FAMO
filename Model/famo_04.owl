@@ -2180,6 +2180,23 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SCADAAlarmState -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SCADAAlarmState">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/State"/>
+        <owl:disjointWith rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SCADAWarningState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SCADAWarningState -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SCADAWarningState">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/State"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberProperty -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberProperty">
@@ -2239,6 +2256,12 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState"/>
                 <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>FAMO State</rdfs:label>
