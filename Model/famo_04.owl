@@ -177,6 +177,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/actualTime -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/actualTime">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/affectsResource -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/affectsResource">
@@ -210,6 +218,22 @@ Verion 0.4 focuses on:
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/functionalOperatingConstraint"/>
         <rdfs:range rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
         <rdfs:comment>An example of a possible functional operating constraint wherein a Role may only be satisfied by Functions that require a certain Input(s) - i.e., due to existing infrastructure/resource availability.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/assertedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/assertedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/assertedFor -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/assertedFor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1221,7 +1245,7 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Project"/>
     </owl:Class>
     
 
@@ -1689,6 +1713,14 @@ For example, Apple manufactures a line of macbooks, which can be further divided
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Project -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Project">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation">
@@ -1709,6 +1741,18 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/assertedBy"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/assertedFor"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Project"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>

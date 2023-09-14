@@ -180,6 +180,30 @@ Tony Huang, Toronto Water</dc:creator>
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualBeginningXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualBeginningXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualEndXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualEndXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualTimeXSDDateTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualTimeXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasBeginningXSDDateTimeStamp -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasBeginningXSDDateTimeStamp">
