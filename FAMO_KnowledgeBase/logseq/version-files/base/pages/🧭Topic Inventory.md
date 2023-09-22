@@ -5,10 +5,13 @@
 	  CLOCK: [2023-07-25 Tue 11:46:45]--[2023-07-25 Tue 11:46:46] =>  00:00:01
 	  :END:
 	- [[🧠to keep in mind]] - contains summary
+	- [[🤔still working through]]
 - ## [[initiative]]
 	- [[initiative/datahub]]
+		- [[initiative/datahub/planning]]
 		- [[initiative/datahub/UI]]
 		- [[initiative/datahub/modeling]]
+		- [[initiative/datahub/controller]]
 	- [[initiative/compliance KB]]
 - ## [[person]]
 	- [[person/Megan]]

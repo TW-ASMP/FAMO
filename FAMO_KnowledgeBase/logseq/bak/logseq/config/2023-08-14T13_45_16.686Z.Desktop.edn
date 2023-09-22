@@ -292,7 +292,7 @@
  ;;  :journal?        false} ; Default value: false
 
  ;; Favorites to list on the left sidebar
- :favorites ["Logseq Guide" "👩🏻‍⚖️decision" "🧭topic inventory" "🈳Template Inventory" "🤴🏻decision" "🧠to keep in mind" "💡insight" "insight" "🧭inventory of entities" "inventory of entities 🧾" "Inventory of Entities"]
+ :favorites ["logseq guide topics" "💡insight" "💡insight on" "👩🏻‍⚖️decision" "🤴🏻decision" "🧠to keep in mind" "🧭topic inventory" "🈳Template Inventory" "Logseq Guide" "insight" "🧭inventory of entities" "inventory of entities 🧾" "Inventory of Entities"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -412,4 +412,5 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :ui/show-brackets? false}
+ :ui/show-brackets? false
+ :editor/logical-outdenting? true}

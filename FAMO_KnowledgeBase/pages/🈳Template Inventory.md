@@ -4,6 +4,7 @@ title:: 🈳Template Inventory
 - ### [[👩🏻‍⚖️decision]]
   template:: 👩🏻‍⚖️decision
   initiative::
+  fully-executed::
   tentative:: yes
   still-relevant:: yes
   review-on-date::
