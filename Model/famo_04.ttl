@@ -1,0 +1,1868 @@
+@prefix : <http://ontology.eil.utoronto.ca/FAMO/famo/> .
+@prefix OM: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM> .
+@prefix WV: <http://www.wurvoc.org/vocabularies/WV> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix om-1: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix prov: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Prov> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix agent: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent> .
+@prefix prov1: <http://www.w3.org/ns/prov#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix change: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change> .
+@prefix schema: <http://schema.org/> .
+@prefix Change1: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/> .
+@prefix activity: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity> .
+@prefix resource: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource> .
+@prefix mereology: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix spatialloc: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc> .
+@base <http://ontology.eil.utoronto.ca/FAMO/famo/> .
+
+<http://ontology.eil.utoronto.ca/FAMO/famo/> rdf:type owl:Ontology ;
+                                              owl:imports <http://ontology.eil.utoronto.ca/5087/1/Activity.owl> ,
+                                                          <http://ontology.eil.utoronto.ca/5087/1/Change.owl> ,
+                                                          <http://ontology.eil.utoronto.ca/5087/1/GenericProperties.owl> ,
+                                                          <http://ontology.eil.utoronto.ca/5087/1/Prov.owl> ,
+                                                          <http://ontology.eil.utoronto.ca/5087/1/SpatialLoc.owl> ;
+                                              terms:creator """Megan Katsumi, University of Toronto
+Mark Fox, University of Toronto
+Tony Huang, Toronto Water"""@en ;
+                                              terms:title "Asset Management Ontology"@en ;
+                                              vann:preferredNamespacePrefix "famo"@en ;
+                                              vann:preferredNamespaceUri "http://ontology.eil.utoronto.ca/FAMO/" ;
+                                              owl:versionInfo """A third iteration of the ontology to refine the key terms identified in the previous version.
+Verion 0.4 focuses on:
+- representing a history of object (specifically asset and role) records across various data systems
+- enabling the fundamental \"Historical Data Hub\" use cases
+- defining change processes (TBD)"""@en ;
+                                              foaf:depiction "https://www.mie.utoronto.ca/wp-content/uploads/2019/08/FASE-logo-201907.jpg" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+dc:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+terms:isVersionOf rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+terms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/example
+vann:example rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.linkedmodel.org/schema/vaem#rationale
+vaem:rationale rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+foaf:depiction rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty
+:FamoObjectProperty rdf:type owl:ObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/achievedByActivity
+:achievedByActivity rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/activityConstraintSatsifiedBy
+:activityConstraintSatsifiedBy rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :FamoObjectProperty ;
+                               rdfs:domain :Role ;
+                               rdfs:range :Function ;
+                               owl:propertyChainAxiom ( :allowsOnlyActivities
+                                                        [ owl:inverseOf :achievedByActivity
+                                                        ]
+                                                      ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/actualTime
+:actualTime rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/affectsResource
+:affectsResource rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation
+:afterManifestation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :FamoObjectProperty ;
+                    rdfs:comment "A transitive ordering on manifestations, afterManifestation is a generalization of hasPreviousManifestation." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities
+:allowsOnlyActivities rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :functionalOperatingConstraint ;
+                      rdfs:range <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity> ;
+                      rdfs:comment "An example of a possible functional operating constraint wherein a Role may only be satisfied by a Function that is achieved via a specific type of Activity." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyResources
+:allowsOnlyResources rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :functionalOperatingConstraint ;
+                     rdfs:range <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource> ;
+                     rdfs:comment "An example of a possible functional operating constraint wherein a Role may only be satisfied by Functions that require a certain Input(s) - i.e., due to existing infrastructure/resource availability." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/assertedBy
+:assertedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/assertedFor
+:assertedFor rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/authorOf
+:authorOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty ,
+                             prov1:influenced ;
+          owl:inverseOf :hasAuthor .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation
+:beforeManifestation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty ;
+                     rdfs:comment "A transitive ordering on Manifestations, beforeManifestation is a generalization of hasNextManifestation" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/causedBy
+:causedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/containedInSpace
+:containedInSpace rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty ,
+                                     <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn> .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissionedAtTime
+:decommissionedAtTime rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/denotes
+:denotes rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/describes
+:describes rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ;
+           owl:inverseOf :hasDescription .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/failureToPerform
+:failureToPerform rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/fitsInFootprint
+:fitsInFootprint rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/footprintRequirementSatisfiedBy
+:footprintRequirementSatisfiedBy rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :FamoObjectProperty ;
+                                 owl:propertyChainAxiom ( :hasAvailableFootprint
+                                                          [ owl:inverseOf :fitsInFootprint
+                                                          ]
+                                                          [ owl:inverseOf :hasFootprint
+                                                          ]
+                                                        ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/functionalOperatingConstraint
+:functionalOperatingConstraint rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :FamoObjectProperty ;
+                               rdfs:domain :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/generatedBy
+:generatedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ,
+                              prov1:wasAttributedTo .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasAvailableFootprint
+:hasAvailableFootprint rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :physicalOperatingConstraint ;
+                       rdfs:domain :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasDescription
+:hasDescription rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasDocumentation
+:hasDocumentation rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasFailure
+:hasFailure rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasFootprint
+:hasFootprint rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasFunction
+:hasFunction rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasInfoArtifactPart
+:hasInfoArtifactPart rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation
+:hasInterpretation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :FamoObjectProperty ;
+                   owl:inverseOf :interpretationOf .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasManufacturer
+:hasManufacturer rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasModel
+:hasModel rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty ;
+          rdfs:comment "Note: this is a temporary representation of an asset's model information added to support the implementation of demo prototype #1. Future consideration is required regarding the representation of product lines, models, product families, etc." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasMonetaryValue
+:hasMonetaryValue rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasObject
+:hasObject rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ;
+           owl:propertyChainAxiom ( :objectIsRepresentedBy
+                                    :hasInterpretation
+                                    :denotes
+                                  ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOperatingContext
+:hasOperatingContext rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty
+:hasOutcomeProperty rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasPerformanceRequirement
+:hasPerformanceRequirement rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasPredecessor
+:hasPredecessor rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasRecordLocation
+:hasRecordLocation rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSpecifiedFunction
+:hasSpecifiedFunction rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubFunction
+:hasSubFunction rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubProductLine
+:hasSubProductLine rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :FamoObjectProperty ;
+                   rdfs:domain :ProductLine ;
+                   rdfs:range :ProductLine .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubRole
+:hasSubRole rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty ;
+            owl:inverseOf :subRoleOf ;
+            rdfs:label "is parent of" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject
+:hasSubject rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty ;
+            owl:propertyChainAxiom ( :subjectIsRepresentedBy
+                                     :hasInterpretation
+                                     :denotes
+                                   ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/inDataSystem
+:inDataSystem rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/inState
+:inState rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :participatesInState ;
+         rdfs:comment "identifies a State that the object is considered to “hold” at some time. This is a specialization of participatesIn, as some objects may be considered to participate in a state but not have the state themselves. For example, if a light switch is in a failed state, the lightbulb may participate in that state in that it cannot be turned on, but the lightbulb itself is not in the failed state." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/indicatesState
+:indicatesState rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/installedAtTime
+:installedAtTime rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn
+:instantiatedIn rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/interpretationOf
+:interpretationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase
+:involvedInProjectPhase rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/isTrustedAuthorityFor
+:isTrustedAuthorityFor rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/memberOfProductFamily
+:memberOfProductFamily rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/memberOfProductLine
+:memberOfProductLine rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty ;
+                     rdfs:range :ProductLine ;
+                     rdfs:comment "The product line that an asset is identified by." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy
+:objectIsRepresentedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :FamoObjectProperty ;
+                       owl:inverseOf :representsObjectOf .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/objectWasRepresentedBy
+:objectWasRepresentedBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :FamoObjectProperty ;
+                        owl:inverseOf :representedObjectOf .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/occupiedBy
+:occupiedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :satisfiedByAsset ;
+            owl:inverseOf :occupies .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/occupies
+:occupies rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty ;
+          rdfs:range :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/participatesInState
+:participatesInState rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty ;
+                     rdfs:comment "identifies a State that the object participates in" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/physicalOperatingConstraint
+:physicalOperatingConstraint rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :FamoObjectProperty ;
+                             rdfs:domain :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/replaces
+:replaces rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf
+:representedObjectOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representedSubjectOf
+:representedSubjectOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :FamoObjectProperty ;
+                      owl:inverseOf :subjectWasRepresentedBy .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/represents
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :FamoObjectProperty ;
+            owl:propertyChainAxiom ( :hasInterpretation
+                                     :denotes
+                                   ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representsAssetInState
+:representsAssetInState rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf
+:representsObjectOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representsRoleOfAssetInState
+:representsRoleOfAssetInState rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/representsSubjectOf
+:representsSubjectOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :FamoObjectProperty ;
+                     owl:inverseOf :subjectIsRepresentedBy .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/roleGoalSatisfiedByFunction
+:roleGoalSatisfiedByFunction rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :FamoObjectProperty ;
+                             rdfs:domain :Function ;
+                             owl:propertyChainAxiom ( <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal>
+                                                      [ owl:inverseOf :hasOutput
+                                                      ]
+                                                    ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/satisfiedByAsset
+:satisfiedByAsset rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :footprintRequirementSatisfiedBy ,
+                                     :satisfiedByFunctionOfAsset ;
+                  rdfs:domain :Role ;
+                  rdfs:range :Asset .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/satisfiedByFunction
+:satisfiedByFunction rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :activityConstraintSatsifiedBy ,
+                                        :roleGoalSatisfiedByFunction ;
+                     rdfs:domain :Role ;
+                     rdfs:range :Function .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/satisfiedByFunctionOfAsset
+:satisfiedByFunctionOfAsset rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :FamoObjectProperty ;
+                            owl:propertyChainAxiom ( :satisfiedByFunction
+                                                     [ owl:inverseOf :hasFunction
+                                                     ]
+                                                   ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/subRoleOf
+:subRoleOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ;
+           rdfs:label "is child of" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy
+:subjectIsRepresentedBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/subjectWasRepresentedBy
+:subjectWasRepresentedBy rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/supportsFunction
+:supportsFunction rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :FamoObjectProperty ;
+                  rdfs:domain :Role ;
+                  rdfs:range :Function .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/supportsRole
+:supportsRole rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/validFor
+:validFor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://www.w3.org/ns/org#memberOf
+org:memberOf rdf:type owl:ObjectProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt
+Change1:existsAt rdf:type owl:ObjectProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn> rdf:type owl:ObjectProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal> rdf:type owl:ObjectProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation> rdf:type owl:ObjectProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/hasLocation
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/hasLocation> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty
+:FAMODataProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissionDate
+:decommissionDate rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/generatedAtTime
+:generatedAtTime rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasCriticality
+:hasCriticality rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasDesignator
+:hasDesignator rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :FAMODataProperty ,
+                                  <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier> ;
+               rdfs:range xsd:string .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumber
+:hasEntityNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasDesignator .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS
+:hasLCS rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :FAMODataProperty ;
+        rdfs:comment "Identifies the life cycle state of an asset." ;
+        rdfs:label "has life cycle state" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOEMSerialNo
+:hasOEMSerialNo rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus
+:hasRoleStatus rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSerialNumber
+:hasSerialNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasDesignator .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasURL
+:hasURL rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :FAMODataProperty ;
+        rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/installDate
+:installDate rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :FAMODataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/motorSize
+:motorSize rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :FAMODataProperty ;
+           rdfs:comment "Status of this data property TBD. Added to enable test data representation." .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> rdf:type owl:DatatypeProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier> rdf:type owl:DatatypeProperty .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/5087/Activity/Activity
+<http://ontology.eil.utoronto.ca/5087/Activity/Activity> rdf:type owl:Class .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf :FamoThing ,
+                          prov1:Activity ,
+                          <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasOutcomeProperty ;
+                            owl:allValuesFrom :PropertyManifestation
+                          ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ActualAsset
+:ActualAsset rdf:type owl:Class ;
+             rdfs:subClassOf :Asset .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ActualRole
+:ActualRole rdf:type owl:Class ;
+            rdfs:subClassOf :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf :FamoThing ,
+                       <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent/Agent> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :authorOf ;
+                         owl:allValuesFrom :InformationArtifact
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty org:memberOf ;
+                         owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization>
+                       ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf :FamoThing ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasFunction ;
+                         owl:someValuesFrom :Function
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasMonetaryValue ;
+                         owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDocumentation ;
+                         owl:allValuesFrom :InformationArtifact
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :involvedInProjectPhase ;
+                         owl:allValuesFrom <http://ontology.eil.utoronto.ca/5087/Activity/Activity>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :occupies ;
+                         owl:allValuesFrom :Role
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasPredecessor ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Asset
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasLCS ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSerialNumber ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :motorSize ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
+                       ] ;
+       rdfs:comment """An asset is some object owned by a person or organization that is perceived to have some monetary value or useful function.
+
+An asset may have some role (context-dependent) and has some capability (this need not be the same as its function, but may exceed it).
+
+An asset may be assigned to at most one Role at any particular time (though it may be associated with sub-roles that its components are assigned to).
+
+In order for an asset to be assigned to a Role, it must possess the Capability required to satisfy the Role (i.e. it must be a candidate to be responsible for the role).
+
+Two assets may be capable of producing the same output, but have different capabilities (owing to the differences in the assets, and the resulting differences in the capabilities' decomposition). In fact, a single Asset is associated with different instances of the same Capability as it changes over time.
+
+All assets have at least one, but possibly more, capability(s). This Capability(s) is subject to change over time. Each describes an intended use of the asset and serves to identify the possible Roles it might fill."""@en ,
+                    "Note: will need to revisit properties defined in earlier versions such as hasPredecessor with respect to updates to Change pattern" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/AssetLCSProperty
+:AssetLCSProperty rdf:type owl:Class ;
+                  rdfs:subClassOf :PropertyManifestation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasSubject ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasValue ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  rdfs:comment "identifies the life cycle status of an asset, as indicated by some Record." ;
+                  rdfs:label "Asset LCS Property" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject
+:CapitalProject rdf:type owl:Class ;
+                rdfs:subClassOf :Project .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ClassMembershipRelation
+:ClassMembershipRelation rdf:type owl:Class ;
+                         rdfs:subClassOf :PropertyManifestation .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ConjunctiveFunction
+:ConjunctiveFunction rdf:type owl:Class ;
+                     rdfs:subClassOf :NonTerminalFunction ;
+                     owl:disjointWith :DisjunctiveFunction .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ConjunctiveRole
+:ConjunctiveRole rdf:type owl:Class ;
+                 rdfs:subClassOf :NonTerminalRole ;
+                 owl:disjointWith :DisjunctiveRole .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation
+:CurrentPropertyManifestation rdf:type owl:Class ;
+                              rdfs:subClassOf :PropertyManifestation ;
+                              rdfs:comment "A Property Manifestation that has been identified as corresponding to the current known value (best reflection of reality) for a data hub entity." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/DataSystem
+:DataSystem rdf:type owl:Class ;
+            rdfs:subClassOf :FamoThing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isTrustedAuthorityFor ;
+                              owl:allValuesFrom :PropertyManifestation
+                            ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty
+:DesignationProperty rdf:type owl:Class ;
+                     rdfs:subClassOf :PropertyManifestation .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/DisjunctiveFunction
+:DisjunctiveFunction rdf:type owl:Class ;
+                     rdfs:subClassOf :NonTerminalFunction .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/DisjunctiveRole
+:DisjunctiveRole rdf:type owl:Class ;
+                 rdfs:subClassOf :NonTerminalRole .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Drawing
+:Drawing rdf:type owl:Class ;
+         rdfs:subClassOf :InformationArtifact .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberProperty
+:EntityNumberProperty rdf:type owl:Class ;
+                      rdfs:subClassOf :IdentificationNumberProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValue ;
+                                        owl:allValuesFrom xsd:string
+                                      ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Failure
+:Failure rdf:type owl:Class ;
+         rdfs:subClassOf :FamoThing ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://www.w3.org/2006/time#hasTime> ;
+                           owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
+                         ] ;
+         vaem:rationale "Failure allows us to describe individual instances of failures, but also to describe failure modes, at the class level."@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing
+:FamoThing rdf:type owl:Class ;
+           foaf:depiction "https://www.mie.utoronto.ca/wp-content/uploads/2019/08/FASE-logo-201907.jpg"@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Footprint
+:Footprint rdf:type owl:Class ;
+           rdfs:subClassOf :FamoThing ,
+                           <http://www.opengis.net/ont/sf#Geometry> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :fitsInFootprint ;
+                             owl:allValuesFrom :Footprint
+                           ] ;
+           rdfs:comment """Underspecified for now. May be defined in detail at a later date.
+
+A footprint represents a simple 2D shape, without orientation. It is therefore distinct from the Geometry class defined in geosparql which is encoded with a reference system and thus has an orientation and location in the context of the reference system.""" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf :FamoThing ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :achievedByActivity ;
+                            owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :affectsResource ;
+                            owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasInput ;
+                            owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasOutput ;
+                            owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty Change1:existsAt ;
+                            owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSubFunction ;
+                            owl:allValuesFrom :Function
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf :satisfiedByFunction
+                                           ] ;
+                            owl:allValuesFrom :Role
+                          ] ;
+          owl:disjointWith :NonTerminalRole ;
+          rdfs:comment """A Capability is possessed by an Asset (or possibly Product Line). It refers to the possible behaviours of an asset that are the intentional outcome of the asset’s design process (i.e. not accidental or a by-product). These behaviours involve the performance of some activity(s) on some object(s). Specific characteristics of a capability (sometimes referred to as functional specifications) are described by constraints on the activity, its input/output states, and on the nature of the involved object.
+
+A capability exists independent of any particular system, but cannot exist independent of some asset (or product line). A capability indicates what implementations may be suitable (possible) for a particular asset, but it is defined independent from any particular implementation of an Asset. A capability that is suitable to meet a role’s requirements is said to enable (have the potential to realize) the role. 
+
+Typically, a Capability that is possessed by a Product Line will be shared by any Assets that are of that product line - however this is not necessarily true. In cases of degradation, manufacturer defects, or modification/upgrades, there may be discrepancies between the capabilities of an asset and those of its product line.
+
+A Capability may be decomposed into sub-capabilities. A Capability may be further defined as either TerminalCapability or NonTerminalCapability, indicating whether any sub-capabilities exist. A complete decomposition of a Capability provides a breakdown of its functionality into more detailed parts. A Capability exists with respect to an Asset or Product Line, and therefore its decomposition is fully determined at any particular time. In other words, a NonTerminalCapability is conjunctive by default.
+
+A single Capability has the potential to satisfy multiple Roles. It is possible for a Capability not to satisfy any Roles.""" ;
+          rdfs:label "FAMO Function"@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/FunctionalFailure
+:FunctionalFailure rdf:type owl:Class ;
+                   rdfs:subClassOf :Failure ;
+                   rdfs:comment "A functional failure refers to a failure of an asset to perform a specific function(s)."@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberProperty
+:IdentificationNumberProperty rdf:type owl:Class ;
+                              rdfs:subClassOf :DesignationProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact
+:InformationArtifact rdf:type owl:Class ;
+                     rdfs:subClassOf :FamoThing ,
+                                     prov1:Entity ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasInfoArtifactPart ;
+                                       owl:allValuesFrom :InformationArtifact
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :generatedAtTime ;
+                                       owl:allValuesFrom xsd:dateTimeStamp
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasURL ;
+                                       owl:allValuesFrom xsd:anyURI
+                                     ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Instruction_Maintenance
+:Instruction_Maintenance rdf:type owl:Class ;
+                         rdfs:subClassOf :InformationArtifact ;
+                         rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/InterpretationOfID
+:InterpretationOfID rdf:type owl:Class ;
+                    rdfs:subClassOf :FamoThing ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :denotes ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:label "Interpretation of Identity" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/List_SpareParts
+:List_SpareParts rdf:type owl:Class ;
+                 rdfs:subClassOf :InformationArtifact ;
+                 rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Manual
+:Manual rdf:type owl:Class ;
+        rdfs:subClassOf :InformationArtifact .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer
+:Manufacturer rdf:type owl:Class ;
+              rdfs:subClassOf :Agent ,
+                              <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/MotorsizeProperty
+:MotorsizeProperty rdf:type owl:Class ;
+                   rdfs:subClassOf :PropertyManifestation ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasSubject ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasValue ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:integer
+                                   ] ;
+                   rdfs:comment "Status of this class TBD. Added to enable test data representation." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/NameProperty
+:NameProperty rdf:type owl:Class ;
+              rdfs:subClassOf :DesignationProperty ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasValue ;
+                                owl:allValuesFrom xsd:string
+                              ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalFunction
+:NonTerminalFunction rdf:type owl:Class ;
+                     rdfs:subClassOf :Function ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasSubFunction ;
+                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :Function
+                                     ] ;
+                     owl:disjointWith :TerminalFunction .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalRole
+:NonTerminalRole rdf:type owl:Class ;
+                 rdfs:subClassOf :ActualRole ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSubRole ;
+                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Role
+                                 ] ;
+                 owl:disjointWith :TerminalRole .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace
+:PhysicalSpace rdf:type owl:Class ;
+               rdfs:subClassOf :FamoThing .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductFamily
+:ProductFamily rdf:type owl:Class ;
+               rdfs:subClassOf :ProductThings ;
+               vann:example "pump, breaker, valve,..."@en ;
+               vaem:rationale "A product family provides a useful means of formalizing a type of asset, independent of manufacturer-specific classifications."@en ;
+               rdfs:comment """A derivation from the PRONTO ontology.
+“Highest level of the AH that represents a set of similar products having alike structures, similar characteristics and production routes. A family is related to a superstructure, which comprehends all the possible structures that the members of such family may have. “""" ;
+               skos:note """May be able to derive a classification from UNSPC.
+
+TBD: For our purposes, is this level of the product representation necessary? Or can we simply define classes of product families as subclasses of asssets/product lines?"""@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductLine
+:ProductLine rdf:type owl:Class ;
+             rdfs:subClassOf :ProductThings ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasDocumentation ;
+                               owl:someValuesFrom :InformationArtifact
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasManufacturer ;
+                               owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization>
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSpecifiedFunction ;
+                               owl:someValuesFrom :Function
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSubProductLine ;
+                               owl:allValuesFrom :ProductLine
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :memberOfProductFamily ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :ProductFamily
+                             ] ;
+             vann:example "iPhone 11, GP80 Portable Gasoline Water Pump 3” Intake/Outlet 7HP, ..."@en ;
+             vaem:rationale "Capturing a product line allows us to describe an asset according to the manufacturer's specifications. It also allows for the identification of relationships between individual assets, based on their product line/model identifier."@en ;
+             rdfs:comment "All Product Lines have at least one, possibly more, capability(s). Each describes an intended use of the assets that are part of the product line, and characterizes the possible Roles it might fill. It is expected that an Asset possess the same capability(s) as those of its product line, but this is not necessarily the case (e.g. defective assets, degenerative wear, modifications to an asset over time).The Capabilities of a Product Line do not change over time. Such revisions should be captured with the identification of a new Product Line." ;
+             skos:note """Consider if/how multiple levels of product lines are represented. 
+For example, Apple manufactures a line of macbooks, which can be further divided into different models, e.g. 13in, 16in, ...""" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductModel
+:ProductModel rdf:type owl:Class ;
+              rdfs:subClassOf :ProductThings .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductThings
+:ProductThings rdf:type owl:Class ;
+               rdfs:subClassOf :FamoThing .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductVersion
+:ProductVersion rdf:type owl:Class ;
+                rdfs:subClassOf :ProductLine ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :replaces ;
+                                  owl:allValuesFrom :ProductVersion
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :validFor ;
+                                  owl:allValuesFrom <http://www.w3.org/2006/time#ProperInterval>
+                                ] ;
+                rdfs:comment """Version provides the addition properties of how a Part changes over time.
+• replaces: points to the prior version of a Product Line
+• generatedBy: Event that caused/necessitated the change
+• validFor: (need a different term) refers to the interval during which the product line is \"active\" or otherwise supported/produced by the manufacturer"""@en ;
+                skos:note "Q: in PRONTO, Version appears to be linked only directly to a product Family. It's unclear why this is. TODO: review paper and follow-up with authors."@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf :Activity .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation
+:PropertyManifestation rdf:type owl:Class ;
+                       rdfs:subClassOf :FamoThing ,
+                                       Change1:Manifestation ,
+                                       [ rdf:type owl:Class ;
+                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :subjectIsRepresentedBy ;
+                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                         owl:onClass :Record
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :subjectWasRepresentedBy ;
+                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                         owl:onClass :Record
+                                                       ]
+                                                     )
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :assertedBy ;
+                                         owl:allValuesFrom :Agent
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :assertedFor ;
+                                         owl:allValuesFrom :Project
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasObject ;
+                                         owl:allValuesFrom owl:Thing
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :indicatesState ;
+                                         owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :objectIsRepresentedBy ;
+                                         owl:allValuesFrom :Record
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :objectWasRepresentedBy ;
+                                         owl:allValuesFrom :Record
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasSubject ;
+                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasValue ;
+                                         owl:allValuesFrom rdfs:Literal
+                                       ] ;
+                       rdfs:comment "A Description corresponds to the representation of a single property of an object at a particular point in time. It is defined as a subclass of Manifestation, because this representation changes over time. An object is described in a data system with a series of Descriptions that indicate how the property changed (or was described to change) over time. Even in the case that a Description represents a property that is not intended to change, it is still subject to change through corrections or revisions within the data system." ;
+                       rdfs:label "Property Manifestation" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Record
+:Record rdf:type owl:Class ;
+        rdfs:subClassOf :FamoThing ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRecordLocation ;
+                          owl:allValuesFrom :RecordLocation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :representedObjectOf ;
+                          owl:allValuesFrom :PropertyManifestation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :representsAssetInState ;
+                          owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :representsObjectOf ;
+                          owl:allValuesFrom :PropertyManifestation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :representsRoleOfAssetInState ;
+                          owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :representsSubjectOf ;
+                          owl:allValuesFrom :PropertyManifestation
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :instantiatedIn ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :DataSystem
+                        ] ;
+        rdfs:comment "a Record captures the information stored in a data system about a particular object. Conceptually, it is similar to a row in a table, however a Record is agnostic to any particular database schema. It refers to the entire collection of information about a particular object in a given data system. In this sense, it can be thought of as a row from a “view” created with all attributes of a particular object." ;
+        rdfs:label "Record" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RecordCorrection
+:RecordCorrection rdf:type owl:Class ;
+                  rdfs:subClassOf :RecordValidation .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RecordLocation
+:RecordLocation rdf:type owl:Class ;
+                rdfs:subClassOf :FamoThing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :inDataSystem ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :DataSystem
+                                ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RecordUpdate
+:RecordUpdate rdf:type owl:Class ;
+              rdfs:subClassOf :Activity .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RecordValidation
+:RecordValidation rdf:type owl:Class ;
+                  rdfs:subClassOf :RecordUpdate .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Record_Calibration
+:Record_Calibration rdf:type owl:Class ;
+                    rdfs:subClassOf :InformationArtifact ;
+                    rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Record_Certification
+:Record_Certification rdf:type owl:Class ;
+                      rdfs:subClassOf :InformationArtifact ;
+                      rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Record_PerformanceStandard
+:Record_PerformanceStandard rdf:type owl:Class ;
+                            rdfs:subClassOf :InformationArtifact ;
+                            rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Record_Setpoint
+:Record_Setpoint rdf:type owl:Class ;
+                 rdfs:subClassOf :InformationArtifact ;
+                 rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Role
+:Role rdf:type owl:Class ;
+      rdfs:subClassOf :FamoThing ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty Change1:existsAt ;
+                        owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/hasGoal> ;
+                        owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation> ;
+                        owl:someValuesFrom <http://ontology.eil.utoronto.ca/ISO21972/iso21972#Feature>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :allowsOnlyActivities ;
+                        owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :allowsOnlyResources ;
+                        owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :footprintRequirementSatisfiedBy ;
+                        owl:allValuesFrom :Asset
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasAvailableFootprint ;
+                        owl:allValuesFrom :Footprint
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDocumentation ;
+                        owl:allValuesFrom :InformationArtifact
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasSubRole ;
+                        owl:allValuesFrom :Role
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :involvedInProjectPhase ;
+                        owl:allValuesFrom <http://ontology.eil.utoronto.ca/5087/Activity/Activity>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :locatedIn ;
+                        owl:allValuesFrom :PhysicalSpace
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :occupiedBy ;
+                        owl:allValuesFrom :Asset
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :satisfiedByAsset ;
+                        owl:allValuesFrom :Asset
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :satisfiedByFunction ;
+                        owl:allValuesFrom :Function
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :subRoleOf ;
+                        owl:allValuesFrom :Role
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :supportsFunction ;
+                        owl:allValuesFrom :Function
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :supportsRole ;
+                        owl:allValuesFrom :Role
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCriticality ;
+                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                            owl:oneOf [ rdf:type rdf:List ;
+                                                        rdf:first 1 ;
+                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                   rdf:first 2 ;
+                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                              rdf:first 3 ;
+                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                         rdf:first 4 ;
+                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                    rdf:first 5 ;
+                                                                                                    rdf:rest rdf:nil
+                                                                                                  ]
+                                                                                       ]
+                                                                            ]
+                                                                 ]
+                                                      ]
+                                          ]
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasRoleStatus ;
+                        owl:allValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName> ;
+                        owl:allValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasEntityNumber ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ;
+      rdfs:comment """A Role is defined in the context of some system, it is influenced by the goals of the overall system, and is affected by the elements of the system (e.g. available inputs and outputs). A role describes some part of a system that may be filled by an asset that will be required to perform some activity(s) on some object(s) in the context of the system. Specific requirements resulting from the context of the role are described through constraints on the activity, its input/output states, and the nature of the involved object(s). In the context of the system a role may also be subject to additional, non-functional requirements. A role may exist without an asset assigned to it, but cannot exist outside of the context of some system.
+
+When assigned to an asset, a role describes the responsibility/expected contribution of the asset toward achieving some intended outcome. This intended outcome is typically tied to a need of some other part of the system. Likewise, a Role may rely on the output of some other part of the system. A role may be realized by a physical asset/piece of equipment that is assigned to “fulfill” that part of the system, only if those assets possess the necessary Capability(s).
+
+Roles may be decomposed into separate, more specific sub-roles or aggregated into higher-level super-roles. A Role that can be decomposed is referred to as a NonTerminalRole, and a Role that cannot be decomposed is referred to as a TerminalRole. TerminalRoles and NonTerminalRoles are disjoint. A Role may be defined as supported by or supporting another Role. This describes a procedural dependency between roles wherein the performance of one role is required in order to enable the performance of another role. This supporting relationship can only be defined between sibling Roles (i.e. Roles that are children of the same, Conjunctive Role). A Role must have an associated location. This describes the (approximate) region in space where the role is required to be fulfilled. A single Role may be satisfied by multiple Capabilities. It is possible (though undesirable) for there to not exist any Capabilities that satisfy a particular Role.\"""" ;
+      rdfs:label "FAMO Role"@en .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleCriticalityProperty
+:RoleCriticalityProperty rdf:type owl:Class ;
+                         rdfs:subClassOf :PropertyManifestation ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasSubject ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :Role
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasValue ;
+                                           owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                               owl:oneOf [ rdf:type rdf:List ;
+                                                                           rdf:first 1 ;
+                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                      rdf:first 2 ;
+                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                 rdf:first 3 ;
+                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                            rdf:first 4 ;
+                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                       rdf:first 5 ;
+                                                                                                                       rdf:rest rdf:nil
+                                                                                                                     ]
+                                                                                                          ]
+                                                                                               ]
+                                                                                    ]
+                                                                         ]
+                                                             ]
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasValue ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onDataRange xsd:integer
+                                         ] ;
+                         rdfs:comment "Note: it may be useful to define a \"criticality\" datatype in the future instead of enumerating the integer values in the definition" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation
+:RoleInclusionRelation rdf:type owl:Class ;
+                       rdfs:subClassOf :PropertyManifestation .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation
+:RoleLocationRelation rdf:type owl:Class ;
+                      rdfs:subClassOf :PropertyManifestation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasObject ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :PhysicalSpace
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasSubject ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :Role
+                                      ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleOccupationRelation
+:RoleOccupationRelation rdf:type owl:Class ;
+                        rdfs:subClassOf :PropertyManifestation ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasObject ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSubject ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :Role
+                                        ] ;
+                        rdfs:comment "identifies the relationship between a role and the asset that occupies it, as indicated by some Record." ;
+                        rdfs:label "Role Occupation Relation" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatusProperty
+:RoleStatusProperty rdf:type owl:Class ;
+                    rdfs:subClassOf :PropertyManifestation .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SCADAAlarmState
+:SCADAAlarmState rdf:type owl:Class ;
+                 rdfs:subClassOf :State ;
+                 owl:disjointWith :SCADAWarningState .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SCADAWarningState
+:SCADAWarningState rdf:type owl:Class ;
+                   rdfs:subClassOf :State .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberProperty
+:SerialNumberProperty rdf:type owl:Class ;
+                      rdfs:subClassOf :IdentificationNumberProperty ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValue ;
+                                        owl:allValuesFrom xsd:string
+                                      ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SpaceInclusionRelation
+:SpaceInclusionRelation rdf:type owl:Class ;
+                        rdfs:subClassOf :PropertyManifestation ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasObject ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :PhysicalSpace
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSubject ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :PhysicalSpace
+                                        ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Specification_Performance
+:Specification_Performance rdf:type owl:Class ;
+                           rdfs:subClassOf :InformationArtifact ;
+                           rdfs:comment "Added for demo" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf :FamoThing ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <http://www.w3.org/2006/time#hasTime> ;
+                         owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :representsRoleOfAssetInState ;
+                         owl:allValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName> ;
+                         owl:allValuesFrom xsd:string
+                       ] ;
+       rdfs:label "FAMO State" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/TerminalFunction
+:TerminalFunction rdf:type owl:Class ;
+                  rdfs:subClassOf :Function ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasSubFunction ;
+                                    owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Function
+                                  ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/TerminalRole
+:TerminalRole rdf:type owl:Class ;
+              rdfs:subClassOf :ActualRole ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasSubRole ;
+                                owl:qualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Role
+                              ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/UninterpretableRecord
+:UninterpretableRecord rdf:type owl:Class ;
+                       rdfs:subClassOf :Record .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/WorkOrderTask
+:WorkOrderTask rdf:type owl:Class ;
+               rdfs:subClassOf :Activity .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerAsset
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerAsset> rdf:type owl:Class ;
+                                                         rdfs:subClassOf :Asset .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerRole
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/FormerRole> rdf:type owl:Class ;
+                                                        rdfs:subClassOf :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedAsset
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedAsset> rdf:type owl:Class ;
+                                                              rdfs:subClassOf :Asset .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedRole
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/InvalidatedRole> rdf:type owl:Class ;
+                                                             rdfs:subClassOf :Role .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedAsset
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedAsset> rdf:type owl:Class ;
+                                                          rdfs:subClassOf :Asset .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedRole
+<http://ontology.eil.utoronto.ca/FAMO/mfamo/PlannedRole> rdf:type owl:Class ;
+                                                         rdfs:subClassOf :Role .
+
+
+###  http://ontology.eil.utoronto.ca/ISO21972/iso21972#Feature
+<http://ontology.eil.utoronto.ca/ISO21972/iso21972#Feature> rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation
+Change1:Manifestation rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :afterManifestation ;
+                                        owl:allValuesFrom Change1:Manifestation
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :beforeManifestation ;
+                                        owl:allValuesFrom Change1:Manifestation
+                                      ] .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Goal> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Organization/Organization> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time/Instant
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Time/Instant> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/data/etms_datasystem
+<http://example.com/data/etms_datasystem> rdf:type owl:NamedIndividual ,
+                                                   :DataSystem .
+
+
+###  http://example.com/data/scada_datasystem
+<http://example.com/data/scada_datasystem> rdf:type owl:NamedIndividual ,
+                                                    :DataSystem .
+
+
+###  http://example.com/data/wms_datasystem
+<http://example.com/data/wms_datasystem> rdf:type owl:NamedIndividual ,
+                                                  :DataSystem .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded
+:decommissioned_and_discarded rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place
+:decommissioned_in_place rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/operational
+:operational rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage
+:placed_in_storage rdf:type owl:NamedIndividual .
+
+
+###  http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+<http://www.opengis.net/def/uom/ISO-8601/0/Gregorian> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Friday
+<http://www.w3.org/2006/time#Friday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Monday
+<http://www.w3.org/2006/time#Monday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Saturday
+<http://www.w3.org/2006/time#Saturday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Sunday
+<http://www.w3.org/2006/time#Sunday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Thursday
+<http://www.w3.org/2006/time#Thursday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Tuesday
+<http://www.w3.org/2006/time#Tuesday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#Wednesday
+<http://www.w3.org/2006/time#Wednesday> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitDay
+<http://www.w3.org/2006/time#unitDay> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitHour
+<http://www.w3.org/2006/time#unitHour> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitMinute
+<http://www.w3.org/2006/time#unitMinute> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitMonth
+<http://www.w3.org/2006/time#unitMonth> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitSecond
+<http://www.w3.org/2006/time#unitSecond> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitWeek
+<http://www.w3.org/2006/time#unitWeek> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/time#unitYear
+<http://www.w3.org/2006/time#unitYear> rdf:type owl:NamedIndividual .
+
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Rules
+#################################################################
+
+:s1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer containment between Physical Spaces based on current record values" ;
+   rdfs:label "contained in space" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PhysicalSpace ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSubject ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :s1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :SpaceInclusionRelation ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :containedInSpace ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer the currently accepted SpaceInclusionRelation property" ;
+   rdfs:label "current space inclusion relation" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Record ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :representsSubjectOf ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :SpaceInclusionRelation ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
