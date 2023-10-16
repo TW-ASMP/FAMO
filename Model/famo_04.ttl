@@ -360,6 +360,12 @@ foaf:depiction rdf:type owl:AnnotationProperty .
                       rdfs:subPropertyOf :FamoObjectProperty .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasStatus
+:hasStatus rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ;
+           rdfs:label "FAMO status" .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubFunction
 :hasSubFunction rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :FamoObjectProperty .
@@ -654,21 +660,9 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                  rdfs:subPropertyOf :hasDesignator .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS
-:hasLCS rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf :FAMODataProperty ;
-        rdfs:comment "Identifies the life cycle state of an asset." ;
-        rdfs:label "has life cycle state" .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOEMSerialNo
 :hasOEMSerialNo rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :FAMODataProperty .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus
-:hasRoleStatus rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :FAMODataProperty .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSerialNumber
@@ -773,6 +767,10 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                          owl:allValuesFrom <http://ontology.eil.utoronto.ca/5087/Activity/Activity>
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedIn ;
+                         owl:allValuesFrom :PhysicalSpace
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :occupies ;
                          owl:allValuesFrom :Role
                        ] ,
@@ -782,13 +780,13 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                          owl:onClass :Asset
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> ;
-                         owl:allValuesFrom xsd:string
+                         owl:onProperty :hasStatus ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :AssetStatus
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasLCS ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onDataRange xsd:string
+                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> ;
+                         owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasSerialNumber ;
@@ -814,21 +812,9 @@ All assets have at least one, but possibly more, capability(s). This Capability(
                     "Note: will need to revisit properties defined in earlier versions such as hasPredecessor with respect to updates to Change pattern" .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/AssetLCSProperty
-:AssetLCSProperty rdf:type owl:Class ;
-                  rdfs:subClassOf :PropertyManifestation ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasSubject ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasValue ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
-                                  ] ;
-                  rdfs:comment "identifies the life cycle status of an asset, as indicated by some Record." ;
-                  rdfs:label "Asset LCS Property" .
+###  http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus
+:AssetStatus rdf:type owl:Class ;
+             rdfs:subClassOf :Status .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject
@@ -1081,7 +1067,12 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace
 :PhysicalSpace rdf:type owl:Class ;
-               rdfs:subClassOf :FamoThing .
+               rdfs:subClassOf :FamoThing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasStatus ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :SpaceStatus
+                               ] .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductFamily
@@ -1370,6 +1361,11 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                         owl:allValuesFrom :Role
                       ] ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasStatus ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :RoleStatus
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :hasCriticality ;
                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
                                             owl:oneOf [ rdf:type rdf:List ;
@@ -1389,10 +1385,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                                                                  ]
                                                       ]
                                           ]
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasRoleStatus ;
-                        owl:allValuesFrom xsd:string
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName> ;
@@ -1485,9 +1477,9 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                         rdfs:label "Role Occupation Relation" .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatusProperty
-:RoleStatusProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :PropertyManifestation .
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus
+:RoleStatus rdf:type owl:Class ;
+            rdfs:subClassOf :Status .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/SCADAAlarmState
@@ -1525,6 +1517,11 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                                         ] .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus
+:SpaceStatus rdf:type owl:Class ;
+             rdfs:subClassOf :Status .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/Specification_Performance
 :Specification_Performance rdf:type owl:Class ;
                            rdfs:subClassOf :InformationArtifact ;
@@ -1547,6 +1544,20 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                          owl:allValuesFrom xsd:string
                        ] ;
        rdfs:label "FAMO State" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Status
+:Status rdf:type owl:Class ;
+        rdfs:subClassOf :FamoThing ;
+        rdfs:comment "Statuses are defined (often during reconciliation) to distinguish between different types of objects, i.e., an Actual Asset (a physical object) vs a Former Asset (an information entity)." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation
+:StatusRelation rdf:type owl:Class ;
+                rdfs:subClassOf :PropertyManifestation ;
+                rdfs:comment """- identifies the Status (from a predefined set of objects) of the subject.
+    - it hasSubject exactly one Role, Asset, or Physical Space
+    - it hasObject exactly one Status""" .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/TerminalFunction
@@ -1684,6 +1695,12 @@ Change1:Manifestation rdf:type owl:Class ;
                                                   :DataSystem .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/abandoned_inplace
+:abandoned_inplace rdf:type owl:NamedIndividual ,
+                            :AssetStatus ,
+                            :Status .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded
 :decommissioned_and_discarded rdf:type owl:NamedIndividual .
 
@@ -1692,12 +1709,60 @@ Change1:Manifestation rdf:type owl:Class ;
 :decommissioned_in_place rdf:type owl:NamedIndividual .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/eliminated
+:eliminated rdf:type owl:NamedIndividual ,
+                     :RoleStatus ,
+                     :SpaceStatus ,
+                     :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/missing
+:missing rdf:type owl:NamedIndividual ,
+                  :AssetStatus ,
+                  :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/never_existed
+:never_existed rdf:type owl:NamedIndividual ,
+                        :AssetStatus ,
+                        :RoleStatus ,
+                        :SpaceStatus ,
+                        :Status .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/operational
 :operational rdf:type owl:NamedIndividual .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage
 :placed_in_storage rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/realized
+:realized rdf:type owl:NamedIndividual ,
+                   :RoleStatus ,
+                   :SpaceStatus ,
+                   :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/removed
+:removed rdf:type owl:NamedIndividual ,
+                  :AssetStatus ,
+                  :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/specified
+:specified rdf:type owl:NamedIndividual ,
+                    :AssetStatus ,
+                    :RoleStatus ,
+                    :SpaceStatus ,
+                    :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/usable
+:usable rdf:type owl:NamedIndividual ,
+                 :AssetStatus ,
+                 :Status .
 
 
 ###  http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
