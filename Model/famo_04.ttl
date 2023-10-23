@@ -1037,8 +1037,7 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
                    rdfs:subClassOf :PropertyManifestation ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasSubject ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                     owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasValue ;
@@ -1077,6 +1076,15 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
                                    owl:onClass :Role
                                  ] ;
                  owl:disjointWith :TerminalRole .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/NotLast
+:NotLast rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty Change1:hasNextManifestation ;
+                               owl:someValuesFrom :PropertyManifestation
+                             ] ;
+         rdfs:subClassOf :PropertyManifestation .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace
@@ -1183,6 +1191,10 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                                                      )
                                        ] ,
                                        [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasSubject ;
+                                         owl:someValuesFrom owl:Thing
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :assertedBy ;
                                          owl:allValuesFrom :Agent
                                        ] ,
@@ -1205,10 +1217,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :objectWasRepresentedBy ;
                                          owl:allValuesFrom :Record
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasSubject ;
-                                         owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasValue ;
@@ -1422,8 +1430,7 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                          rdfs:subClassOf :PropertyManifestation ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasSubject ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onClass :Role
+                                           owl:someValuesFrom :Role
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasValue ;
@@ -1464,13 +1471,11 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                       rdfs:subClassOf :PropertyManifestation ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasObject ;
-                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                        owl:onClass :PhysicalSpace
+                                        owl:someValuesFrom :PhysicalSpace
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasSubject ;
-                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                        owl:onClass :Role
+                                        owl:someValuesFrom :Role
                                       ] .
 
 
@@ -1479,13 +1484,11 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                         rdfs:subClassOf :PropertyManifestation ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasObject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                          owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasSubject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :Role
+                                          owl:someValuesFrom :Role
                                         ] ;
                         rdfs:comment "identifies the relationship between a role and the asset that occupies it, as indicated by some Record." ;
                         rdfs:label "Role Occupation Relation" .
@@ -1521,13 +1524,11 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                         rdfs:subClassOf :PropertyManifestation ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasObject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :PhysicalSpace
+                                          owl:someValuesFrom :PhysicalSpace
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasSubject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :PhysicalSpace
+                                          owl:someValuesFrom :PhysicalSpace
                                         ] .
 
 
@@ -1746,6 +1747,23 @@ Change1:Manifestation rdf:type owl:Class ;
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/operational
 :operational rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p1
+:p1 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation ;
+    Change1:hasNextManifestation :p2 .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p2
+:p2 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation ;
+    Change1:hasNextManifestation :p3 .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p3
+:p3 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage
@@ -2065,6 +2083,46 @@ Change1:Manifestation rdf:type owl:Class ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :occupiedBy ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer the currently accepted value of a motorsize property" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Record ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :representsSubjectOf ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :MotorsizeProperty ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
