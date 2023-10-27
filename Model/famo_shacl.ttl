@@ -1,0 +1,41 @@
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>.
+@prefix famo_shacl: <http://ontology.eil.utoronto.ca/FAMO/famo_shacl/>.
+@prefix famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>.
+@prefix famo_assets: <http://ontology.eil.utoronto.ca/FAMO/assets/>.
+@prefix ex: <http://example.com/data/>.
+@prefix change: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/>.
+
+#working shacl file to test constraints identified in https://tw-docs.atlassian.net/browse/FAMO-13
+
+#R1a: an entity (role) may not have more than one parent (#hierarchy)
+famo_shacl:r1a-role a sh:NodeShape;
+	sh:targetClass famo:Role;
+	sh:property famo_shacl:r1a-subclass.
+	
+famo_shacl:r1a-subclass a sh:PropertyShape;
+	sh:path famo:subRoleOf;
+	sh:description "An entity may not have more than one parent";
+	sh:maxCount 1.
+	
+#R1b:  a record may not represent an entity as *currently* having more than one parent
+#R1b-1
+famo_shacl:r1b a sh:NodeShape;
+	sh:targetClass famo:RoleInclusionProperty;
+	sh:property famo_shacl:r1b1-object.
+
+famo_shacl:r1b1-object a sh:PropertyShape;
+	sh:path famo:objectIsRepresentedBy;
+	sh:description "A RoleInclusionProperty may not have more than one object (parent role record)";
+	sh:maxCount 1.
+	
+#R1b-2
+famo_shacl:r1b a sh:NodeShape;
+	sh:targetClass famo:Record;
+	sh:property famo_shacl:r1b2-subject.
+famo_shacl:r1b2-subject a sh:PropertyShape;
+		sh:path famo:representsSubjectOf;
+		sh:class famo:RoleInclusionProperty;
+		sh:class famo:CurrentPropertyManifestation;
+		sh:description "A Record may not be the subject of more than one (current) RoleInclusionProperty";
+		sh:maxCount 1.

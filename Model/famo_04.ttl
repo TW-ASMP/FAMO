@@ -140,12 +140,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
                  rdfs:subPropertyOf :FamoObjectProperty .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation
-:afterManifestation rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :FamoObjectProperty ;
-                    rdfs:comment "A transitive ordering on manifestations, afterManifestation is a generalization of hasPreviousManifestation." .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities
 :allowsOnlyActivities rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :functionalOperatingConstraint ;
@@ -175,12 +169,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
           rdfs:subPropertyOf :FamoObjectProperty ,
                              prov1:influenced ;
           owl:inverseOf :hasAuthor .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation
-:beforeManifestation rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :FamoObjectProperty ;
-                     rdfs:comment "A transitive ordering on Manifestations, beforeManifestation is a generalization of hasNextManifestation" .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/causedBy
@@ -833,6 +821,16 @@ All assets have at least one, but possibly more, capability(s). This Capability(
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation
 :CurrentPropertyManifestation rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( :PropertyManifestation
+                                                                         [ rdf:type owl:Class ;
+                                                                           owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty Change1:hasNextManifestation ;
+                                                                                              owl:someValuesFrom :PropertyManifestation
+                                                                                            ]
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
                               rdfs:subClassOf :PropertyManifestation ;
                               owl:disjointWith :PastPropertyManifestation ;
                               rdfs:comment "A Property Manifestation that has been identified as corresponding to the current known value (best reflection of reality) for a data hub entity." .
@@ -1059,10 +1057,6 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation
 :PastPropertyManifestation rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                 owl:onProperty Change1:hasNextManifestation ;
-                                                 owl:someValuesFrom :PropertyManifestation
-                                               ] ;
                            rdfs:subClassOf :PropertyManifestation .
 
 
@@ -1619,15 +1613,7 @@ rdf:List rdf:type owl:Class .
 
 
 ###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation
-Change1:Manifestation rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty :afterManifestation ;
-                                        owl:allValuesFrom Change1:Manifestation
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :beforeManifestation ;
-                                        owl:allValuesFrom Change1:Manifestation
-                                      ] .
+Change1:Manifestation rdf:type owl:Class .
 
 
 ###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney
