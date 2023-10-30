@@ -140,12 +140,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
                  rdfs:subPropertyOf :FamoObjectProperty .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/afterManifestation
-:afterManifestation rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :FamoObjectProperty ;
-                    rdfs:comment "A transitive ordering on manifestations, afterManifestation is a generalization of hasPreviousManifestation." .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/allowsOnlyActivities
 :allowsOnlyActivities rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :functionalOperatingConstraint ;
@@ -177,12 +171,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
           owl:inverseOf :hasAuthor .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/beforeManifestation
-:beforeManifestation rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :FamoObjectProperty ;
-                     rdfs:comment "A transitive ordering on Manifestations, beforeManifestation is a generalization of hasNextManifestation" .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/causedBy
 :causedBy rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :FamoObjectProperty .
@@ -190,7 +178,7 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/containedInSpace
 :containedInSpace rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :FamoObjectProperty ,
+                  rdfs:subPropertyOf :transContainedInSpace ,
                                      <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/containedIn> .
 
 
@@ -360,6 +348,12 @@ foaf:depiction rdf:type owl:AnnotationProperty .
                       rdfs:subPropertyOf :FamoObjectProperty .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasStatus
+:hasStatus rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ;
+           rdfs:label "FAMO status" .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSubFunction
 :hasSubFunction rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :FamoObjectProperty .
@@ -452,12 +446,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
                        owl:inverseOf :representsObjectOf .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/objectWasRepresentedBy
-:objectWasRepresentedBy rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :FamoObjectProperty ;
-                        owl:inverseOf :representedObjectOf .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/occupiedBy
 :occupiedBy rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :satisfiedByAsset ;
@@ -485,17 +473,6 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/replaces
 :replaces rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :FamoObjectProperty .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/representedObjectOf
-:representedObjectOf rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :FamoObjectProperty .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/representedSubjectOf
-:representedSubjectOf rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :FamoObjectProperty ;
-                      owl:inverseOf :subjectWasRepresentedBy .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/represents
@@ -564,18 +541,14 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/subRoleOf
 :subRoleOf rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :FamoObjectProperty ;
+           rdfs:subPropertyOf :FamoObjectProperty ,
+                              :transSubRoleOf ;
            rdfs:label "is child of" .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy
 :subjectIsRepresentedBy rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :FamoObjectProperty .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/subjectWasRepresentedBy
-:subjectWasRepresentedBy rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :FamoObjectProperty .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/supportsFunction
@@ -588,6 +561,19 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/supportsRole
 :supportsRole rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :FamoObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/transContainedInSpace
+:transContainedInSpace rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :FamoObjectProperty ;
+                       rdf:type owl:TransitiveProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/transSubRoleOf
+:transSubRoleOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :FamoObjectProperty ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:label "is ancestor role of" .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/validFor
@@ -654,21 +640,9 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                  rdfs:subPropertyOf :hasDesignator .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/hasLCS
-:hasLCS rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf :FAMODataProperty ;
-        rdfs:comment "Identifies the life cycle state of an asset." ;
-        rdfs:label "has life cycle state" .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasOEMSerialNo
 :hasOEMSerialNo rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :FAMODataProperty .
-
-
-###  http://ontology.eil.utoronto.ca/FAMO/famo/hasRoleStatus
-:hasRoleStatus rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :FAMODataProperty .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/hasSerialNumber
@@ -773,6 +747,10 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                          owl:allValuesFrom <http://ontology.eil.utoronto.ca/5087/Activity/Activity>
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :locatedIn ;
+                         owl:allValuesFrom :PhysicalSpace
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :occupies ;
                          owl:allValuesFrom :Role
                        ] ,
@@ -782,13 +760,13 @@ Change1:existsAt rdf:type owl:ObjectProperty .
                          owl:onClass :Asset
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> ;
-                         owl:allValuesFrom xsd:string
+                         owl:onProperty :hasStatus ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :AssetStatus
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasLCS ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onDataRange xsd:string
+                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/1/GenericProperties/hasName> ;
+                         owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasSerialNumber ;
@@ -814,21 +792,9 @@ All assets have at least one, but possibly more, capability(s). This Capability(
                     "Note: will need to revisit properties defined in earlier versions such as hasPredecessor with respect to updates to Change pattern" .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/AssetLCSProperty
-:AssetLCSProperty rdf:type owl:Class ;
-                  rdfs:subClassOf :PropertyManifestation ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasSubject ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasValue ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
-                                  ] ;
-                  rdfs:comment "identifies the life cycle status of an asset, as indicated by some Record." ;
-                  rdfs:label "Asset LCS Property" .
+###  http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus
+:AssetStatus rdf:type owl:Class ;
+             rdfs:subClassOf :Status .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/CapitalProject
@@ -855,7 +821,18 @@ All assets have at least one, but possibly more, capability(s). This Capability(
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation
 :CurrentPropertyManifestation rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( :PropertyManifestation
+                                                                         [ rdf:type owl:Class ;
+                                                                           owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty Change1:hasNextManifestation ;
+                                                                                              owl:someValuesFrom :PropertyManifestation
+                                                                                            ]
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
                               rdfs:subClassOf :PropertyManifestation ;
+                              owl:disjointWith :PastPropertyManifestation ;
                               rdfs:comment "A Property Manifestation that has been identified as corresponding to the current known value (best reflection of reality) for a data hub entity." .
 
 
@@ -1037,8 +1014,7 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
                    rdfs:subClassOf :PropertyManifestation ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasSubject ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                     owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasValue ;
@@ -1079,9 +1055,19 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
                  owl:disjointWith :TerminalRole .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation
+:PastPropertyManifestation rdf:type owl:Class ;
+                           rdfs:subClassOf :PropertyManifestation .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace
 :PhysicalSpace rdf:type owl:Class ;
-               rdfs:subClassOf :FamoThing .
+               rdfs:subClassOf :FamoThing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasStatus ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :SpaceStatus
+                               ] .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/ProductFamily
@@ -1164,18 +1150,9 @@ For example, Apple manufactures a line of macbooks, which can be further divided
 :PropertyManifestation rdf:type owl:Class ;
                        rdfs:subClassOf :FamoThing ,
                                        Change1:Manifestation ,
-                                       [ rdf:type owl:Class ;
-                                         owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :subjectIsRepresentedBy ;
-                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                         owl:onClass :Record
-                                                       ]
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :subjectWasRepresentedBy ;
-                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                         owl:onClass :Record
-                                                       ]
-                                                     )
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasSubject ;
+                                         owl:someValuesFrom owl:Thing
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :assertedBy ;
@@ -1198,12 +1175,13 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                                          owl:allValuesFrom :Record
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :objectWasRepresentedBy ;
+                                         owl:onProperty :subjectIsRepresentedBy ;
                                          owl:allValuesFrom :Record
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasSubject ;
-                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         owl:onProperty :instantiatedIn ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :DataSystem
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasValue ;
@@ -1219,10 +1197,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasRecordLocation ;
                           owl:allValuesFrom :RecordLocation
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :representedObjectOf ;
-                          owl:allValuesFrom :PropertyManifestation
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :representsAssetInState ;
@@ -1370,6 +1344,11 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                         owl:allValuesFrom :Role
                       ] ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasStatus ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :RoleStatus
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :hasCriticality ;
                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
                                             owl:oneOf [ rdf:type rdf:List ;
@@ -1389,10 +1368,6 @@ For example, Apple manufactures a line of macbooks, which can be further divided
                                                                  ]
                                                       ]
                                           ]
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasRoleStatus ;
-                        owl:allValuesFrom xsd:string
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName> ;
@@ -1416,8 +1391,7 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                          rdfs:subClassOf :PropertyManifestation ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasSubject ;
-                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onClass :Role
+                                           owl:someValuesFrom :Role
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasValue ;
@@ -1458,13 +1432,11 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                       rdfs:subClassOf :PropertyManifestation ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasObject ;
-                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                        owl:onClass :PhysicalSpace
+                                        owl:someValuesFrom :PhysicalSpace
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasSubject ;
-                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                        owl:onClass :Role
+                                        owl:someValuesFrom :Role
                                       ] .
 
 
@@ -1473,21 +1445,19 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                         rdfs:subClassOf :PropertyManifestation ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasObject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
+                                          owl:someValuesFrom <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Asset>
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasSubject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :Role
+                                          owl:someValuesFrom :Role
                                         ] ;
                         rdfs:comment "identifies the relationship between a role and the asset that occupies it, as indicated by some Record." ;
                         rdfs:label "Role Occupation Relation" .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatusProperty
-:RoleStatusProperty rdf:type owl:Class ;
-                    rdfs:subClassOf :PropertyManifestation .
+###  http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus
+:RoleStatus rdf:type owl:Class ;
+            rdfs:subClassOf :Status .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/SCADAAlarmState
@@ -1515,14 +1485,17 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                         rdfs:subClassOf :PropertyManifestation ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasObject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :PhysicalSpace
+                                          owl:someValuesFrom :PhysicalSpace
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasSubject ;
-                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :PhysicalSpace
+                                          owl:someValuesFrom :PhysicalSpace
                                         ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus
+:SpaceStatus rdf:type owl:Class ;
+             rdfs:subClassOf :Status .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/Specification_Performance
@@ -1547,6 +1520,20 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
                          owl:allValuesFrom xsd:string
                        ] ;
        rdfs:label "FAMO State" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Status
+:Status rdf:type owl:Class ;
+        rdfs:subClassOf :FamoThing ;
+        rdfs:comment "Statuses are defined (often during reconciliation) to distinguish between different types of objects, i.e., an Actual Asset (a physical object) vs a Former Asset (an information entity)." .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation
+:StatusRelation rdf:type owl:Class ;
+                rdfs:subClassOf :PropertyManifestation ;
+                rdfs:comment """- identifies the Status (from a predefined set of objects) of the subject.
+    - it hasSubject exactly one Role, Asset, or Physical Space
+    - it hasObject exactly one Status""" .
 
 
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/TerminalFunction
@@ -1626,15 +1613,7 @@ rdf:List rdf:type owl:Class .
 
 
 ###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/Manifestation
-Change1:Manifestation rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                        owl:onProperty :afterManifestation ;
-                                        owl:allValuesFrom Change1:Manifestation
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :beforeManifestation ;
-                                        owl:allValuesFrom Change1:Manifestation
-                                      ] .
+Change1:Manifestation rdf:type owl:Class .
 
 
 ###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM/AmountOfMoney
@@ -1684,6 +1663,12 @@ Change1:Manifestation rdf:type owl:Class ;
                                                   :DataSystem .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/abandoned_inplace
+:abandoned_inplace rdf:type owl:NamedIndividual ,
+                            :AssetStatus ,
+                            :Status .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded
 :decommissioned_and_discarded rdf:type owl:NamedIndividual .
 
@@ -1692,12 +1677,77 @@ Change1:Manifestation rdf:type owl:Class ;
 :decommissioned_in_place rdf:type owl:NamedIndividual .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/eliminated
+:eliminated rdf:type owl:NamedIndividual ,
+                     :RoleStatus ,
+                     :SpaceStatus ,
+                     :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/missing
+:missing rdf:type owl:NamedIndividual ,
+                  :AssetStatus ,
+                  :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/never_existed
+:never_existed rdf:type owl:NamedIndividual ,
+                        :AssetStatus ,
+                        :RoleStatus ,
+                        :SpaceStatus ,
+                        :Status .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/operational
 :operational rdf:type owl:NamedIndividual .
 
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p1
+:p1 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation ;
+    Change1:hasNextManifestation :p2 .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p2
+:p2 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation ;
+    Change1:hasNextManifestation :p3 .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/p3
+:p3 rdf:type owl:NamedIndividual ,
+             :PropertyManifestation .
+
+
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage
 :placed_in_storage rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/realized
+:realized rdf:type owl:NamedIndividual ,
+                   :RoleStatus ,
+                   :SpaceStatus ,
+                   :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/removed
+:removed rdf:type owl:NamedIndividual ,
+                  :AssetStatus ,
+                  :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/specified
+:specified rdf:type owl:NamedIndividual ,
+                    :AssetStatus ,
+                    :RoleStatus ,
+                    :SpaceStatus ,
+                    :Status .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/usable
+:usable rdf:type owl:NamedIndividual ,
+                 :AssetStatus ,
+                 :Status .
 
 
 ###  http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
@@ -1770,13 +1820,65 @@ Change1:Manifestation rdf:type owl:Class ;
 #    Rules
 #################################################################
 
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 :s1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :s2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 :r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:d rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer motorsize of an Asset based on current record values" ;
+   rdfs:label "motor size" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :MotorsizeProperty ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSubject ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :s1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasValue ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :motorSize ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "Rule to infer containment between Physical Spaces based on current record values" ;
@@ -1799,17 +1901,24 @@ Change1:Manifestation rdf:type owl:Class ;
                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :SpaceInclusionRelation ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :SpaceInclusionRelation ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p
                                                                                                  ] ;
-                                                                                       rdf:rest rdf:nil
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
                                                                                      ]
                                                                           ]
                                                                ]
@@ -1826,40 +1935,179 @@ Change1:Manifestation rdf:type owl:Class ;
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "Rule to infer the currently accepted SpaceInclusionRelation property" ;
-   rdfs:label "current space inclusion relation" ;
+   rdfs:comment "Rule to infer the parent role of a Role given the current RoleInclusionRelation" ;
+   rdfs:label "subrole of" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Record ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :r
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :representsSubjectOf ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :RoleInclusionRelation ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :SpaceInclusionRelation ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSubject ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :s1
                                                                                       ] ;
-                                                                            rdf:rest rdf:nil
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
                                                                           ]
                                                                ]
                                                     ]
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :subRoleOf ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer the PhysicalSpace that a Role is located in based on the current RoleLocationRelation" ;
+   rdfs:label "role located in" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :RoleLocationRelation ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSubject ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :s1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :locatedIn ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer the Asset that a Role is occupied by based on the current RoleOccupationRelation" ;
+   rdfs:label "occupied by" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CurrentPropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.com/data/wms_datasystem>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :RoleOccupationRelation ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasSubject ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :s1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasObject ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :occupiedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "infers the data system that the property is/was instantiated in, based upon its associated record" ;
+   rdfs:label "property instantiated in data system" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PropertyManifestation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :representsSubjectOf ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :r ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :d
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :instantiatedIn ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :d
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
