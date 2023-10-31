@@ -9,16 +9,24 @@
 #working shacl file to test constraints identified in https://tw-docs.atlassian.net/browse/FAMO-13
 
 #R1a: an entity (role) may not have more than one parent (#hierarchy)
+#R3a: a role cannot be the ancestor of itself (there may not be a loop in the hierarchy - the hierarchy must be a DAG. (#hierarchy))
 famo_shacl:r1a-role a sh:NodeShape;
 	sh:targetClass famo:Role;
-	sh:property famo_shacl:r1a-subclass.
+	sh:property famo_shacl:r1a-subRole;
+	sh:property famo_shacl:r3-subrole_irreflexive.
 	
-famo_shacl:r1a-subclass a sh:PropertyShape;
+famo_shacl:r1a-subRole a sh:PropertyShape;
 	sh:path famo:subRoleOf;
-	sh:description "An entity may not have more than one parent";
+	sh:description "An Role may not have more than one parent";
 	sh:maxCount 1.
 	
-#R1b:  a record may not represent an entity as *currently* having more than one parent
+famo_shacl:r3-subrole_irreflexive a sh:PropertyShape;
+	sh:path famo:transSubRoleOf;
+	sh:disjoint [sh:inversePath famo:transSubRoleOf];
+	sh:description "A Role may not be an ancestor of itself (no loops in the hierarchy)".
+	
+
+#R1b: a record may not represent an entity as *currently* having more than one parent
 #R1b-1
 famo_shacl:r1b a sh:NodeShape;
 	sh:targetClass famo:RoleInclusionProperty;
@@ -33,9 +41,23 @@ famo_shacl:r1b1-object a sh:PropertyShape;
 famo_shacl:r1b a sh:NodeShape;
 	sh:targetClass famo:Record;
 	sh:property famo_shacl:r1b2-subject.
+	
 famo_shacl:r1b2-subject a sh:PropertyShape;
 		sh:path famo:representsSubjectOf;
 		sh:class famo:RoleInclusionProperty;
 		sh:class famo:CurrentPropertyManifestation;
 		sh:description "A Record may not be the subject of more than one (current) RoleInclusionProperty";
 		sh:maxCount 1.
+		
+#R2
+famo_shacl:r2 a sh:NodeShape;
+	sh:targetClass famo:Role;
+	sh:targetClass [sh:not famo:FacilityRole]; # for all Roles that are not Facility Roles (exact class name tbd)
+	sh:property famo_shacl:r2-subRole.
+	
+famo_shacl:r1b2-subject a sh:PropertyShape;
+		sh:path famo:subRoleOf;
+		sh:description "All Roles (except Facility level Roles) must have a parent, i.e. be a subRole of some role";
+		sh:minCount 1.
+		
+#R3b: a record may not represent a role as *currently* having itself as an ancestor

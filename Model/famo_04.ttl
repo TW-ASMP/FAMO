@@ -572,7 +572,8 @@ foaf:depiction rdf:type owl:AnnotationProperty .
 ###  http://ontology.eil.utoronto.ca/FAMO/famo/transSubRoleOf
 :transSubRoleOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :FamoObjectProperty ;
-                rdf:type owl:TransitiveProperty ;
+                rdf:type owl:TransitiveProperty ,
+                         owl:IrreflexiveProperty ;
                 rdfs:label "is ancestor role of" .
 
 

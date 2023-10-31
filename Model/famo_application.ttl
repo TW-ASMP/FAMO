@@ -1,0 +1,226 @@
+@prefix : <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix Change: <http://ontology.eil.utoronto.ca/5087/1/Change/> .
+@prefix Change1: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@base <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/> .
+
+<http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/> rdf:type owl:Ontology ;
+                                                              owl:imports <http://ontology.eil.utoronto.ca/FAMO/famo/> ;
+                                                              dc:creator """Megan Katsumi, University of Toronto
+Mark Fox, University of Toronto
+Tony Huang, Toronto Water""" ;
+                                                              dc:title "Famo Data Hub Application Extension"@en ;
+                                                              vann:preferredNamespaceUri "http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/" ;
+                                                              owl:versionInfo "An extension of FAMO 0.4 with application-specific terms."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/denotes
+<http://ontology.eil.utoronto.ca/FAMO/famo/denotes> rdf:type owl:ObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation
+<http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation> rdf:type owl:ObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/hasObject
+<http://ontology.eil.utoronto.ca/FAMO/famo/hasObject> rdf:type owl:ObjectProperty ;
+                                                      owl:propertyChainAxiom ( <http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy>
+                                                                               <http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation>
+                                                                               <http://ontology.eil.utoronto.ca/FAMO/famo/denotes>
+                                                                             ) .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy
+<http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppObjectProperty
+:FamoAppObjectProperty rdf:type owl:ObjectProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsAncestorRoleOfRecord
+:representsAncestorRoleOfRecord rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :FamoAppObjectProperty ;
+                                rdf:type owl:TransitiveProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsChildRoleOfRecord
+:representsChildRoleOfRecord rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :representsAncestorRoleOfRecord .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/FamoAppDataProperty
+:FamoAppDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/beginOfExistsAtXSDDateTimeStamp
+:beginOfExistsAtXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/endOfExistsAtXSDDateTimeStamp
+:endOfExistsAtXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existenceAnnotation
+:existenceAnnotation rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :FamoAppDataProperty ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:oneOf [ rdf:type rdf:List ;
+                                              rdf:first "Cannot be confirmed" ;
+                                              rdf:rest [ rdf:type rdf:List ;
+                                                         rdf:first "Confirmed" ;
+                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                    rdf:first "Does not exist" ;
+                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                               rdf:first "To be investigated" ;
+                                                                               rdf:rest rdf:nil
+                                                                             ]
+                                                                  ]
+                                                       ]
+                                            ]
+                                ] .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/existsAtXSDDateTimeStamp
+:existsAtXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualBeginningXSDDateTimeStamp
+:hasActualBeginningXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualEndXSDDateTimeStamp
+:hasActualEndXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasActualTimeXSDDateTimeStamp
+:hasActualTimeXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasBeginningXSDDateTimeStamp
+:hasBeginningXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasEndXSDDateTimeStamp
+:hasEndXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/hasXSDDateTimeStamp
+:hasXSDDateTimeStamp rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :FamoAppDataProperty .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:rec1 rdf:type swrl:Variable .
+
+:p rdf:type swrl:Variable .
+
+:rec2 rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer whether a record currently represents the child of another (analogous to subrole of inference)" ;
+   rdfs:label "represents child role of record" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :representsChildRoleOfRecord ;
+                           swrl:argument1 :rec1 ;
+                           swrl:argument2 :rec2
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head rdf:nil
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "Rule to infer that a record currently represents the child (sub role) of a role represented by another record" ;
+   rdfs:label "represents child of role record" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/representsSubjectOf> ;
+                           swrl:argument1 :rec1 ;
+                           swrl:argument2 :p
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation> ;
+                                      swrl:argument1 :p
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf> ;
+                                                 swrl:argument1 :rec2 ;
+                                                 swrl:argument2 :p
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :representsChildRoleOfRecord ;
+                           swrl:argument1 :rec1 ;
+                           swrl:argument2 :rec2
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
