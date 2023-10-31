@@ -40,7 +40,8 @@ famo_shacl:r1b1-object a sh:PropertyShape;
 #R1b-2
 famo_shacl:r1b a sh:NodeShape;
 	sh:targetClass famo:Record;
-	sh:property famo_shacl:r1b2-subject.
+	sh:property famo_shacl:r1b2-subject;
+	sh:property famo_shacl:ancestor_irreflexive.
 	
 famo_shacl:r1b2-subject a sh:PropertyShape;
 		sh:path famo:representsSubjectOf;
@@ -48,6 +49,12 @@ famo_shacl:r1b2-subject a sh:PropertyShape;
 		sh:class famo:CurrentPropertyManifestation;
 		sh:description "A Record may not be the subject of more than one (current) RoleInclusionProperty";
 		sh:maxCount 1.
+
+#R3b: a record may not represent a role as *currently* having itself as an ancestor
+famo_shacl:r3b-ancestor_irreflexive a sh:PropertyShape;
+	sh:path famo_app:representsAncestorRoleOfRecord;
+	sh:disjoint [sh:inversePath famo_app:representsAncestorRoleOfRecord];
+	sh:description "A Record may not represent a Role as the ancestor of itself (no loops in the record hierarchy)".
 		
 #R2
 famo_shacl:r2 a sh:NodeShape;
@@ -60,4 +67,36 @@ famo_shacl:r1b2-subject a sh:PropertyShape;
 		sh:description "All Roles (except Facility level Roles) must have a parent, i.e. be a subRole of some role";
 		sh:minCount 1.
 		
-#R3b: a record may not represent a role as *currently* having itself as an ancestor
+#R4a: every role number (entity number) must be unique
+famo_shacl:r4a-unique_enum a sh:NodeShape;
+	sh:targetObjectsOf famo:hasEntityNumber;
+	sh:property [
+		sh:path 	[sh:inversePath famo:hasEntityNumber];
+		sh:maxCount 1;
+		].
+	
+#R4b: every role number *currently* represented in a record must be unique *in a particular datasystem*
+#we can do this with a SPARQL embedding - but is there another way?
+famo_shacl:r4b-unique_enum a sh:NodeShape;
+	sh:targetClass a famo:EntityNumberProperty;
+	sh:targetClass a famo:CurrentPropertyManifestation;
+	sh:sparql [
+		a sh:SPARQLConstraint ;   # This triple is optional
+		sh:message "The entity number currently represented by a role record must be unique in a given data system." ;
+    sh:select """
+				PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+        SELECT DISTINCT ?this ?value ?other WHERE {
+            ?this famo:hasValue ?value .
+            ?other famo:hasValue ?value .
+            FILTER (?other != ?this) .
+            ?other a famo:EntityNumberProperty;
+								a famo:CurrentPropertyManifestation;
+								famo:instantiatedIn ?ds.
+            ?this a famo:EntityNumberProperty;
+								a famo:CurrentPropertyManifestation;
+								famo:instantiatedIn ?ds.
+        }
+        """		
+		].
+	

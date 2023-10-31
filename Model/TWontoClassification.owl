@@ -7,7 +7,10 @@
 @base <http://www.toronto.ca/twonto#> .
 
 <http://www.toronto.ca/twonto> rdf:type owl:Ontology ;
-                                owl:versionIRI <http://www.toronto.ca/twonto/0.1> .
+                                owl:versionIRI <http://www.toronto.ca/twonto/0.1> ;
+                                owl:imports <http://ontology.eil.utoronto.ca/FAMO/famo/> ;
+                                <http://purl.org/dc/terms/description> """Toronto Water Classification.
+This classification extends the core Foundational Asset Management Ontology (FAMO) with Toronto Water-specific classifications of Assets, Roles, and (eventually) Physical Spaces.""" .
 
 #################################################################
 #    Annotation properties
@@ -22,15 +25,17 @@
 #################################################################
 
 ###  http://www.toronto.ca/twonto#00042
-<http://www.toronto.ca/twonto#00042> rdf:type owl:ObjectProperty ,
-                                              owl:AsymmetricProperty ,
+<http://www.toronto.ca/twonto#00042> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
+                                     rdf:type owl:AsymmetricProperty ,
                                               owl:IrreflexiveProperty ;
                                      rdfs:label "has operator" .
 
 
 ###  http://www.toronto.ca/twonto#00043
-<http://www.toronto.ca/twonto#00043> rdf:type owl:ObjectProperty ,
-                                              owl:FunctionalProperty ,
+<http://www.toronto.ca/twonto#00043> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
+                                     rdf:type owl:FunctionalProperty ,
                                               owl:AsymmetricProperty ,
                                               owl:TransitiveProperty ,
                                               owl:IrreflexiveProperty ;
@@ -39,16 +44,21 @@
 
 
 ###  http://www.toronto.ca/twonto#00044
-<http://www.toronto.ca/twonto#00044> rdf:type owl:ObjectProperty ,
-                                              owl:FunctionalProperty ,
+<http://www.toronto.ca/twonto#00044> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
+                                     rdf:type owl:FunctionalProperty ,
                                               owl:AsymmetricProperty ,
                                               owl:IrreflexiveProperty ;
                                      rdfs:label "record from" .
 
 
+###  http://www.toronto.ca/twonto/TWOntoObjectProperty
+<http://www.toronto.ca/twonto/TWOntoObjectProperty> rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
-                      rdfs:range <http://www.toronto.ca/twonto#00036> .
+owl:topObjectProperty rdfs:domain <http://ontology.eil.utoronto.ca/FAMO/famo/Asset> ;
+                      rdfs:range <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> .
 
 
 #################################################################
@@ -69,50 +79,62 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
 
 ###  http://www.toronto.ca/twonto#00045
 <http://www.toronto.ca/twonto#00045> rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoDataProperty> ;
                                      rdfs:label "has diameter" .
 
 
 ###  http://www.toronto.ca/twonto#00046
-<http://www.toronto.ca/twonto#00046> rdf:type owl:DatatypeProperty ,
-                                              owl:FunctionalProperty ;
+<http://www.toronto.ca/twonto#00046> rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoDataProperty> ;
+                                     rdf:type owl:FunctionalProperty ;
                                      rdfs:domain <http://www.toronto.ca/twonto#00011> ;
                                      rdfs:label "valve property" .
+
+
+###  http://www.toronto.ca/twonto/TWOntoDataProperty
+<http://www.toronto.ca/twonto/TWOntoDataProperty> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Asset
+<http://ontology.eil.utoronto.ca/FAMO/famo/Asset> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Function
+<http://ontology.eil.utoronto.ca/FAMO/famo/Function> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> ;
+                                                     rdfs:label "function" .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace
+<http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo/Role
+<http://ontology.eil.utoronto.ca/FAMO/famo/Role> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> .
+
+
 ###  http://www.toronto.ca/twonto#foral-patal-fabip-litam
 :foral-patal-fabip-litam rdf:type owl:Class ;
-                         rdfs:subClassOf <http://www.toronto.ca/twonto#00000> ;
+                         rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Asset> ;
                          rdfs:label "Distribution and Collection Network Asset"@en .
-
-
-###  http://www.toronto.ca/twonto#00000
-<http://www.toronto.ca/twonto#00000> rdf:type owl:Class ;
-                                     rdfs:label "asset" .
-
-
-###  http://www.toronto.ca/twonto#00002
-<http://www.toronto.ca/twonto#00002> rdf:type owl:Class ;
-                                     rdfs:label "asset role"@en .
-
-
-###  http://www.toronto.ca/twonto#00003
-<http://www.toronto.ca/twonto#00003> rdf:type owl:Class ;
-                                     rdfs:label "function" .
 
 
 ###  http://www.toronto.ca/twonto#00006
 <http://www.toronto.ca/twonto#00006> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00000> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Asset> ;
                                      rdfs:label "collection of discrete assets" .
 
 
 ###  http://www.toronto.ca/twonto#00007
 <http://www.toronto.ca/twonto#00007> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00000> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Asset> ;
                                      rdfs:label "discrete asset"@en .
 
 
@@ -212,11 +234,6 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
                                      rdfs:label "sewer service connection" .
 
 
-###  http://www.toronto.ca/twonto#00023
-<http://www.toronto.ca/twonto#00023> rdf:type owl:Class ;
-                                     rdfs:label "space"@en .
-
-
 ###  http://www.toronto.ca/twonto#00024
 <http://www.toronto.ca/twonto#00024> rdf:type owl:Class ;
                                      rdfs:subClassOf <http://www.toronto.ca/twonto#00026> ;
@@ -237,26 +254,26 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
 
 ###  http://www.toronto.ca/twonto#00028
 <http://www.toronto.ca/twonto#00028> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00002> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Role> ;
                                      rdfs:label "valve role"@en .
 
 
 ###  http://www.toronto.ca/twonto#00029
 <http://www.toronto.ca/twonto#00029> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00003> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Function> ;
                                      rdfs:label "containment" .
 
 
 ###  http://www.toronto.ca/twonto#00030
 <http://www.toronto.ca/twonto#00030> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00003> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Function> ;
                                      rdfs:isDefinedBy "a function that is realized when a physical or chemical property of the thing being processed is changed by the bearer of the function." ;
                                      rdfs:label "processing" .
 
 
 ###  http://www.toronto.ca/twonto#00031
 <http://www.toronto.ca/twonto#00031> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00003> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Function> ;
                                      rdfs:comment "store function implies the existance of containment function." ;
                                      rdfs:isDefinedBy "a function that is realized when the input flow in to the bearer of the function is greater than the output flow and the difference between the input and the output is held within the bearer." ;
                                      rdfs:label "storage" .
@@ -278,42 +295,38 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
 
 ###  http://www.toronto.ca/twonto#00034
 <http://www.toronto.ca/twonto#00034> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00003> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Function> ;
                                      rdfs:comment "a function that is realized when the input flow of a substance or energy in to the bearer of the function is greater than the output flow." ;
                                      rdfs:label "supply" .
 
 
 ###  http://www.toronto.ca/twonto#00035
 <http://www.toronto.ca/twonto#00035> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> ;
                                      rdfs:label "commercial product"@en .
-
-
-###  http://www.toronto.ca/twonto#00036
-<http://www.toronto.ca/twonto#00036> rdf:type owl:Class ;
-                                     rdfs:label "organization" .
 
 
 ###  http://www.toronto.ca/twonto#00037
 <http://www.toronto.ca/twonto#00037> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00036> ;
+                                     rdfs:subClassOf <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> ;
                                      rdfs:label "division" .
 
 
 ###  http://www.toronto.ca/twonto#00038
 <http://www.toronto.ca/twonto#00038> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00036> ;
+                                     rdfs:subClassOf <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> ;
                                      rdfs:label "unit" .
 
 
 ###  http://www.toronto.ca/twonto#00039
 <http://www.toronto.ca/twonto#00039> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00036> ;
+                                     rdfs:subClassOf <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> ;
                                      rdfs:label "work area" .
 
 
 ###  http://www.toronto.ca/twonto#00040
 <http://www.toronto.ca/twonto#00040> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00036> ;
+                                     rdfs:subClassOf <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> ;
                                      rdfs:label "corporation" .
 
 
@@ -332,6 +345,7 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
 
 ###  http://www.toronto.ca/twonto#00055
 <http://www.toronto.ca/twonto#00055> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> ;
                                      rdfs:label "material or processing medium"@en .
 
 
@@ -367,13 +381,13 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
 
 ###  http://www.toronto.ca/twonto#00076
 <http://www.toronto.ca/twonto#00076> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00023> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace> ;
                                      rdfs:label "indoor space"@en .
 
 
 ###  http://www.toronto.ca/twonto#00077
 <http://www.toronto.ca/twonto#00077> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto#00023> ;
+                                     rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/PhysicalSpace> ;
                                      rdfs:label "outdoor space"@en .
 
 
@@ -382,6 +396,15 @@ owl:topObjectProperty rdfs:domain <http://www.toronto.ca/twonto#00000> ;
                                      rdfs:subClassOf <http://www.toronto.ca/twonto#00007> ;
                                      rdfs:comment "@Tom:Type:pressurized, gravity" ;
                                      rdfs:label "sewer segment"@en .
+
+
+###  http://www.toronto.ca/twonto/TWOntoThing
+<http://www.toronto.ca/twonto/TWOntoThing> rdf:type owl:Class .
+
+
+###  https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization
+<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> .
 
 
 #################################################################
