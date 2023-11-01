@@ -100,3 +100,12 @@ famo_shacl:r4b-unique_enum a sh:NodeShape;
         """		
 		].
 	
+#R5: all role numbers must contain the character “-”
+famo_shacl:r5-enumregex a sh:NodeShape;
+	sh:targetClass a famo:EntityNumberProperty;
+	sh:property famo_shacl:hasValue_enum.
+	
+famo_shacl:hasValue_enum a sh:PropertyShape;
+	sh:path famo:hasValue;
+	sh:pattern "-".
+	

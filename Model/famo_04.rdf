@@ -1926,7 +1926,7 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/associatedLocation"/>
-                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/ISO21972/iso21972#Feature"/>
+                <owl:someValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
