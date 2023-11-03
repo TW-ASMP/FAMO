@@ -2,4 +2,4 @@ PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX change: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/>
 
-[?p1, rdf:type, famo:CurrentPropertyManifestation] :- [?p1, rdf:type, famo:PropertyManifestation], NOT EXISTS ?p2 IN ([?p1, change:hasNextManifestation, ?p2]).
+[?p1, rdf:type, famo:CurrentPropertyManifestation] :- [?p1, rdf:type, famo:PropertyManifestation], NOT EXISTS ?p2 IN ([?p1, change:hasNextManifestation, ?p2]), NOT EXISTS ?a IN ([?a, famo:invalidates, ?p1]).

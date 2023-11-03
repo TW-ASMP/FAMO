@@ -27,29 +27,7 @@ This classification extends the core Foundational Asset Management Ontology (FAM
 ###  http://www.toronto.ca/twonto#00042
 <http://www.toronto.ca/twonto#00042> rdf:type owl:ObjectProperty ;
                                      rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
-                                     rdf:type owl:AsymmetricProperty ,
-                                              owl:IrreflexiveProperty ;
                                      rdfs:label "has operator" .
-
-
-###  http://www.toronto.ca/twonto#00043
-<http://www.toronto.ca/twonto#00043> rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
-                                     rdf:type owl:FunctionalProperty ,
-                                              owl:AsymmetricProperty ,
-                                              owl:TransitiveProperty ,
-                                              owl:IrreflexiveProperty ;
-                                     rdfs:comment "is physical proper part of" ;
-                                     rdfs:label "is part of" .
-
-
-###  http://www.toronto.ca/twonto#00044
-<http://www.toronto.ca/twonto#00044> rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf <http://www.toronto.ca/twonto/TWOntoObjectProperty> ;
-                                     rdf:type owl:FunctionalProperty ,
-                                              owl:AsymmetricProperty ,
-                                              owl:IrreflexiveProperty ;
-                                     rdfs:label "record from" .
 
 
 ###  http://www.toronto.ca/twonto/TWOntoObjectProperty
@@ -298,12 +276,6 @@ owl:topObjectProperty rdfs:domain <http://ontology.eil.utoronto.ca/FAMO/famo/Ass
                                      rdfs:subClassOf <http://ontology.eil.utoronto.ca/FAMO/famo/Function> ;
                                      rdfs:comment "a function that is realized when the input flow of a substance or energy in to the bearer of the function is greater than the output flow." ;
                                      rdfs:label "supply" .
-
-
-###  http://www.toronto.ca/twonto#00035
-<http://www.toronto.ca/twonto#00035> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://www.toronto.ca/twonto/TWOntoThing> ;
-                                     rdfs:label "commercial product"@en .
 
 
 ###  http://www.toronto.ca/twonto#00037
