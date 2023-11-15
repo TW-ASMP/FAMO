@@ -977,6 +977,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumberPrintedOnTag -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumberPrintedOnTag">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/hasOEMSerialNo -->
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasOEMSerialNo">
@@ -1056,11 +1064,18 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Abandoned -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Abandoned">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentAssetStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Activity -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Activity">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1306,6 +1321,30 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EliminatedRoleStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EliminatedRoleStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentRoleStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EliminatedSpaceStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EliminatedSpaceStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentSpaceStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagProperty -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagProperty">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberProperty -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberProperty">
@@ -1316,6 +1355,30 @@ All assets have at least one, but possibly more, capability(s). This Capability(
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ExistentAssetStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentAssetStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ExistentRoleStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentRoleStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/ExistentSpaceStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentSpaceStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
     </owl:Class>
     
 
@@ -1443,6 +1506,22 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/InOperation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/InOperation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InPossession"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/InPossession -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/InPossession">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentAssetStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact">
@@ -1503,6 +1582,14 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Lost -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Lost">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentAssetStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Manual -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Manual">
@@ -1516,6 +1603,14 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Manufacturer">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Agent"/>
         <rdfs:subClassOf rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Missing -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Missing">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentAssetStatus"/>
     </owl:Class>
     
 
@@ -1556,6 +1651,30 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentAssetStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentAssetStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentRoleStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentRoleStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentSpaceStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentSpaceStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalFunction -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NonTerminalFunction">
@@ -1588,6 +1707,14 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NotInOperation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NotInOperation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InPossession"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation">
@@ -1607,6 +1734,14 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
                 <owl:onClass rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Planned -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Planned">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentAssetStatus"/>
     </owl:Class>
     
 
@@ -1785,6 +1920,22 @@ For example, Apple manufactures a line of macbooks, which can be further divided
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RealizedRoleStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RealizedRoleStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentRoleStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RealizedSpaceStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RealizedSpaceStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/ExistentSpaceStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Record -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Record">
@@ -1903,6 +2054,14 @@ For example, Apple manufactures a line of macbooks, which can be further divided
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Record_Setpoint">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact"/>
         <rdfs:comment>Added for demo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Removed -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Removed">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentAssetStatus"/>
     </owl:Class>
     
 
@@ -2271,6 +2430,22 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SpecifiedRoleStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SpecifiedRoleStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentRoleStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SpecifiedSpaceStatus -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SpecifiedSpaceStatus">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/NonExistentSpaceStatus"/>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/State -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/State">
@@ -2302,7 +2477,9 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Status">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoThing"/>
-        <rdfs:comment>Statuses are defined (often during reconciliation) to distinguish between different types of objects, i.e., an Actual Asset (a physical object) vs a Former Asset (an information entity).</rdfs:comment>
+        <rdfs:comment>A Status is a type of State (as defined in ISO/IEC 5087-1) that may be composed to form a more complex state description of a particular object. Statuses are defined (often during reconciliation) to distinguish between different types of existential status of the represented objects, e.g. an asset that is “in possession” versus one that has been “removed”.
+
+Logical relationships may be defined in the form of rules or validation constraints to relate Status types to other attributes of an object. For example, if an Asset has a MissingStatus, then its location should be undefined (unknown). This can be done with the use of the satisfiedBy relation defined in 5087-1 that relates a State to a Manifestation (e.g. a Property Manifestation) that satisfies it, however these axioms are out of the scope of this version of the model.</rdfs:comment>
     </owl:Class>
     
 
@@ -2491,134 +2668,6 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
 
     <owl:NamedIndividual rdf:about="http://example.com/data/wms_datasystem">
         <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DataSystem"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/abandoned_inplace -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/abandoned_inplace">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_and_discarded"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/decommissioned_in_place"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/eliminated -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/eliminated">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/missing -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/missing">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/never_existed -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/never_existed">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/operational -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/operational"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/p1 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/p1">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-        <Change1:hasNextManifestation rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/p2 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/p2">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-        <Change1:hasNextManifestation rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p3"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/p3 -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/p3">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/placed_in_storage"/>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/realized -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/realized">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/removed -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/removed">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/specified -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/specified">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/usable -->
-
-    <owl:NamedIndividual rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/usable">
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/AssetStatus"/>
-        <rdf:type rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Status"/>
     </owl:NamedIndividual>
     
 
