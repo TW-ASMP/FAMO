@@ -302,6 +302,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/finds -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/finds">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/fitsInFootprint -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/fitsInFootprint">
@@ -628,6 +636,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/invalidates -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/invalidates">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase">
@@ -639,6 +655,22 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/isTrustedAuthorityFor -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/isTrustedAuthorityFor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformationAbout -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformationAbout">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -768,6 +800,22 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformation">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformationAbout -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformationAbout">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/roleGoalSatisfiedByFunction -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/roleGoalSatisfiedByFunction">
@@ -870,6 +918,14 @@ Verion 0.4 focuses on:
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label>is ancestor role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/unableToAccess -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/unableToAccess">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1080,6 +1136,12 @@ Verion 0.4 focuses on:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasOutcomeProperty"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/invalidates"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1406,6 +1468,27 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/FieldObservation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/FieldObservation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/finds"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/unableToAccess"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Field Observation is an activity where an agent physically examines, or attempts to examine, assets and roles in the field. It is specialization of Activity and ssn:Observation. Three additional properties are identified to describe the potential outcomes of interest for this type of observation activity: found, unableToAccess, and invalidates. These properties are distinct from the startsAtManifestation and endsAtManifestation classes. While the situations identified by the properties could in some way be described through a combination of Manifestations, this would not be useful for the identified use cases.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Footprint -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Footprint">
@@ -1420,6 +1503,45 @@ All assets have at least one, but possibly more, capability(s). This Capability(
         <rdfs:comment>Underspecified for now. May be defined in detail at a later date.
 
 A footprint represents a simple 2D shape, without orientation. It is therefore distinct from the Geometry class defined in geosparql which is encoded with a reference system and thus has an orientation and location in the context of the reference system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Formulation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Formulation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/invalidates"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformationAbout"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformationAbout"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Formulation is an Activity where an agent determines (produces) some information to describe an object. Five additional properties are identified to describe this type of activity: requiresInformationAbout, leadsToInformationAbout, invalidates, requiresInformation, and leadsToInformation.</rdfs:comment>
     </owl:Class>
     
 
@@ -1554,6 +1676,33 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Instruction_Maintenance">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact"/>
         <rdfs:comment>Added for demo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/Interpretation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/Interpretation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformation"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InterpretationOfID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/leadsToInformationAbout"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/requiresInformationAbout"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Interpretation is an Activity where an agent determines what object some information (typically, a record in a data system) is intended to describe. Four additional properties are identified to describe this type of activity: requiresInformationAbout, producesInformationAbout, requiresInformation, and producesInformation. The information produced by an Interpretation is classified as an Interpretation of Identity.</rdfs:comment>
     </owl:Class>
     
 
@@ -2006,19 +2155,9 @@ For example, Apple manufactures a line of macbooks, which can be further divided
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RecordUpdate -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RecordUpdate">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
-    </owl:Class>
-    
-
-
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/RecordValidation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RecordValidation">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RecordUpdate"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/RecordValidation"/>
     
 
 
@@ -2529,14 +2668,6 @@ Logical relationships may be defined in the form of rules or validation constrai
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/UninterpretableRecord">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Record"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/WorkOrderTask -->
-
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/WorkOrderTask">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Activity"/>
     </owl:Class>
     
 
