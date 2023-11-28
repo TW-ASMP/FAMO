@@ -3,3 +3,5 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX change: <https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/>
 
 [?p1, rdf:type, famo:CurrentPropertyManifestation] :- [?p1, rdf:type, famo:PropertyManifestation], NOT EXISTS ?p2 IN ([?p1, change:hasNextManifestation, ?p2]).
+
+## TO DO: refactor rules so that we have "latest property manifestation" in all data systems/orderings, and then "current property manifestation, based on being instantiated in a *particular* system", then re-write property-specific rules based only on current property manifestation status (i.e. no need to include the datasystem condition there)

@@ -1078,6 +1078,7 @@ Verion 0.4 focuses on:
 
     <owl:DatatypeProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/installDate">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FAMODataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
@@ -1330,7 +1331,6 @@ All assets have at least one, but possibly more, capability(s). This Capability(
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
         <owl:disjointWith rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation"/>
         <rdfs:comment>A Property Manifestation that has been identified as corresponding to the current known value (best reflection of reality) for a data hub entity.</rdfs:comment>
     </owl:Class>
@@ -1351,9 +1351,9 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/DesignationRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationRelation">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
     </owl:Class>
     
@@ -1399,18 +1399,18 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagProperty">
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
     </owl:Class>
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberProperty">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberProperty"/>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberRelation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
@@ -1620,10 +1620,10 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberProperty">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty"/>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationRelation"/>
     </owl:Class>
     
 
@@ -1786,10 +1786,10 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NameProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/NameRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NameProperty">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationProperty"/>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/NameRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/DesignationRelation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
@@ -2518,10 +2518,10 @@ Roles may be decomposed into separate, more specific sub-roles or aggregated int
     
 
 
-    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberProperty -->
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberRelation -->
 
-    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberProperty">
-        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberProperty"/>
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberRelation">
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/IdentificationNumberRelation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
