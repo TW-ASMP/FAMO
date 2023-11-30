@@ -95,6 +95,12 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
@@ -113,9 +119,21 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
     <!-- http://purl.org/vocab/vann/example -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
@@ -140,6 +158,12 @@ Verion 0.4 focuses on:
     <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
     
 
 
@@ -595,6 +619,14 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/inProjectScope -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/inProjectScope">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/inState -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/inState">
@@ -938,15 +970,39 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime"/>
+    
+
+
     <!-- http://www.w3.org/ns/org#memberOf -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
     
 
 
+    <!-- http://www.w3.org/ns/prov#influenced -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#influenced"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo"/>
+    
+
+
     <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt -->
 
     <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/existsAt"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/hasNextManifestation -->
+
+    <owl:ObjectProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/hasNextManifestation"/>
     
 
 
@@ -1104,6 +1160,12 @@ Verion 0.4 focuses on:
     
 
 
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasName"/>
+    
+
+
     <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName -->
 
     <owl:DatatypeProperty rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName"/>
@@ -1201,6 +1263,12 @@ Verion 0.4 focuses on:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasDocumentation"/>
                 <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/InformationArtifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/inProjectScope"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Project"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2265,6 +2333,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/inProjectScope"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/involvedInProjectPhase"/>
                 <owl:allValuesFrom rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/Activity"/>
             </owl:Restriction>
@@ -2726,9 +2800,39 @@ Logical relationships may be defined in the form of rules or validation constrai
     
 
 
+    <!-- http://www.opengis.net/ont/sf#Geometry -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Geometry"/>
+    
+
+
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#ProperInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#ProperInterval"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
     
 
 
@@ -2741,6 +2845,12 @@ Logical relationships may be defined in the form of rules or validation constrai
     <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State -->
 
     <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/State"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent/Agent -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent/Agent"/>
     
 
 
@@ -2765,6 +2875,12 @@ Logical relationships may be defined in the form of rules or validation constrai
     <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource -->
 
     <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/Resource"/>
+    
+
+
+    <!-- https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/Location -->
+
+    <owl:Class rdf:about="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/SpatialLoc/Location"/>
     
 
 
