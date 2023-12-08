@@ -28,7 +28,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/staging_graph/> {
 	}
 #where there are discrepancies with operational graph
 GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
-?old_property_id famo:hasObject ?old_object;
+?current_property_id famo:hasObject ?old_object;
 		famo:hasSubject ?subject;
 		a ?property_type;
 		a famo:CurrentPropertyManifestation.
@@ -60,7 +60,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/staging_graph/> {
 	}
 #where there are discrepancies with operational graph
 GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
-?old_property_id famo:hasObject ?old_object;
+?current_property_id famo:hasObject ?old_object;
 		famo:hasSubject ?subject;
 		a ?property_type;
 		a famo:CurrentPropertyManifestation.
@@ -68,4 +68,36 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 ?property_type rdfs:subClassOf famo:PropertyManifestation.
 	}
  FILTER(?old_object==?new_object)
+};
+
+#unknown value, with attempt to find (unable to access current)
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+#plus other metadata (source project, author, etc)
+?proj famo:unableToAccess ?current_property_id.
+	}
 }
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/staging_graph/> {
+?new_property_id famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#no object is specified in the staging graph
+NOT EXISTS (?new_property_id famo:hasObject ?new_object)
+
+#metadata defined in the staging graph
+?proj famo:unableToVerify ?bnode_property_id.
+	}
+#where there are discrepancies with operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?current_property_id famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.
+
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+	}
+};
