@@ -1,0 +1,220 @@
+# SPARQL 1.2.1 merge reconciliation with operational graph (**for relations - using famo:hasObject only**)
+
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+#case 1a
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?new_property_id a ?property_type.
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject.
+#plus other metadata (source project, author, etc)
+?proj ?r ?new_property_id;
+	famo:invalidates ?current_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/>
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> {
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#where the property was an outcome of a reconciliation activity: finds or leadsToInformation
+?proj ?r ?new_property_id.
+FILTER (?r == famo:leadsToInformation) || (?r == famo:finds))
+	}
+#where there are discrepancies with operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/>
+GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/> {
+?current_property_id famo:hasObject ?old_object;
+		famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.
+
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+	}
+ FILTER(?old_object!=?new_object)
+};
+
+#case 1b
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?new_property_id a ?property_type.
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject.
+#plus other metadata (source project, author, etc)
+?proj famo:finds ?new_property_id;
+	famo:invalidates ?current_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/>
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> {
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#where the property was an outcome of a reconciliation activity: finds or leadsToInformation
+{
+{ ?proj famo:finds ?new_property_id.}
+UNION
+{ ?proj famo:leadsToInformation ?new_property_id.}
+}
+	}
+	}
+#where the operational graph does not define an object for the current property (value unknown)
+GRAPH <http://www.torontowater.org/asmp/dh/operational/>
+GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/>
+ {
+?current_property_id famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.
+
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+	}
+ FILTER NOT EXISTS {?current_property_id famo:hasObject ?old_object}
+};
+
+#case 2
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+#plus other metadata (source project, author, etc)
+?proj ?r ?current_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/>
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> {
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#where the property was an outcome of a reconciliation activity: finds or leadsToInformation
+?proj ?r ?new_property_id.
+FILTER (?r == famo:leadsToInformation) || (?r == famo:finds)
+	}
+#where the value aligns with the operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/>
+GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/> {
+?current_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.
+
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+	}
+
+};
+
+#case 3a
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+#plus other metadata (source project, author, etc)
+?proj famo:unableToAccess ?current_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/>
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/>  {
+?new_property_id famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#no object is specified in the staging graph
+FILTER NOT EXISTS {?new_property_id famo:hasObject ?new_object}
+
+#metadata defined in the staging graph
+?proj famo:unableToAccess ?new_property_id.
+	}
+#where there is a current property manifestation defined in the operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?current_property_id famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.
+
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+	}
+};
+
+#case 3b
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+#plus other metadata (source project, author, etc)
+?proj famo:unableToAccess ?new_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/>  {
+?new_property_id famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#no object is specified in the staging graph
+FILTER NOT EXISTS {?new_property_id famo:hasObject ?new_object}
+
+#metadata defined in the staging graph
+?proj famo:unableToAccess ?new_property_id.
+	}
+#where there is no current property manifestation defined in the operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+FILTER NOT EXISTS {?current_property_id famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.}
+	}
+};
+
+#case 5
+INSERT {
+#new property manifestations with new present-tense relations
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?new_property_id a ?property_type.
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject.
+#plus other metadata (source project, author, etc)
+?proj ?r ?new_property_id.
+	}
+}
+WHERE {
+#new properties to insert from staging graph
+GRAPH <http://www.torontowater.org/asmp/dh/staging/> {
+?new_property_id famo:hasObject ?new_object;
+		famo:hasSubject ?subject;
+		a ?property_type.
+#need to match the subclass of property manifestation, not just any class that the property is a type of
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+
+#where the property was an outcome of a reconciliation activity: finds or leadsToInformation
+?proj ?r ?new_property_id.
+FILTER (?r == famo:leadsToInformation) || (?r == famo:finds))
+	}
+	}
+#where there is no current property in the operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?property_type rdfs:subClassOf famo:PropertyManifestation.
+FILTER NOT EXISTS {?current_property_id famo:hasSubject ?subject;
+		a ?property_type;
+		a famo:CurrentPropertyManifestation.}
+	}
+
+}
