@@ -1,0 +1,16 @@
+# SPARQL 1.2.3
+
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+INSERT {
+GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/> {
+	?property_id famo:hasObject famo:nothing.
+}
+}
+WHERE {
+GRAPH <http://www.torontowater.org/asmp/dh/capital_nothing_staging/>
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> {
+	?property_id famo:hasObject famo:nothing.
+}
+}

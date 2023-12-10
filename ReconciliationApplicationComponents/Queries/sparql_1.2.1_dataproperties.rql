@@ -28,7 +28,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/ontology/> {
 
 #where the property was an outcome of a reconciliation activity: finds or leadsToInformation
 ?proj ?r ?new_property_id.
-FILTER (?r == famo:leadsToInformation) || (?r == famo:finds))
+FILTER (?r = famo:leadsToInformation) || (?r = famo:finds))
 	}
 #where there are discrepancies with operational graph
 GRAPH <http://www.torontowater.org/asmp/dh/operational/>
@@ -110,7 +110,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/ontology/> {
 
 #where the property was an outcome of a reconciliation activity: finds or leadsToInformation
 ?proj ?r ?new_property_id.
-FILTER (?r == famo:leadsToInformation) || (?r == famo:finds)
+FILTER (?r = famo:leadsToInformation) || (?r = famo:finds)
 	}
 #where the value aligns with the operational graph
 GRAPH <http://www.torontowater.org/asmp/dh/operational/>
@@ -217,7 +217,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/ontology/> {
 
 #where the property was an outcome of a reconciliation activity: finds or leadsToInformation
 ?proj ?r ?new_property_id.
-FILTER (?r == famo:leadsToInformation) || (?r == famo:finds))
+FILTER (?r = famo:leadsToInformation) || (?r = famo:finds))
 	}
 	}
 #where there is no current property in the operational graph

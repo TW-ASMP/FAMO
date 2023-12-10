@@ -1,0 +1,19 @@
+# SPARQL 1.2.1.1 add all assets and roles as in project scope
+
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+INSERT {
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+?asset famo:inProjectScope ?project.
+?role famo:inProjectScope ?project.
+}
+}
+WHERE {
+GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_staging/> {
+#the asset or the role has been identified as in the project's scope
+{?asset famo:inProjectScope ?project.}
+UNION
+{?role famo:inProjectScope ?project.}
+}
+}
