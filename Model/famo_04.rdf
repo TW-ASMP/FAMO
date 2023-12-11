@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://ontology.eil.utoronto.ca/FAMO/famo/"
      xml:base="http://ontology.eil.utoronto.ca/FAMO/famo/"
+     xmlns:famo="http://ontology.eil.utoronto.ca/FAMO/famo/"
      xmlns:OM="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OM"
      xmlns:WV="http://www.wurvoc.org/vocabularies/WV"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -949,7 +950,7 @@ Verion 0.4 focuses on:
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/transSubRoleOf">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:label>is ancestor role of</rdfs:label>
+        <rdfs:label>is descendent role of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1491,6 +1492,12 @@ All assets have at least one, but possibly more, capability(s). This Capability(
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation">
         <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                <owl:allValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Designation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2448,6 +2455,12 @@ For example, Apple manufactures a line of macbooks, which can be further divided
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumberPrintedOnTag"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/hasName"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -3037,10 +3050,13 @@ Logical relationships may be defined in the form of rules or validation constrai
     <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/s1">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/v">
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/s2">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/s2">
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/v">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/r">
@@ -3048,6 +3064,200 @@ Logical relationships may be defined in the form of rules or validation constrai
     </rdf:Description>
     <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/d">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to infer the entity number printed on tag for a Role given the current EntityNumberRelation</rdfs:comment>
+        <rdfs:label>enum on tag</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation"/>
+                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumberPrintedOnTag"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to infer the entity number of a Role given the current EntityNumberRelation</rdfs:comment>
+        <rdfs:label>role enum</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation"/>
+                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasEntityNumber"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -3473,6 +3683,90 @@ Logical relationships may be defined in the form of rules or validation constrai
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/occupiedBy"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to infer the status of a Role given the current RoleInclusionRelation</rdfs:comment>
+        <rdfs:label>role status</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation"/>
+                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation"/>
+                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/hasStatus"/>
                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                         <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                     </rdf:Description>

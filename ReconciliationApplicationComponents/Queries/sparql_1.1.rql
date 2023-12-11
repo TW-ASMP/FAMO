@@ -1,0 +1,34 @@
+# SPARQL 1.1 capital project export
+
+PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?role_id ?parent_id ?role_enum ?role_status_type ?id_on_tag ?role_loc ?asset_id ?asset_enum ?asset_status ?asset_serial_num
+FROM <http://www.torontowater.org/asmp/dh/operational/>
+FROM <http://www.torontowater.org/asmp/dh/operational_nothing/>
+FROM <http://www.torontowater.org/asmp/dh/ontology/>
+{
+	{
+		{
+		#role_id == given DHE URI
+		}
+		UNION
+		{
+		#role_id 'descendent of' (famo:transSubrole) given DHE URI
+		}
+	}
+#role properties
+	?role_id famo:subRoleOf ?parent_id;
+		famo:hasEntityNumber ?role_enum;
+		famo:hasStatus [
+			a ?role_status_type];
+			?role_status_type rdfs:subClassOf famo:RoleStatus;
+		famo:hasEntityNumberPrintedOnTag ?id_on_tag;
+		famo:locatedIn ?role_loc;
+		famo:occupiedBy ?asset_id.
+#asset properties
+	#asset enum
+	#asset status
+	#asset serial number
+}
