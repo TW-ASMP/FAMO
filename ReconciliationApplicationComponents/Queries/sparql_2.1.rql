@@ -1,39 +1,54 @@
-# SPARQL 1.1 capital project export
+# SPARQL 2.1 data system update notice
 
 PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX ex: <http://example.com/data/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?role_id ?property_id ?project
+SELECT ?new_property_id ?property_type ?subject ?new_value ?current_value ?project ?t
 FROM <http://www.torontowater.org/asmp/dh/operational/>
 FROM <http://www.torontowater.org/asmp/dh/operational_nothing/>
 FROM <http://www.torontowater.org/asmp/dh/ontology/>
 {
-    {
-      {
-      #role_id == given DHE URI
-      FILTER (?role_id = ex:dhid_role_D_1_1_2_4_3_2_4_2)
-      }
-        UNION
-      {
-      #role_id 'descendent of' (famo:transSubrole) given DHE URI
-      ?role_id famo:transSubRoleOf ex:dhid_role_D_1_1_2_4_3_2_4_2.
-      }
-    }
-#role properties
-	?role_id famo:subRoleOf ?parent_id.
-  OPTIONAL {?role_id famo:occupiedBy ?asset_id}
-  OPTIONAL {?role_id famo:hasEntityNumber ?role_enum}
-  OPTIONAL {?role_id famo:hasStatus [
-			a ?role_status_type].
-             ?role_status_type rdfs:subClassOf famo:RoleStatus.}
-  OPTIONAL {?role_id famo:hasEntityNumberPrintedOnTag ?id_on_tag}
-  OPTIONAL {?role_id famo:locatedIn ?role_loc}
+{ #object properties
+#a more recent property assertion
+   ?new_property_id a famo:PropertyManifestation;
+	 		a ?property_type;
+			famo:hasSubject ?subject;
+			famo:hasObject ?new_value;
+			famo_app:beginOfExistsAtXSDDateTimeStamp ?t.
 
+#the data system's current property assertion			
+		?property_type rdfs:subClassOf famo:PropertyManifestation.
+		?current_property_id a ?property_type;
+			famo:instantiatedIn <data_system>;
+			a famo:LatestPropertyManifestation;
+			famo:hasSubject ?subject;
+			famo:hasObject ?current_value.
+			
+#where the current value is different from the more recent value
+FILTER ((?new_value != ?current_value) && (?t > <t0>)
+}
+UNION
+#data properties
+{
+#a more recent property assertion
+   ?new_property_id a famo:PropertyManifestation;
+	 		a ?property_type;
+			famo:hasSubject ?subject;
+			famo:hasValue ?new_value;
+			famo_app:beginOfExistsAtXSDDateTimeStamp ?t.
 
-#asset properties
-OPTIONAL {?asset_id famo:hasEntityNumber ?asset_enum}
-OPTIONAL {?asset_id famo:hasStatus ?asset_status}
-OPTIONAL {?asset_id famo:hasSerialNumber ?asset_serial_num}
+#the data system's current property assertion			
+		?property_type rdfs:subClassOf famo:PropertyManifestation.
+		?current_property_id a ?property_type;
+			famo:instantiatedIn <data_system>;
+			a famo:LatestPropertyManifestation;
+			famo:hasSubject ?subject;
+			famo:hasValue ?current_value.
+			
+#where the current value is different from the more recent value
+FILTER ((?new_value != ?current_value) && (?t > <t0>)
+}
 }
