@@ -1385,21 +1385,7 @@ All assets have at least one, but possibly more, capability(s). This Capability(
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation -->
 
     <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/hasNextManifestation"/>
-                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/LatestPropertyManifestation"/>
         <owl:disjointWith rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PastPropertyManifestation"/>
         <rdfs:comment>A Property Manifestation that has been identified as corresponding to the current known value (best reflection of reality) for a data hub entity.</rdfs:comment>
     </owl:Class>
@@ -1807,6 +1793,30 @@ A single Capability has the potential to satisfy multiple Roles. It is possible 
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Interpretation of Identity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/LatestPropertyManifestation -->
+
+    <owl:Class rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/LatestPropertyManifestation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/hasNextManifestation"/>
+                                <owl:someValuesFrom rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/PropertyManifestation"/>
+        <rdfs:comment>A Property Manifestation that is identified as the latest in any applied orderings.</rdfs:comment>
     </owl:Class>
     
 
@@ -3085,10 +3095,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3096,9 +3105,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3106,10 +3116,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
-                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3117,9 +3126,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -3127,26 +3137,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
                                                             </rdf:Description>
                                                         </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
-                                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
-                                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                             </rdf:Description>
@@ -3194,10 +3191,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3205,9 +3201,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SerialNumberRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3215,10 +3212,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
-                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3226,9 +3222,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -3236,26 +3233,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
                                                             </rdf:Description>
                                                         </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
-                                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
-                                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                             </rdf:Description>
@@ -3303,10 +3287,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3314,9 +3297,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3324,10 +3308,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
-                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3335,25 +3318,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Asset"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -3399,10 +3370,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3410,9 +3380,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberOnTagRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3421,9 +3392,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3431,26 +3402,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
                                                     </rdf:Description>
                                                 </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -3496,10 +3454,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3507,9 +3464,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/EntityNumberRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3517,10 +3475,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
-                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3528,9 +3485,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -3538,26 +3496,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
+                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
                                                             </rdf:Description>
                                                         </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties/hasIdentifier"/>
-                                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
-                                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/n"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                             </rdf:Description>
@@ -3605,10 +3550,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/MotorsizeProperty"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3616,9 +3560,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/MotorsizeProperty"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3626,26 +3571,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/v"/>
                                             </rdf:Description>
                                         </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasValue"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/v"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -3710,10 +3642,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceInclusionRelation"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3721,25 +3652,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/SpaceInclusionRelation"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -3785,10 +3704,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3796,9 +3714,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/StatusRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3806,10 +3725,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
-                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
+                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -3817,25 +3735,13 @@ Logical relationships may be defined in the form of rules or validation constrai
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/Role"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
+                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                                     </rdf:Description>
                                                 </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                                <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -3881,10 +3787,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3892,9 +3797,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3903,25 +3809,12 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                             </rdf:Description>
                                         </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -3965,10 +3858,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -3976,9 +3868,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleLocationRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -3987,25 +3880,12 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                             </rdf:Description>
                                         </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -4049,10 +3929,9 @@ Logical relationships may be defined in the form of rules or validation constrai
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleOccupationRelation"/>
                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                <swrl:argument2 rdf:resource="http://example.com/data/wms_datasystem"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -4060,9 +3939,10 @@ Logical relationships may be defined in the form of rules or validation constrai
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/RoleOccupationRelation"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
                                         <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
+                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -4071,25 +3951,12 @@ Logical relationships may be defined in the form of rules or validation constrai
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject"/>
+                                                <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
                                                 <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s1"/>
+                                                <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
                                             </rdf:Description>
                                         </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject"/>
-                                                        <swrl:argument1 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/p"/>
-                                                        <swrl:argument2 rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/s2"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
