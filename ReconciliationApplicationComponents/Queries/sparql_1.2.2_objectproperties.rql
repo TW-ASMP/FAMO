@@ -1,6 +1,7 @@
 # SPARQL 1.2.2
 
 PREFIX famo: <http://ontology.eil.utoronto.ca/FAMO/famo/>
+PREFIX famo_app: <http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -10,6 +11,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 #pattern for new data added via capital changes
 ?new_property_id a ?property_type.
 ?new_property_id famo:hasObject ?new_object;
+		famo_app:beginOfExistsAtXSDDateTimeStamp ?t;
 		famo:hasSubject ?subject.
 ?new_object a ?new_object_type;
 	famo:inProjectScope ?proj.
@@ -33,6 +35,8 @@ OPTIONAL {?new_object a ?new_object_type}
 
 #where the property is an outcome of the project
 ?proj famo:hasOutcomeProperty ?new_property_id.
+
+BIND (NOW() AS ?t)
 	}
 #where there exists some original (old) property in the staging graph (via reconciliation data)
 GRAPH <http://www.torontowater.org/asmp/dh/operational/>
@@ -59,6 +63,7 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 #pattern for new data added via capital changes
 ?new_property_id a ?property_type.
 ?new_property_id famo:hasObject ?new_object;
+		famo_app:beginOfExistsAtXSDDateTimeStamp ?t;
 		famo:hasSubject ?subject.
 ?new_object a ?new_object_type.
 #plus any other metadata (source project, author, etc)
@@ -82,6 +87,8 @@ OPTIONAL {?new_object a ?new_object_type}
 
 #metadata defined in the staging graph
 ?proj famo:finds ?new_property_id.
+
+BIND (NOW() AS ?t)
 	}
 
 GRAPH <http://www.torontowater.org/asmp/dh/operational/>

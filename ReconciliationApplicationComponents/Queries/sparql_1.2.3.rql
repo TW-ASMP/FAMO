@@ -9,9 +9,9 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/> {
 	?property_id famo:hasObject famo:nothing.
 }
 }
+
+USING <http://www.torontowater.org/asmp/dh/capital_nothing_staging/>
+USING <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> 
 WHERE {
-GRAPH <http://www.torontowater.org/asmp/dh/capital_nothing_staging/>
-GRAPH <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> {
 	?property_id famo:hasObject famo:nothing.
-}
 }
