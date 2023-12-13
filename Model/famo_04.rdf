@@ -497,6 +497,7 @@ Verion 0.4 focuses on:
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasObject">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/objectOf"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy"/>
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
@@ -603,6 +604,7 @@ Verion 0.4 focuses on:
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasSubject">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/subjectOf"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy"/>
             <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/hasInterpretation"/>
@@ -740,6 +742,14 @@ Verion 0.4 focuses on:
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectIsRepresentedBy">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
         <owl:inverseOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/objectOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/objectOf">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -913,6 +923,14 @@ Verion 0.4 focuses on:
     <!-- http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy -->
 
     <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectIsRepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.eil.utoronto.ca/FAMO/famo/subjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.eil.utoronto.ca/FAMO/famo/subjectOf">
         <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/FAMO/famo/FamoObjectProperty"/>
     </owl:ObjectProperty>
     
