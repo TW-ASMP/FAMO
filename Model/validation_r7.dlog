@@ -1,0 +1,1 @@
+[?x, rdf:type, owl:Nothing]<http://www.torontowater.org/asmp/dh/reconciliation_staging/> :- [?x, rdf:type, famo:Asset]<http://www.torontowater.org/asmp/dh/reconciliation_staging/>, NOT EXISTS ?c IN ([?c,rdfs:subClassOf,famo:Asset]<http://www.torontowater.org/asmp/dh/ontology/>, [?x,rdf:type,?c]<http://www.torontowater.org/asmp/dh/ontology/>).

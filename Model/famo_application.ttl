@@ -78,15 +78,14 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 :FamoAppObjectProperty rdf:type owl:ObjectProperty .
 
 
-###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsAncestorRoleOfRecord
-:representsAncestorRoleOfRecord rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf :FamoAppObjectProperty ;
-                                rdf:type owl:TransitiveProperty .
-
-
 ###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsChildRoleOfRecord
 :representsChildRoleOfRecord rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf :representsAncestorRoleOfRecord .
+                             rdfs:subPropertyOf :representsDescendantRoleOfRecord .
+
+
+###  http://ontology.eil.utoronto.ca/FAMO/famo_hub_application/representsDescendantRoleOfRecord
+:representsDescendantRoleOfRecord rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :FamoAppObjectProperty .
 
 
 #################################################################
@@ -173,9 +172,13 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
 
 :rec2 rdf:type swrl:Variable .
 
+:rec3 rdf:type swrl:Variable .
+
+:ds rdf:type swrl:Variable .
+
 [ swrla:isRuleEnabled "true"^^xsd:boolean ;
-   rdfs:comment "Rule to infer whether a record currently represents the child of another (analogous to subrole of inference)" ;
-   rdfs:label "represents child role of record" ;
+   rdfs:comment "Rule to infer that a record currently represents the descendant (sub role) of a role represented by another record" ;
+   rdfs:label "represents descendant role" ;
    rdf:type swrl:Imp ;
    swrl:body [ rdf:type swrl:AtomList ;
                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
@@ -183,9 +186,44 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                            swrl:argument1 :rec1 ;
                            swrl:argument2 :rec2
                          ] ;
-               rdf:rest rdf:nil
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :representsChildRoleOfRecord ;
+                                      swrl:argument1 :rec2 ;
+                                      swrl:argument2 :rec3
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn> ;
+                                                 swrl:argument1 :rec1 ;
+                                                 swrl:argument2 :ds
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn> ;
+                                                            swrl:argument1 :rec2 ;
+                                                            swrl:argument2 :ds
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/instantiatedIn> ;
+                                                                       swrl:argument1 :rec3 ;
+                                                                       swrl:argument2 :ds
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
              ] ;
-   swrl:head rdf:nil
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :representsDescendantRoleOfRecord ;
+                           swrl:argument1 :rec1 ;
+                           swrl:argument2 :rec3
+                         ] ;
+               rdf:rest rdf:nil
+             ]
  ] .
 
 [ swrla:isRuleEnabled "true"^^xsd:boolean ;
@@ -200,16 +238,22 @@ swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
                          ] ;
                rdf:rest [ rdf:type swrl:AtomList ;
                           rdf:first [ rdf:type swrl:ClassAtom ;
-                                      swrl:classPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/CurrentPropertyManifestation> ;
+                                      swrl:classPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/LatestPropertyManifestation> ;
                                       swrl:argument1 :p
                                     ] ;
                           rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                 swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf> ;
-                                                 swrl:argument1 :rec2 ;
-                                                 swrl:argument2 :p
+                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                 swrl:classPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/RoleInclusionRelation> ;
+                                                 swrl:argument1 :p
                                                ] ;
-                                     rdf:rest rdf:nil
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate <http://ontology.eil.utoronto.ca/FAMO/famo/representsObjectOf> ;
+                                                            swrl:argument1 :rec2 ;
+                                                            swrl:argument2 :p
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
                                    ]
                         ]
              ] ;

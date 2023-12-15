@@ -60,12 +60,22 @@ famo_shacl:r3b-ancestor_irreflexive a sh:PropertyShape;
 famo_shacl:r2 a sh:NodeShape;
 	sh:targetClass famo:Role;
 	sh:targetClass [sh:not famo:FacilityRole]; # for all Roles that are not Facility Roles (exact class name tbd)
-	sh:property famo_shacl:r2-subRole.
+	sh:property famo_shacl:r2a-subRole;
+	sh:property famo_shacl:r2b-subRole.
 	
-famo_shacl:r1b2-subject a sh:PropertyShape;
-		sh:path famo:subRoleOf;
-		sh:description "All Roles (except Facility level Roles) must have a parent, i.e. be a subRole of some role";
-		sh:minCount 1.
+	#for the inferred, current value
+	famo_shacl:r2a-subRole a sh:PropertyShape;
+			sh:path famo:subRoleOf;
+			sh:description "All Roles (except Facility level Roles) must have a parent, i.e. be a subRole of some role";
+			sh:minCount 1.
+
+	#for latest role records in different data systems
+	famo_shacl:r2b-subRole a sh:PropertyShape;
+			sh:path famo:subjectOf;
+			sh:class famo:RoleInclusionProperty;
+			sh:class famo:LatestPropertyManifestation;
+			sh:description "All Roles (except Facility level Roles) must have a parent, i.e. be a subRole of some role";
+			sh:minCount 1.
 		
 #R4a: every role number (entity number) must be unique
 famo_shacl:r4a-unique_enum a sh:NodeShape;
