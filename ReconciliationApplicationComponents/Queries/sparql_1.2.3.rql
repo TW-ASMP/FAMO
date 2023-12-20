@@ -10,8 +10,14 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational_nothing/> {
 }
 }
 
-USING <http://www.torontowater.org/asmp/dh/capital_nothing_staging/>
-USING <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> 
 WHERE {
-	?property_id famo:hasObject famo:nothing.
+#where the property is instantiated in one of the staging graphs
+VALUES ?g1 {<http://www.torontowater.org/asmp/dh/capital_nothing_staging/>
+<http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> }
+GRAPH ?g1 {
+	?property_id famo:hasObject famo:nothing.}
+#and it (the property) was inserted into the operational graph
+GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
+	?property_id a famo:PropertyManifestation.
+}
 }
