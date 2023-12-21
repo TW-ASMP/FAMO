@@ -14,6 +14,8 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 		famo:hasSubject ?subject.
 ?new_object a ?new_object_type;
 	famo:inProjectScope ?proj.
+#other properties of the new object, if applicable
+?new_object ?p ?val.
 #plus any other metadata (source project, author, etc)
 ?proj famo:hasOutcomeProperty ?new_property_id.
 #ordering relation with old (reconciliation) property
@@ -25,7 +27,9 @@ WHERE {
 VALUES ?g1 {<http://www.torontowater.org/asmp/dh/capital_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g1 {
 ?new_property_id famo:hasObject ?new_object.
-OPTIONAL {?new_object a ?new_object_type}}
+OPTIONAL {?new_object a ?new_object_type}
+#other properties of the new object, if applicable
+OPTIONAL {?new_object ?p ?val}}
 
 VALUES ?g2 {<http://www.torontowater.org/asmp/dh/capital_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g2 {
@@ -147,6 +151,8 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 ?new_property_id famo:hasObject ?new_object;
 		famo:hasSubject ?subject.
 ?new_object a ?new_object_type.
+#other properties of the new object, if applicable
+?new_object ?p ?val.
 #plus any other metadata (source project, author, etc)
 ?proj famo:hasOutcomeProperty ?new_property_id.
 ?subject famo:inProjectScope ?proj.
@@ -158,7 +164,9 @@ WHERE {
 VALUES ?g1 {<http://www.torontowater.org/asmp/dh/capital_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g1 {
 ?new_property_id famo:hasObject ?new_object.
-OPTIONAL {?new_object a ?new_object_type} }
+OPTIONAL {?new_object a ?new_object_type} 
+#other properties of the new object, if applicable
+OPTIONAL {?new_object ?p ?val}}
 
 VALUES ?g2 {<http://www.torontowater.org/asmp/dh/capital_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g2 {

@@ -14,6 +14,9 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 ?new_property_id famo:hasObject ?new_object;
 		famo_app:beginOfExistsAtXSDDateTimeStamp ?t;
 		famo:hasSubject ?subject.
+#other properties of the new object, if applicable
+?new_object ?p ?val.
+
 #plus other metadata (source project, author, etc)
 ?proj ?r ?new_property_id;
 	famo:invalidates ?current_property_id.
@@ -23,7 +26,9 @@ WHERE {
 #new properties to insert from staging graph
 VALUES ?g1 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g1 {
-?new_property_id famo:hasObject ?new_object
+?new_property_id famo:hasObject ?new_object.
+#other properties of the new object, if applicable
+OPTIONAL {?new_object ?p ?val.}
 }
 
 VALUES ?g2 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
@@ -157,6 +162,8 @@ GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 ?new_property_id famo:hasObject ?new_object;
 		famo_app:beginOfExistsAtXSDDateTimeStamp ?t;
 		famo:hasSubject ?subject.
+#other properties of the new object, if applicable
+		OPTIONAL {?new_object ?p ?val.}
 #plus other metadata (source project, author, etc)
 ?proj famo:finds ?new_property_id;
 	famo:invalidates ?current_property_id.
@@ -167,6 +174,8 @@ WHERE {
 VALUES ?g1 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g1 {
 ?new_property_id famo:hasObject ?new_object.
+#other properties of the new object, if applicable
+OPTIONAL {?new_object ?p ?val.}
 }
 
 VALUES ?g2 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/reconciliation_nothing_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
@@ -378,14 +387,17 @@ FILTER NOT EXISTS {?current_property_id famo:hasSubject ?subject;			# requires m
 	}
 };
 
-#update in progress - need to write additional cases for famo:nothing
-#case 5a
+
+#case 5a: object not famo:nothing
 INSERT {
 #new property manifestations
 GRAPH <http://www.torontowater.org/asmp/dh/operational/> {
 ?new_property_id a ?property_type.
 ?new_property_id famo:hasObject ?new_object;
 		famo:hasSubject ?subject.
+#other properties of the new object, if applicable
+?new_object ?p ?val.
+
 #plus other metadata (source project, author, etc)
 ?proj ?r ?new_property_id.
 	}
@@ -394,7 +406,9 @@ WHERE {
 #new properties to insert from staging graph
 VALUES ?g1 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g1 {
-?new_property_id famo:hasObject ?new_object.}
+?new_property_id famo:hasObject ?new_object.
+#other properties of the new object, if applicable
+OPTIONAL {?new_object ?p ?val.}}
 
 VALUES ?g2 {<http://www.torontowater.org/asmp/dh/reconciliation_staging/> <http://www.torontowater.org/asmp/dh/ontology/>}
 GRAPH ?g2 {
