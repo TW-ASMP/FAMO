@@ -88,8 +88,8 @@ famo_shacl:r4a-unique_enum a sh:NodeShape;
 #R4b: every role number *currently* represented in a record must be unique *in a particular datasystem*
 #we can do this with a SPARQL embedding - but is there another way?
 famo_shacl:r4b-unique_enum a sh:NodeShape;
-	sh:targetClass a famo:EntityNumberProperty;
-	sh:targetClass a famo:CurrentPropertyManifestation;
+	sh:targetClass famo:EntityNumberProperty;
+	sh:targetClass famo:CurrentPropertyManifestation;
 	sh:sparql [
 		a sh:SPARQLConstraint ;   # This triple is optional
 		sh:message "The entity number currently represented by a role record must be unique in a given data system." ;
@@ -112,7 +112,7 @@ famo_shacl:r4b-unique_enum a sh:NodeShape;
 	
 #R5: all role numbers must contain the character “-”
 famo_shacl:r5-enumregex a sh:NodeShape;
-	sh:targetClass a famo:EntityNumberProperty;
+	sh:targetClass famo:EntityNumberProperty;
 	sh:property famo_shacl:hasValue_enum.
 	
 famo_shacl:hasValue_enum a sh:PropertyShape;
