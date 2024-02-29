@@ -1,9 +1,0 @@
-- What do we use Logseq for
-	- rough meeting notes
-	- capture decisions and the rationale behind them
-	- things to remember
-- How to embed a picture
-- Topic Inventory and back links
-- How to use a template
-- How to use the side pane
--
